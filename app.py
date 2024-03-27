@@ -23,7 +23,7 @@ def load_and_display_data(title, filename):
     st.dataframe(data_descriptors, hide_index=False, use_container_width=True)
 
     # Add a selectbox for the user to select a plot type
-    plot_types = ["Histogram", "Box Plot", "Scatter Plot"]
+    plot_types = ["Histograma", "Box Plot", "Scatter Plot"]
     selected_plot = st.selectbox("Selecciona un tipo de gráfico", plot_types)
 
     # Add a selectbox for the user to select a quantitative variable
@@ -33,7 +33,7 @@ def load_and_display_data(title, filename):
     )
 
     # Plot the selected plot type
-    if selected_plot == "Histogram":
+    if selected_plot == "Histograma":
         fig = px.histogram(
             data,
             x=selected_var,
