@@ -3,6 +3,7 @@ import plotly.express as px
 import streamlit as st
 
 from charts.olympics import get_olympics_charts
+from charts.schooling import get_schooling_charts
 from statistics_calc import descriptors, qualitative_stats
 
 
@@ -58,6 +59,8 @@ def load_and_display_data(title, filename, qualitative_vars):
 
     if title == "🏅 Olympics data":
         get_olympics_charts(data)
+    elif title == "📚 Schooling data":
+        get_schooling_charts(data)
 
 
 def main():
