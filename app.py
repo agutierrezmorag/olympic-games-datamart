@@ -53,11 +53,11 @@ def load_and_display_data(title, filename, qualitative_vars):
         fig.update_yaxes(title_text=selected_var2)
 
     fig.update_layout(title_text=f"{selected_plot} de {selected_var}", title_x=0.5)
-    st.plotly_chart(fig)
+    st.plotly_chart(fig, use_container_width=True)
 
 
 def main():
-    st.set_page_config(page_title="Datamart data", page_icon="📊")
+    st.set_page_config(page_title="Datamart data", page_icon="📊", layout="wide")
 
     # Define the datasets and their corresponding titles and qualitative variables
     datasets = {
