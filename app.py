@@ -61,7 +61,7 @@ def load_and_display_data(title, filename):
 
     if title == "🏅 Olympics":
         get_olympics_charts(data)
-    elif title == "📚 Schooling":
+    elif title == "🎓 Schooling":
         get_schooling_charts(data)
 
 
