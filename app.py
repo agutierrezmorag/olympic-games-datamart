@@ -67,29 +67,47 @@ def load_and_display_data(title, filename):
 def main():
     st.set_page_config(page_title="Datamart data", page_icon="📊", layout="wide")
 
-    # Define the datasets and their corresponding titles and qualitative variables
-    datasets = {
-        "🏅 Olympics": "olympics.csv",
-        "📚 Schooling": "expected-years-of-schooling.csv",
-        "🪙 Income": "gross-national-income-per-capita.csv",
-        "🌍 Human Development Index HDI)": "human-development-index.csv",
-        "📈 Historical Index of Human Development HIHD)": "hdi-vs-hihd.csv",
-        "Human Development Index HDI) Comparison": "human-development-index-comparison.csv",
-    }
-
     with st.sidebar:
+        # Define the datasets and their corresponding titles and qualitative variables
+        chosen_datasets = {
+            "🏅 Olympics": "olympics.csv",
+            "🎓 Schooling": "expected-years-of-schooling.csv",
+            "💰 Income": "gross-national-income-per-capita.csv",
+            "🌍 Human Development Index (HDI)": "human-development-index.csv",
+            "📊 Historical Index of Human Development (HIHD)": "hdi-vs-hihd.csv",
+        }
+
+        other_datasets = {
+            "🔄 HDI Comparison": "human-development-index-comparison.csv",
+            "💹 HDI vs. GDP per capita": "hdi-vs-gdp-per-capita.csv",
+            "🌐 HDI Without GDP vs GDP per capita": "hdi-without-gdp-vs-gdp-per-capita.csv",
+            "📈 HDI - Escosura": "human-development-index-escosura.csv",
+            "📚 Mean Years of Schooling Long Run": "mean-years-of-schooling-long-run.csv",
+        }
+
         st.markdown("# 📊 Datamart data")
         st.markdown(
             "Los siguientes datos no han sido modificados y se presentan tal como se encuentran en los archivos `csv`."
         )
 
         st.warning(
-            "⚠️ **IMPORTANTE:** Considerar que se usa un punto en vez de una coma para valores decimales."
+            "⚠️ **IMPORTANTE:** Considerar que se usa un punto para valores decimales y una coma para separar miles."
         )
 
         st.info("📢 **Nota:** La carga de un `scatter plot` puede tomar tiempo.")
 
+        only_chosen_datasets = st.toggle(
+            "Mostrar solo los datasets seleccionados",
+            value=True,
+            help="Mostrar solo los datasets que hayan sido seleccionados para el análisis o incluir todos los datasets disponibles.",
+        )
+
         # Add a selectbox for the user to select a dataset
+        datasets = (
+            chosen_datasets
+            if only_chosen_datasets
+            else {**chosen_datasets, **other_datasets}
+        )
         selected_dataset = st.selectbox("Elige un dataset", list(datasets.keys()))
 
     # Load and display the selected dataset
