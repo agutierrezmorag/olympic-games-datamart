@@ -96,6 +96,8 @@ def main():
 
         st.info("📢 **Nota:** La carga de un `scatter plot` puede tomar tiempo.")
 
+        st.info("📢 **Nota:** Se consideraran valores desde los años 1980 hasta 2016.")
+
         only_chosen_datasets = st.toggle(
             "Mostrar solo los datasets seleccionados",
             value=True,
