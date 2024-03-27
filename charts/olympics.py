@@ -2,6 +2,7 @@ import plotly.express as px
 import streamlit as st
 
 
+@st.cache_data
 def get_olympics_charts(data):
     # Add a pie chart for the 'Sex' column in the 'Olympics data' dataset
     st.markdown("## :blue[Otros gráficos de interés]")
