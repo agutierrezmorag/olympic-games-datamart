@@ -58,9 +58,9 @@ def load_and_display_data(title, filename):
     fig.update_layout(title_text=f"{selected_plot} de {selected_var}", title_x=0.5)
     st.plotly_chart(fig, use_container_width=True)
 
-    if title == "🏅 Olympics data":
+    if title == "🏅 Olympics":
         get_olympics_charts(data)
-    elif title == "📚 Schooling data":
+    elif title == "📚 Schooling":
         get_schooling_charts(data)
 
 
