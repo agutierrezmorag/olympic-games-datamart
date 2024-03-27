@@ -9,7 +9,6 @@ def load_and_display_data(title, filename, qualitative_vars):
     st.markdown(f"## {title}")
     data = pd.read_csv(f"datasets/{filename}")
     st.dataframe(data, hide_index=True, use_container_width=True)
-    col1, col2 = st.columns(2)
 
     st.markdown("### Variables cualitativas")
     qualitative = qualitative_stats(data, qualitative_vars)
