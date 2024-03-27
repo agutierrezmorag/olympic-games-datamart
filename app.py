@@ -291,6 +291,76 @@ def load_and_display_data(title, filename, qualitative_vars):
             )
             st.plotly_chart(fig)
 
+        # Bar chart showing the distribution of athletes by season
+        with col1:
+            season_distribution = data["Season"].value_counts()
+            fig = px.bar(
+                season_distribution,
+                x=season_distribution.index,
+                y=season_distribution.values,
+                labels={"x": "Temporada", "y": "Número de Atletas"},
+                title="Distribución de atletas por temporada",
+            )
+            st.plotly_chart(fig)
+
+        # Scatter plot showing the relationship between the height and weight of athletes
+        with col2:
+            fig = px.scatter(
+                data,
+                x="Height",
+                y="Weight",
+                labels={"x": "Altura (cm)", "y": "Peso (kg)"},
+                title="Relación entre la altura y el peso de los atletas",
+            )
+            st.plotly_chart(fig)
+
+        # Line chart showing the trend of the average age of athletes over time
+        with col1:
+            average_age_by_year = data.groupby("Year")["Age"].mean().reset_index()
+            fig = px.line(
+                average_age_by_year,
+                x="Year",
+                y="Age",
+                labels={"x": "Año", "y": "Edad Promedio de los Atletas"},
+                title="Tendencia de la edad promedio de los atletas a lo largo del tiempo",
+            )
+            st.plotly_chart(fig)
+
+        # Bar chart showing the top 10 teams with the most athletes
+        with col2:
+            team_athlete_count = data["Team"].value_counts().head(10)
+            fig = px.bar(
+                team_athlete_count,
+                x=team_athlete_count.index,
+                y=team_athlete_count.values,
+                labels={"x": "Equipo", "y": "Número de Atletas"},
+                title="Los 10 equipos con más atletas",
+            )
+            st.plotly_chart(fig)
+
+        # Pie chart showing the distribution of events
+        with col1:
+            event_distribution = data["Event"].value_counts().head(10)
+            fig = px.pie(
+                event_distribution,
+                names=event_distribution.index,
+                values=event_distribution.values,
+                title="Distribución de eventos (Top 10)",
+            )
+            st.plotly_chart(fig)
+
+        # Scatter plot showing the relationship between the year and the number of events
+        with col2:
+            events_by_year = data.groupby("Year")["Event"].nunique().reset_index()
+            fig = px.scatter(
+                events_by_year,
+                x="Year",
+                y="Event",
+                labels={"x": "Año", "y": "Número de Eventos"},
+                title="Relación entre el año y el número de eventos",
+            )
+            st.plotly_chart(fig)
+
 
 def main():
     st.set_page_config(page_title="Datamart data", page_icon="📊", layout="wide")
