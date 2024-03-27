@@ -127,6 +127,114 @@ def load_and_display_data(title, filename, qualitative_vars):
             )
             st.plotly_chart(fig)
 
+        # Bar chart showing the top 10 countries with the most athletes
+        with col1:
+            athlete_country_count = data["NOC"].value_counts().head(10)
+            fig = px.bar(
+                athlete_country_count,
+                x=athlete_country_count.index,
+                y=athlete_country_count.values,
+                labels={"x": "País", "y": "Número de Atletas"},
+                title="Los 10 países con más atletas",
+            )
+            st.plotly_chart(fig)
+
+        # Line chart showing the trend of the total number of medals won by year
+        with col2:
+            medals_by_year = (
+                data[data["Medal"].notna()].groupby("Year")["Medal"].count()
+            )
+            fig = px.line(
+                medals_by_year,
+                x=medals_by_year.index,
+                y=medals_by_year.values,
+                labels={"x": "Año", "y": "Número de Medallas"},
+                title="Tendencia de medallas totales ganadas por año",
+            )
+            st.plotly_chart(fig)
+
+        # Pie chart showing the distribution of different types of medals
+        with col1:
+            medal_types = data["Medal"].value_counts()
+            fig = px.pie(
+                medal_types,
+                names=medal_types.index,
+                values=medal_types.values,
+                title="Distribución de tipos de medallas",
+            )
+            st.plotly_chart(fig)
+
+        # Scatter plot showing the relationship between the year and the number of medals won
+        with col2:
+            medals_by_year = (
+                data[data["Medal"].notna()]
+                .groupby("Year")["Medal"]
+                .count()
+                .reset_index()
+            )
+            fig = px.scatter(
+                medals_by_year,
+                x="Year",
+                y="Medal",
+                labels={"x": "Año", "y": "Número de Medallas"},
+                title="Relación entre el año y el número de medallas ganadas",
+            )
+            st.plotly_chart(fig)
+
+        # Bar chart showing the top 10 athletes with the most medals
+        with col1:
+            athlete_medal_count = (
+                data[data["Medal"].notna()]["Name"].value_counts().head(10)
+            )
+            fig = px.bar(
+                athlete_medal_count,
+                x=athlete_medal_count.index,
+                y=athlete_medal_count.values,
+                labels={"x": "Atleta", "y": "Número de Medallas"},
+                title="Los 10 atletas con más medallas",
+            )
+            st.plotly_chart(fig)
+
+        # Line chart showing the trend of the total number of athletes participating each year
+        with col2:
+            athletes_by_year = data.groupby("Year")["ID"].nunique()
+            fig = px.line(
+                athletes_by_year,
+                x=athletes_by_year.index,
+                y=athletes_by_year.values,
+                labels={"x": "Año", "y": "Número de Atletas"},
+                title="Tendencia del número total de atletas participantes cada año",
+            )
+            st.plotly_chart(fig)
+
+        # Pie chart showing the distribution of athletes by sport
+        with col1:
+            sport_distribution = data["Sport"].value_counts().head(10)
+            fig = px.pie(
+                sport_distribution,
+                names=sport_distribution.index,
+                values=sport_distribution.values,
+                title="Distribución de atletas por deporte (Top 10)",
+            )
+            st.plotly_chart(fig)
+
+        # Scatter plot showing the relationship between the age of athletes and the number of medals they won
+        with col2:
+            athlete_age_medals = (
+                data[data["Medal"].notna()]
+                .groupby("Age")["Medal"]
+                .count()
+                .reset_index()
+            )
+            fig = px.scatter(
+                athlete_age_medals,
+                x="Age",
+                y="Medal",
+                labels={"x": "Edad", "y": "Número de Medallas"},
+                title="Relación entre la edad de los atletas y el número de medallas que ganaron",
+            )
+            st.plotly_chart(fig)
+
 
 def main():
     st.set_page_config(page_title="Datamart data", page_icon="📊", layout="wide")
