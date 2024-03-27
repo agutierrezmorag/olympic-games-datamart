@@ -72,7 +72,7 @@ def get_income_charts(data):
             entity_data,
             x="Year",
             y="GNI per capita, PPP (constant 2017 international $)",
-            title=f"GNI per capita de {selected_entity}",
+            title=f"PNB per capita de {selected_entity}",
             labels={
                 "Year": "Año",
                 "GNI per capita, PPP (constant 2017 international $)": "PNB per capita, PPP (constant 2017 international $)",
