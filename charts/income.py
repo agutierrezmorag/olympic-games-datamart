@@ -18,7 +18,7 @@ def get_income_charts(data):
             title="GNI per cápita por entidad en el último año",
             labels={
                 "Entity": "Entity",
-                "GNI per capita, PPP (constant 2017 international $)": "GNI per capita, PPP (constant 2017 international $)",
+                "GNI per capita, PPP (constant 2017 international $)": "PNB per capita, PPP (constant 2017 international $)",
             },
         )
         st.plotly_chart(fig, use_container_width=True)
@@ -35,7 +35,7 @@ def get_income_charts(data):
             title="10 entidades con el GNI per cápita más bajo en el último año",
             labels={
                 "Entity": "Entity",
-                "GNI per capita, PPP (constant 2017 international $)": "GNI per capita, PPP (constant 2017 international $)",
+                "GNI per capita, PPP (constant 2017 international $)": "PNB per capita, PPP (constant 2017 international $)",
             },
         )
         st.plotly_chart(fig, use_container_width=True)
@@ -52,7 +52,30 @@ def get_income_charts(data):
             title="10 entidades con el GNI per cápita más alto en el último año",
             labels={
                 "Entity": "Entity",
-                "GNI per capita, PPP (constant 2017 international $)": "GNI per capita, PPP (constant 2017 international $)",
+                "GNI per capita, PPP (constant 2017 international $)": "PNB per capita, PPP (constant 2017 international $)",
+            },
+        )
+        st.plotly_chart(fig, use_container_width=True)
+
+    with col2:
+        # Get a list of unique entities
+        entities = sorted(data["Entity"].unique())
+
+        # Create a select box for the entities
+        selected_entity = st.selectbox("Selecciona una entidad", entities)
+
+        # Filter data for the selected entity
+        entity_data = data[data["Entity"] == selected_entity]
+
+        # Scatter plot of GNI per capita over the years for the selected entity
+        fig = px.scatter(
+            entity_data,
+            x="Year",
+            y="GNI per capita, PPP (constant 2017 international $)",
+            title=f"GNI per capita de {selected_entity}",
+            labels={
+                "Year": "Año",
+                "GNI per capita, PPP (constant 2017 international $)": "PNB per capita, PPP (constant 2017 international $)",
             },
         )
         st.plotly_chart(fig, use_container_width=True)
