@@ -294,3 +294,42 @@ def get_olympics_charts(data):
             title="Relación entre el año y el número de eventos",
         )
         st.plotly_chart(fig)
+
+    # Pie chart showing the distribution of events by season
+    with col1:
+        season_distribution = data["Season"].value_counts()
+        fig = px.pie(
+            season_distribution,
+            names=season_distribution.index,
+            values=season_distribution.values,
+            title="Distribución de eventos por temporada",
+        )
+        st.plotly_chart(fig)
+
+    # Bar chart showing the top 10 cities with the most hosted Olympics
+    with col2:
+        city_distribution = data["City"].value_counts().nlargest(10)
+        fig = px.bar(
+            city_distribution,
+            x=city_distribution.index,
+            y=city_distribution.values,
+            title="Las 10 ciudades con más Juegos Olímpicos",
+            labels={"x": "Ciudad", "y": "Número de Juegos Olímpicos"},
+        )
+        st.plotly_chart(fig)
+
+    # Bar chart showing the countries that have never won a medal
+    with col1:
+        medal_countries = data[data["Medal"].notna()]["NOC"].unique()
+        no_medal_countries = data.loc[
+            ~data["NOC"].isin(medal_countries), "NOC"
+        ].value_counts()
+        fig = px.bar(
+            no_medal_countries,
+            x=no_medal_countries.index,
+            y=no_medal_countries.values,
+            title="Países que nunca han ganado una medalla",
+            labels={"x": "País", "y": "Número de Participaciones"},
+            text_auto=True,
+        )
+        st.plotly_chart(fig)
