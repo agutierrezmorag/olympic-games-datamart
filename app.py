@@ -24,6 +24,26 @@ def load_and_display_data(title, filename):
     data_descriptors = descriptors(data)
     st.dataframe(data_descriptors, hide_index=False, use_container_width=True)
 
+    st.markdown("## :green[Valores únicos]")
+    # Add a selectbox for the user to select a column
+    selected_column = st.selectbox(
+        "Selecciona una columna para ver sus valores únicos", data.columns
+    )
+
+    # Display all unique values of the selected column
+    st.write(f"Valores únicos para {selected_column}:")
+
+    # Get all unique values of the selected column
+    unique_values = data[selected_column].unique()
+
+    # Convert the unique values to a DataFrame
+    unique_values_df = pd.DataFrame(unique_values, columns=[selected_column])
+
+    # Display the DataFrame
+    st.dataframe(unique_values_df, use_container_width=True)
+    st.write(f"Total de valores únicos: **{len(unique_values)}**")
+
+    st.markdown("## :violet[Graficar]")
     # Add a selectbox for the user to select a plot type
     plot_types = ["Histograma", "Box Plot", "Scatter Plot"]
     selected_plot = st.selectbox("Selecciona un tipo de gráfico", plot_types)
