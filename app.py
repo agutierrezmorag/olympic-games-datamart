@@ -113,6 +113,18 @@ def main():
         )
         selected_dataset = st.selectbox("Elige un dataset", list(datasets.keys()))
 
+        st.divider()
+
+        st.button(
+            "Limpiar cache",
+            on_click=st.cache_data.clear(),
+            type="primary",
+            use_container_width=True,
+        )
+        st.caption(
+            "_Limpiar el cache de los graficos de interes. Solo utilizar en caso de ser necesario._"
+        )
+
     # Load and display the selected dataset
     filename = datasets[selected_dataset]
 
