@@ -42,9 +42,9 @@ def get_hdi_charts(data):
         fig_hdi_hist = px.histogram(
             latest_year_data_hdi,
             x="Human Development Index (UNDP)",
-            title=f"Distribution of Human Development Index in {latest_year_hdi}",
+            title=f"Distribución del Índice de Desarrollo Humano en {latest_year_hdi}",
             labels={
-                "Human Development Index (UNDP)": "Human Development Index (UNDP)",
+                "Human Development Index (UNDP)": "Indice de Desarrollo Humano (IDH)",
             },
         )
         st.plotly_chart(fig_hdi_hist, use_container_width=True)
@@ -56,10 +56,10 @@ def get_hdi_charts(data):
             x="Year",
             y="Human Development Index (UNDP)",
             histfunc="avg",
-            title="Distribution of Human Development Index through the years",
+            title="Promedio del Índice de Desarrollo Humano a lo largo de los años",
             labels={
-                "Year": "Year",
-                "Human Development Index (UNDP)": "Human Development Index (UNDP)",
+                "Year": "Año",
+                "Human Development Index (UNDP)": "Indice de Desarrollo Humano (IDH)",
             },
             text_auto=True,
         )
