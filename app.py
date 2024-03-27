@@ -39,6 +39,7 @@ def load_and_display_data(title, filename):
             x=selected_var,
             nbins=50,
             labels={"x": selected_var, "y": "Frecuencia"},
+            text_auto=True,
         )
         fig.update_xaxes(title_text=selected_var)
         fig.update_yaxes(title_text="Frecuencia")
