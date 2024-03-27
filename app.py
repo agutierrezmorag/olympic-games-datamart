@@ -26,7 +26,7 @@ def load_and_display_data(title, filename, qualitative_vars):
     # Add a selectbox for the user to select a quantitative variable
     quantitative_vars = [col for col in data.columns if col not in qualitative_vars]
     selected_var = st.selectbox(
-        "Selecciona una variable para generar un histograma", quantitative_vars
+        "Selecciona una variable para generar un gráfico", quantitative_vars
     )
 
     # Plot the selected plot type
@@ -37,15 +37,20 @@ def load_and_display_data(title, filename, qualitative_vars):
             nbins=50,
             labels={"x": selected_var, "y": "Frecuencia"},
         )
+        fig.update_xaxes(title_text=selected_var)
+        fig.update_yaxes(title_text="Frecuencia")
     elif selected_plot == "Box Plot":
         fig = px.box(data, x=selected_var)
+        fig.update_xaxes(title_text=selected_var)
+        fig.update_yaxes(title_text="Value")
     elif selected_plot == "Scatter Plot":
-        # Add a second selectbox for the user to select a second variable for the scatter plot
         selected_var2 = st.selectbox(
             "Selecciona una segunda variable para el gráfico de dispersión",
             quantitative_vars,
         )
         fig = px.scatter(data, x=selected_var, y=selected_var2)
+        fig.update_xaxes(title_text=selected_var)
+        fig.update_yaxes(title_text=selected_var2)
 
     fig.update_layout(title_text=f"{selected_plot} de {selected_var}", title_x=0.5)
     st.plotly_chart(fig)
@@ -78,9 +83,12 @@ def main():
             "Los siguientes datos no han sido modificados y se presentan tal como se encuentran en el archivo `csv`."
         )
 
-        st.info(
-            "📢 **Nota:** Considerar que se usa un punto en vez de una coma para valores decimales."
+        st.warning(
+            "⚠️ **IMPORTANTE:** Considerar que se usa un punto en vez de una coma para valores decimales."
         )
+
+        st.info("📢 **Nota:** La carga de un `scatter plot` puede tomar tiempo.")
+
         # Add a selectbox for the user to select a dataset
         selected_dataset = st.selectbox("Elige un dataset", list(datasets.keys()))
 
