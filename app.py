@@ -235,6 +235,62 @@ def load_and_display_data(title, filename, qualitative_vars):
             )
             st.plotly_chart(fig)
 
+        # Bar chart showing the top 10 sports with the most medals
+        with col1:
+            sport_medal_count = (
+                data[data["Medal"].notna()]["Sport"].value_counts().head(10)
+            )
+            fig = px.bar(
+                sport_medal_count,
+                x=sport_medal_count.index,
+                y=sport_medal_count.values,
+                labels={"x": "Deporte", "y": "Número de Medallas"},
+                title="Los 10 deportes con más medallas",
+            )
+            st.plotly_chart(fig)
+
+        # Line chart showing the trend of the total number of sports participated in each year
+        with col2:
+            sports_by_year = data.groupby("Year")["Sport"].nunique()
+            fig = px.line(
+                sports_by_year,
+                x=sports_by_year.index,
+                y=sports_by_year.values,
+                labels={"x": "Año", "y": "Número de Deportes"},
+                title="Tendencia del número total de deportes participados cada año",
+            )
+            st.plotly_chart(fig)
+
+        # Pie chart showing the distribution of medals by sport
+        with col1:
+            medal_sport_distribution = (
+                data[data["Medal"].notna()]["Sport"].value_counts().head(10)
+            )
+            fig = px.pie(
+                medal_sport_distribution,
+                names=medal_sport_distribution.index,
+                values=medal_sport_distribution.values,
+                title="Distribución de medallas por deporte (Top 10)",
+            )
+            st.plotly_chart(fig)
+
+        # Scatter plot showing the relationship between the number of sports and the number of medals won
+        with col2:
+            sport_medal_relation = (
+                data[data["Medal"].notna()]
+                .groupby("Sport")["Medal"]
+                .count()
+                .reset_index()
+            )
+            fig = px.scatter(
+                sport_medal_relation,
+                x="Sport",
+                y="Medal",
+                labels={"x": "Deporte", "y": "Número de Medallas"},
+                title="Relación entre el número de deportes y el número de medallas ganadas",
+            )
+            st.plotly_chart(fig)
+
 
 def main():
     st.set_page_config(page_title="Datamart data", page_icon="📊", layout="wide")
