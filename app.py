@@ -7,13 +7,14 @@ from charts.schooling import get_schooling_charts
 from statistics_calc import descriptors, qualitative_stats
 
 
-def load_and_display_data(title, filename, qualitative_vars):
+def load_and_display_data(title, filename):
     st.markdown(f"## :red[{title}]")
     data = pd.read_csv(f"datasets/{filename}")
     st.dataframe(data, hide_index=True, use_container_width=True)
     col1, col2 = st.columns(2)
 
     st.markdown("### Variables cualitativas")
+    qualitative_vars = data.select_dtypes(include=["object"]).columns.tolist()
     qualitative = qualitative_stats(data, qualitative_vars)
     st.dataframe(qualitative, hide_index=True, use_container_width=True)
 
@@ -68,26 +69,18 @@ def main():
 
     # Define the datasets and their corresponding titles and qualitative variables
     datasets = {
-        "🏅 Olympics data": (
-            "olympics.csv",
-            ["Team", "NOC", "Games", "Sport", "Event", "Medal"],
-        ),
-        "📚 Schooling data": ("expected-years-of-schooling.csv", ["Entity", "Code"]),
-        "🪙 Income data": ("gross-national-income-per-capita.csv", ["Entity", "Code"]),
-        "🌍 Human Development Index (HDI) data": (
-            "human-development-index.csv",
-            ["Entity", "Code"],
-        ),
-        "📈 Historical Index of Human Development (HIHD) data": (
-            "hdi-vs-hihd.csv",
-            ["Entity", "Code"],
-        ),
+        "🏅 Olympics": "olympics.csv",
+        "📚 Schooling": "expected-years-of-schooling.csv",
+        "🪙 Income": "gross-national-income-per-capita.csv",
+        "🌍 Human Development Index HDI)": "human-development-index.csv",
+        "📈 Historical Index of Human Development HIHD)": "hdi-vs-hihd.csv",
+        "Human Development Index HDI) Comparison": "human-development-index-comparison.csv",
     }
 
     with st.sidebar:
         st.markdown("# 📊 Datamart data")
         st.markdown(
-            "Los siguientes datos no han sido modificados y se presentan tal como se encuentran en el archivo `csv`."
+            "Los siguientes datos no han sido modificados y se presentan tal como se encuentran en los archivos `csv`."
         )
 
         st.warning(
@@ -100,9 +93,9 @@ def main():
         selected_dataset = st.selectbox("Elige un dataset", list(datasets.keys()))
 
     # Load and display the selected dataset
-    filename, qualitative_vars = datasets[selected_dataset]
+    filename = datasets[selected_dataset]
 
-    load_and_display_data(selected_dataset, filename, qualitative_vars)
+    load_and_display_data(selected_dataset, filename)
 
 
 if __name__ == "__main__":
