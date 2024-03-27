@@ -19,15 +19,15 @@ def load_and_display_data(title, filename, qualitative_vars):
     data_descriptors = descriptors(data)
     st.dataframe(data_descriptors, hide_index=False, use_container_width=True)
 
+    # Add a selectbox for the user to select a plot type
+    plot_types = ["Histogram", "Box Plot", "Scatter Plot"]
+    selected_plot = st.selectbox("Selecciona un tipo de gráfico", plot_types)
+
     # Add a selectbox for the user to select a quantitative variable
     quantitative_vars = [col for col in data.columns if col not in qualitative_vars]
     selected_var = st.selectbox(
         "Selecciona una variable para generar un histograma", quantitative_vars
     )
-
-    # Add a selectbox for the user to select a plot type
-    plot_types = ["Histogram", "Box Plot", "Scatter Plot"]
-    selected_plot = st.selectbox("Selecciona un tipo de gráfico", plot_types)
 
     # Plot the selected plot type
     if selected_plot == "Histogram":
