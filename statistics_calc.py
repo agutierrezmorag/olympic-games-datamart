@@ -3,35 +3,30 @@ import pandas as pd
 
 
 def qualitative_stats(data, cols_cualitativas):
-    # Crear un DataFrame vacío para almacenar las estadísticas
+    # Create a DataFrame with a single row of dummy data
     estadisticas = pd.DataFrame(
-        columns=[
-            "Columna",
-            "Moda",
-            "Moda (#)",
-            "Moda (%)",
-            "Valores unicos (#)",
-            "Valores unicos (%)",
-            "Valores nulos (%)",
-        ]
+        {
+            "Columna": ["dummy"],
+            "Moda": ["dummy"],
+            "Moda (#)": [0],
+            "Moda (%)": [0.0],
+            "Valores unicos (#)": [0],
+            "Valores unicos (%)": [0.0],
+            "Valores nulos (%)": [0.0],
+        }
     )
 
     for col in cols_cualitativas:
         # Moda
         moda = data[col].mode()[0]
-
         # Cantidad de veces que se repite la moda
         moda_count = data[col].value_counts().iloc[0]
-
         # Porcentaje de la moda
         moda_porcentaje = moda_count / len(data) * 100
-
         # Cantidad de valores diferentes
         valores_unicos = data[col].nunique()
-
         # Porcentaje de cada tipo de valor
         valor_porcentajes = data[col].nunique() / len(data) * 100
-
         # Porcentaje de datos faltantes
         porcentaje_nulos = data[col].isna().mean() * 100
 
@@ -48,6 +43,9 @@ def qualitative_stats(data, cols_cualitativas):
             }
         )
         estadisticas = pd.concat([estadisticas, nueva_fila], ignore_index=True)
+
+    # Drop the dummy row
+    estadisticas = estadisticas.drop(estadisticas.index[0])
 
     return estadisticas
 
