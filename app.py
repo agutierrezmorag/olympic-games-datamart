@@ -27,8 +27,11 @@ def load_and_display_data(title, filename, qualitative_vars):
 
     # Plot a histogram of the selected variable
     fig, ax = plt.subplots()
-    data[selected_var].hist(ax=ax)
+    data[selected_var].hist(ax=ax, label="Frecuencia")  # Add a label for the legend
     ax.set_title(f"Histograma de {selected_var}")
+    ax.set_xlabel(selected_var)  # Add x-label
+    ax.set_ylabel("Frecuencia")  # Add y-label
+    ax.legend()  # Display the legend
     st.pyplot(fig)
 
 
