@@ -19,6 +19,7 @@ def get_olympics_charts(data):
             y=medal_count.values,
             labels={"x": "País", "y": "Recuento de Medallas"},
             title="Recuento de Medallas por País",
+            text_auto=True,
         )
         st.plotly_chart(fig)
 
