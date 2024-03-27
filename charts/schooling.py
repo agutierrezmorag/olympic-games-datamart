@@ -2,6 +2,7 @@ import plotly.express as px
 import streamlit as st
 
 
+@st.cache_data
 def get_schooling_charts(data):
     st.markdown("## :blue[Otros gráficos de interés]")
     col1, col2 = st.columns(2)
@@ -40,6 +41,7 @@ def get_schooling_charts(data):
         labels={
             "Expected Years of Schooling (years)": "Años de escolaridad esperados",
         },
+        text_auto=True,
     )
     st.plotly_chart(fig, use_container_width=True)
 
