@@ -13,6 +13,10 @@ def load_and_display_data(title, filename):
     st.markdown(f"## :red[{title}]")
     data = pd.read_csv(f"datasets/{filename}")
     st.dataframe(data, hide_index=True, use_container_width=True)
+    st.caption(
+        f"Total de filas: **{data.shape[0]}** | Total de columnas: **{data.shape[1]}**"
+    )
+
     col1, col2 = st.columns(2)
 
     st.markdown("### Variables cualitativas")
