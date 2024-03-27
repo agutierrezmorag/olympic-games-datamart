@@ -2,6 +2,7 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
+from charts.income import get_income_charts
 from charts.olympics import get_olympics_charts
 from charts.schooling import get_schooling_charts
 from statistics_calc import descriptors, qualitative_stats
@@ -63,6 +64,8 @@ def load_and_display_data(title, filename):
         get_olympics_charts(data)
     elif title == "🎓 Schooling":
         get_schooling_charts(data)
+    elif title == "💰 Income":
+        get_income_charts(data)
 
 
 def main():
