@@ -33,7 +33,7 @@ def get_olympics_charts(data):
             x="Year",
             y="Medal",
             color="NOC",
-            title="Medals by Year and Country",
+            title="Medallas Ganadas por País a lo Largo del Tiempo",
         )
         st.plotly_chart(fig)
 
