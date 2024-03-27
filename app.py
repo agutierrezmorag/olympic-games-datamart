@@ -6,7 +6,7 @@ from statistics_calc import descriptors, qualitative_stats
 
 
 def load_and_display_data(title, filename, qualitative_vars):
-    st.markdown(f"## {title}")
+    st.markdown(f"## :red[{title}]")
     data = pd.read_csv(f"datasets/{filename}")
     st.dataframe(data, hide_index=True, use_container_width=True)
     col1, col2 = st.columns(2)
@@ -55,6 +55,78 @@ def load_and_display_data(title, filename, qualitative_vars):
     fig.update_layout(title_text=f"{selected_plot} de {selected_var}", title_x=0.5)
     st.plotly_chart(fig, use_container_width=True)
 
+    # Add a pie chart for the 'Sex' column in the 'Olympics data' dataset
+    st.markdown("## :blue[Otros gráficos de interés]")
+    if title == "🏅 Olympics data":
+        col1, col2 = st.columns(2)
+        with col1:
+            fig = px.pie(data, names="Sex", title="Distribución de Sexo")
+            st.plotly_chart(fig)
+
+        with col2:
+            medal_count = (
+                data.groupby("NOC")["Medal"].count().sort_values(ascending=False)
+            )
+            fig = px.bar(
+                medal_count,
+                x=medal_count.index,
+                y=medal_count.values,
+                labels={"x": "País", "y": "Recuento de Medallas"},
+                title="Recuento de Medallas por País",
+            )
+            st.plotly_chart(fig)
+
+        with col1:
+            medals_by_year_country = (
+                data[data["Medal"].notna()]
+                .groupby(["Year", "NOC"])["Medal"]
+                .count()
+                .reset_index()
+            )
+            fig = px.line(
+                medals_by_year_country,
+                x="Year",
+                y="Medal",
+                color="NOC",
+                title="Medals by Year and Country",
+            )
+            st.plotly_chart(fig)
+
+        with col2:
+            athlete_count = data.groupby("Year")["ID"].nunique()
+            fig = px.line(
+                athlete_count,
+                x=athlete_count.index,
+                y=athlete_count.values,
+                labels={"x": "Año", "y": "Número de Atletas"},
+                title="Participación de Atletas a lo Largo del Tiempo",
+            )
+            st.plotly_chart(fig)
+
+        with col1:
+            gender_count = data.groupby(["Year", "Sex"])["ID"].nunique().unstack()
+            fig = px.area(
+                gender_count,
+                labels={
+                    "value": "Número de Atletas",
+                    "variable": "Sexo",
+                    "Year": "Año",
+                },
+                title="Distribución de Género a lo Largo del Tiempo",
+            )
+            st.plotly_chart(fig)
+
+        with col2:
+            medals_by_sex = data[data["Medal"].notna()].groupby("Sex")["Medal"].count()
+            fig = px.bar(
+                medals_by_sex,
+                x=medals_by_sex.index,
+                y=medals_by_sex.values,
+                labels={"x": "Sexo", "y": "Recuento de Medallas"},
+                title="Recuento de Medallas por Sexo",
+            )
+            st.plotly_chart(fig)
+
 
 def main():
     st.set_page_config(page_title="Datamart data", page_icon="📊", layout="wide")
@@ -92,8 +164,8 @@ def main():
         # Add a selectbox for the user to select a dataset
         selected_dataset = st.selectbox("Elige un dataset", list(datasets.keys()))
 
-        # Load and display the selected dataset
-        filename, qualitative_vars = datasets[selected_dataset]
+    # Load and display the selected dataset
+    filename, qualitative_vars = datasets[selected_dataset]
 
     load_and_display_data(selected_dataset, filename, qualitative_vars)
 
