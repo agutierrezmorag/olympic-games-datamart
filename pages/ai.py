@@ -142,12 +142,21 @@ def main():
                 st.write(response["output"])
                 with st.expander("🧠 Show train of thought"):
                     for step in response["intermediate_steps"]:
-                        st.write(
-                            f"💡 **Thought:** {step[0].log.split('Thought: ')[1].split('Action: ')[0]}"
-                        )
-                        st.markdown(f"🛠️ **Action:** {step[0].tool}")
-                        st.write(f"📥 **Action Input:** {step[0].tool_input}")
-                        st.write(f"✨ **Result:** {step[1]}")
+                        if isinstance(llm, ChatOpenAI):
+                            st.markdown(f"🛠️ **Action:** {step[0].tool}")
+                            st.write(
+                                f"📥 **Action Input:** {step[0].tool_input['query']}"
+                            )
+                            st.write("✨ **Result:**")
+                            st.dataframe(step[1])
+                        else:
+                            st.write(
+                                f"💡 **Thought:** {step[0].log.split('Thought: ')[1].split('Action: ')[0]}"
+                            )
+                            st.markdown(f"🛠️ **Action:** {step[0].tool}")
+                            st.write(f"📥 **Action Input:** {step[0].tool_input}")
+                            st.write("✨ **Result:**")
+                            st.dataframe(step[1])
             except Exception as e:
                 st.error(
                     f"An error occurred: {e}. Try again or reload the page by pressing `R`."
