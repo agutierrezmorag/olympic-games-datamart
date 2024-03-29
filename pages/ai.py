@@ -137,11 +137,15 @@ def main():
         st.chat_message("user", avatar="🤓").write(query)
         with st.chat_message("assistant"):
             try:
-                response = agent_executor.invoke(query)
+                with st.spinner("Thinking..."):
+                    response = agent_executor.invoke(query)
                 st.write(response["output"])
-                st.expander("Show intermediate steps").write(
-                    response["intermediate_steps"]
-                )
+                with st.expander("🧠 Show train of thought"):
+                    for step in response["intermediate_steps"]:
+                        st.write(f"💡 **Thought:** {step[0].log.split('Thought: ')[1]}")
+                        st.markdown(f"🛠️ **Action:** {step[0].tool}")
+                        st.write(f"📥 **Action Input:** {step[0].tool_input}")
+                        st.write(f"✨ **Result:** {step[1]}")
             except Exception as e:
                 st.error(
                     f"An error occurred: {e}. Try again or reload the page by pressing `R`."
