@@ -5,6 +5,7 @@ import streamlit as st
 from langchain.agents.agent_types import AgentType
 from langchain_anthropic import ChatAnthropic
 from langchain_experimental.agents.agent_toolkits import create_pandas_dataframe_agent
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_openai import ChatOpenAI
 
 os.environ["LANGCHAIN_TRACING_V2"] = st.secrets.langsmith.tracing
@@ -59,6 +60,7 @@ def choose_llm():
                 "claude-3-sonnet-20240229",
                 "claude-3-opus-20240229",
                 "gpt-3.5-turbo",
+                "gemini-pro",
             ],
         )
 
@@ -75,6 +77,12 @@ def choose_llm():
                 model=model,
                 temperature=temperature,
                 openai_api_key=api_key,
+            )
+        elif model == "gemini-pro":
+            llm = ChatGoogleGenerativeAI(
+                model=model,
+                temperature=temperature,
+                google_api_key=api_key,
             )
         else:
             llm = ChatAnthropic(
