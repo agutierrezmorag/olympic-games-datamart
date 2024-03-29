@@ -3,7 +3,6 @@ import os
 import pandas as pd
 import streamlit as st
 from langchain.agents.agent_types import AgentType
-from langchain.memory import ConversationBufferWindowMemory
 from langchain_anthropic import ChatAnthropic
 from langchain_community.chat_message_histories.streamlit import (
     StreamlitChatMessageHistory,
@@ -104,6 +103,11 @@ def main():
         "This is a chatbot that can answer questions about various datasets. Select a dataset from the sidebar (or upload your own) \
         and ask a question!"
     )
+    st.caption(
+        "__Note: Chat history is purely visual and does not affect the AI's responses.__"
+    )
+
+    msgs = StreamlitChatMessageHistory()
 
     with st.sidebar:
         st.header("LLM")
@@ -113,13 +117,14 @@ def main():
             1,
             10,
             3,
-            help="Max iterations of operations for the agent to run",
+            help="Max iterations of operations for the agent to run. Higher values may take longer to compute and be more expensive.",
         )
 
         st.header("Dataset")
         df = choose_dataset()
 
     if not llm:
+        st.info("Please select a language model and dataset.")
         st.stop()
 
     try:
@@ -132,31 +137,27 @@ def main():
             agent_type=AgentType.OPENAI_FUNCTIONS
             if isinstance(llm, ChatOpenAI)
             else AgentType.ZERO_SHOT_REACT_DESCRIPTION,
+            memory=msgs,
         )
     except ValueError:
         st.error("No valid dataset selected.")
         st.stop()
 
-    if "msgs" not in st.session_state:
-        st.session_state.msgs = StreamlitChatMessageHistory(key="msgs")
-    if "memory" not in st.session_state:
-        st.session_state.memory = ConversationBufferWindowMemory(
-            k=5,
-            chat_memory=st.session_state.msgs,
-            return_messages=True,
-        )
-
-    # Historial de mensajes
-    for msg in st.session_state.msgs.messages:
-        st.chat_message(msg.type).write(msg.content)
+    avatars = {"human": "🤓", "ai": "📋"}
+    for msg in msgs.messages:
+        st.chat_message(msg.type, avatar=avatars[msg.type]).write(msg.content)
 
     if query := st.chat_input("Ask me a question!"):
-        st.chat_message("user", avatar="🤓").write(query)
-        with st.chat_message("assistant"):
+        msgs.add_user_message(query)
+        st.chat_message("human", avatar="🤓").write(query)
+
+        with st.chat_message("ai", avatar="📋"):
             try:
                 with st.spinner("Thinking..."):
                     response = agent_executor.invoke(query)
+                msgs.add_ai_message(response["output"])
                 st.write(response["output"])
+
                 with st.expander("🧠 Show train of thought"):
                     for step in response["intermediate_steps"]:
                         if isinstance(llm, ChatOpenAI):
