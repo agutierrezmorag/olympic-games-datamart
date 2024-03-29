@@ -3,6 +3,7 @@ import os
 import pandas as pd
 import streamlit as st
 from langchain.agents.agent_types import AgentType
+from langchain.callbacks import tracing_v2_enabled
 from langchain_anthropic import ChatAnthropic
 from langchain_community.chat_message_histories.streamlit import (
     StreamlitChatMessageHistory,
@@ -10,6 +11,7 @@ from langchain_community.chat_message_histories.streamlit import (
 from langchain_experimental.agents.agent_toolkits import create_pandas_dataframe_agent
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_openai import ChatOpenAI
+from langsmith import Client
 
 os.environ["LANGCHAIN_TRACING_V2"] = st.secrets.langsmith.tracing
 os.environ["LANGCHAIN_PROJECT"] = st.secrets.langsmith.project
@@ -25,6 +27,11 @@ def load_csvs():
     hdi = pd.read_csv("datasets/human-development-index.csv")
     hihd = pd.read_csv("datasets/hdi-vs-hihd.csv")
     return olympics, income, schooling, hdi, hihd
+
+
+@st.cache_resource
+def get_langsmith_client():
+    return Client()
 
 
 def choose_dataset():
@@ -137,7 +144,6 @@ def main():
             agent_type=AgentType.OPENAI_FUNCTIONS
             if isinstance(llm, ChatOpenAI)
             else AgentType.ZERO_SHOT_REACT_DESCRIPTION,
-            memory=msgs,
         )
     except ValueError:
         st.error("No valid dataset selected.")
