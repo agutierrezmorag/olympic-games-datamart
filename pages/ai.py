@@ -1,9 +1,16 @@
-import asyncio
+import os
 
 import pandas as pd
 import streamlit as st
+from langchain.agents.agent_types import AgentType
 from langchain_anthropic import ChatAnthropic
 from langchain_experimental.agents.agent_toolkits import create_pandas_dataframe_agent
+from langchain_openai import ChatOpenAI
+
+os.environ["LANGCHAIN_TRACING_V2"] = st.secrets.langsmith.tracing
+os.environ["LANGCHAIN_PROJECT"] = st.secrets.langsmith.project
+os.environ["LANGCHAIN_ENDPOINT"] = st.secrets.langsmith.endpoint
+os.environ["LANGCHAIN_API_KEY"] = st.secrets.langsmith.api_key
 
 
 @st.cache_data
@@ -43,62 +50,39 @@ def choose_dataset():
 
 
 def choose_llm():
-    model = st.selectbox(
-        "Select a language model",
-        [
-            "claude-3-haiku-20240307",
-            "claude-3-sonnet-20240229",
-            "claude-3-opus-20240229",
-        ],
-    )
+    col1, col2 = st.columns(2)
+    with col1:
+        model = st.selectbox(
+            "Select a language model",
+            [
+                "claude-3-haiku-20240307",
+                "claude-3-sonnet-20240229",
+                "claude-3-opus-20240229",
+                "gpt-3.5-turbo",
+            ],
+        )
 
-    api_key = st.text_input(
-        "Enter your LLM API key", help="Get one from https://anthropic.com/"
-    )
-    st.caption("This value will not be validated, stored nor shared.")
+    with col2:
+        api_key = st.text_input(
+            "Enter your LLM API key",
+            help="Get one from https://anthropic.com/. This value will not be validated, stored nor shared.",
+        )
 
     temperature = st.slider("Temperature", 0.0, 10.0, 0.0)
     if api_key:
-        llm = ChatAnthropic(
-            model=model,
-            temperature=temperature,
-            anthropic_api_key=api_key,
-            streaming=True,
-        )
-        return llm
-
-
-async def answer_question(
-    query, agent, response_placeholder, agent_thoughts_placeholder
-):
-    full_response = ""
-
-    async for chunk in agent.astream(query):
-        # Agent Action
-        if "actions" in chunk:
-            for action in chunk["actions"]:
-                agent_thoughts_placeholder.markdown(f"- Using Tool: `{action.tool}`")
-                agent_thoughts_placeholder.markdown(
-                    f"- Tool Input: `{action.tool_input}`"
-                )
-        # Observation
-        elif "steps" in chunk:
-            for step in chunk["steps"]:
-                agent_thoughts_placeholder.markdown(
-                    f"- Tool Result: `{step.observation}`"
-                )
-        # Final result
-        elif "output" in chunk:
-            full_response += chunk["output"]
-            response_placeholder.markdown(full_response)
+        if model == "gpt-3.5-turbo":
+            llm = ChatOpenAI(
+                model=model,
+                temperature=temperature,
+                openai_api_key=api_key,
+            )
         else:
-            raise ValueError()
-
-    agent_thoughts_placeholder.update(
-        label="Answered! 🎉",
-        expanded=False,
-        state="complete",
-    )
+            llm = ChatAnthropic(
+                model=model,
+                temperature=temperature,
+                anthropic_api_key=api_key,
+            )
+        return llm
 
 
 def main():
@@ -112,6 +96,13 @@ def main():
     with st.sidebar:
         st.header("LLM")
         llm = choose_llm()
+        iterations = st.number_input(
+            "Max iterations",
+            1,
+            10,
+            3,
+            help="Max iterations of operations for the agent to run",
+        )
 
         st.header("Dataset")
         df = choose_dataset()
@@ -124,9 +115,11 @@ def main():
             llm,
             df,
             verbose=True,
-            max_iterations=3,
-            early_stopping_method="generate",
+            max_iterations=iterations,
             return_intermediate_steps=True,
+            agent_type=AgentType.OPENAI_FUNCTIONS
+            if isinstance(llm, ChatOpenAI)
+            else AgentType.ZERO_SHOT_REACT_DESCRIPTION,
         )
     except ValueError:
         st.error("No valid dataset selected.")
@@ -135,21 +128,9 @@ def main():
     if query := st.chat_input("Ask me a question!"):
         st.chat_message("user", avatar="🤓").write(query)
         with st.chat_message("assistant"):
-            response_placeholder = st.empty()
-            agent_thoughts_placeholder = st.status("🤔 Pensando...", expanded=True)
-            try:
-                asyncio.run(
-                    answer_question(
-                        query,
-                        agent_executor,
-                        response_placeholder,
-                        agent_thoughts_placeholder,
-                    )
-                )
-            except Exception as e:
-                print(
-                    f"An error occurred: {e}. Try again or reload the page by pressing `R`."
-                )
+            response = agent_executor.invoke(query)
+            st.write(response["output"])
+            st.expander("Show intermediate steps").write(response["intermediate_steps"])
 
 
 if __name__ == "__main__":
