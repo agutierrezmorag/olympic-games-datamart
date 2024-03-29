@@ -120,6 +120,7 @@ def main():
             agent_type=AgentType.OPENAI_FUNCTIONS
             if isinstance(llm, ChatOpenAI)
             else AgentType.ZERO_SHOT_REACT_DESCRIPTION,
+            handle_parsing_errors=True,
         )
     except ValueError:
         st.error("No valid dataset selected.")
