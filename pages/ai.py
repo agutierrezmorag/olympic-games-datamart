@@ -142,7 +142,9 @@ def main():
                 st.write(response["output"])
                 with st.expander("🧠 Show train of thought"):
                     for step in response["intermediate_steps"]:
-                        st.write(f"💡 **Thought:** {step[0].log.split('Thought: ')[1]}")
+                        st.write(
+                            f"💡 **Thought:** {step[0].log.split('Thought: ')[1].split('Action: ')[0]}"
+                        )
                         st.markdown(f"🛠️ **Action:** {step[0].tool}")
                         st.write(f"📥 **Action Input:** {step[0].tool_input}")
                         st.write(f"✨ **Result:** {step[1]}")
