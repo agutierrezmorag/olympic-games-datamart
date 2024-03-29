@@ -128,7 +128,6 @@ def main():
             agent_type=AgentType.OPENAI_FUNCTIONS
             if isinstance(llm, ChatOpenAI)
             else AgentType.ZERO_SHOT_REACT_DESCRIPTION,
-            handle_parsing_errors=True,
         )
     except ValueError:
         st.error("No valid dataset selected.")
@@ -137,9 +136,16 @@ def main():
     if query := st.chat_input("Ask me a question!"):
         st.chat_message("user", avatar="🤓").write(query)
         with st.chat_message("assistant"):
-            response = agent_executor.invoke(query)
-            st.write(response["output"])
-            st.expander("Show intermediate steps").write(response["intermediate_steps"])
+            try:
+                response = agent_executor.invoke(query)
+                st.write(response["output"])
+                st.expander("Show intermediate steps").write(
+                    response["intermediate_steps"]
+                )
+            except Exception as e:
+                st.error(
+                    f"An error occurred: {e}. Try again or reload the page by pressing `R`."
+                )
 
 
 if __name__ == "__main__":
