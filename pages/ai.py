@@ -115,6 +115,7 @@ def main():
     )
 
     msgs = StreamlitChatMessageHistory()
+    lg_client = get_langsmith_client()
 
     with st.sidebar:
         st.header("LLM")
@@ -160,9 +161,18 @@ def main():
         with st.chat_message("ai", avatar="📋"):
             try:
                 with st.spinner("Thinking..."):
-                    response = agent_executor.invoke(query)
-                msgs.add_ai_message(response["output"])
+                    with tracing_v2_enabled() as cb:
+                        response = agent_executor.invoke(query)
+                        url = cb.get_run_url()
+                msgs.add_ai_message(
+                    f"{response['output']}\n\n[🔗 View run details]({url})"
+                )
                 st.write(response["output"])
+                st.link_button(
+                    "🔗 View run details",
+                    url,
+                    help="View LLM call details in Langsmith",
+                )
 
                 with st.expander("🧠 Show train of thought"):
                     for step in response["intermediate_steps"]:
