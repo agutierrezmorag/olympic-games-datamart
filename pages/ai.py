@@ -115,7 +115,7 @@ def main():
     )
 
     msgs = StreamlitChatMessageHistory()
-    lg_client = get_langsmith_client()
+    lg_client = get_langsmith_client()  # noqa: F841
 
     with st.sidebar:
         st.header("LLM")
