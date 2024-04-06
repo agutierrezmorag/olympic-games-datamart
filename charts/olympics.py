@@ -331,15 +331,3 @@ def get_olympics_charts(data):
             labels={"x": "Ciudad", "y": "Número de Juegos Olímpicos"},
         )
         st.plotly_chart(fig)
-
-    # Bar chart showing the countries that have never won a medal
-    with col1:
-        no_medal_countries = data[data["Medalla"].isna()]["NOC"].value_counts()
-        fig = px.bar(
-            no_medal_countries,
-            x=no_medal_countries.index,
-            y=no_medal_countries.values,
-            title="Países que nunca han ganado una medalla",
-            labels={"x": "País", "y": "Número de Atletas"},
-        )
-        st.plotly_chart(fig)
