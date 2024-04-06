@@ -19,6 +19,42 @@ def get_olympics_charts(data):
         fig.update_traces(textinfo="label+value")
         st.plotly_chart(fig)
 
+    # Create a pie chart to show the distribution of athletes across different Olympic seasons
+    with col2:
+        season_distribution = data["Temporada"].value_counts().reset_index()
+        season_distribution.columns = ["Temporada", "Count"]
+
+        fig = px.pie(
+            season_distribution,
+            names="Temporada",
+            values="Count",
+            title="Distribución de atletas por temporada olímpica",
+            labels={"Season": "Temporada", "Count": "Número de atletas"},
+        )
+
+        fig.update_traces(textinfo="label+value")
+        st.plotly_chart(fig)
+
+    # Create a bar chart to show the total number of medals won by each country
+    with col1:
+        medal_distribution = (
+            data[data["Medalla"].notna()]["NOC"].value_counts().reset_index()
+        )
+        medal_distribution.columns = ["NOC", "Count"]
+
+        fig = px.bar(
+            medal_distribution,
+            x="NOC",
+            y="Count",
+            title="Medallas ganadas por país",
+            labels={"NOC": "País", "Count": "Número de medallas"},
+            text_auto=True,
+            color="Count",
+            color_continuous_scale=px.colors.sequential.Viridis,
+        )
+
+        st.plotly_chart(fig)
+
     # Create a choropleth map to show the distribution of athletes by country
     with col2:
         country_distribution = data["NOC"].value_counts().reset_index()
