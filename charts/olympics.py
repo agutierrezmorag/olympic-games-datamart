@@ -1,6 +1,9 @@
+import matplotlib.pyplot as plt
 import pandas as pd
 import plotly.express as px
+import seaborn as sns
 import streamlit as st
+from sklearn.linear_model import LogisticRegression
 
 
 @st.cache_data
@@ -168,6 +171,31 @@ def get_olympics_charts(data):
 
         st.plotly_chart(fig)
 
+    # Clean data
+    cleaned_data = data.dropna(subset=["Altura", "Peso", "Medalla"])
+
+    # Create 'Medal_Won' column
+    cleaned_data["Medal_Won"] = cleaned_data["Medalla"].notnull().astype(int)
+
+    # Create scatter plots
+    sns.scatterplot(x="Altura", y="Medal_Won", data=cleaned_data)
+    plt.show()
+
+    sns.scatterplot(x="Peso", y="Medal_Won", data=cleaned_data)
+    plt.show()
+
+    # Perform logistic regression
+    X = cleaned_data[["Altura", "Peso"]]
+    y = cleaned_data["Medal_Won"]
+
+    log_reg = LogisticRegression().fit(X, y)
+
+    # Print coefficients
+    st.write("Height coefficient:", log_reg.coef_[0][0])
+    st.write("Weight coefficient:", log_reg.coef_[0][1])
+
+
+def ww2_charts(data):
     st.markdown("## :red[Segunda Guerra Mundial]")
     st.markdown(
         "Analisis de los países involucrados en la Segunda Guerra Mundial. El periodo de la Segunda Guerra Mundial se considera de 1939 a 1945 y se encuentra resaltado en los gráficos a continuación."
