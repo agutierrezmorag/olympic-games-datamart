@@ -133,3 +133,36 @@ def get_olympics_charts(data):
         )
 
         st.plotly_chart(fig)
+
+    # Create a grouped bar chart to show the distribution of medal types within each sport for male and female athletes
+    with col1:
+        medal_distribution = (
+            data[data["Medalla"].isin(["Bronce", "Plata", "Oro"])]
+            .groupby(["Deporte", "Sexo", "Medalla"])["Medalla"]
+            .count()
+            .unstack()
+            .reset_index()
+        )
+        medal_distribution.columns = ["Deporte", "Sexo", "Bronce", "Plata", "Oro"]
+        medal_distribution["Total"] = medal_distribution[
+            ["Bronce", "Plata", "Oro"]
+        ].sum(axis=1)
+        medal_distribution = medal_distribution.sort_values("Total", ascending=False)
+
+        fig = px.bar(
+            medal_distribution,
+            x="Deporte",
+            y=["Bronce", "Plata", "Oro"],
+            color="Sexo",
+            title="Distribución de tipos de medallas dentro de cada deporte por género",
+            labels={
+                "value": "Número de medallas",
+                "variable": "Tipo de medalla",
+                "Deporte": "Deporte",
+                "Sexo": "Género",
+            },
+            barmode="group",
+            color_discrete_map={"M": "sky blue", "F": "pink"},
+        )
+
+        st.plotly_chart(fig)
