@@ -8,11 +8,13 @@ def get_olympics_charts(data):
     st.markdown("## :blue[Otros gráficos de interés]")
     col1, col2 = st.columns(2)
     with col1:
-        fig = px.pie(data, names="Sex", title="Distribución de Sexo")
+        fig = px.pie(data, names="Sexo", title="Distribución de Sexo")
         st.plotly_chart(fig)
 
     with col2:
-        medal_count = data.groupby("NOC")["Medal"].count().sort_values(ascending=False)
+        medal_count = (
+            data.groupby("NOC")["Medalla"].count().sort_values(ascending=False)
+        )
         fig = px.bar(
             medal_count,
             x=medal_count.index,
@@ -25,22 +27,22 @@ def get_olympics_charts(data):
 
     with col1:
         medals_by_year_country = (
-            data[data["Medal"].notna()]
-            .groupby(["Year", "NOC"])["Medal"]
+            data[data["Medalla"].notna()]
+            .groupby(["Año", "NOC"])["Medalla"]
             .count()
             .reset_index()
         )
         fig = px.line(
             medals_by_year_country,
-            x="Year",
-            y="Medal",
+            x="Año",
+            y="Medalla",
             color="NOC",
             title="Medallas Ganadas por País a lo Largo del Tiempo",
         )
         st.plotly_chart(fig)
 
     with col2:
-        athlete_count = data.groupby("Year")["ID"].nunique()
+        athlete_count = data.groupby("Año")["ID"].nunique()
         fig = px.line(
             athlete_count,
             x=athlete_count.index,
@@ -51,20 +53,20 @@ def get_olympics_charts(data):
         st.plotly_chart(fig)
 
     with col1:
-        gender_count = data.groupby(["Year", "Sex"])["ID"].nunique().unstack()
+        gender_count = data.groupby(["Año", "Sexo"])["ID"].nunique().unstack()
         fig = px.area(
             gender_count,
             labels={
                 "value": "Número de Atletas",
                 "variable": "Sexo",
-                "Year": "Año",
+                "Año": "Año",
             },
             title="Distribución de Género a lo Largo del Tiempo",
         )
         st.plotly_chart(fig)
 
     with col2:
-        medals_by_sex = data[data["Medal"].notna()].groupby("Sex")["Medal"].count()
+        medals_by_sex = data[data["Medalla"].notna()].groupby("Sexo")["Medalla"].count()
         fig = px.bar(
             medals_by_sex,
             x=medals_by_sex.index,
@@ -88,7 +90,7 @@ def get_olympics_charts(data):
 
     # Line chart showing the trend of the total number of medals won by year
     with col2:
-        medals_by_year = data[data["Medal"].notna()].groupby("Year")["Medal"].count()
+        medals_by_year = data[data["Medal"].notna()].groupby("Año")["Medalla"].count()
         fig = px.line(
             medals_by_year,
             x=medals_by_year.index,
@@ -100,7 +102,7 @@ def get_olympics_charts(data):
 
     # Pie chart showing the distribution of different types of medals
     with col1:
-        medal_types = data["Medal"].value_counts()
+        medal_types = data["Medalla"].value_counts()
         fig = px.pie(
             medal_types,
             names=medal_types.index,
@@ -112,12 +114,15 @@ def get_olympics_charts(data):
     # Scatter plot showing the relationship between the year and the number of medals won
     with col2:
         medals_by_year = (
-            data[data["Medal"].notna()].groupby("Year")["Medal"].count().reset_index()
+            data[data["Medalla"].notna()]
+            .groupby("Año")["Medalla"]
+            .count()
+            .reset_index()
         )
         fig = px.scatter(
             medals_by_year,
-            x="Year",
-            y="Medal",
+            x="Año",
+            y="Medalla",
             labels={"x": "Año", "y": "Número de Medallas"},
             title="Relación entre el año y el número de medallas ganadas",
         )
@@ -126,7 +131,7 @@ def get_olympics_charts(data):
     # Bar chart showing the top 10 athletes with the most medals
     with col1:
         athlete_medal_count = (
-            data[data["Medal"].notna()]["Name"].value_counts().head(10)
+            data[data["Medalla"].notna()]["Nombre"].value_counts().head(10)
         )
         fig = px.bar(
             athlete_medal_count,
@@ -139,7 +144,7 @@ def get_olympics_charts(data):
 
     # Line chart showing the trend of the total number of athletes participating each year
     with col2:
-        athletes_by_year = data.groupby("Year")["ID"].nunique()
+        athletes_by_year = data.groupby("Año")["ID"].nunique()
         fig = px.line(
             athletes_by_year,
             x=athletes_by_year.index,
@@ -151,7 +156,7 @@ def get_olympics_charts(data):
 
     # Pie chart showing the distribution of athletes by sport
     with col1:
-        sport_distribution = data["Sport"].value_counts().head(10)
+        sport_distribution = data["Deporte"].value_counts().head(10)
         fig = px.pie(
             sport_distribution,
             names=sport_distribution.index,
@@ -163,12 +168,15 @@ def get_olympics_charts(data):
     # Scatter plot showing the relationship between the age of athletes and the number of medals they won
     with col2:
         athlete_age_medals = (
-            data[data["Medal"].notna()].groupby("Age")["Medal"].count().reset_index()
+            data[data["Medalla"].notna()]
+            .groupby("Edad")["Medalla"]
+            .count()
+            .reset_index()
         )
         fig = px.scatter(
             athlete_age_medals,
-            x="Age",
-            y="Medal",
+            x="Edad",
+            y="Medalla",
             labels={"x": "Edad", "y": "Número de Medallas"},
             title="Relación entre la edad de los atletas y el número de medallas que ganaron",
         )
@@ -176,7 +184,9 @@ def get_olympics_charts(data):
 
     # Bar chart showing the top 10 sports with the most medals
     with col1:
-        sport_medal_count = data[data["Medal"].notna()]["Sport"].value_counts().head(10)
+        sport_medal_count = (
+            data[data["Medalla"].notna()]["Deporte"].value_counts().head(10)
+        )
         fig = px.bar(
             sport_medal_count,
             x=sport_medal_count.index,
@@ -188,7 +198,7 @@ def get_olympics_charts(data):
 
     # Line chart showing the trend of the total number of sports participated in each year
     with col2:
-        sports_by_year = data.groupby("Year")["Sport"].nunique()
+        sports_by_year = data.groupby("Año")["Deporte"].nunique()
         fig = px.line(
             sports_by_year,
             x=sports_by_year.index,
@@ -201,7 +211,7 @@ def get_olympics_charts(data):
     # Pie chart showing the distribution of medals by sport
     with col1:
         medal_sport_distribution = (
-            data[data["Medal"].notna()]["Sport"].value_counts().head(10)
+            data[data["Medalla"].notna()]["Deporte"].value_counts().head(10)
         )
         fig = px.pie(
             medal_sport_distribution,
@@ -214,12 +224,15 @@ def get_olympics_charts(data):
     # Scatter plot showing the relationship between the number of sports and the number of medals won
     with col2:
         sport_medal_relation = (
-            data[data["Medal"].notna()].groupby("Sport")["Medal"].count().reset_index()
+            data[data["Medalla"].notna()]
+            .groupby("Deporte")["Medalla"]
+            .count()
+            .reset_index()
         )
         fig = px.scatter(
             sport_medal_relation,
-            x="Sport",
-            y="Medal",
+            x="Deporte",
+            y="Medalla",
             labels={"x": "Deporte", "y": "Número de Medallas"},
             title="Relación entre el número de deportes y el número de medallas ganadas",
         )
@@ -227,7 +240,7 @@ def get_olympics_charts(data):
 
     # Bar chart showing the distribution of athletes by season
     with col1:
-        season_distribution = data["Season"].value_counts()
+        season_distribution = data["Temporada"].value_counts()
         fig = px.bar(
             season_distribution,
             x=season_distribution.index,
@@ -241,8 +254,8 @@ def get_olympics_charts(data):
     with col2:
         fig = px.scatter(
             data,
-            x="Height",
-            y="Weight",
+            x="Altura",
+            y="Peso",
             labels={"x": "Altura (cm)", "y": "Peso (kg)"},
             title="Relación entre la altura y el peso de los atletas",
         )
@@ -250,11 +263,11 @@ def get_olympics_charts(data):
 
     # Line chart showing the trend of the average age of athletes over time
     with col1:
-        average_age_by_year = data.groupby("Year")["Age"].mean().reset_index()
+        average_age_by_year = data.groupby("Año")["Edad"].mean().reset_index()
         fig = px.line(
             average_age_by_year,
-            x="Year",
-            y="Age",
+            x="Año",
+            y="Edad",
             labels={"x": "Año", "y": "Edad Promedio de los Atletas"},
             title="Tendencia de la edad promedio de los atletas a lo largo del tiempo",
         )
@@ -262,7 +275,7 @@ def get_olympics_charts(data):
 
     # Bar chart showing the top 10 teams with the most athletes
     with col2:
-        team_athlete_count = data["Team"].value_counts().head(10)
+        team_athlete_count = data["Equipo"].value_counts().head(10)
         fig = px.bar(
             team_athlete_count,
             x=team_athlete_count.index,
@@ -274,7 +287,7 @@ def get_olympics_charts(data):
 
     # Pie chart showing the distribution of events
     with col1:
-        event_distribution = data["Event"].value_counts().head(10)
+        event_distribution = data["Evento"].value_counts().head(10)
         fig = px.pie(
             event_distribution,
             names=event_distribution.index,
@@ -285,11 +298,11 @@ def get_olympics_charts(data):
 
     # Scatter plot showing the relationship between the year and the number of events
     with col2:
-        events_by_year = data.groupby("Year")["Event"].nunique().reset_index()
+        events_by_year = data.groupby("Año")["Evento"].nunique().reset_index()
         fig = px.scatter(
             events_by_year,
-            x="Year",
-            y="Event",
+            x="Año",
+            y="Evento",
             labels={"x": "Año", "y": "Número de Eventos"},
             title="Relación entre el año y el número de eventos",
         )
@@ -297,7 +310,7 @@ def get_olympics_charts(data):
 
     # Pie chart showing the distribution of events by season
     with col1:
-        season_distribution = data["Season"].value_counts()
+        season_distribution = data["Temporada"].value_counts()
         fig = px.pie(
             season_distribution,
             names=season_distribution.index,
@@ -308,7 +321,7 @@ def get_olympics_charts(data):
 
     # Bar chart showing the top 10 cities with the most hosted Olympics
     with col2:
-        unique_games = data.drop_duplicates(subset=["Games", "City"])
+        unique_games = data.drop_duplicates(subset=["Ciudad"])
         city_distribution = unique_games["City"].value_counts().nlargest(10)
         fig = px.bar(
             city_distribution,
@@ -321,7 +334,7 @@ def get_olympics_charts(data):
 
     # Bar chart showing the countries that have never won a medal
     with col1:
-        medal_countries = data[data["Medal"].notna()]["NOC"].unique()
+        medal_countries = data[data["Medalla"].notna()]["NOC"].unique()
         no_medal_countries = data.loc[
             ~data["NOC"].isin(medal_countries), "NOC"
         ].value_counts()
