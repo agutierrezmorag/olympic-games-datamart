@@ -101,7 +101,7 @@ def main():
     with st.sidebar:
         # Define the datasets and their corresponding titles and qualitative variables
         chosen_datasets = {
-            "🏅 Olympics": "olympics.csv",
+            "🏅 Olympics": "olympics_spanish.csv",
             "🎓 Schooling": "expected-years-of-schooling.csv",
             "💰 Income": "gross-national-income-per-capita.csv",
             "🌍 Human Development Index (HDI)": "human-development-index.csv",
