@@ -1,3 +1,4 @@
+import pandas as pd
 import plotly.express as px
 import streamlit as st
 
@@ -165,4 +166,109 @@ def get_olympics_charts(data):
             color_discrete_map={"M": "sky blue", "F": "pink"},
         )
 
+        st.plotly_chart(fig)
+
+    st.markdown("## :red[Segunda Guerra Mundial]")
+    st.markdown(
+        "Analisis de los países involucrados en la Segunda Guerra Mundial. El periodo de la Segunda Guerra Mundial se considera de 1939 a 1945 y se encuentra resaltado en los gráficos a continuación."
+    )
+    xcol1, xcol2, xcol3 = st.columns(3)
+    # Create a list of the countries that were involved in WWII as Axis powers
+    axis_countries = ["GER", "ITA", "JPN", "HUN", "ROM", "BUL", "FIN"]
+
+    # Create a list of the countries that were involved in WWII as Allies
+    allies_countries = [
+        "USA",
+        "GBR",
+        "FRA",
+        "USSR",
+        "CHN",
+        "CAN",
+        "AUS",
+        "NZL",
+        "IND",
+        "RSA",
+        "EGY",
+        "BRA",
+        "MEX",
+        "ARG",
+        "BEL",
+        "NED",
+        "NOR",
+        "POL",
+        "GRE",
+        "YUG",
+    ]
+
+    # Create a list of the countries that were neutral during WWII
+    neutral_countries = ["SWE", "SWI", "SPA", "POR", "IRE", "TUR"]
+
+    # Group the data by country and Olympic year
+    grouped_data = (
+        data.groupby(["NOC", "Año"])
+        .agg({"Medalla": "count", "ID": pd.Series.nunique})
+        .reset_index()
+    )
+    grouped_data.columns = ["NOC", "Año", "Medallas", "Atletas"]
+
+    # Filter the data to consider only up to 1994
+    grouped_data = grouped_data[grouped_data["Año"] <= 1993]
+
+    # Create separate dataframes for Axis, Allies, and Neutral countries
+    axis_data = grouped_data[grouped_data["NOC"].isin(axis_countries)]
+    allies_data = grouped_data[grouped_data["NOC"].isin(allies_countries)]
+    neutral_data = grouped_data[grouped_data["NOC"].isin(neutral_countries)]
+
+    # Define a list of shapes to represent the WWII period
+    shapes = [
+        dict(
+            type="rect",
+            xref="x",
+            yref="paper",
+            x0=1939,
+            x1=1945,
+            y0=0,
+            y1=1,
+            fillcolor="LightSalmon",
+            opacity=0.5,
+            layer="below",
+            line_width=0,
+        )
+    ]
+    with xcol1:
+        # Create line plots to visualize the performance metrics of the WWII-involved countries over time
+        fig = px.line(
+            axis_data,
+            x="Año",
+            y="Medallas",
+            color="NOC",
+            title="Rendimiento de los países del Eje a lo largo del tiempo",
+        )
+
+        # Add the shapes to the layout of each figure
+        fig.update_layout(shapes=shapes)
+        st.plotly_chart(fig)
+
+    with xcol2:
+        fig = px.line(
+            allies_data,
+            x="Año",
+            y="Medallas",
+            color="NOC",
+            title="Rendimiento de los países aliados a lo largo del tiempo",
+        )
+        # Add the shapes to the layout of each figure
+        fig.update_layout(shapes=shapes)
+        st.plotly_chart(fig)
+
+    with xcol3:
+        fig = px.line(
+            neutral_data,
+            x="Año",
+            y="Medallas",
+            color="NOC",
+            title="Rendimiento de los países neutrales a lo largo del tiempo",
+        )
+        # Add the shapes to the layout of each figure
+        fig.update_layout(shapes=shapes)
         st.plotly_chart(fig)
