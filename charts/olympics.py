@@ -16,7 +16,7 @@ def get_olympics_charts(data):
             title="Distribución de género",
             labels={"names": "Sexo", "values": "Total"},
         )
-        fig.update_traces(textinfo="label+value")
+        fig.update_traces(textinfo="label+percent")
         st.plotly_chart(fig)
 
     # Create a pie chart to show the distribution of athletes across different Olympic seasons
@@ -32,7 +32,7 @@ def get_olympics_charts(data):
             labels={"Season": "Temporada", "Count": "Número de atletas"},
         )
 
-        fig.update_traces(textinfo="label+value")
+        fig.update_traces(textinfo="label+percent")
         st.plotly_chart(fig)
 
     # Create a bar chart to show the total number of medals won by each country
@@ -67,4 +67,35 @@ def get_olympics_charts(data):
             labels={"NOC": "Pais", "Count": "Número de atletas"},
             color_continuous_scale=px.colors.sequential.Greens,
         )
+        st.plotly_chart(fig)
+
+    # Create a bar chart to show the distribution of medal types within each sport
+    with col1:
+        medal_distribution = (
+            data[data["Medalla"].isin(["Bronce", "Plata", "Oro"])]
+            .groupby(["Deporte", "Medalla"])["Medalla"]
+            .count()
+            .unstack()
+            .reset_index()
+        )
+        medal_distribution.columns = ["Deporte", "Bronce", "Plata", "Oro"]
+        medal_distribution["Total"] = medal_distribution[
+            ["Bronce", "Plata", "Oro"]
+        ].sum(axis=1)
+        medal_distribution = medal_distribution.sort_values("Total", ascending=False)
+
+        fig = px.bar(
+            medal_distribution,
+            x="Deporte",
+            y=["Bronce", "Plata", "Oro"],
+            title="Distribución de tipos de medallas dentro de cada deporte",
+            labels={
+                "value": "Número de medallas",
+                "variable": "Tipo de medalla",
+                "Deporte": "Deporte",
+            },
+            barmode="stack",
+            text_auto=True,
+        )
+
         st.plotly_chart(fig)
