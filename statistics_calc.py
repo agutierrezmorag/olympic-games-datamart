@@ -62,10 +62,13 @@ def descriptors(data):
     iqr = numeric_cols.apply(lambda x: x.quantile(0.75) - x.quantile(0.25))
     iqr = pd.DataFrame(iqr, columns=["IQR"]).T
 
+    # Calculate total values for numeric columns only
+    # total_values = pd.DataFrame(numeric_cols.count(), columns=["total values"]).T
+
     # Get the description for all columns
     desc = data.describe()
 
-    # Append skewness and kurtosis to the description
+    # Append skewness, kurtosis, IQR, and total values to the description
     desc = pd.concat([desc, skewness, kurtosis, iqr])
 
     return desc
