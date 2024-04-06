@@ -1,13 +1,13 @@
-import matplotlib.pyplot as plt
 import pandas as pd
 import plotly.express as px
-import seaborn as sns
 import streamlit as st
 from sklearn.linear_model import LogisticRegression
 
 
 @st.cache_data
 def get_olympics_charts(data):
+    logistic_regression(data)
+
     st.markdown("## :blue[Otros gráficos de interés]")
     col1, col2 = st.columns(2)
 
@@ -171,28 +171,87 @@ def get_olympics_charts(data):
 
         st.plotly_chart(fig)
 
-    # Clean data
-    cleaned_data = data.dropna(subset=["Altura", "Peso", "Medalla"])
+    # Create a line plot to show the number of participants in each sport over time
+    with col2:
+        sport_participation = (
+            data.groupby(["Año", "Deporte"])["Deporte"]
+            .count()
+            .reset_index(name="Count")
+        )
+        fig = px.line(
+            sport_participation,
+            x="Año",
+            y="Count",
+            color="Deporte",
+            title="Participación en cada deporte a lo largo del tiempo",
+        )
+        st.plotly_chart(fig)
 
+    # Create a bar chart to show the number of participants in the top 25 events in the most recent year
+    with col1:
+        recent_year = data["Año"].max()
+        event_participation = (
+            data[data["Año"] == recent_year]["Evento"]
+            .value_counts()
+            .nlargest(25)  # Select only the top 25 events
+            .reset_index(name="Atletas")
+        )
+        event_participation.columns = ["Evento", "Atletas"]
+        fig = px.bar(
+            event_participation,
+            x="Evento",
+            y="Atletas",
+            text_auto=True,
+            title=f"Participación en los 25 eventos principales en {recent_year}",
+        )
+        st.plotly_chart(fig)
+
+    ww2_charts(data)
+
+
+def logistic_regression(data):
     # Create 'Medal_Won' column
-    cleaned_data["Medal_Won"] = cleaned_data["Medalla"].notnull().astype(int)
+    data["Medal_Won"] = data["Medalla"].notnull().astype(int)
 
-    # Create scatter plots
-    sns.scatterplot(x="Altura", y="Medal_Won", data=cleaned_data)
-    plt.show()
+    # Clean data
+    cleaned_data = data.dropna(subset=["Altura", "Peso"])
 
-    sns.scatterplot(x="Peso", y="Medal_Won", data=cleaned_data)
-    plt.show()
-
-    # Perform logistic regression
-    X = cleaned_data[["Altura", "Peso"]]
+    # Perform logistic regression with BMI
+    X = cleaned_data[["Altura", "Peso", "IMC"]]
     y = cleaned_data["Medal_Won"]
 
     log_reg = LogisticRegression().fit(X, y)
 
     # Print coefficients
-    st.write("Height coefficient:", log_reg.coef_[0][0])
-    st.write("Weight coefficient:", log_reg.coef_[0][1])
+    height_coef = log_reg.coef_[0][0]
+    weight_coef = log_reg.coef_[0][1]
+    imc_coef = log_reg.coef_[0][2]
+
+    st.markdown(f"""
+        ## Coeficientes de la Regresión Logística
+        
+        - **Coeficiente de Altura:** {height_coef:.4f}
+            - Por cada unidad que aumenta la altura, las log-odds de ganar una medalla {'aumentan' if height_coef > 0 else 'disminuyen'} en {abs(height_coef):.4f}, asumiendo que todas las demás características permanecen constantes.
+        
+        - **Coeficiente de Peso:** {weight_coef:.4f}
+            - Por cada unidad que aumenta el peso, las log-odds de ganar una medalla {'aumentan' if weight_coef > 0 else 'disminuyen'} en {abs(weight_coef):.4f}, asumiendo que todas las demás características permanecen constantes.
+    
+        - **Coeficiente de IMC:** {imc_coef:.4f}
+            - Por cada unidad que aumenta el IMC, las log-odds de ganar una medalla {'aumentan' if imc_coef > 0 else 'disminuyen'} en {abs(imc_coef):.4f}, asumiendo que todas las demás características permanecen constantes.
+        """)
+
+    st.markdown("""
+        ### ¿Qué son los Log-Odds?
+
+        Los log-odds, también conocidos como logits, son una forma de expresar probabilidades.
+
+        - Si tienes una probabilidad, la "odds" (o posibilidad) es la probabilidad de que ocurra un evento dividida por la probabilidad de que no ocurra.
+        - El "log-odds" es simplemente el logaritmo natural de las odds.
+
+        En el contexto de la regresión logística, usamos log-odds porque nos permiten modelar una variable de respuesta binaria con una combinación lineal de predictores. Esto significa que aunque estamos modelando una probabilidad (que está limitada entre 0 y 1), los log-odds pueden variar de -infinito a +infinito.
+
+        En resumen, los coeficientes de la regresión logística representan el cambio en los log-odds causado por una unidad de cambio en los predictores. En nuestro caso, los coeficientes de altura y peso representan cuánto cambian las log-odds de ganar una medalla cuando la altura o el peso cambian en una unidad.
+    """)
 
 
 def ww2_charts(data):
