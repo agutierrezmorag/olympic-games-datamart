@@ -99,3 +99,37 @@ def get_olympics_charts(data):
         )
 
         st.plotly_chart(fig)
+
+    # Create a bar chart to show the distribution of medal types within each country
+    with col2:
+        medal_distribution = (
+            data[data["Medalla"].isin(["Bronce", "Plata", "Oro"])]
+            .groupby(["NOC", "Medalla"])["Medalla"]
+            .count()
+            .unstack()
+            .reset_index()
+        )
+        medal_distribution.columns = ["NOC", "Bronce", "Plata", "Oro"]
+        medal_distribution["Total"] = medal_distribution[
+            ["Bronce", "Plata", "Oro"]
+        ].sum(axis=1)
+        medal_distribution = medal_distribution.sort_values("Total", ascending=False)
+
+        # Select only the top 25 countries
+        medal_distribution = medal_distribution.head(25)
+
+        fig = px.bar(
+            medal_distribution,
+            x="NOC",
+            y=["Bronce", "Plata", "Oro"],
+            title="Distribución de tipos de medallas por país (Top 25)",
+            labels={
+                "value": "Número de medallas",
+                "variable": "Tipo de medalla",
+                "NOC": "País",
+            },
+            barmode="stack",
+            text_auto=True,
+        )
+
+        st.plotly_chart(fig)
