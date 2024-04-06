@@ -322,7 +322,7 @@ def get_olympics_charts(data):
     # Bar chart showing the top 10 cities with the most hosted Olympics
     with col2:
         unique_games = data.drop_duplicates(subset=["Ciudad"])
-        city_distribution = unique_games["City"].value_counts().nlargest(10)
+        city_distribution = unique_games["Ciudad"].value_counts().nlargest(10)
         fig = px.bar(
             city_distribution,
             x=city_distribution.index,
