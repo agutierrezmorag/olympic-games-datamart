@@ -90,7 +90,7 @@ def get_olympics_charts(data):
 
     # Line chart showing the trend of the total number of medals won by year
     with col2:
-        medals_by_year = data[data["Medal"].notna()].groupby("Año")["Medalla"].count()
+        medals_by_year = data[data["Medalla"].notna()].groupby("Año")["Medalla"].count()
         fig = px.line(
             medals_by_year,
             x=medals_by_year.index,
