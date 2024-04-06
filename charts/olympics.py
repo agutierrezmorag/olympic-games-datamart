@@ -272,3 +272,43 @@ def get_olympics_charts(data):
         # Add the shapes to the layout of each figure
         fig.update_layout(shapes=shapes)
         st.plotly_chart(fig)
+
+    with xcol1:
+        # Create line plots to visualize the performance metrics of the WWII-involved countries over time
+        fig = px.line(
+            axis_data,
+            x="Año",
+            y="Atletas",
+            color="NOC",
+            title="Número de atletas de los países del Eje a lo largo del tiempo",
+        )
+
+        # Add the shapes to the layout of each figure
+        fig.update_layout(shapes=shapes)
+        st.plotly_chart(fig)
+
+    with xcol2:
+        fig = px.line(
+            allies_data,
+            x="Año",
+            y="Atletas",
+            color="NOC",
+            title="Número de atletas de los países aliados a lo largo del tiempo",
+        )
+
+        # Add the shapes to the layout of each figure
+        fig.update_layout(shapes=shapes)
+        st.plotly_chart(fig)
+
+    with xcol3:
+        fig = px.line(
+            neutral_data,
+            x="Año",
+            y="Atletas",
+            color="NOC",
+            title="Número de atletas de los países neutrales a lo largo del tiempo",
+        )
+
+        # Add the shapes to the layout of each figure
+        fig.update_layout(shapes=shapes)
+        st.plotly_chart(fig)
