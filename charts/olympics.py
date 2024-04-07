@@ -1,5 +1,6 @@
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go
 import streamlit as st
 from sklearn.linear_model import LogisticRegression
 
@@ -57,25 +58,69 @@ def get_olympics_charts(data):
 
         st.plotly_chart(fig)
 
-    # Create a dot chart showing the distribution of medals by age
+    # Create a dot chart showing the distribution of medals and athletes by age
     with col2:
-        age_distribution = (
+        # Calculate the distribution of medals by age
+        medal_distribution = (
             data[data["Medalla"].notna()]
             .groupby("Edad")["Medalla"]
             .count()
             .reset_index()
         )
-        fig = px.scatter(
-            age_distribution,
-            x="Edad",
-            y="Medalla",
-            title="Distribución de medallas por edad",
-            labels={"Edad": "Edad", "Medalla": "Número de medallas"},
-            text="Edad",
+
+        # Calculate the distribution of athletes by age
+        athlete_distribution = data.groupby("Edad")["ID"].nunique().reset_index()
+
+        # Create a figure
+        fig = go.Figure()
+
+        # Add a scatter trace for the distribution of medals by age
+        fig.add_trace(
+            go.Scatter(
+                x=medal_distribution["Edad"],
+                y=medal_distribution["Medalla"],
+                mode="markers",
+                name="Medallas",
+            )
         )
 
-        # Adjust the position of the text labels
-        fig.update_traces(textposition="top center")
+        # Add a scatter trace for the distribution of athletes by age
+        fig.add_trace(
+            go.Scatter(
+                x=athlete_distribution["Edad"],
+                y=athlete_distribution["ID"],
+                mode="markers",
+                name="Atletas",
+            )
+        )
+
+        # Add annotations for each marker
+        for i in range(len(medal_distribution)):
+            fig.add_annotation(
+                x=medal_distribution.loc[i, "Edad"],
+                y=medal_distribution.loc[i, "Medalla"],
+                text=str(int(medal_distribution.loc[i, "Edad"])),
+                showarrow=False,
+                font=dict(size=8),
+                yshift=10,
+            )
+        for i in range(len(athlete_distribution)):
+            fig.add_annotation(
+                x=athlete_distribution.loc[i, "Edad"],
+                y=athlete_distribution.loc[i, "ID"],
+                text=str(int(athlete_distribution.loc[i, "Edad"])),
+                showarrow=False,
+                font=dict(size=8),
+                yshift=10,
+            )
+
+        # Set the title and labels
+        fig.update_layout(
+            title="Distribución de medallas y atletas por edad",
+            xaxis_title="Edad",
+            yaxis_title="Número",
+            legend_title="Distribución",
+        )
 
         st.plotly_chart(fig)
 
