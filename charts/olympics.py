@@ -71,7 +71,11 @@ def get_olympics_charts(data):
             y="Medalla",
             title="Distribución de medallas por edad",
             labels={"Edad": "Edad", "Medalla": "Número de medallas"},
+            text="Edad",
         )
+
+        # Adjust the position of the text labels
+        fig.update_traces(textposition="top center")
 
         st.plotly_chart(fig)
 
