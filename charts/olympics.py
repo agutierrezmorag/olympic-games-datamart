@@ -369,34 +369,13 @@ def ww2_charts(data):
     )
     xcol1, xcol2, xcol3 = st.columns(3)
     # Create a list of the countries that were involved in WWII as Axis powers
-    axis_countries = ["GER", "ITA", "JPN", "HUN", "ROM", "BUL", "FIN"]
+    axis_countries = ["GER", "ITA", "JPN"]
 
     # Create a list of the countries that were involved in WWII as Allies
-    allies_countries = [
-        "USA",
-        "GBR",
-        "FRA",
-        "USSR",
-        "CHN",
-        "CAN",
-        "AUS",
-        "NZL",
-        "IND",
-        "RSA",
-        "EGY",
-        "BRA",
-        "MEX",
-        "ARG",
-        "BEL",
-        "NED",
-        "NOR",
-        "POL",
-        "GRE",
-        "YUG",
-    ]
+    allies_countries = ["USA", "GBR", "URS"]
 
     # Create a list of the countries that were neutral during WWII
-    neutral_countries = ["SWE", "SWI", "SPA", "POR", "IRE", "TUR"]
+    neutral_countries = ["SWE", "SUI", "ESP"]
 
     # Group the data by country and Olympic year
     grouped_data = (
@@ -430,80 +409,103 @@ def ww2_charts(data):
             line_width=0,
         )
     ]
+
+    # Define a color for each country
+    colors = {
+        "GER": "darkred",  # Germany
+        "ITA": "deepskyblue",  # Italy
+        "JPN": "gold",  # Japan
+        "USA": "darkgreen",  # USA
+        "GBR": "darkblue",  # Great Britain
+        "URS": "darkviolet",  # USSR
+        "SWE": "lightseagreen",  # Sweden
+        "SUI": "saddlebrown",  # Switzerland
+        "ESP": "darkorange",  # Spain
+    }
+
+    # Create line plots to visualize the performance metrics of the WWII-involved countries over time
     with xcol1:
-        # Create line plots to visualize the performance metrics of the WWII-involved countries over time
-        fig = px.line(
-            axis_data,
-            x="Año",
-            y="Medallas",
-            color="NOC",
+        fig = go.Figure()
+        for country in axis_countries:
+            country_data = axis_data[axis_data["NOC"] == country]
+            fig.add_trace(
+                go.Scatter(
+                    x=country_data["Año"],
+                    y=country_data["Medallas"],
+                    mode="lines",
+                    name=f"{country} Medallas",
+                    line=dict(dash="solid", color=colors.get(country, "blue")),
+                )
+            )
+            fig.add_trace(
+                go.Scatter(
+                    x=country_data["Año"],
+                    y=country_data["Atletas"],
+                    mode="lines",
+                    name=f"{country} Atletas",
+                    line=dict(dash="dash", color=colors.get(country, "blue")),
+                )
+            )
+        fig.update_layout(
+            shapes=shapes,
             title="Rendimiento de los países del Eje a lo largo del tiempo",
         )
-
-        # Add the shapes to the layout of each figure
-        fig.update_layout(shapes=shapes)
         st.plotly_chart(fig)
 
     with xcol2:
-        fig = px.line(
-            allies_data,
-            x="Año",
-            y="Medallas",
-            color="NOC",
+        fig = go.Figure()
+        for country in allies_countries:
+            country_data = allies_data[allies_data["NOC"] == country]
+            print(country)
+            fig.add_trace(
+                go.Scatter(
+                    x=country_data["Año"],
+                    y=country_data["Medallas"],
+                    mode="lines",
+                    name=f"{country} Medallas",
+                    line=dict(dash="solid", color=colors.get(country, "blue")),
+                )
+            )
+            fig.add_trace(
+                go.Scatter(
+                    x=country_data["Año"],
+                    y=country_data["Atletas"],
+                    mode="lines",
+                    name=f"{country} Atletas",
+                    line=dict(dash="dash", color=colors.get(country, "blue")),
+                )
+            )
+        fig.update_layout(
+            shapes=shapes,
             title="Rendimiento de los países aliados a lo largo del tiempo",
         )
-        # Add the shapes to the layout of each figure
-        fig.update_layout(shapes=shapes)
         st.plotly_chart(fig)
 
     with xcol3:
-        fig = px.line(
-            neutral_data,
-            x="Año",
-            y="Medallas",
-            color="NOC",
+        fig = go.Figure()
+        for country in neutral_countries:
+            country_data = neutral_data[neutral_data["NOC"] == country]
+            print(country)
+            fig.add_trace(
+                go.Scatter(
+                    x=country_data["Año"],
+                    y=country_data["Medallas"],
+                    mode="lines",
+                    name=f"{country} Medallas",
+                    line=dict(dash="solid", color=colors.get(country, "blue")),
+                )
+            )
+            fig.add_trace(
+                go.Scatter(
+                    x=country_data["Año"],
+                    y=country_data["Atletas"],
+                    mode="lines",
+                    name=f"{country} Atletas",
+                    line=dict(dash="dash", color=colors.get(country, "blue")),
+                )
+            )
+        fig.update_layout(
+            shapes=shapes,
             title="Rendimiento de los países neutrales a lo largo del tiempo",
         )
-        # Add the shapes to the layout of each figure
-        fig.update_layout(shapes=shapes)
-        st.plotly_chart(fig)
-
-    with xcol1:
-        # Create line plots to visualize the performance metrics of the WWII-involved countries over time
-        fig = px.line(
-            axis_data,
-            x="Año",
-            y="Atletas",
-            color="NOC",
-            title="Número de atletas de los países del Eje a lo largo del tiempo",
-        )
-
-        # Add the shapes to the layout of each figure
-        fig.update_layout(shapes=shapes)
-        st.plotly_chart(fig)
-
-    with xcol2:
-        fig = px.line(
-            allies_data,
-            x="Año",
-            y="Atletas",
-            color="NOC",
-            title="Número de atletas de los países aliados a lo largo del tiempo",
-        )
-
-        # Add the shapes to the layout of each figure
-        fig.update_layout(shapes=shapes)
-        st.plotly_chart(fig)
-
-    with xcol3:
-        fig = px.line(
-            neutral_data,
-            x="Año",
-            y="Atletas",
-            color="NOC",
-            title="Número de atletas de los países neutrales a lo largo del tiempo",
-        )
-
-        # Add the shapes to the layout of each figure
-        fig.update_layout(shapes=shapes)
         st.plotly_chart(fig)
