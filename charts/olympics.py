@@ -139,6 +139,30 @@ def get_olympics_charts(data):
 
         st.plotly_chart(fig)
 
+    # Display the oldest sports that are still played today in a line chart
+    with col2:
+        oldest_sports = data.groupby("Deporte")["Año"].min().reset_index()
+        latest_sports = data.groupby("Deporte")["Año"].max().reset_index()
+
+        # Merge the two dataframes
+        sports = pd.merge(oldest_sports, latest_sports, on="Deporte")
+
+        # Filter sports that are still played today
+        sports = sports[sports["Año_y"] == data["Año"].max()]
+
+        # Sort by the oldest year
+        sports = sports.sort_values("Año_x", ascending=True)
+
+        fig = px.line(
+            sports,
+            x="Año_x",
+            y="Deporte",
+            title="Deportes más antiguos que todavía se juegan hoy en día",
+            labels={"Deporte": "Deporte", "Año_x": "Primer año de competencia"},
+        )
+
+        st.plotly_chart(fig)
+
     # Create a bar chart to show the distribution of medal types within each country
     with col2:
         medal_distribution = (
