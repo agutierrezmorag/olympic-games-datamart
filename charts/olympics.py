@@ -7,6 +7,9 @@ from sklearn.linear_model import LogisticRegression
 
 @st.cache_data
 def get_olympics_charts(data):
+    # Assuming 'ID' is the unique identifier for each athlete
+    data = data.drop_duplicates(subset="ID")
+
     logistic_regression(data)
 
     st.markdown("## :blue[Otros gráficos de interés]")
@@ -21,7 +24,7 @@ def get_olympics_charts(data):
             title="Distribución de género",
             labels={"names": "Sexo", "values": "Total"},
         )
-        fig.update_traces(textinfo="label+percent")
+        fig.update_traces(textinfo="value+percent")
         st.plotly_chart(fig)
 
     # Create a pie chart to show the distribution of athletes across different Olympic seasons
@@ -37,7 +40,7 @@ def get_olympics_charts(data):
             labels={"Season": "Temporada", "Count": "Número de atletas"},
         )
 
-        fig.update_traces(textinfo="label+percent")
+        fig.update_traces(textinfo="value+percent")
         st.plotly_chart(fig)
 
     # Create a bar chart to show the total number of medals won by each country
