@@ -101,7 +101,7 @@ def get_olympics_charts(data):
                 y=medal_distribution.loc[i, "Medalla"],
                 text=str(int(medal_distribution.loc[i, "Edad"])),
                 showarrow=False,
-                font=dict(size=8),
+                font=dict(size=11),
                 yshift=10,
             )
         for i in range(len(athlete_distribution)):
@@ -110,7 +110,7 @@ def get_olympics_charts(data):
                 y=athlete_distribution.loc[i, "ID"],
                 text=str(int(athlete_distribution.loc[i, "Edad"])),
                 showarrow=False,
-                font=dict(size=8),
+                font=dict(size=11),
                 yshift=10,
             )
 
@@ -456,7 +456,6 @@ def ww2_charts(data):
         fig = go.Figure()
         for country in allies_countries:
             country_data = allies_data[allies_data["NOC"] == country]
-            print(country)
             fig.add_trace(
                 go.Scatter(
                     x=country_data["Año"],
@@ -485,7 +484,6 @@ def ww2_charts(data):
         fig = go.Figure()
         for country in neutral_countries:
             country_data = neutral_data[neutral_data["NOC"] == country]
-            print(country)
             fig.add_trace(
                 go.Scatter(
                     x=country_data["Año"],
