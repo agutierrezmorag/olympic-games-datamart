@@ -53,10 +53,45 @@ def get_olympics_charts(data):
             title="Medallas ganadas por país",
             labels={"NOC": "País", "Count": "Número de medallas"},
             text_auto=True,
-            color="Count",
-            color_continuous_scale=px.colors.sequential.Viridis,
         )
 
+        st.plotly_chart(fig)
+
+    # Create a dot chart showing the distribution of medals by age
+    with col2:
+        age_distribution = (
+            data[data["Medalla"].notna()]
+            .groupby("Edad")["Medalla"]
+            .count()
+            .reset_index()
+        )
+        fig = px.scatter(
+            age_distribution,
+            x="Edad",
+            y="Medalla",
+            title="Distribución de medallas por edad",
+            labels={"Edad": "Edad", "Medalla": "Número de medallas"},
+        )
+
+        st.plotly_chart(fig)
+
+    # Create a choropleth map to show the distribution of medals by country
+    with col1:
+        # Filter out rows where Medal is NaN
+        medal_data = data.dropna(subset=["Medalla"])
+
+        # Count the number of medals for each NOC
+        medal_distribution = medal_data["NOC"].value_counts().reset_index()
+        medal_distribution.columns = ["NOC", "Count"]
+
+        fig = px.choropleth(
+            medal_distribution,
+            locations="NOC",
+            color="Count",
+            title="Distribución de medallas por país",
+            labels={"NOC": "País", "Count": "Número de medallas"},
+            color_continuous_scale=px.colors.sequential.Greens,
+        )
         st.plotly_chart(fig)
 
     # Create a choropleth map to show the distribution of athletes by country
