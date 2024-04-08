@@ -136,7 +136,12 @@ def country_charts(data, og_data):
     # Create a choropleth map to show the distribution of medals by country
     with ccol1:
         # Filter out rows where Medal is NaN
-        medal_data = data.dropna(subset=["Medalla"])
+        medal_data = og_data.dropna(subset=["Medalla"])
+
+        # Drop duplicates for team events
+        medal_data = medal_data.drop_duplicates(
+            subset=["Año", "Temporada", "Ciudad", "Deporte", "Evento", "NOC", "Equipo"]
+        )
 
         # Count the number of medals for each NOC
         medal_distribution = medal_data["Región"].value_counts().reset_index()
