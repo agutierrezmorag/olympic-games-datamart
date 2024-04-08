@@ -87,7 +87,8 @@ def load_and_display_data(title, filename):
 
     if title == "🏅 Olympics (Spanish)":
         st.caption(
-            "📢 **Nota:** Puede haber más Comités Olímpicos Nacionales (NOCs) que países porque algunos territorios autónomos tienen sus propios NOCs. Por ejemplo, Puerto Rico, Guam o Hong Kong."
+            "📢 **Nota:** Puede haber más Comités Olímpicos Nacionales (NOCs) que países porque algunos territorios autónomos \
+            tienen sus propios NOCs. Por ejemplo, Puerto Rico, Guam o Hong Kong."
         )
 
         st.markdown("### Posible discrepancia de datos")
@@ -107,6 +108,7 @@ def load_and_display_data(title, filename):
         asegurar la integridad de sus registros, incluyendo la incorporación de correcciones y cambios retroactivos realizados por \
         el Comité Olímpico Internacional a lo largo de los años.
         """)
+
         get_olympics_charts(data)
     elif title == "🎓 Schooling":
         get_schooling_charts(data)
