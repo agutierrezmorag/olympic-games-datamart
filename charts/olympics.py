@@ -139,16 +139,16 @@ def country_charts(data, og_data):
         medal_data = data.dropna(subset=["Medalla"])
 
         # Count the number of medals for each NOC
-        medal_distribution = medal_data["Region"].value_counts().reset_index()
-        medal_distribution.columns = ["Region", "Count"]
+        medal_distribution = medal_data["Región"].value_counts().reset_index()
+        medal_distribution.columns = ["Región", "Count"]
 
         fig = px.choropleth(
             medal_distribution,
-            locations="Region",
+            locations="Región",
             locationmode="country names",
             color="Count",
             title="Distribución de medallas por país",
-            labels={"Region": "País", "Count": "Número de medallas"},
+            labels={"Región": "País", "Count": "Número de medallas"},
             color_continuous_scale=px.colors.sequential.algae,
         )
 
@@ -163,15 +163,15 @@ def country_charts(data, og_data):
 
     # Create a choropleth map to show the distribution of athletes by country
     with ccol2:
-        country_distribution = data["Region"].value_counts().reset_index()
-        country_distribution.columns = ["Region", "Count"]
+        country_distribution = data["Región"].value_counts().reset_index()
+        country_distribution.columns = ["Región", "Count"]
         fig = px.choropleth(
             country_distribution,
-            locations="Region",
+            locations="Región",
             locationmode="country names",
             color="Count",
             title="Distribución de atletas por país",
-            labels={"Region": "Pais", "Count": "Número de atletas"},
+            labels={"Región": "Pais", "Count": "Número de atletas"},
             color_continuous_scale=px.colors.sequential.algae,
         )
 
@@ -187,16 +187,19 @@ def country_charts(data, og_data):
     # Create a bar chart to show the total number of medals won by each country
     with ccol1:
         medal_distribution = (
-            data[data["Medalla"].notna()]["NOC"].value_counts().reset_index().head(25)
+            data[data["Medalla"].notna()]["Región"]
+            .value_counts()
+            .reset_index()
+            .head(25)
         )
-        medal_distribution.columns = ["NOC", "Count"]
+        medal_distribution.columns = ["Región", "Count"]
 
         fig = px.bar(
             medal_distribution,
-            x="NOC",
+            x="Región",
             y="Count",
             title="Medallas ganadas por país (Top 25)",
-            labels={"NOC": "País", "Count": "Número de medallas"},
+            labels={"Región": "País", "Count": "Número de medallas"},
             text_auto=True,
         )
 
@@ -204,14 +207,14 @@ def country_charts(data, og_data):
 
     # Create a bar chart for the top 25 countries with the most athletes
     with ccol2:
-        top_countries = data["NOC"].value_counts().head(25).reset_index()
-        top_countries.columns = ["NOC", "Count"]
+        top_countries = data["Región"].value_counts().head(25).reset_index()
+        top_countries.columns = ["Región", "Count"]
         fig = px.bar(
             top_countries,
-            x="NOC",
+            x="Región",
             y="Count",
             title="Top 25 países con más atletas",
-            labels={"NOC": "País", "Count": "Número de atletas"},
+            labels={"Región": "País", "Count": "Número de atletas"},
             text_auto=True,
         )
         st.plotly_chart(fig)
@@ -220,12 +223,12 @@ def country_charts(data, og_data):
     with ccol1:
         medal_distribution = (
             data[data["Medalla"].isin(["Bronce", "Plata", "Oro"])]
-            .groupby(["NOC", "Medalla"])["Medalla"]
+            .groupby(["Región", "Medalla"])["Medalla"]
             .count()
             .unstack()
             .reset_index()
         )
-        medal_distribution.columns = ["NOC", "Bronce", "Plata", "Oro"]
+        medal_distribution.columns = ["Región", "Bronce", "Plata", "Oro"]
         medal_distribution["Total"] = medal_distribution[
             ["Bronce", "Plata", "Oro"]
         ].sum(axis=1)
@@ -236,13 +239,13 @@ def country_charts(data, og_data):
 
         fig = px.bar(
             medal_distribution,
-            x="NOC",
+            x="Región",
             y=["Bronce", "Plata", "Oro"],
             title="Distribución de tipos de medallas por país (Top 25)",
             labels={
                 "value": "Número de medallas",
                 "variable": "Tipo de medalla",
-                "NOC": "País",
+                "Región": "País",
             },
             barmode="stack",
             color_discrete_sequence=[
