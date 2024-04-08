@@ -28,32 +28,6 @@ def get_olympics_charts(data):
         "El periodo de la Guerra Fría se considera de 1947 a 1991 y se encuentra resaltado en los gráficos a continuación."
     )
     cold_war_charts(data, og_data)
-    st.markdown("### Boicot estadounidense de los Juegos Olímpicos de 1980")
-    st.markdown("""
-Las Olimpiadas de 1980 se celebraron en Moscú, Unión Soviética (actual Rusia) del 19 de julio al 3 de agosto de 1980. \
-Fue la primera vez que los Juegos Olímpicos se llevaron a cabo en un país comunista.
-
-Estas Olimpiadas fueron muy polémicas debido a un boicot liderado por los Estados Unidos. \
-En enero de 1980, el presidente estadounidense Jimmy Carter anunció que EEUU boicotearía los Juegos si \
-la Unión Soviética no retiraba sus tropas de Afganistán en un plazo de un mes. \
-Cuando la URSS no retiró sus tropas, EEUU, junto con más de 60 países, finalmente se negaron a participar en las Olimpiadas de Moscú.
-
-La ausencia de EEUU y sus aliados, incluyendo potencias deportivas como Alemania Occidental, Canadá y Japón, \
-fue un duro golpe para estos Juegos. \
-La Unión Soviética y sus países del bloque comunista dominaron las competencias, ganando la mayor parte de las medallas de oro. \
-Sin embargo, los Juegos de Moscú se vieron opacados por la controversia y la baja participación.
-    """)
-
-    st.markdown("### Boicot soviético de los Juegos Olímpicos de 1984")
-    st.markdown("""
-Las Olimpiadas de 1984 se llevaron a cabo del 28 de julio al 12 de agosto de 1984 en Los Ángeles, Estados Unidos. \
-A diferencia de 1980, en esta ocasión fue la Unión Soviética y sus países aliados los que boicotearon los Juegos, \
-en respuesta al boicot de 1980 liderado por EEUU.
-
-A pesar de la ausencia de la URSS y sus países del bloque comunista, los Juegos de Los Ángeles 1984 fueron un gran éxito, \
-con la participación de 140 países y la asistencia de más de 5 millones de espectadores. La competencia fue intensa y \
-Estados Unidos dominó el medallero.    
-    """)
 
     st.markdown("## :blue[Otros gráficos de interés]")
     extra_charts(data, og_data)
@@ -537,6 +511,22 @@ def cold_war_charts(data, og_data):
         )
         st.plotly_chart(fig)
 
+        st.markdown("### Boicot estadounidense de los Juegos Olímpicos de 1980")
+        st.markdown("""
+    Las Olimpiadas de 1980 se celebraron en Moscú, Unión Soviética (actual Rusia) del 19 de julio al 3 de agosto de 1980. \
+    Fue la primera vez que los Juegos Olímpicos se llevaron a cabo en un país comunista.
+
+    Estas Olimpiadas fueron muy polémicas debido a un boicot liderado por los Estados Unidos. \
+    En enero de 1980, el presidente estadounidense Jimmy Carter anunció que EEUU boicotearía los Juegos si \
+    la Unión Soviética no retiraba sus tropas de Afganistán en un plazo de un mes. \
+    Cuando la URSS no retiró sus tropas, EEUU, junto con más de 60 países, finalmente se negaron a participar en las Olimpiadas de Moscú.
+
+    La ausencia de EEUU y sus aliados, incluyendo potencias deportivas como Alemania Occidental, Canadá y Japón, \
+    fue un duro golpe para estos Juegos. \
+    La Unión Soviética y sus países del bloque comunista dominaron las competencias, ganando la mayor parte de las medallas de oro. \
+    Sin embargo, los Juegos de Moscú se vieron opacados por la controversia y la baja participación.
+        """)
+
     with xcol2:
         fig = go.Figure()
         for country in eastern_bloc_countries:
@@ -565,6 +555,17 @@ def cold_war_charts(data, og_data):
             title="Rendimiento de los países del Bloque Oriental a lo largo del tiempo",
         )
         st.plotly_chart(fig)
+
+        st.markdown("### Boicot soviético de los Juegos Olímpicos de 1984")
+        st.markdown("""
+Las Olimpiadas de 1984 se llevaron a cabo del 28 de julio al 12 de agosto de 1984 en Los Ángeles, Estados Unidos. \
+A diferencia de 1980, en esta ocasión fue la Unión Soviética y sus países aliados los que boicotearon los Juegos, \
+en respuesta al boicot de 1980 liderado por EEUU.
+
+A pesar de la ausencia de la URSS y sus países del bloque comunista, los Juegos de Los Ángeles 1984 fueron un gran éxito, \
+con la participación de 140 países y la asistencia de más de 5 millones de espectadores. La competencia fue intensa y \
+Estados Unidos dominó el medallero.    
+        """)
 
 
 def extra_charts(data, og_data):
