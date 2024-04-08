@@ -139,31 +139,49 @@ def country_charts(data, og_data):
         medal_data = data.dropna(subset=["Medalla"])
 
         # Count the number of medals for each NOC
-        medal_distribution = medal_data["NOC"].value_counts().reset_index()
-        medal_distribution.columns = ["NOC", "Count"]
+        medal_distribution = medal_data["Region"].value_counts().reset_index()
+        medal_distribution.columns = ["Region", "Count"]
 
         fig = px.choropleth(
             medal_distribution,
-            locations="NOC",
+            locations="Region",
+            locationmode="country names",
             color="Count",
             title="Distribución de medallas por país",
-            labels={"NOC": "País", "Count": "Número de medallas"},
+            labels={"Region": "País", "Count": "Número de medallas"},
             color_continuous_scale=px.colors.sequential.algae,
         )
+
+        fig.update_geos(
+            showcountries=True,
+            countrycolor="Black",
+            showcoastlines=False,
+            projection_type="natural earth",
+        )
+
         st.plotly_chart(fig)
 
     # Create a choropleth map to show the distribution of athletes by country
     with ccol2:
-        country_distribution = data["NOC"].value_counts().reset_index()
-        country_distribution.columns = ["NOC", "Count"]
+        country_distribution = data["Region"].value_counts().reset_index()
+        country_distribution.columns = ["Region", "Count"]
         fig = px.choropleth(
             country_distribution,
-            locations="NOC",
+            locations="Region",
+            locationmode="country names",
             color="Count",
             title="Distribución de atletas por país",
-            labels={"NOC": "Pais", "Count": "Número de atletas"},
+            labels={"Region": "Pais", "Count": "Número de atletas"},
             color_continuous_scale=px.colors.sequential.algae,
         )
+
+        fig.update_geos(
+            showcountries=True,
+            countrycolor="Black",
+            showcoastlines=False,
+            projection_type="natural earth",
+        )
+
         st.plotly_chart(fig)
 
     # Create a bar chart to show the total number of medals won by each country
@@ -241,18 +259,18 @@ def country_charts(data, og_data):
     with ccol2:
         # Count the number of unique years each country has hosted the Olympics
         city_distribution = (
-            data.drop_duplicates(subset=["Pais", "Año"])["Pais"]
+            data.drop_duplicates(subset=["Pais anfitrión", "Año"])["Pais anfitrión"]
             .value_counts()
             .reset_index()
         )
-        city_distribution.columns = ["Pais", "Count"]
+        city_distribution.columns = ["Pais anfitrión", "Count"]
 
         fig = px.bar(
             city_distribution,
-            x="Pais",
+            x="Pais anfitrión",
             y="Count",
             title="Distribución de sedes olímpicas por país",
-            labels={"Pais": "País", "Count": "Número de veces"},
+            labels={"Pais anfitrión": "País", "Count": "Número de veces"},
             text_auto=True,
         )
         st.plotly_chart(fig)
