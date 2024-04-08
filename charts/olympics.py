@@ -231,6 +231,26 @@ def country_charts(data, og_data):
 
         st.plotly_chart(fig)
 
+    # Create a bar chart to show where the Olympics have been held
+    with ccol2:
+        # Count the number of unique years each country has hosted the Olympics
+        city_distribution = (
+            data.drop_duplicates(subset=["Pais", "Año"])["Pais"]
+            .value_counts()
+            .reset_index()
+        )
+        city_distribution.columns = ["Pais", "Count"]
+
+        fig = px.bar(
+            city_distribution,
+            x="Pais",
+            y="Count",
+            title="Distribución de sedes olímpicas por país",
+            labels={"Pais": "País", "Count": "Número de veces"},
+            text_auto=True,
+        )
+        st.plotly_chart(fig)
+
 
 def ww2_charts(data, og_data):
     xcol1, xcol2, xcol3 = st.columns(3)
