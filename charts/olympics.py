@@ -23,6 +23,26 @@ def get_olympics_charts(data):
     )
     ww2_charts(data, og_data)
 
+    st.markdown("## :blue[Guerra Fría]")
+    st.markdown(
+        "El periodo de la Guerra Fría se considera de 1947 a 1991 y se encuentra resaltado en los gráficos a continuación."
+    )
+    cold_war_charts(data, og_data)
+    st.markdown("""
+Las Olimpiadas de 1980 se celebraron en Moscú, Unión Soviética (actual Rusia) del 19 de julio al 3 de agosto de 1980. \
+Fue la primera vez que los Juegos Olímpicos se llevaron a cabo en un país comunista.
+
+Estas Olimpiadas fueron muy polémicas debido a un boicot liderado por los Estados Unidos. \
+En enero de 1980, el presidente estadounidense Jimmy Carter anunció que EEUU boicotearía los Juegos si \
+la Unión Soviética no retiraba sus tropas de Afganistán en un plazo de un mes. \
+Cuando la URSS no retiró sus tropas, EEUU, junto con más de 60 países, finalmente se negaron a participar en las Olimpiadas de Moscú.
+
+La ausencia de EEUU y sus aliados, incluyendo potencias deportivas como Alemania Occidental, Canadá y Japón, \
+fue un duro golpe para estos Juegos. \
+La Unión Soviética y sus países del bloque comunista dominaron las competencias, ganando la mayor parte de las medallas de oro. \
+Sin embargo, los Juegos de Moscú se vieron opacados por la controversia y la baja participación.
+    """)
+
     st.markdown("## :blue[Otros gráficos de interés]")
     extra_charts(data, og_data)
 
@@ -391,6 +411,135 @@ def ww2_charts(data, og_data):
         fig.update_layout(
             shapes=shapes,
             title="Rendimiento de los países neutrales a lo largo del tiempo",
+        )
+        st.plotly_chart(fig)
+
+
+def cold_war_charts(data, og_data):
+    xcol1, xcol2 = st.columns(2)
+    # Create a list of the countries that were involved in the Cold War as Western Bloc
+    western_bloc_countries = ["USA", "GBR", "FRA", "CAN", "AUS"]
+
+    # Create a list of the countries that were involved in the Cold War as Eastern Bloc
+    eastern_bloc_countries = ["URS", "GDR", "HUN", "POL", "CUB"]
+
+    # Group the data by country and Olympic year
+    grouped_data = (
+        data.groupby(["NOC", "Año"])
+        .agg({"Medalla": "count", "ID": pd.Series.nunique})
+        .reset_index()
+    )
+    grouped_data.columns = ["NOC", "Año", "Medallas", "Atletas"]
+
+    # Filter the data to consider only up to 1991
+    grouped_data = grouped_data[grouped_data["Año"] <= 1993]
+
+    # Create separate dataframes for Western Bloc and Eastern Bloc countries
+    western_bloc_data = grouped_data[grouped_data["NOC"].isin(western_bloc_countries)]
+    eastern_bloc_data = grouped_data[grouped_data["NOC"].isin(eastern_bloc_countries)]
+
+    # Define a list of shapes to represent the Cold War period
+    shapes = [
+        dict(
+            type="rect",
+            xref="x",
+            yref="paper",
+            x0=1947,
+            x1=1991,
+            y0=0,
+            y1=1,
+            fillcolor="LightSalmon",
+            opacity=0.5,
+            layer="below",
+            line_width=0,
+        )
+    ]
+
+    # Define a list of annotations to emphasize the dip in the year 1980
+    annotations = [
+        dict(
+            x=1980,
+            y=1,
+            xref="x",
+            yref="paper",
+            text="Boicot de los Juegos Olímpicos de 1980",
+            showarrow=True,
+            arrowhead=7,
+            ax=0,
+            ay=-50,
+        )
+    ]
+
+    # Define a color for each country
+    colors = {
+        "USA": "darkblue",  # USA
+        "GBR": "darkgreen",  # Great Britain
+        "FRA": "darkred",  # France
+        "CAN": "darkorange",  # Canada
+        "AUS": "darkviolet",  # Australia
+        "URS": "deepskyblue",  # USSR
+        "GDR": "gold",  # East Germany
+        "HUN": "lightseagreen",  # Hungary
+        "POL": "saddlebrown",  # Poland
+        "CUB": "darkred",  # Cuba
+    }
+
+    # Create line plots to visualize the performance metrics of the Cold War-involved countries over time
+    with xcol1:
+        fig = go.Figure()
+        for country in western_bloc_countries:
+            country_data = western_bloc_data[western_bloc_data["NOC"] == country]
+            fig.add_trace(
+                go.Scatter(
+                    x=country_data["Año"],
+                    y=country_data["Medallas"],
+                    mode="lines",
+                    name=f"{country} Medallas",
+                    line=dict(dash="solid", color=colors.get(country, "blue")),
+                )
+            )
+            fig.add_trace(
+                go.Scatter(
+                    x=country_data["Año"],
+                    y=country_data["Atletas"],
+                    mode="lines",
+                    name=f"{country} Atletas",
+                    line=dict(dash="dash", color=colors.get(country, "blue")),
+                )
+            )
+        fig.update_layout(
+            shapes=shapes,
+            annotations=annotations,
+            title="Rendimiento de los países del Bloque Occidental a lo largo del tiempo",
+        )
+        st.plotly_chart(fig)
+
+    with xcol2:
+        fig = go.Figure()
+        for country in eastern_bloc_countries:
+            country_data = eastern_bloc_data[eastern_bloc_data["NOC"] == country]
+            fig.add_trace(
+                go.Scatter(
+                    x=country_data["Año"],
+                    y=country_data["Medallas"],
+                    mode="lines",
+                    name=f"{country} Medallas",
+                    line=dict(dash="solid", color=colors.get(country, "blue")),
+                )
+            )
+            fig.add_trace(
+                go.Scatter(
+                    x=country_data["Año"],
+                    y=country_data["Atletas"],
+                    mode="lines",
+                    name=f"{country} Atletas",
+                    line=dict(dash="dash", color=colors.get(country, "blue")),
+                )
+            )
+        fig.update_layout(
+            shapes=shapes,
+            annotations=annotations,
+            title="Rendimiento de los países del Bloque Oriental a lo largo del tiempo",
         )
         st.plotly_chart(fig)
 
