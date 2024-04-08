@@ -28,6 +28,7 @@ def get_olympics_charts(data):
         "El periodo de la Guerra Fría se considera de 1947 a 1991 y se encuentra resaltado en los gráficos a continuación."
     )
     cold_war_charts(data, og_data)
+    st.markdown("### Boicot estadounidense de los Juegos Olímpicos de 1980")
     st.markdown("""
 Las Olimpiadas de 1980 se celebraron en Moscú, Unión Soviética (actual Rusia) del 19 de julio al 3 de agosto de 1980. \
 Fue la primera vez que los Juegos Olímpicos se llevaron a cabo en un país comunista.
@@ -41,6 +42,17 @@ La ausencia de EEUU y sus aliados, incluyendo potencias deportivas como Alemania
 fue un duro golpe para estos Juegos. \
 La Unión Soviética y sus países del bloque comunista dominaron las competencias, ganando la mayor parte de las medallas de oro. \
 Sin embargo, los Juegos de Moscú se vieron opacados por la controversia y la baja participación.
+    """)
+
+    st.markdown("### Boicot soviético de los Juegos Olímpicos de 1984")
+    st.markdown("""
+Las Olimpiadas de 1984 se llevaron a cabo del 28 de julio al 12 de agosto de 1984 en Los Ángeles, Estados Unidos. \
+A diferencia de 1980, en esta ocasión fue la Unión Soviética y sus países aliados los que boicotearon los Juegos, \
+en respuesta al boicot de 1980 liderado por EEUU.
+
+A pesar de la ausencia de la URSS y sus países del bloque comunista, los Juegos de Los Ángeles 1984 fueron un gran éxito, \
+con la participación de 140 países y la asistencia de más de 5 millones de espectadores. La competencia fue intensa y \
+Estados Unidos dominó el medallero.    
     """)
 
     st.markdown("## :blue[Otros gráficos de interés]")
@@ -455,19 +467,30 @@ def cold_war_charts(data, og_data):
         )
     ]
 
-    # Define a list of annotations to emphasize the dip in the year 1980
+    # Define a list of annotations to emphasize the dip in the year 1980 and the year 1984
     annotations = [
         dict(
             x=1980,
             y=1,
             xref="x",
             yref="paper",
-            text="Boicot de los Juegos Olímpicos de 1980",
+            text="Boicot estadounidense de los Juegos Olímpicos de 1980",
             showarrow=True,
             arrowhead=7,
             ax=0,
-            ay=-50,
-        )
+            ay=-35,
+        ),
+        dict(
+            x=1984,
+            y=1,
+            xref="x",
+            yref="paper",
+            text="Boicot soviético de los Juegos Olímpicos de 1984",
+            showarrow=True,
+            arrowhead=7,
+            ax=0,
+            ay=-75,
+        ),
     ]
 
     # Define a color for each country
