@@ -85,7 +85,7 @@ def load_and_display_data(title, filename):
     fig.update_layout(title_text=f"{selected_plot} de {selected_var}", title_x=0.5)
     st.plotly_chart(fig, use_container_width=True)
 
-    if title == "🏅 Olympics":
+    if title == "🏅 Olympics (Spanish)":
         get_olympics_charts(data)
     elif title == "🎓 Schooling":
         get_schooling_charts(data)
@@ -101,7 +101,8 @@ def main():
     with st.sidebar:
         # Define the datasets and their corresponding titles and qualitative variables
         chosen_datasets = {
-            "🏅 Olympics": "olympics_spanish.csv",
+            "🏅 Olympics (Spanish)": "olympics_spanish.csv",
+            "🏅 Olympics": "olympics.csv",
             "🎓 Schooling": "expected-years-of-schooling.csv",
             "💰 Income": "gross-national-income-per-capita.csv",
             "🌍 Human Development Index (HDI)": "human-development-index.csv",
