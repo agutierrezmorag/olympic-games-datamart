@@ -89,6 +89,24 @@ def load_and_display_data(title, filename):
         st.caption(
             "📢 **Nota:** Puede haber más Comités Olímpicos Nacionales (NOCs) que países porque algunos territorios autónomos tienen sus propios NOCs. Por ejemplo, Puerto Rico, Guam o Hong Kong."
         )
+
+        st.markdown("### Posible discrepancia de datos")
+        st.markdown("""
+        Los datos del dataset son proporcionados por [Olympedia](https://www.olympedia.org/), una base de datos especializada en \
+        la historia de los Juegos Olímpicos. A continuación, se presenta una explicación sobre la posible discrepancia de datos \
+        con otras fuentes:
+        
+        Olympedia.org tiene una larga trayectoria como la base de datos más completa y confiable sobre la historia de los Juegos Olímpicos. \
+        Fundada en la década de 1990 por un grupo de apasionados historiadores deportivos y estrechamente asociada con la Sociedad \
+        Internacional de Historiadores Olímpicos (ISOH), Olympedia ha pasado décadas recopilando, verificando y actualizando \
+        meticulosamente cada detalle relacionado con los atletas, eventos y medallas olímpicos desde la era moderna de los \
+        Juegos que comenzó en 1896. A diferencia de fuentes más generalistas como Wikipedia, que dependen de contribuciones abiertas, \
+        el equipo de Olympedia, que trabaja en colaboración con la ISOH, se dedica exclusivamente a mantener la base de datos \
+        olímpica más precisa y actualizada posible. Por lo tanto, es normal que puedan existir algunas discrepancias menores entre \
+        los datos de Olympedia y los de otros sitios web, ya que Olympedia realiza un mayor nivel de investigación y validación para \
+        asegurar la integridad de sus registros, incluyendo la incorporación de correcciones y cambios retroactivos realizados por \
+        el Comité Olímpico Internacional a lo largo de los años.
+        """)
         get_olympics_charts(data)
     elif title == "🎓 Schooling":
         get_schooling_charts(data)
