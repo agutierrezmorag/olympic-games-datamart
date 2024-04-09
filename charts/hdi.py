@@ -6,61 +6,78 @@ def get_hdi_charts(data):
     st.markdown("## :blue[Otros gráficos de interés]")
     col1, col2 = st.columns(2)
 
-    # Line chart of HDI over the years for the selected entity
+    # Choropleth map of HDI in early times
     with col1:
-        # Get a list of unique entities in the HDI data
-        entities_hdi = sorted(data["Entity"].unique())
+        # Find the earliest year in the data
+        earliest_year = data["Año"].min()
 
-        # Create a select box for the entities in the HDI data
-        selected_entity_hdi = st.selectbox(
-            "Selecciona una entidad para el Índice de Desarrollo Humano", entities_hdi
+        # Filter the data to only include the earliest year
+        data_earliest_year = data[data["Año"] == earliest_year]
+
+        # Add a choropleth map showing the expected years of schooling
+        fig = px.choropleth(
+            data_earliest_year,
+            title=f"Índice de Desarrollo Humano en {earliest_year}",
+            locations="Entidad",
+            locationmode="country names",
+            color="Índice de Desarrollo Humano (PNUD)",
+            hover_name="Entidad",
+            color_continuous_scale="Viridis",
+            range_color=(0, 1),
         )
-
-        # Filter HDI data for the selected entity
-        entity_data_hdi = data[data["Entity"] == selected_entity_hdi]
-
-        fig_hdi_line = px.line(
-            entity_data_hdi,
-            x="Year",
-            y="Human Development Index (UNDP)",
-            title=f"Índice de Desarrollo Humano en {selected_entity_hdi}",
-            labels={
-                "Year": "Año",
-                "Human Development Index (UNDP)": "Indice de Desarrollo Humano (IDH)",
-            },
+        fig.update_geos(
+            showcountries=True,
+            countrycolor="Black",
+            showcoastlines=False,
+            projection_type="natural earth",
         )
-        st.plotly_chart(fig_hdi_line, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True)
 
+        # Add a bar chart showing the top countries with the highest hdi
+        fig = px.bar(
+            data_earliest_year.nlargest(10, "Índice de Desarrollo Humano (PNUD)"),
+            x="Índice de Desarrollo Humano (PNUD)",
+            y="Entidad",
+            title=f"Top 10 países con mayor indice de desarrollo humano en {earliest_year}",
+            orientation="h",
+            text="Índice de Desarrollo Humano (PNUD)",
+        )
+        st.plotly_chart(fig, use_container_width=True)
+
+    # Choropleth map of HDI in modern times
     with col2:
-        # Get the latest year in the data
-        latest_year_hdi = data["Year"].max()
+        # Find the latest year in the data
+        latest_year = data["Año"].max()
 
-        # Filter data for the latest year
-        latest_year_data_hdi = data[data["Year"] == latest_year_hdi]
+        # Filter the data to only include the latest year
+        data_latest_year = data[data["Año"] == latest_year]
 
-        # Histogram of HDI in the latest year
-        fig_hdi_hist = px.histogram(
-            latest_year_data_hdi,
-            x="Human Development Index (UNDP)",
-            title=f"Distribución del Índice de Desarrollo Humano en {latest_year_hdi}",
-            labels={
-                "Human Development Index (UNDP)": "Indice de Desarrollo Humano (IDH)",
-            },
+        # Add a choropleth map showing the expected years of schooling
+        fig = px.choropleth(
+            data_latest_year,
+            title=f"Índice de Desarrollo Humano en {latest_year}",
+            locations="Entidad",
+            locationmode="country names",
+            color="Índice de Desarrollo Humano (PNUD)",
+            hover_name="Entidad",
+            color_continuous_scale="Viridis",
+            range_color=(0, 1),
         )
-        st.plotly_chart(fig_hdi_hist, use_container_width=True)
-
-    with col1:
-        # Histogram of HDI through the years
-        fig_hdi_hist_years = px.histogram(
-            data,
-            x="Year",
-            y="Human Development Index (UNDP)",
-            histfunc="avg",
-            title="Promedio del Índice de Desarrollo Humano a lo largo de los años",
-            labels={
-                "Year": "Año",
-                "Human Development Index (UNDP)": "Indice de Desarrollo Humano (IDH)",
-            },
-            text_auto=True,
+        fig.update_geos(
+            showcountries=True,
+            countrycolor="Black",
+            showcoastlines=False,
+            projection_type="natural earth",
         )
-        st.plotly_chart(fig_hdi_hist_years, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True)
+
+        # Add a bar chart showing the top countries with the highest hdi
+        fig = px.bar(
+            data_latest_year.nlargest(10, "Índice de Desarrollo Humano (PNUD)"),
+            x="Índice de Desarrollo Humano (PNUD)",
+            y="Entidad",
+            title=f"Top 10 países con mayor indice de desarrollo humano en {latest_year}",
+            orientation="h",
+            text="Índice de Desarrollo Humano (PNUD)",
+        )
+        st.plotly_chart(fig, use_container_width=True)
