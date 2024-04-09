@@ -10,14 +10,14 @@ def get_schooling_charts(data):
 
     with col1:
         # Find the latest year in the data
-        first_year = data["Año"].max()
+        latest_year = data["Año"].max()
 
         # Filter the data to only include the latest year
-        data_first_year = data[data["Año"] == first_year]
+        data_latest_year = data[data["Año"] == latest_year]
 
         # Add a choropleth map showing the expected years of schooling
         fig = px.choropleth(
-            data_first_year,
+            data_latest_year,
             title="Años de escolaridad esperados (1990)",
             locations="Entidad",
             locationmode="country names",
@@ -30,14 +30,14 @@ def get_schooling_charts(data):
 
     with col2:
         # Find the latest year in the data
-        latest_year = data["Año"].min()
+        earliest_year = data["Año"].min()
 
         # Filter the data to only include the latest year
-        data_latest_year = data[data["Año"] == latest_year]
+        data_earliest_year = data[data["Año"] == earliest_year]
 
         # Add a choropleth map showing the expected years of schooling
         fig = px.choropleth(
-            data_latest_year,
+            data_earliest_year,
             title="Años de escolaridad esperados (2017)",
             locations="Entidad",
             locationmode="country names",
@@ -51,7 +51,7 @@ def get_schooling_charts(data):
     # Add a bar chart showing the top countries with the highest expected years of schooling in 1990
     with col1:
         fig = px.bar(
-            data_first_year.nlargest(10, "Años de escolaridad esperados"),
+            data_earliest_year.nlargest(10, "Años de escolaridad esperados"),
             x="Años de escolaridad esperados",
             y="Entidad",
             title="Top 10 países con mayor años de escolaridad esperados (1990)",
@@ -73,9 +73,9 @@ def get_schooling_charts(data):
         st.plotly_chart(fig, use_container_width=True)
 
     # Identify the top 10 countries in 1990 and 2017
-    top_countries_1990 = data_first_year.nlargest(10, "Años de escolaridad esperados")[
-        "Entidad"
-    ]
+    top_countries_1990 = data_earliest_year.nlargest(
+        10, "Años de escolaridad esperados"
+    )["Entidad"]
     top_countries_2017 = data_latest_year.nlargest(10, "Años de escolaridad esperados")[
         "Entidad"
     ]
