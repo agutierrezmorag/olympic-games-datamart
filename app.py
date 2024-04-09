@@ -130,12 +130,12 @@ def main():
         chosen_datasets = {
             "🏅 Olympics (Spanish)": "olympics_spanish.csv",
             "🏅 Olympics": "olympics.csv",
-            "🎓 Schooling": "expected-years-of-schooling.csv",
             "🎓 Schooling (Spanish)": "expected-years-of-schooling-spanish.csv",
-            "💰 Income": "gross-national-income-per-capita.csv",
+            "🎓 Schooling": "expected-years-of-schooling.csv",
             "💰 Income (Spanish)": "gross-national-income-per-capita-spanish.csv",
-            "🌍 Human Development Index (HDI)": "human-development-index.csv",
+            "💰 Income": "gross-national-income-per-capita.csv",
             "🌍 Human Development Index (HDI) (Spanish)": "human-development-index-spanish.csv",
+            "🌍 Human Development Index (HDI)": "human-development-index.csv",
             "📊 Historical Index of Human Development (HIHD)": "hdi-vs-hihd.csv",
         }
 
