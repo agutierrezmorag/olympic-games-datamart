@@ -110,7 +110,7 @@ def load_and_display_data(title, filename):
         """)
 
         get_olympics_charts(data)
-    elif title == "🎓 Schooling":
+    elif title == "🎓 Schooling (Spanish)":
         get_schooling_charts(data)
     elif title == "💰 Income":
         get_income_charts(data)
@@ -127,6 +127,7 @@ def main():
             "🏅 Olympics (Spanish)": "olympics_spanish.csv",
             "🏅 Olympics": "olympics.csv",
             "🎓 Schooling": "expected-years-of-schooling.csv",
+            "🎓 Schooling (Spanish)": "expected-years-of-schooling-spanish.csv",
             "💰 Income": "gross-national-income-per-capita.csv",
             "🌍 Human Development Index (HDI)": "human-development-index.csv",
             "📊 Historical Index of Human Development (HIHD)": "hdi-vs-hihd.csv",

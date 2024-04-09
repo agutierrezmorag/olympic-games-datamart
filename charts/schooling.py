@@ -1,3 +1,4 @@
+import pandas as pd
 import plotly.express as px
 import streamlit as st
 
@@ -7,89 +8,95 @@ def get_schooling_charts(data):
     st.markdown("## :blue[Otros gráficos de interés]")
     col1, col2 = st.columns(2)
 
-    # Add a line chart for Expected years of schooling over the years
+    with col1:
+        # Find the latest year in the data
+        first_year = data["Año"].max()
+
+        # Filter the data to only include the latest year
+        data_first_year = data[data["Año"] == first_year]
+
+        # Add a choropleth map showing the expected years of schooling
+        fig = px.choropleth(
+            data_first_year,
+            title="Años de escolaridad esperados (1990)",
+            locations="Entidad",
+            locationmode="country names",
+            color="Años de escolaridad esperados",
+            hover_name="Entidad",
+            color_continuous_scale="Viridis",
+            range_color=(5, 20),
+        )
+        st.plotly_chart(fig, use_container_width=True)
+
+    with col2:
+        # Find the latest year in the data
+        latest_year = data["Año"].min()
+
+        # Filter the data to only include the latest year
+        data_latest_year = data[data["Año"] == latest_year]
+
+        # Add a choropleth map showing the expected years of schooling
+        fig = px.choropleth(
+            data_latest_year,
+            title="Años de escolaridad esperados (2017)",
+            locations="Entidad",
+            locationmode="country names",
+            color="Años de escolaridad esperados",
+            hover_name="Entidad",
+            color_continuous_scale="Viridis",
+            range_color=(5, 20),
+        )
+        st.plotly_chart(fig, use_container_width=True)
+
+    # Add a bar chart showing the top countries with the highest expected years of schooling in 1990
+    with col1:
+        fig = px.bar(
+            data_first_year.nlargest(10, "Años de escolaridad esperados"),
+            x="Años de escolaridad esperados",
+            y="Entidad",
+            title="Top 10 países con mayor años de escolaridad esperados (1990)",
+            orientation="h",
+            text="Años de escolaridad esperados",
+        )
+        st.plotly_chart(fig, use_container_width=True)
+
+    # Add a bar chart showing the top countries with the highest expected years of schooling in 2017
+    with col2:
+        fig = px.bar(
+            data_latest_year.nlargest(10, "Años de escolaridad esperados"),
+            x="Años de escolaridad esperados",
+            y="Entidad",
+            title="Top 10 países con mayor años de escolaridad esperados (2017)",
+            orientation="h",
+            text="Años de escolaridad esperados",
+        )
+        st.plotly_chart(fig, use_container_width=True)
+
+    # Identify the top 10 countries in 1990 and 2017
+    top_countries_1990 = data_first_year.nlargest(10, "Años de escolaridad esperados")[
+        "Entidad"
+    ]
+    top_countries_2017 = data_latest_year.nlargest(10, "Años de escolaridad esperados")[
+        "Entidad"
+    ]
+
+    # Combine the two sets of countries
+    top_countries = pd.concat([top_countries_1990, top_countries_2017]).unique()
+
+    # Filter the original data to only include these countries
+    data_top_countries = data[data["Entidad"].isin(top_countries)]
+
+    # Create a line chart
     fig = px.line(
-        data,
-        x="Year",
-        y="Expected Years of Schooling (years)",
-        title="Años de escolaridad esperados a lo largo de los años",
+        data_top_countries,
+        x="Año",
+        y="Años de escolaridad esperados",
+        color="Entidad",
+        title="Differences in Expected Years of Schooling Over Time",
         labels={
-            "Year": "Año",
-            "Expected Years of Schooling (years)": "Años de escolaridad esperados",
-        },
-    )
-    st.plotly_chart(fig, use_container_width=True)
-
-    # Add a bar chart for Expected years of schooling by Entity
-    fig = px.bar(
-        data,
-        x="Entity",
-        y="Expected Years of Schooling (years)",
-        title="Años de escolaridad esperados por entidad",
-        labels={
-            "Entity": "Entidad",
-            "Expected Years of Schooling (years)": "Años de escolaridad esperados",
-        },
-    )
-    st.plotly_chart(fig, use_container_width=True)
-
-    # Add a histogram for Expected years of schooling
-    fig = px.histogram(
-        data,
-        x="Expected Years of Schooling (years)",
-        title="Histograma de años de escolaridad esperados",
-        labels={
-            "Expected Years of Schooling (years)": "Años de escolaridad esperados",
-        },
-        text_auto=True,
-    )
-    st.plotly_chart(fig, use_container_width=True)
-
-    # Add a scatter plot for Expected years of schooling by Year for each Entity
-    fig = px.scatter(
-        data,
-        x="Year",
-        y="Expected Years of Schooling (years)",
-        color="Entity",
-        title="Años de escolaridad esperados por año para cada entidad",
-        labels={
-            "Year": "Año",
-            "Expected Years of Schooling (years)": "Años de escolaridad esperados",
-            "Entity": "Entidad",
-        },
-    )
-    st.plotly_chart(fig, use_container_width=True)
-
-    # Get the latest year data
-    latest_year_data = data[data["Year"] == data["Year"].max()]
-
-    # Sort by "Expected Years of Schooling (years)" and get the top 10 entities
-    top_entities = latest_year_data.sort_values(
-        by="Expected Years of Schooling (years)", ascending=False
-    ).head(10)
-
-    # Add a bar chart for Expected years of schooling for the latest year for top 10 entities
-    fig = px.bar(
-        top_entities,
-        x="Entity",
-        y="Expected Years of Schooling (years)",
-        title="Top 10 entidades con mayor años de escolaridad esperados en el último año",
-        labels={
-            "Entity": "Entidad",
-            "Expected Years of Schooling (years)": "Años de escolaridad esperados",
-        },
-    )
-    st.plotly_chart(fig, use_container_width=True)
-
-    # Add a box plot for Expected years of schooling for each Entity
-    fig = px.box(
-        data,
-        x="Entity",
-        y="Expected Years of Schooling (years)",
-        title="Diagrama de caja de años de escolaridad esperados por entidad",
-        labels={
-            "Entity": "Entidad",
-            "Expected Years of Schooling (years)": "Años de escolaridad esperados",
+            "Año": "Year",
+            "Años de escolaridad esperados": "Expected Years of Schooling",
+            "Entidad": "Country",
         },
     )
     st.plotly_chart(fig, use_container_width=True)
