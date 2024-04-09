@@ -115,6 +115,10 @@ def load_and_display_data(title, filename):
     elif title == "💰 Income":
         get_income_charts(data)
     elif title == "🌍 Human Development Index (HDI) (Spanish)":
+        st.caption(
+            "📢 **Nota:** PNUD significa Programa de las Naciones Unidas para el Desarrollo."
+        )
+
         get_hdi_charts(data)
 
 
