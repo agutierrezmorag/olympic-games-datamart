@@ -32,6 +32,18 @@ def get_olympics_charts(data):
     st.markdown("## :blue[Otros gráficos de interés]")
     extra_charts(data, og_data)
 
+    st.markdown("## :green[Información adicional]")
+    st.markdown("""
+        - La Aeronáutica solo recibió medallas de oro en los Juegos Olímpicos de 1936 en Berlín, Alemania. \
+        Hubieron preparativos para expandir esta disciplina como deporte pero el inicio de la Segunda Guerra Mundial \
+        detuvo el proceso.
+        
+        - Lacrosse solo fue jugado en 1904 en St. Louis, 1908 en Londres, 1928 en Ámsterdam y 1932 en Los Ángeles. \
+        En 1904, solo hubieron 3 equipos participantes. En 1908 y 1928 solo participaron equipos de Canadá y en 1932 \
+        solo participaron equipos de Estados Unidos y Canadá. Posteriormente, dejó de ser un deporte olímpico debido a \
+        la falta de equipos internacionales. Se espera que regrese a los Juegos Olímpicos en 2028.
+        """)
+
 
 def gender_charts(data, og_data):
     male_color = "steelblue"
@@ -789,4 +801,61 @@ def extra_charts(data, og_data):
             title="Atletas con más participaciones en los Juegos Olímpicos",
             text_auto=True,
         )
+        st.plotly_chart(fig)
+
+    # Find sports that are no longer played in the Olympics
+    with col2:
+        # Find the most recent year for each sport and whether it's a Summer or Winter Olympics
+        latest_year = data.groupby(["Deporte", "Temporada"])["Año"].max().reset_index()
+
+        # Find the most recent year for Summer and Winter Olympics
+        latest_summer_year = data[data["Temporada"] == "Verano"]["Año"].max()
+        latest_winter_year = data[data["Temporada"] == "Invierno"]["Año"].max()
+
+        # Filter sports that are no longer played in Verano Olympics
+        discontinued_summer_sports = latest_year[
+            (latest_year["Año"] < latest_summer_year)
+            & (latest_year["Temporada"] == "Verano")
+        ]
+
+        # Filter sports that are no longer played in Invierno Olympics
+        discontinued_winter_sports = latest_year[
+            (latest_year["Año"] < latest_winter_year)
+            & (latest_year["Temporada"] == "Invierno")
+        ]
+
+        # Calculate years since each sport was last played
+        discontinued_summer_sports.loc[:, "Años desde la última vez que se jugó"] = (
+            latest_summer_year - discontinued_summer_sports["Año"]
+        )
+        discontinued_winter_sports.loc[:, "Años desde la última vez que se jugó"] = (
+            latest_winter_year - discontinued_winter_sports["Año"]
+        )
+
+        # Concatenate the two dataframes and create a new column for the type of sport
+        discontinued_sports = pd.concat(
+            [
+                discontinued_summer_sports.assign(Tipo="Verano"),
+                discontinued_winter_sports.assign(Tipo="Invierno"),
+            ]
+        )
+
+        # Sort the dataframe by the "Años desde la última vez que se jugó" column
+        discontinued_sports = discontinued_sports.sort_values(
+            "Años desde la última vez que se jugó"
+        )
+
+        # Create a bar plot
+        fig = px.bar(
+            discontinued_sports,
+            x="Años desde la última vez que se jugó",
+            y="Deporte",
+            color="Tipo",
+            color_discrete_map={"Verano": "khaki", "Invierno": "lightblue"},
+            orientation="h",
+            title="Deportes que ya no se juegan en los Juegos Olímpicos",
+            text="Año",
+            text_auto=True,
+        )
+
         st.plotly_chart(fig)
