@@ -114,7 +114,7 @@ def load_and_display_data(title, filename):
         get_schooling_charts(data)
     elif title == "💰 Income":
         get_income_charts(data)
-    elif title == "🌍 Human Development Index (HDI)":
+    elif title == "🌍 Human Development Index (HDI) (Spanish)":
         get_hdi_charts(data)
 
 
