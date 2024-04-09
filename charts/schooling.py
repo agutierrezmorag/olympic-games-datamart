@@ -29,10 +29,10 @@ def get_schooling_charts(data):
         st.plotly_chart(fig, use_container_width=True)
 
     with col2:
-        # Find the latest year in the data
+        # Find the earliest year in the data
         earliest_year = data["Año"].min()
 
-        # Filter the data to only include the latest year
+        # Filter the data to only include the earliest year
         data_earliest_year = data[data["Año"] == earliest_year]
 
         # Add a choropleth map showing the expected years of schooling
