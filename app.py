@@ -130,6 +130,7 @@ def main():
             "🎓 Schooling (Spanish)": "expected-years-of-schooling-spanish.csv",
             "💰 Income": "gross-national-income-per-capita.csv",
             "🌍 Human Development Index (HDI)": "human-development-index.csv",
+            "🌍 Human Development Index (HDI) (Spanish)": "human-development-index-spanish.csv",
             "📊 Historical Index of Human Development (HIHD)": "hdi-vs-hihd.csv",
         }
 
