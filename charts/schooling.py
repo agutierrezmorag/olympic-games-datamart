@@ -26,6 +26,12 @@ def get_schooling_charts(data):
             color_continuous_scale="Viridis",
             range_color=(5, 20),
         )
+        fig.update_geos(
+            showcountries=True,
+            countrycolor="Black",
+            showcoastlines=False,
+            projection_type="natural earth",
+        )
         st.plotly_chart(fig, use_container_width=True)
 
         # Add a bar chart showing the top countries with the highest expected years of schooling in 1990
@@ -56,6 +62,12 @@ def get_schooling_charts(data):
             hover_name="Entidad",
             color_continuous_scale="Viridis",
             range_color=(5, 20),
+        )
+        fig.update_geos(
+            showcountries=True,
+            countrycolor="Black",
+            showcoastlines=False,
+            projection_type="natural earth",
         )
         st.plotly_chart(fig, use_container_width=True)
 
