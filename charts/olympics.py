@@ -790,13 +790,22 @@ def extra_charts(data, og_data):
 
     # Create a chart to show the athletes with the most participation in the Olympics
     with col1:
+        # Group by athlete name and NOC, and count the number of participations for each
         athlete_participation = (
-            og_data["Nombre"].value_counts().nlargest(10).reset_index()
+            og_data.groupby(["Nombre", "NOC"])
+            .size()
+            .nlargest(10)
+            .reset_index(name="Participaciones")
         )
-        athlete_participation.columns = ["Nombre", "Participaciones"]
+
+        # Create a new column that combines the athlete name and NOC
+        athlete_participation["Nombre (NOC)"] = (
+            athlete_participation["Nombre"] + " (" + athlete_participation["NOC"] + ")"
+        )
+
         fig = px.bar(
             athlete_participation,
-            x="Nombre",
+            x="Nombre (NOC)",
             y="Participaciones",
             title="Atletas con más participaciones en los Juegos Olímpicos",
             text_auto=True,
