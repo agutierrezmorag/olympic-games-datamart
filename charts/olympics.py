@@ -166,7 +166,7 @@ def country_charts(data, og_data):
             color="Count",
             title="Distribución de medallas por país",
             labels={"Región": "País", "Count": "Número de medallas"},
-            color_continuous_scale=px.colors.sequential.algae,
+            color_continuous_scale=px.colors.sequential.Viridis,
         )
 
         fig.update_geos(
@@ -189,7 +189,7 @@ def country_charts(data, og_data):
             color="Count",
             title="Distribución de atletas por país",
             labels={"Región": "Pais", "Count": "Número de atletas"},
-            color_continuous_scale=px.colors.sequential.algae,
+            color_continuous_scale=px.colors.sequential.Viridis,
         )
 
         fig.update_geos(
