@@ -102,11 +102,11 @@ def get_schooling_charts(data):
         x="Año",
         y="Años de escolaridad esperados",
         color="Entidad",
-        title="Differences in Expected Years of Schooling Over Time",
+        title="Diferencia en años de escolaridad esperados entre 1990 y 2017",
         labels={
-            "Año": "Year",
-            "Años de escolaridad esperados": "Expected Years of Schooling",
-            "Entidad": "Country",
+            "Año": "Año",
+            "Años de escolaridad esperados": "Años de escolaridad esperados",
+            "Entidad": "Entidad",
         },
     )
     st.plotly_chart(fig, use_container_width=True)
