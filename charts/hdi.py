@@ -6,6 +6,9 @@ def get_hdi_charts(data):
     st.markdown("## :blue[Otros gráficos de interés]")
     col1, col2 = st.columns(2)
 
+    data = data.dropna()
+    data["Año"] = data["Año"].astype(int)
+
     # Choropleth map of HDI in early times
     with col1:
         # Find the earliest year in the data
