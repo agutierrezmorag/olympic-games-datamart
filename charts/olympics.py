@@ -741,7 +741,7 @@ def extra_charts(data, og_data):
         athlete_participation = (
             og_data.groupby(["Nombre", "NOC"])
             .size()
-            .nlargest(15)
+            .nlargest(10)
             .reset_index(name="Participaciones")
         )
 
