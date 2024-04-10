@@ -642,7 +642,7 @@ def extra_charts(data, og_data):
     # Create a bar chart to show the distribution of medal types within each sport
     with col1:
         medal_distribution = (
-            data[data["Medalla"].isin(["Bronce", "Plata", "Oro"])]
+            og_data[og_data["Medalla"].isin(["Bronce", "Plata", "Oro"])]
             .groupby(["Deporte", "Medalla"])["Medalla"]
             .count()
             .unstack()
@@ -677,14 +677,14 @@ def extra_charts(data, og_data):
 
     # Display the oldest sports that are still played today in a line chart
     with col2:
-        oldest_sports = data.groupby("Deporte")["Año"].min().reset_index()
-        latest_sports = data.groupby("Deporte")["Año"].max().reset_index()
+        oldest_sports = og_data.groupby("Deporte")["Año"].min().reset_index()
+        latest_sports = og_data.groupby("Deporte")["Año"].max().reset_index()
 
         # Merge the two dataframes
         sports = pd.merge(oldest_sports, latest_sports, on="Deporte")
 
         # Filter sports that are still played today
-        sports = sports[sports["Año_y"] == data["Año"].max()]
+        sports = sports[sports["Año_y"] == og_data["Año"].max()]
 
         # Sort by the oldest year
         sports = sports.sort_values("Año_x", ascending=True)
@@ -702,7 +702,7 @@ def extra_charts(data, og_data):
     # Create a line plot to show the number of participants in each sport over time
     with col1:
         sport_participation = (
-            data.groupby(["Año", "Deporte"])["Deporte"]
+            og_data.groupby(["Año", "Deporte"])["Deporte"]
             .count()
             .reset_index(name="Count")
         )
@@ -712,6 +712,7 @@ def extra_charts(data, og_data):
             y="Count",
             color="Deporte",
             title="Participación en cada deporte a lo largo del tiempo",
+            labels={"Count": "Número de atletas", "Año": "Año", "Deporte": "Deporte"},
         )
         st.plotly_chart(fig)
 
