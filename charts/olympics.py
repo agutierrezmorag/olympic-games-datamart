@@ -152,7 +152,7 @@ def country_charts(data, og_data):
 
         # Drop duplicates for team events
         medal_data = medal_data.drop_duplicates(
-            subset=["Año", "Temporada", "Ciudad", "Deporte", "Evento", "NOC", "Equipo"]
+            subset=["Equipo", "Evento", "Año", "Temporada", "Deporte"]
         )
 
         # Count the number of medals for each NOC
@@ -168,12 +168,22 @@ def country_charts(data, og_data):
             labels={"Región": "País", "Count": "Número de medallas"},
             color_continuous_scale=px.colors.sequential.Viridis,
         )
-
         fig.update_geos(
             showcountries=True,
             countrycolor="Black",
             showcoastlines=False,
             projection_type="natural earth",
+        )
+        st.plotly_chart(fig)
+
+        # Create a bar chart to show the distribution of medals by country
+        fig = px.bar(
+            medal_distribution.head(25),
+            x="Región",
+            y="Count",
+            title="Top 25 países con más medallas",
+            labels={"Región": "País", "Count": "Número de medallas"},
+            text_auto=True,
         )
 
         st.plotly_chart(fig)
@@ -191,109 +201,46 @@ def country_charts(data, og_data):
             labels={"Región": "Pais", "Count": "Número de atletas"},
             color_continuous_scale=px.colors.sequential.Viridis,
         )
-
         fig.update_geos(
             showcountries=True,
             countrycolor="Black",
             showcoastlines=False,
             projection_type="natural earth",
         )
-
         st.plotly_chart(fig)
 
-    # Create a bar chart to show the total number of medals won by each country
-    with ccol1:
-        medal_distribution = (
-            data[data["Medalla"].notna()]["Región"]
-            .value_counts()
-            .reset_index()
-            .head(25)
-        )
-        medal_distribution.columns = ["Región", "Count"]
-
+        # Create a bar chart for the top 25 countries with the most athletes
         fig = px.bar(
-            medal_distribution,
-            x="Región",
-            y="Count",
-            title="Medallas ganadas por país (Top 25)",
-            labels={"Región": "País", "Count": "Número de medallas"},
-            text_auto=True,
-        )
-
-        st.plotly_chart(fig)
-
-    # Create a bar chart for the top 25 countries with the most athletes
-    with ccol2:
-        top_countries = data["Región"].value_counts().head(25).reset_index()
-        top_countries.columns = ["Región", "Count"]
-        fig = px.bar(
-            top_countries,
+            country_distribution.head(25),
             x="Región",
             y="Count",
             title="Top 25 países con más atletas",
             labels={"Región": "País", "Count": "Número de atletas"},
             text_auto=True,
         )
-        st.plotly_chart(fig)
-
-    # Create a bar chart to show the distribution of medal types within each country
-    with ccol1:
-        medal_distribution = (
-            data[data["Medalla"].isin(["Bronce", "Plata", "Oro"])]
-            .groupby(["Región", "Medalla"])["Medalla"]
-            .count()
-            .unstack()
-            .reset_index()
-        )
-        medal_distribution.columns = ["Región", "Bronce", "Plata", "Oro"]
-        medal_distribution["Total"] = medal_distribution[
-            ["Bronce", "Plata", "Oro"]
-        ].sum(axis=1)
-        medal_distribution = medal_distribution.sort_values("Total", ascending=False)
-
-        # Select only the top 25 countries
-        medal_distribution = medal_distribution.head(25)
-
-        fig = px.bar(
-            medal_distribution,
-            x="Región",
-            y=["Bronce", "Plata", "Oro"],
-            title="Distribución de tipos de medallas por país (Top 25)",
-            labels={
-                "value": "Número de medallas",
-                "variable": "Tipo de medalla",
-                "Región": "País",
-            },
-            barmode="stack",
-            color_discrete_sequence=[
-                "darkgoldenrod",
-                "aliceblue",
-                "gold",
-            ],
-            text_auto=True,
-        )
 
         st.plotly_chart(fig)
 
     # Create a bar chart to show where the Olympics have been held
-    with ccol2:
-        # Count the number of unique years each country has hosted the Olympics
-        city_distribution = (
-            data.drop_duplicates(subset=["Pais anfitrión", "Año"])["Pais anfitrión"]
-            .value_counts()
-            .reset_index()
-        )
-        city_distribution.columns = ["Pais anfitrión", "Count"]
 
-        fig = px.bar(
-            city_distribution,
-            x="Pais anfitrión",
-            y="Count",
-            title="Distribución de sedes olímpicas por país",
-            labels={"Pais anfitrión": "País", "Count": "Número de veces"},
-            text_auto=True,
-        )
-        st.plotly_chart(fig)
+    # Count the number of unique years each country has hosted the Olympics
+    city_distribution = (
+        data.drop_duplicates(subset=["Pais anfitrión", "Año"])["Pais anfitrión"]
+        .value_counts()
+        .reset_index()
+    )
+    city_distribution.columns = ["Pais anfitrión", "Count"]
+
+    fig = px.choropleth(
+        city_distribution,
+        locations="Pais anfitrión",
+        locationmode="country names",
+        color="Count",
+        title="Países anfitriones de los Juegos Olímpicos",
+        labels={"Pais anfitrión": "Pais", "Count": "Número de olímpiadas"},
+        color_continuous_scale=px.colors.sequential.Viridis,
+    )
+    st.plotly_chart(fig, use_container_width=True)
 
 
 def ww2_charts(data, og_data):
