@@ -185,7 +185,6 @@ def country_charts(data, og_data):
             labels={"Región": "País", "Count": "Número de medallas"},
             text_auto=True,
         )
-
         st.plotly_chart(fig)
 
     # Create a choropleth map to show the distribution of athletes by country
