@@ -1,6 +1,6 @@
 Entidad,Código,Año,Índice de Desarrollo Humano (PNUD)
-Afghanistan,AFG,1980,0.228
-Afghanistan,AFG,1985,0.273
+Afghanistan,AFG,1980,
+Afghanistan,AFG,1985,
 Afghanistan,AFG,2002,0.373
 Afghanistan,AFG,2003,0.383
 Afghanistan,AFG,2004,0.398
@@ -17,8 +17,8 @@ Afghanistan,AFG,2014,0.491
 Afghanistan,AFG,2015,0.493
 Afghanistan,AFG,2016,0.494
 Afghanistan,AFG,2017,0.498
-Albania,ALB,1980,0.625
-Albania,ALB,1985,0.623
+Albania,ALB,1980,
+Albania,ALB,1985,
 Albania,ALB,1990,0.645
 Albania,ALB,1991,0.626
 Albania,ALB,1992,0.61
@@ -125,8 +125,8 @@ Antigua and Barbuda,ATG,2014,0.77
 Antigua and Barbuda,ATG,2015,0.775
 Antigua and Barbuda,ATG,2016,0.778
 Antigua and Barbuda,ATG,2017,0.78
-Argentina,ARG,1980,0.675
-Argentina,ARG,1985,0.694
+Argentina,ARG,1980,
+Argentina,ARG,1985,
 Argentina,ARG,1990,0.704
 Argentina,ARG,1991,0.713
 Argentina,ARG,1992,0.72
@@ -211,8 +211,8 @@ Australia,AUS,2014,0.933
 Australia,AUS,2015,0.936
 Australia,AUS,2016,0.938
 Australia,AUS,2017,0.939
-Austria,AUT,1980,0.747
-Austria,AUT,1985,0.764
+Austria,AUT,1980,
+Austria,AUT,1985,
 Austria,AUT,1990,0.795
 Austria,AUT,1991,0.8
 Austria,AUT,1992,0.805
@@ -282,8 +282,8 @@ Bahamas,BHS,2014,0.807
 Bahamas,BHS,2015,0.807
 Bahamas,BHS,2016,0.806
 Bahamas,BHS,2017,0.807
-Bahrain,BHR,1980,0.679
-Bahrain,BHR,1985,0.727
+Bahrain,BHR,1980,
+Bahrain,BHR,1985,
 Bahrain,BHR,1990,0.746
 Bahrain,BHR,1991,0.752
 Bahrain,BHR,1992,0.757
@@ -312,8 +312,8 @@ Bahrain,BHR,2014,0.81
 Bahrain,BHR,2015,0.832
 Bahrain,BHR,2016,0.846
 Bahrain,BHR,2017,0.846
-Bangladesh,BGD,1980,0.338
-Bangladesh,BGD,1985,0.356
+Bangladesh,BGD,1980,
+Bangladesh,BGD,1985,
 Bangladesh,BGD,1990,0.387
 Bangladesh,BGD,1991,0.394
 Bangladesh,BGD,1992,0.402
@@ -342,8 +342,8 @@ Bangladesh,BGD,2014,0.583
 Bangladesh,BGD,2015,0.592
 Bangladesh,BGD,2016,0.597
 Bangladesh,BGD,2017,0.608
-Barbados,BRB,1980,0.67
-Barbados,BRB,1985,0.7
+Barbados,BRB,1980,
+Barbados,BRB,1985,
 Barbados,BRB,1990,0.716
 Barbados,BRB,1991,0.718
 Barbados,BRB,1992,0.718
@@ -395,8 +395,8 @@ Belarus,BLR,2014,0.807
 Belarus,BLR,2015,0.805
 Belarus,BLR,2016,0.805
 Belarus,BLR,2017,0.808
-Belgium,BEL,1980,0.755
-Belgium,BEL,1985,0.774
+Belgium,BEL,1980,
+Belgium,BEL,1985,
 Belgium,BEL,1990,0.806
 Belgium,BEL,1991,0.81
 Belgium,BEL,1992,0.825
@@ -453,8 +453,8 @@ Belize,BLZ,2014,0.706
 Belize,BLZ,2015,0.709
 Belize,BLZ,2016,0.709
 Belize,BLZ,2017,0.708
-Benin,BEN,1980,0.286
-Benin,BEN,1985,0.327
+Benin,BEN,1980,
+Benin,BEN,1985,
 Benin,BEN,1990,0.348
 Benin,BEN,1991,0.354
 Benin,BEN,1992,0.358
@@ -542,8 +542,8 @@ Bosnia and Herzegovina,BIH,2014,0.754
 Bosnia and Herzegovina,BIH,2015,0.755
 Bosnia and Herzegovina,BIH,2016,0.766
 Bosnia and Herzegovina,BIH,2017,0.768
-Botswana,BWA,1980,0.453
-Botswana,BWA,1985,0.518
+Botswana,BWA,1980,
+Botswana,BWA,1985,
 Botswana,BWA,1990,0.581
 Botswana,BWA,1991,0.588
 Botswana,BWA,1992,0.587
@@ -572,8 +572,8 @@ Botswana,BWA,2014,0.701
 Botswana,BWA,2015,0.706
 Botswana,BWA,2016,0.712
 Botswana,BWA,2017,0.717
-Brazil,BRA,1980,0.547
-Brazil,BRA,1985,0.576
+Brazil,BRA,1980,
+Brazil,BRA,1985,
 Brazil,BRA,1990,0.611
 Brazil,BRA,1991,0.615
 Brazil,BRA,1992,0.622
@@ -602,7 +602,7 @@ Brazil,BRA,2014,0.752
 Brazil,BRA,2015,0.757
 Brazil,BRA,2016,0.758
 Brazil,BRA,2017,0.759
-Brunei,BRN,1985,0.755
+Brunei,BRN,1985,
 Brunei,BRN,1990,0.782
 Brunei,BRN,1991,0.787
 Brunei,BRN,1992,0.792
@@ -631,8 +631,8 @@ Brunei,BRN,2014,0.853
 Brunei,BRN,2015,0.852
 Brunei,BRN,2016,0.852
 Brunei,BRN,2017,0.853
-Bulgaria,BGR,1980,0.665
-Bulgaria,BGR,1985,0.686
+Bulgaria,BGR,1980,
+Bulgaria,BGR,1985,
 Bulgaria,BGR,1990,0.694
 Bulgaria,BGR,1991,0.691
 Bulgaria,BGR,1992,0.691
@@ -679,8 +679,8 @@ Burkina Faso,BFA,2014,0.405
 Burkina Faso,BFA,2015,0.412
 Burkina Faso,BFA,2016,0.42
 Burkina Faso,BFA,2017,0.423
-Burundi,BDI,1980,0.23
-Burundi,BDI,1985,0.276
+Burundi,BDI,1980,
+Burundi,BDI,1985,
 Burundi,BDI,1990,0.297
 Burundi,BDI,1991,0.3
 Burundi,BDI,1992,0.297
@@ -737,8 +737,8 @@ Cambodia,KHM,2014,0.566
 Cambodia,KHM,2015,0.571
 Cambodia,KHM,2016,0.576
 Cambodia,KHM,2017,0.582
-Cameroon,CMR,1980,0.405
-Cameroon,CMR,1985,0.436
+Cameroon,CMR,1980,
+Cameroon,CMR,1985,
 Cameroon,CMR,1990,0.44
 Cameroon,CMR,1991,0.436
 Cameroon,CMR,1992,0.432
@@ -767,7 +767,7 @@ Cameroon,CMR,2014,0.543
 Cameroon,CMR,2015,0.548
 Cameroon,CMR,2016,0.553
 Cameroon,CMR,2017,0.556
-Canada,CAN,1985,0.827
+Canada,CAN,1985,
 Canada,CAN,1990,0.849
 Canada,CAN,1991,0.853
 Canada,CAN,1992,0.856
@@ -814,8 +814,8 @@ Cape Verde,CPV,2014,0.644
 Cape Verde,CPV,2015,0.647
 Cape Verde,CPV,2016,0.652
 Cape Verde,CPV,2017,0.654
-Central African Republic,CAF,1980,0.302
-Central African Republic,CAF,1985,0.32
+Central African Republic,CAF,1980,
+Central African Republic,CAF,1985,
 Central African Republic,CAF,1990,0.317
 Central African Republic,CAF,1991,0.312
 Central African Republic,CAF,1992,0.299
@@ -862,8 +862,8 @@ Chad,TCD,2014,0.403
 Chad,TCD,2015,0.407
 Chad,TCD,2016,0.405
 Chad,TCD,2017,0.404
-Chile,CHL,1980,0.636
-Chile,CHL,1985,0.654
+Chile,CHL,1980,
+Chile,CHL,1985,
 Chile,CHL,1990,0.701
 Chile,CHL,1991,0.711
 Chile,CHL,1992,0.719
@@ -892,8 +892,8 @@ Chile,CHL,2014,0.833
 Chile,CHL,2015,0.84
 Chile,CHL,2016,0.842
 Chile,CHL,2017,0.843
-China,CHN,1980,0.43
-China,CHN,1985,0.467
+China,CHN,1980,
+China,CHN,1985,
 China,CHN,1990,0.502
 China,CHN,1991,0.51
 China,CHN,1992,0.521
@@ -922,8 +922,8 @@ China,CHN,2014,0.738
 China,CHN,2015,0.743
 China,CHN,2016,0.748
 China,CHN,2017,0.752
-Colombia,COL,1980,0.557
-Colombia,COL,1985,0.573
+Colombia,COL,1980,
+Colombia,COL,1985,
 Colombia,COL,1990,0.592
 Colombia,COL,1991,0.595
 Colombia,COL,1992,0.606
@@ -966,8 +966,8 @@ Comoros,COM,2014,0.501
 Comoros,COM,2015,0.502
 Comoros,COM,2016,0.502
 Comoros,COM,2017,0.503
-Congo,COG,1980,0.527
-Congo,COG,1985,0.554
+Congo,COG,1980,
+Congo,COG,1985,
 Congo,COG,1990,0.536
 Congo,COG,1991,0.535
 Congo,COG,1992,0.535
@@ -996,8 +996,8 @@ Congo,COG,2014,0.595
 Congo,COG,2015,0.613
 Congo,COG,2016,0.612
 Congo,COG,2017,0.606
-Costa Rica,CRI,1980,0.613
-Costa Rica,CRI,1985,0.623
+Costa Rica,CRI,1980,
+Costa Rica,CRI,1985,
 Costa Rica,CRI,1990,0.656
 Costa Rica,CRI,1991,0.661
 Costa Rica,CRI,1992,0.67
@@ -1026,8 +1026,8 @@ Costa Rica,CRI,2014,0.78
 Costa Rica,CRI,2015,0.788
 Costa Rica,CRI,2016,0.791
 Costa Rica,CRI,2017,0.794
-Cote d'Ivoire,CIV,1980,0.376
-Cote d'Ivoire,CIV,1985,0.382
+Cote d'Ivoire,CIV,1980,
+Cote d'Ivoire,CIV,1985,
 Cote d'Ivoire,CIV,1990,0.388
 Cote d'Ivoire,CIV,1991,0.387
 Cote d'Ivoire,CIV,1992,0.387
@@ -1084,8 +1084,8 @@ Croatia,HRV,2014,0.824
 Croatia,HRV,2015,0.827
 Croatia,HRV,2016,0.828
 Croatia,HRV,2017,0.831
-Cuba,CUB,1980,0.627
-Cuba,CUB,1985,0.664
+Cuba,CUB,1980,
+Cuba,CUB,1985,
 Cuba,CUB,1990,0.676
 Cuba,CUB,1991,0.67
 Cuba,CUB,1992,0.663
@@ -1114,8 +1114,8 @@ Cuba,CUB,2014,0.768
 Cuba,CUB,2015,0.772
 Cuba,CUB,2016,0.774
 Cuba,CUB,2017,0.777
-Cyprus,CYP,1980,0.668
-Cyprus,CYP,1985,0.703
+Cyprus,CYP,1980,
+Cyprus,CYP,1985,
 Cyprus,CYP,1990,0.732
 Cyprus,CYP,1991,0.735
 Cyprus,CYP,1992,0.74
@@ -1172,8 +1172,8 @@ Czechia,CZE,2014,0.879
 Czechia,CZE,2015,0.882
 Czechia,CZE,2016,0.885
 Czechia,CZE,2017,0.888
-Democratic Republic of Congo,COD,1980,0.346
-Democratic Republic of Congo,COD,1985,0.355
+Democratic Republic of Congo,COD,1980,
+Democratic Republic of Congo,COD,1985,
 Democratic Republic of Congo,COD,1990,0.356
 Democratic Republic of Congo,COD,1991,0.353
 Democratic Republic of Congo,COD,1993,0.34
@@ -1201,8 +1201,8 @@ Democratic Republic of Congo,COD,2014,0.436
 Democratic Republic of Congo,COD,2015,0.444
 Democratic Republic of Congo,COD,2016,0.452
 Democratic Republic of Congo,COD,2017,0.457
-Denmark,DNK,1980,0.758
-Denmark,DNK,1985,0.776
+Denmark,DNK,1980,
+Denmark,DNK,1985,
 Denmark,DNK,1990,0.799
 Denmark,DNK,1991,0.804
 Denmark,DNK,1992,0.809
@@ -1272,7 +1272,7 @@ Dominica,DMA,2014,0.724
 Dominica,DMA,2015,0.721
 Dominica,DMA,2016,0.718
 Dominica,DMA,2017,0.715
-Dominican Republic,DOM,1985,0.57
+Dominican Republic,DOM,1985,
 Dominican Republic,DOM,1990,0.598
 Dominican Republic,DOM,1991,0.603
 Dominican Republic,DOM,1992,0.612
@@ -1301,8 +1301,8 @@ Dominican Republic,DOM,2014,0.718
 Dominican Republic,DOM,2015,0.729
 Dominican Republic,DOM,2016,0.733
 Dominican Republic,DOM,2017,0.736
-Ecuador,ECU,1980,0.603
-Ecuador,ECU,1985,0.631
+Ecuador,ECU,1980,
+Ecuador,ECU,1985,
 Ecuador,ECU,1990,0.643
 Ecuador,ECU,1991,0.646
 Ecuador,ECU,1992,0.65
@@ -1331,8 +1331,8 @@ Ecuador,ECU,2014,0.742
 Ecuador,ECU,2015,0.743
 Ecuador,ECU,2016,0.749
 Ecuador,ECU,2017,0.752
-Egypt,EGY,1980,0.453
-Egypt,EGY,1985,0.507
+Egypt,EGY,1980,
+Egypt,EGY,1985,
 Egypt,EGY,1990,0.546
 Egypt,EGY,1991,0.55
 Egypt,EGY,1992,0.557
@@ -1361,7 +1361,7 @@ Egypt,EGY,2014,0.683
 Egypt,EGY,2015,0.691
 Egypt,EGY,2016,0.694
 Egypt,EGY,2017,0.696
-El Salvador,SLV,1985,0.488
+El Salvador,SLV,1985,
 El Salvador,SLV,1990,0.529
 El Salvador,SLV,1991,0.534
 El Salvador,SLV,1992,0.546
@@ -1449,8 +1449,8 @@ Estonia,EST,2014,0.864
 Estonia,EST,2015,0.866
 Estonia,EST,2016,0.868
 Estonia,EST,2017,0.871
-Eswatini,SWZ,1980,0.473
-Eswatini,SWZ,1985,0.504
+Eswatini,SWZ,1980,
+Eswatini,SWZ,1985,
 Eswatini,SWZ,1990,0.536
 Eswatini,SWZ,1991,0.537
 Eswatini,SWZ,1992,0.536
@@ -1497,8 +1497,8 @@ Ethiopia,ETH,2014,0.445
 Ethiopia,ETH,2015,0.451
 Ethiopia,ETH,2016,0.457
 Ethiopia,ETH,2017,0.463
-Fiji,FJI,1980,0.578
-Fiji,FJI,1985,0.576
+Fiji,FJI,1980,
+Fiji,FJI,1985,
 Fiji,FJI,1990,0.643
 Fiji,FJI,1991,0.651
 Fiji,FJI,1992,0.655
@@ -1527,8 +1527,8 @@ Fiji,FJI,2014,0.73
 Fiji,FJI,2015,0.738
 Fiji,FJI,2016,0.738
 Fiji,FJI,2017,0.741
-Finland,FIN,1980,0.744
-Finland,FIN,1985,0.762
+Finland,FIN,1980,
+Finland,FIN,1985,
 Finland,FIN,1990,0.784
 Finland,FIN,1991,0.787
 Finland,FIN,1992,0.795
@@ -1557,8 +1557,8 @@ Finland,FIN,2014,0.914
 Finland,FIN,2015,0.915
 Finland,FIN,2016,0.918
 Finland,FIN,2017,0.92
-France,FRA,1980,0.721
-France,FRA,1985,0.741
+France,FRA,1980,
+France,FRA,1985,
 France,FRA,1990,0.779
 France,FRA,1991,0.788
 France,FRA,1992,0.798
@@ -1587,8 +1587,8 @@ France,FRA,2014,0.894
 France,FRA,2015,0.898
 France,FRA,2016,0.899
 France,FRA,2017,0.901
-Gabon,GAB,1980,0.548
-Gabon,GAB,1985,0.596
+Gabon,GAB,1980,
+Gabon,GAB,1985,
 Gabon,GAB,1990,0.62
 Gabon,GAB,1991,0.625
 Gabon,GAB,1992,0.624
@@ -1691,8 +1691,8 @@ Germany,DEU,2014,0.93
 Germany,DEU,2015,0.933
 Germany,DEU,2016,0.934
 Germany,DEU,2017,0.936
-Ghana,GHA,1980,0.415
-Ghana,GHA,1985,0.427
+Ghana,GHA,1980,
+Ghana,GHA,1985,
 Ghana,GHA,1990,0.455
 Ghana,GHA,1991,0.46
 Ghana,GHA,1992,0.464
@@ -1721,8 +1721,8 @@ Ghana,GHA,2014,0.576
 Ghana,GHA,2015,0.585
 Ghana,GHA,2016,0.588
 Ghana,GHA,2017,0.592
-Greece,GRC,1980,0.714
-Greece,GRC,1985,0.741
+Greece,GRC,1980,
+Greece,GRC,1985,
 Greece,GRC,1990,0.753
 Greece,GRC,1991,0.763
 Greece,GRC,1992,0.764
@@ -1767,8 +1767,8 @@ Grenada,GRD,2014,0.761
 Grenada,GRD,2015,0.767
 Grenada,GRD,2016,0.77
 Grenada,GRD,2017,0.772
-Guatemala,GTM,1980,0.445
-Guatemala,GTM,1985,0.455
+Guatemala,GTM,1980,
+Guatemala,GTM,1985,
 Guatemala,GTM,1990,0.478
 Guatemala,GTM,1991,0.483
 Guatemala,GTM,1992,0.49
@@ -1838,7 +1838,7 @@ Guinea-Bissau,GNB,2014,0.445
 Guinea-Bissau,GNB,2015,0.449
 Guinea-Bissau,GNB,2016,0.453
 Guinea-Bissau,GNB,2017,0.455
-Guyana,GUY,1985,0.545
+Guyana,GUY,1985,
 Guyana,GUY,1990,0.538
 Guyana,GUY,1991,0.533
 Guyana,GUY,1992,0.548
@@ -1867,8 +1867,8 @@ Guyana,GUY,2014,0.648
 Guyana,GUY,2015,0.651
 Guyana,GUY,2016,0.652
 Guyana,GUY,2017,0.654
-Haiti,HTI,1980,0.357
-Haiti,HTI,1985,0.397
+Haiti,HTI,1980,
+Haiti,HTI,1985,
 Haiti,HTI,1990,0.409
 Haiti,HTI,1991,0.409
 Haiti,HTI,1992,0.406
@@ -1897,8 +1897,8 @@ Haiti,HTI,2014,0.49
 Haiti,HTI,2015,0.493
 Haiti,HTI,2016,0.496
 Haiti,HTI,2017,0.498
-Honduras,HND,1980,0.463
-Honduras,HND,1985,0.494
+Honduras,HND,1980,
+Honduras,HND,1985,
 Honduras,HND,1990,0.506
 Honduras,HND,1991,0.509
 Honduras,HND,1992,0.513
@@ -1927,8 +1927,8 @@ Honduras,HND,2014,0.603
 Honduras,HND,2015,0.609
 Honduras,HND,2016,0.614
 Honduras,HND,2017,0.617
-Hong Kong,HKG,1980,0.7
-Hong Kong,HKG,1985,0.742
+Hong Kong,HKG,1980,
+Hong Kong,HKG,1985,
 Hong Kong,HKG,1990,0.781
 Hong Kong,HKG,1991,0.786
 Hong Kong,HKG,1992,0.791
@@ -1957,8 +1957,8 @@ Hong Kong,HKG,2014,0.923
 Hong Kong,HKG,2015,0.927
 Hong Kong,HKG,2016,0.93
 Hong Kong,HKG,2017,0.933
-Hungary,HUN,1980,0.7
-Hungary,HUN,1985,0.711
+Hungary,HUN,1980,
+Hungary,HUN,1985,
 Hungary,HUN,1990,0.704
 Hungary,HUN,1991,0.701
 Hungary,HUN,1993,0.719
@@ -1986,8 +1986,8 @@ Hungary,HUN,2014,0.833
 Hungary,HUN,2015,0.834
 Hungary,HUN,2016,0.835
 Hungary,HUN,2017,0.838
-Iceland,ISL,1980,0.756
-Iceland,ISL,1985,0.776
+Iceland,ISL,1980,
+Iceland,ISL,1985,
 Iceland,ISL,1990,0.802
 Iceland,ISL,1991,0.815
 Iceland,ISL,1992,0.818
@@ -2016,8 +2016,8 @@ Iceland,ISL,2014,0.925
 Iceland,ISL,2015,0.927
 Iceland,ISL,2016,0.933
 Iceland,ISL,2017,0.935
-India,IND,1980,0.362
-India,IND,1985,0.397
+India,IND,1980,
+India,IND,1985,
 India,IND,1990,0.427
 India,IND,1991,0.432
 India,IND,1992,0.438
@@ -2046,8 +2046,8 @@ India,IND,2014,0.618
 India,IND,2015,0.627
 India,IND,2016,0.636
 India,IND,2017,0.64
-Indonesia,IDN,1980,0.474
-Indonesia,IDN,1985,0.512
+Indonesia,IDN,1980,
+Indonesia,IDN,1985,
 Indonesia,IDN,1990,0.528
 Indonesia,IDN,1991,0.533
 Indonesia,IDN,1992,0.539
@@ -2104,8 +2104,8 @@ Iran,IRN,2014,0.788
 Iran,IRN,2015,0.789
 Iran,IRN,2016,0.796
 Iran,IRN,2017,0.798
-Iraq,IRQ,1980,0.548
-Iraq,IRQ,1985,0.537
+Iraq,IRQ,1980,
+Iraq,IRQ,1985,
 Iraq,IRQ,1990,0.572
 Iraq,IRQ,1991,0.527
 Iraq,IRQ,1992,0.541
@@ -2134,8 +2134,8 @@ Iraq,IRQ,2014,0.666
 Iraq,IRQ,2015,0.668
 Iraq,IRQ,2016,0.672
 Iraq,IRQ,2017,0.685
-Ireland,IRL,1980,0.722
-Ireland,IRL,1985,0.742
+Ireland,IRL,1980,
+Ireland,IRL,1985,
 Ireland,IRL,1990,0.763
 Ireland,IRL,1991,0.767
 Ireland,IRL,1992,0.773
@@ -2164,8 +2164,8 @@ Ireland,IRL,2014,0.921
 Ireland,IRL,2015,0.929
 Ireland,IRL,2016,0.934
 Ireland,IRL,2017,0.938
-Israel,ISR,1980,0.75
-Israel,ISR,1985,0.768
+Israel,ISR,1980,
+Israel,ISR,1985,
 Israel,ISR,1990,0.792
 Israel,ISR,1991,0.8
 Israel,ISR,1992,0.807
@@ -2194,8 +2194,8 @@ Israel,ISR,2014,0.899
 Israel,ISR,2015,0.901
 Israel,ISR,2016,0.902
 Israel,ISR,2017,0.903
-Italy,ITA,1980,0.722
-Italy,ITA,1985,0.738
+Italy,ITA,1980,
+Italy,ITA,1985,
 Italy,ITA,1990,0.769
 Italy,ITA,1991,0.774
 Italy,ITA,1992,0.78
@@ -2224,8 +2224,8 @@ Italy,ITA,2014,0.874
 Italy,ITA,2015,0.876
 Italy,ITA,2016,0.878
 Italy,ITA,2017,0.88
-Jamaica,JAM,1980,0.648
-Jamaica,JAM,1985,0.65
+Jamaica,JAM,1980,
+Jamaica,JAM,1985,
 Jamaica,JAM,1990,0.638
 Jamaica,JAM,1991,0.639
 Jamaica,JAM,1992,0.645
@@ -2254,8 +2254,8 @@ Jamaica,JAM,2014,0.728
 Jamaica,JAM,2015,0.73
 Jamaica,JAM,2016,0.732
 Jamaica,JAM,2017,0.732
-Japan,JPN,1980,0.769
-Japan,JPN,1985,0.791
+Japan,JPN,1980,
+Japan,JPN,1985,
 Japan,JPN,1990,0.816
 Japan,JPN,1991,0.821
 Japan,JPN,1992,0.824
@@ -2284,8 +2284,8 @@ Japan,JPN,2014,0.903
 Japan,JPN,2015,0.905
 Japan,JPN,2016,0.907
 Japan,JPN,2017,0.909
-Jordan,JOR,1980,0.595
-Jordan,JOR,1985,0.618
+Jordan,JOR,1980,
+Jordan,JOR,1985,
 Jordan,JOR,1990,0.617
 Jordan,JOR,1991,0.627
 Jordan,JOR,1992,0.648
@@ -2341,8 +2341,8 @@ Kazakhstan,KAZ,2014,0.793
 Kazakhstan,KAZ,2015,0.797
 Kazakhstan,KAZ,2016,0.797
 Kazakhstan,KAZ,2017,0.8
-Kenya,KEN,1980,0.453
-Kenya,KEN,1985,0.465
+Kenya,KEN,1980,
+Kenya,KEN,1985,
 Kenya,KEN,1990,0.468
 Kenya,KEN,1991,0.466
 Kenya,KEN,1992,0.463
@@ -2417,8 +2417,8 @@ Korea,,2014,0.896
 Korea,,2015,0.898
 Korea,,2016,0.9
 Korea,,2017,0.903
-Kuwait,KWT,1980,0.701
-Kuwait,KWT,1985,0.732
+Kuwait,KWT,1980,
+Kuwait,KWT,1985,
 Kuwait,KWT,1990,0.713
 Kuwait,KWT,1991,0.673
 Kuwait,KWT,1992,0.666
@@ -2475,8 +2475,8 @@ Kyrgyzstan,KGZ,2014,0.663
 Kyrgyzstan,KGZ,2015,0.666
 Kyrgyzstan,KGZ,2016,0.669
 Kyrgyzstan,KGZ,2017,0.672
-Laos,LAO,1980,0.345
-Laos,LAO,1985,0.37
+Laos,LAO,1980,
+Laos,LAO,1985,
 Laos,LAO,1990,0.4
 Laos,LAO,1991,0.405
 Laos,LAO,1992,0.411
@@ -2546,8 +2546,8 @@ Lebanon,LBN,2014,0.751
 Lebanon,LBN,2015,0.752
 Lebanon,LBN,2016,0.753
 Lebanon,LBN,2017,0.757
-Lesotho,LSO,1980,0.436
-Lesotho,LSO,1985,0.469
+Lesotho,LSO,1980,
+Lesotho,LSO,1985,
 Lesotho,LSO,1990,0.499
 Lesotho,LSO,1991,0.499
 Lesotho,LSO,1992,0.499
@@ -2595,8 +2595,8 @@ Liberia,LBR,2014,0.431
 Liberia,LBR,2015,0.432
 Liberia,LBR,2016,0.432
 Liberia,LBR,2017,0.435
-Libya,LBY,1980,0.636
-Libya,LBY,1985,0.657
+Libya,LBY,1980,
+Libya,LBY,1985,
 Libya,LBY,1990,0.677
 Libya,LBY,1991,0.688
 Libya,LBY,1992,0.692
@@ -2671,8 +2671,8 @@ Lithuania,LTU,2014,0.851
 Lithuania,LTU,2015,0.852
 Lithuania,LTU,2016,0.855
 Lithuania,LTU,2017,0.858
-Luxembourg,LUX,1980,0.719
-Luxembourg,LUX,1985,0.752
+Luxembourg,LUX,1980,
+Luxembourg,LUX,1985,
 Luxembourg,LUX,1990,0.782
 Luxembourg,LUX,1991,0.79
 Luxembourg,LUX,1992,0.795
@@ -2719,8 +2719,8 @@ Madagascar,MDG,2014,0.512
 Madagascar,MDG,2015,0.514
 Madagascar,MDG,2016,0.517
 Madagascar,MDG,2017,0.519
-Malawi,MWI,1980,0.278
-Malawi,MWI,1985,0.278
+Malawi,MWI,1980,
+Malawi,MWI,1985,
 Malawi,MWI,1990,0.34
 Malawi,MWI,1991,0.346
 Malawi,MWI,1992,0.355
@@ -2749,8 +2749,8 @@ Malawi,MWI,2014,0.468
 Malawi,MWI,2015,0.47
 Malawi,MWI,2016,0.474
 Malawi,MWI,2017,0.477
-Malaysia,MYS,1980,0.569
-Malaysia,MYS,1985,0.611
+Malaysia,MYS,1980,
+Malaysia,MYS,1985,
 Malaysia,MYS,1990,0.643
 Malaysia,MYS,1991,0.652
 Malaysia,MYS,1992,0.66
@@ -2802,8 +2802,8 @@ Maldives,MDV,2014,0.705
 Maldives,MDV,2015,0.71
 Maldives,MDV,2016,0.712
 Maldives,MDV,2017,0.717
-Mali,MLI,1980,0.199
-Mali,MLI,1985,0.207
+Mali,MLI,1980,
+Mali,MLI,1985,
 Mali,MLI,1990,0.231
 Mali,MLI,1991,0.238
 Mali,MLI,1992,0.243
@@ -2832,8 +2832,8 @@ Mali,MLI,2014,0.414
 Mali,MLI,2015,0.418
 Mali,MLI,2016,0.421
 Mali,MLI,2017,0.427
-Malta,MLT,1980,0.705
-Malta,MLT,1985,0.713
+Malta,MLT,1980,
+Malta,MLT,1985,
 Malta,MLT,1990,0.74
 Malta,MLT,1991,0.745
 Malta,MLT,1992,0.749
@@ -2863,7 +2863,7 @@ Malta,MLT,2015,0.871
 Malta,MLT,2016,0.875
 Malta,MLT,2017,0.878
 Marshall Islands,MHL,2017,0.708
-Mauritania,MRT,1985,0.362
+Mauritania,MRT,1985,
 Mauritania,MRT,1990,0.374
 Mauritania,MRT,1991,0.379
 Mauritania,MRT,1992,0.387
@@ -2892,8 +2892,8 @@ Mauritania,MRT,2014,0.514
 Mauritania,MRT,2015,0.514
 Mauritania,MRT,2016,0.516
 Mauritania,MRT,2017,0.52
-Mauritius,MUS,1980,0.549
-Mauritius,MUS,1985,0.575
+Mauritius,MUS,1980,
+Mauritius,MUS,1985,
 Mauritius,MUS,1990,0.619
 Mauritius,MUS,1991,0.626
 Mauritius,MUS,1992,0.633
@@ -2922,8 +2922,8 @@ Mauritius,MUS,2014,0.782
 Mauritius,MUS,2015,0.782
 Mauritius,MUS,2016,0.788
 Mauritius,MUS,2017,0.79
-Mexico,MEX,1980,0.601
-Mexico,MEX,1985,0.634
+Mexico,MEX,1980,
+Mexico,MEX,1985,
 Mexico,MEX,1990,0.65
 Mexico,MEX,1991,0.654
 Mexico,MEX,1992,0.658
@@ -2998,8 +2998,8 @@ Moldova,MDA,2014,0.696
 Moldova,MDA,2015,0.693
 Moldova,MDA,2016,0.697
 Moldova,MDA,2017,0.7
-Mongolia,MNG,1980,0.524
-Mongolia,MNG,1985,0.552
+Mongolia,MNG,1980,
+Mongolia,MNG,1985,
 Mongolia,MNG,1990,0.579
 Mongolia,MNG,1991,0.574
 Mongolia,MNG,1992,0.561
@@ -3043,8 +3043,8 @@ Montenegro,MNE,2014,0.805
 Montenegro,MNE,2015,0.809
 Montenegro,MNE,2016,0.81
 Montenegro,MNE,2017,0.814
-Morocco,MAR,1980,0.396
-Morocco,MAR,1985,0.434
+Morocco,MAR,1980,
+Morocco,MAR,1985,
 Morocco,MAR,1990,0.458
 Morocco,MAR,1991,0.464
 Morocco,MAR,1992,0.468
@@ -3073,8 +3073,8 @@ Morocco,MAR,2014,0.65
 Morocco,MAR,2015,0.655
 Morocco,MAR,2016,0.662
 Morocco,MAR,2017,0.667
-Mozambique,MOZ,1980,0.238
-Mozambique,MOZ,1985,0.212
+Mozambique,MOZ,1980,
+Mozambique,MOZ,1985,
 Mozambique,MOZ,1990,0.209
 Mozambique,MOZ,1991,0.212
 Mozambique,MOZ,1992,0.208
@@ -3103,8 +3103,8 @@ Mozambique,MOZ,2014,0.427
 Mozambique,MOZ,2015,0.432
 Mozambique,MOZ,2016,0.435
 Mozambique,MOZ,2017,0.437
-Myanmar,MMR,1980,0.334
-Myanmar,MMR,1985,0.359
+Myanmar,MMR,1980,
+Myanmar,MMR,1985,
 Myanmar,MMR,1990,0.359
 Myanmar,MMR,1991,0.366
 Myanmar,MMR,1992,0.38
@@ -3161,8 +3161,8 @@ Namibia,NAM,2014,0.636
 Namibia,NAM,2015,0.642
 Namibia,NAM,2016,0.645
 Namibia,NAM,2017,0.647
-Nepal,NPL,1980,0.279
-Nepal,NPL,1985,0.325
+Nepal,NPL,1980,
+Nepal,NPL,1985,
 Nepal,NPL,1990,0.378
 Nepal,NPL,1991,0.386
 Nepal,NPL,1992,0.394
@@ -3191,8 +3191,8 @@ Nepal,NPL,2014,0.56
 Nepal,NPL,2015,0.566
 Nepal,NPL,2016,0.569
 Nepal,NPL,2017,0.574
-Netherlands,NLD,1980,0.787
-Netherlands,NLD,1985,0.799
+Netherlands,NLD,1980,
+Netherlands,NLD,1985,
 Netherlands,NLD,1990,0.829
 Netherlands,NLD,1991,0.834
 Netherlands,NLD,1992,0.835
@@ -3221,8 +3221,8 @@ Netherlands,NLD,2014,0.924
 Netherlands,NLD,2015,0.926
 Netherlands,NLD,2016,0.928
 Netherlands,NLD,2017,0.931
-New Zealand,NZL,1980,0.793
-New Zealand,NZL,1985,0.805
+New Zealand,NZL,1980,
+New Zealand,NZL,1985,
 New Zealand,NZL,1990,0.818
 New Zealand,NZL,1991,0.82
 New Zealand,NZL,1992,0.825
@@ -3251,8 +3251,8 @@ New Zealand,NZL,2014,0.91
 New Zealand,NZL,2015,0.914
 New Zealand,NZL,2016,0.915
 New Zealand,NZL,2017,0.917
-Nicaragua,NIC,1980,0.478
-Nicaragua,NIC,1985,0.484
+Nicaragua,NIC,1980,
+Nicaragua,NIC,1985,
 Nicaragua,NIC,1990,0.489
 Nicaragua,NIC,1991,0.498
 Nicaragua,NIC,1992,0.505
@@ -3281,8 +3281,8 @@ Nicaragua,NIC,2014,0.649
 Nicaragua,NIC,2015,0.652
 Nicaragua,NIC,2016,0.657
 Nicaragua,NIC,2017,0.658
-Niger,NER,1980,0.19
-Niger,NER,1985,0.199
+Niger,NER,1980,
+Niger,NER,1985,
 Niger,NER,1990,0.21
 Niger,NER,1991,0.214
 Niger,NER,1992,0.216
@@ -3344,8 +3344,8 @@ North Macedonia,MKD,2014,0.747
 North Macedonia,MKD,2015,0.754
 North Macedonia,MKD,2016,0.756
 North Macedonia,MKD,2017,0.757
-Norway,NOR,1980,0.811
-Norway,NOR,1985,0.828
+Norway,NOR,1980,
+Norway,NOR,1985,
 Norway,NOR,1990,0.85
 Norway,NOR,1991,0.856
 Norway,NOR,1992,0.862
@@ -3392,8 +3392,8 @@ Oman,OMN,2014,0.815
 Oman,OMN,2015,0.822
 Oman,OMN,2016,0.822
 Oman,OMN,2017,0.821
-Pakistan,PAK,1980,0.353
-Pakistan,PAK,1985,0.38
+Pakistan,PAK,1980,
+Pakistan,PAK,1985,
 Pakistan,PAK,1990,0.404
 Pakistan,PAK,1991,0.409
 Pakistan,PAK,1992,0.414
@@ -3454,8 +3454,8 @@ Palestine,PSE,2014,0.679
 Palestine,PSE,2015,0.687
 Palestine,PSE,2016,0.689
 Palestine,PSE,2017,0.686
-Panama,PAN,1980,0.626
-Panama,PAN,1985,0.648
+Panama,PAN,1980,
+Panama,PAN,1985,
 Panama,PAN,1990,0.66
 Panama,PAN,1991,0.665
 Panama,PAN,1992,0.673
@@ -3484,7 +3484,7 @@ Panama,PAN,2014,0.781
 Panama,PAN,2015,0.781
 Panama,PAN,2016,0.785
 Panama,PAN,2017,0.789
-Papua New Guinea,PNG,1985,0.334
+Papua New Guinea,PNG,1985,
 Papua New Guinea,PNG,1990,0.38
 Papua New Guinea,PNG,1991,0.388
 Papua New Guinea,PNG,1992,0.398
@@ -3513,8 +3513,8 @@ Papua New Guinea,PNG,2014,0.536
 Papua New Guinea,PNG,2015,0.542
 Papua New Guinea,PNG,2016,0.543
 Papua New Guinea,PNG,2017,0.544
-Paraguay,PRY,1980,0.551
-Paraguay,PRY,1985,0.564
+Paraguay,PRY,1980,
+Paraguay,PRY,1985,
 Paraguay,PRY,1990,0.58
 Paraguay,PRY,1991,0.585
 Paraguay,PRY,1992,0.589
@@ -3543,8 +3543,8 @@ Paraguay,PRY,2014,0.698
 Paraguay,PRY,2015,0.702
 Paraguay,PRY,2016,0.702
 Paraguay,PRY,2017,0.702
-Peru,PER,1980,0.577
-Peru,PER,1985,0.6
+Peru,PER,1980,
+Peru,PER,1985,
 Peru,PER,1990,0.611
 Peru,PER,1991,0.617
 Peru,PER,1992,0.617
@@ -3573,8 +3573,8 @@ Peru,PER,2014,0.746
 Peru,PER,2015,0.745
 Peru,PER,2016,0.748
 Peru,PER,2017,0.75
-Philippines,PHL,1980,0.557
-Philippines,PHL,1985,0.565
+Philippines,PHL,1980,
+Philippines,PHL,1985,
 Philippines,PHL,1990,0.586
 Philippines,PHL,1991,0.587
 Philippines,PHL,1992,0.589
@@ -3603,8 +3603,8 @@ Philippines,PHL,2014,0.689
 Philippines,PHL,2015,0.693
 Philippines,PHL,2016,0.696
 Philippines,PHL,2017,0.699
-Poland,POL,1980,0.689
-Poland,POL,1985,0.701
+Poland,POL,1980,
+Poland,POL,1985,
 Poland,POL,1990,0.712
 Poland,POL,1991,0.711
 Poland,POL,1992,0.714
@@ -3633,8 +3633,8 @@ Poland,POL,2014,0.842
 Poland,POL,2015,0.855
 Poland,POL,2016,0.86
 Poland,POL,2017,0.865
-Portugal,PRT,1980,0.645
-Portugal,PRT,1985,0.676
+Portugal,PRT,1980,
+Portugal,PRT,1985,
 Portugal,PRT,1990,0.711
 Portugal,PRT,1991,0.72
 Portugal,PRT,1992,0.732
@@ -3663,8 +3663,8 @@ Portugal,PRT,2014,0.839
 Portugal,PRT,2015,0.842
 Portugal,PRT,2016,0.845
 Portugal,PRT,2017,0.847
-Qatar,QAT,1980,0.729
-Qatar,QAT,1985,0.752
+Qatar,QAT,1980,
+Qatar,QAT,1985,
 Qatar,QAT,1990,0.754
 Qatar,QAT,1991,0.751
 Qatar,QAT,1992,0.753
@@ -3749,8 +3749,8 @@ Russia,RUS,2014,0.807
 Russia,RUS,2015,0.813
 Russia,RUS,2016,0.815
 Russia,RUS,2017,0.816
-Rwanda,RWA,1980,0.299
-Rwanda,RWA,1985,0.32
+Rwanda,RWA,1980,
+Rwanda,RWA,1985,
 Rwanda,RWA,1990,0.25
 Rwanda,RWA,1991,0.227
 Rwanda,RWA,1992,0.213
@@ -3828,8 +3828,8 @@ Saint Vincent and the Grenadines,VCT,2014,0.72
 Saint Vincent and the Grenadines,VCT,2015,0.72
 Saint Vincent and the Grenadines,VCT,2016,0.721
 Saint Vincent and the Grenadines,VCT,2017,0.723
-Samoa,WSM,1980,0.571
-Samoa,WSM,1985,0.584
+Samoa,WSM,1980,
+Samoa,WSM,1985,
 Samoa,WSM,1990,0.62
 Samoa,WSM,1991,0.622
 Samoa,WSM,1992,0.624
@@ -3858,8 +3858,8 @@ Samoa,WSM,2014,0.703
 Samoa,WSM,2015,0.706
 Samoa,WSM,2016,0.711
 Samoa,WSM,2017,0.713
-Sao Tome and Principe,STP,1980,0.452
-Sao Tome and Principe,STP,1985,0.453
+Sao Tome and Principe,STP,1980,
+Sao Tome and Principe,STP,1985,
 Sao Tome and Principe,STP,1990,0.453
 Sao Tome and Principe,STP,1991,0.455
 Sao Tome and Principe,STP,1992,0.458
@@ -3916,8 +3916,8 @@ Saudi Arabia,SAU,2014,0.852
 Saudi Arabia,SAU,2015,0.854
 Saudi Arabia,SAU,2016,0.854
 Saudi Arabia,SAU,2017,0.853
-Senegal,SEN,1980,0.325
-Senegal,SEN,1985,0.353
+Senegal,SEN,1980,
+Senegal,SEN,1985,
 Senegal,SEN,1990,0.367
 Senegal,SEN,1991,0.367
 Senegal,SEN,1992,0.368
@@ -3992,8 +3992,8 @@ Seychelles,SYC,2014,0.786
 Seychelles,SYC,2015,0.791
 Seychelles,SYC,2016,0.793
 Seychelles,SYC,2017,0.797
-Sierra Leone,SLE,1980,0.268
-Sierra Leone,SLE,1985,0.285
+Sierra Leone,SLE,1980,
+Sierra Leone,SLE,1985,
 Sierra Leone,SLE,1990,0.275
 Sierra Leone,SLE,1991,0.267
 Sierra Leone,SLE,1992,0.264
@@ -4153,8 +4153,8 @@ South Africa,ZAF,2014,0.685
 South Africa,ZAF,2015,0.692
 South Africa,ZAF,2016,0.696
 South Africa,ZAF,2017,0.699
-South Korea,KOR,1980,0.622
-South Korea,KOR,1985,0.68
+South Korea,KOR,1980,
+South Korea,KOR,1985,
 South Korea,KOR,1990,0.728
 South Korea,KOR,1991,0.739
 South Korea,KOR,1992,0.746
@@ -4191,8 +4191,8 @@ South Sudan,SSD,2014,0.397
 South Sudan,SSD,2015,0.399
 South Sudan,SSD,2016,0.394
 South Sudan,SSD,2017,0.388
-Spain,ESP,1980,0.702
-Spain,ESP,1985,0.725
+Spain,ESP,1980,
+Spain,ESP,1985,
 Spain,ESP,1990,0.754
 Spain,ESP,1991,0.764
 Spain,ESP,1992,0.772
@@ -4221,8 +4221,8 @@ Spain,ESP,2014,0.88
 Spain,ESP,2015,0.885
 Spain,ESP,2016,0.889
 Spain,ESP,2017,0.891
-Sri Lanka,LKA,1980,0.571
-Sri Lanka,LKA,1985,0.597
+Sri Lanka,LKA,1980,
+Sri Lanka,LKA,1985,
 Sri Lanka,LKA,1990,0.625
 Sri Lanka,LKA,1991,0.63
 Sri Lanka,LKA,1992,0.635
@@ -4293,8 +4293,8 @@ Suriname,SUR,2014,0.718
 Suriname,SUR,2015,0.722
 Suriname,SUR,2016,0.719
 Suriname,SUR,2017,0.72
-Sweden,SWE,1980,0.786
-Sweden,SWE,1985,0.797
+Sweden,SWE,1980,
+Sweden,SWE,1985,
 Sweden,SWE,1990,0.816
 Sweden,SWE,1991,0.818
 Sweden,SWE,1992,0.821
@@ -4323,8 +4323,8 @@ Sweden,SWE,2014,0.92
 Sweden,SWE,2015,0.929
 Sweden,SWE,2016,0.932
 Sweden,SWE,2017,0.933
-Switzerland,CHE,1980,0.809
-Switzerland,CHE,1985,0.815
+Switzerland,CHE,1980,
+Switzerland,CHE,1985,
 Switzerland,CHE,1990,0.832
 Switzerland,CHE,1991,0.834
 Switzerland,CHE,1992,0.836
@@ -4353,8 +4353,8 @@ Switzerland,CHE,2014,0.939
 Switzerland,CHE,2015,0.942
 Switzerland,CHE,2016,0.943
 Switzerland,CHE,2017,0.944
-Syria,SYR,1980,0.516
-Syria,SYR,1985,0.549
+Syria,SYR,1980,
+Syria,SYR,1985,
 Syria,SYR,1991,0.562
 Syria,SYR,1992,0.568
 Syria,SYR,1993,0.571
@@ -4410,7 +4410,7 @@ Tajikistan,TJK,2014,0.645
 Tajikistan,TJK,2015,0.645
 Tajikistan,TJK,2016,0.647
 Tajikistan,TJK,2017,0.65
-Tanzania,TZA,1985,0.371
+Tanzania,TZA,1985,
 Tanzania,TZA,1990,0.37
 Tanzania,TZA,1991,0.371
 Tanzania,TZA,1992,0.37
@@ -4439,8 +4439,8 @@ Tanzania,TZA,2014,0.515
 Tanzania,TZA,2015,0.528
 Tanzania,TZA,2016,0.533
 Tanzania,TZA,2017,0.538
-Thailand,THA,1980,0.502
-Thailand,THA,1985,0.539
+Thailand,THA,1980,
+Thailand,THA,1985,
 Thailand,THA,1990,0.574
 Thailand,THA,1991,0.583
 Thailand,THA,1992,0.589
@@ -4487,8 +4487,8 @@ Timor,TLS,2014,0.61
 Timor,TLS,2015,0.63
 Timor,TLS,2016,0.631
 Timor,TLS,2017,0.625
-Togo,TGO,1980,0.403
-Togo,TGO,1985,0.382
+Togo,TGO,1980,
+Togo,TGO,1985,
 Togo,TGO,1990,0.405
 Togo,TGO,1991,0.408
 Togo,TGO,1992,0.399
@@ -4517,8 +4517,8 @@ Togo,TGO,2014,0.481
 Togo,TGO,2015,0.495
 Togo,TGO,2016,0.5
 Togo,TGO,2017,0.503
-Tonga,TON,1980,0.607
-Tonga,TON,1985,0.639
+Tonga,TON,1980,
+Tonga,TON,1985,
 Tonga,TON,1990,0.648
 Tonga,TON,1991,0.654
 Tonga,TON,1992,0.656
@@ -4547,8 +4547,8 @@ Tonga,TON,2014,0.717
 Tonga,TON,2015,0.721
 Tonga,TON,2016,0.724
 Tonga,TON,2017,0.726
-Trinidad and Tobago,TTO,1980,0.669
-Trinidad and Tobago,TTO,1985,0.673
+Trinidad and Tobago,TTO,1980,
+Trinidad and Tobago,TTO,1985,
 Trinidad and Tobago,TTO,1990,0.672
 Trinidad and Tobago,TTO,1991,0.673
 Trinidad and Tobago,TTO,1992,0.673
@@ -4577,8 +4577,8 @@ Trinidad and Tobago,TTO,2014,0.779
 Trinidad and Tobago,TTO,2015,0.783
 Trinidad and Tobago,TTO,2016,0.785
 Trinidad and Tobago,TTO,2017,0.784
-Tunisia,TUN,1980,0.486
-Tunisia,TUN,1985,0.536
+Tunisia,TUN,1980,
+Tunisia,TUN,1985,
 Tunisia,TUN,1990,0.569
 Tunisia,TUN,1991,0.575
 Tunisia,TUN,1992,0.583
@@ -4607,8 +4607,8 @@ Tunisia,TUN,2014,0.725
 Tunisia,TUN,2015,0.728
 Tunisia,TUN,2016,0.732
 Tunisia,TUN,2017,0.735
-Turkey,TUR,1980,0.492
-Turkey,TUR,1985,0.54
+Turkey,TUR,1980,
+Turkey,TUR,1985,
 Turkey,TUR,1990,0.579
 Turkey,TUR,1991,0.583
 Turkey,TUR,1992,0.589
@@ -4645,8 +4645,8 @@ Turkmenistan,TKM,2014,0.697
 Turkmenistan,TKM,2015,0.701
 Turkmenistan,TKM,2016,0.705
 Turkmenistan,TKM,2017,0.706
-Uganda,UGA,1980,0.285
-Uganda,UGA,1985,0.307
+Uganda,UGA,1980,
+Uganda,UGA,1985,
 Uganda,UGA,1990,0.311
 Uganda,UGA,1991,0.311
 Uganda,UGA,1992,0.305
@@ -4731,8 +4731,8 @@ United Arab Emirates,ARE,2014,0.855
 United Arab Emirates,ARE,2015,0.86
 United Arab Emirates,ARE,2016,0.862
 United Arab Emirates,ARE,2017,0.863
-United Kingdom,GBR,1980,0.738
-United Kingdom,GBR,1985,0.753
+United Kingdom,GBR,1980,
+United Kingdom,GBR,1985,
 United Kingdom,GBR,1990,0.775
 United Kingdom,GBR,1991,0.788
 United Kingdom,GBR,1992,0.801
@@ -4761,8 +4761,8 @@ United Kingdom,GBR,2014,0.919
 United Kingdom,GBR,2015,0.918
 United Kingdom,GBR,2016,0.92
 United Kingdom,GBR,2017,0.922
-United States,USA,1980,0.826
-United States,USA,1985,0.841
+United States,USA,1980,
+United States,USA,1985,
 United States,USA,1990,0.86
 United States,USA,1991,0.861
 United States,USA,1992,0.867
@@ -4791,8 +4791,8 @@ United States,USA,2014,0.918
 United States,USA,2015,0.92
 United States,USA,2016,0.922
 United States,USA,2017,0.924
-Uruguay,URY,1980,0.664
-Uruguay,URY,1985,0.667
+Uruguay,URY,1980,
+Uruguay,URY,1985,
 Uruguay,URY,1990,0.692
 Uruguay,URY,1991,0.697
 Uruguay,URY,1992,0.7
@@ -4852,8 +4852,8 @@ Vanuatu,VUT,2014,0.598
 Vanuatu,VUT,2015,0.599
 Vanuatu,VUT,2016,0.6
 Vanuatu,VUT,2017,0.603
-Venezuela,VEN,1980,0.628
-Venezuela,VEN,1985,0.632
+Venezuela,VEN,1980,
+Venezuela,VEN,1985,
 Venezuela,VEN,1990,0.634
 Venezuela,VEN,1991,0.644
 Venezuela,VEN,1992,0.651
@@ -4882,8 +4882,8 @@ Venezuela,VEN,2014,0.778
 Venezuela,VEN,2015,0.775
 Venezuela,VEN,2016,0.766
 Venezuela,VEN,2017,0.761
-Vietnam,VNM,1980,0.463
-Vietnam,VNM,1985,0.479
+Vietnam,VNM,1980,
+Vietnam,VNM,1985,
 Vietnam,VNM,1990,0.475
 Vietnam,VNM,1991,0.484
 Vietnam,VNM,1992,0.496
@@ -4940,8 +4940,8 @@ Yemen,YEM,2014,0.505
 Yemen,YEM,2015,0.483
 Yemen,YEM,2016,0.462
 Yemen,YEM,2017,0.452
-Zambia,ZMB,1980,0.418
-Zambia,ZMB,1985,0.409
+Zambia,ZMB,1980,
+Zambia,ZMB,1985,
 Zambia,ZMB,1990,0.401
 Zambia,ZMB,1991,0.402
 Zambia,ZMB,1992,0.403
@@ -4970,8 +4970,8 @@ Zambia,ZMB,2014,0.58
 Zambia,ZMB,2015,0.583
 Zambia,ZMB,2016,0.586
 Zambia,ZMB,2017,0.588
-Zimbabwe,ZWE,1980,0.437
-Zimbabwe,ZWE,1985,0.498
+Zimbabwe,ZWE,1980,
+Zimbabwe,ZWE,1985,
 Zimbabwe,ZWE,1990,0.491
 Zimbabwe,ZWE,1991,0.494
 Zimbabwe,ZWE,1992,0.481
