@@ -62,9 +62,6 @@ def descriptors(data):
     iqr = numeric_cols.apply(lambda x: x.quantile(0.75) - x.quantile(0.25))
     iqr = pd.DataFrame(iqr, columns=["IQR"]).T
 
-    # Calculate total values for numeric columns only
-    # total_values = pd.DataFrame(numeric_cols.count(), columns=["total values"]).T
-
     # Get the description for all columns
     desc = data.describe()
 
