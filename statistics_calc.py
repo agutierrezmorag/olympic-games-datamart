@@ -10,6 +10,7 @@ def qualitative_stats(data, cols_cualitativas):
             "Moda": ["dummy"],
             "Moda (#)": [0],
             "Moda (%)": [0.0],
+            "Total de valores": [0],
             "Valores unicos (#)": [0],
             "Valores unicos (%)": [0.0],
             "Valores nulos (%)": [0.0],
@@ -19,6 +20,8 @@ def qualitative_stats(data, cols_cualitativas):
     for col in cols_cualitativas:
         # Moda
         moda = data[col].mode()[0]
+        # Total non-null values
+        total_values = data[col].count()
         # Cantidad de veces que se repite la moda
         moda_count = data[col].value_counts().iloc[0]
         # Porcentaje de la moda
@@ -37,6 +40,7 @@ def qualitative_stats(data, cols_cualitativas):
                 "Moda": [moda],
                 "Moda (#)": [moda_count],
                 "Moda (%)": [moda_porcentaje],
+                "Total de valores": [total_values],
                 "Valores unicos (#)": [valores_unicos],
                 "Valores unicos (%)": [valor_porcentajes],
                 "Valores nulos (%)": [porcentaje_nulos],
