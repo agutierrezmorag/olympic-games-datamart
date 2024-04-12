@@ -220,26 +220,56 @@ def country_charts(data, og_data):
 
         st.plotly_chart(fig)
 
-    # Create a bar chart to show where the Olympics have been held
-
     # Count the number of unique years each country has hosted the Olympics
-    city_distribution = (
-        data.drop_duplicates(subset=["Pais anfitrión", "Año"])["Pais anfitrión"]
-        .value_counts()
-        .reset_index()
-    )
-    city_distribution.columns = ["Pais anfitrión", "Count"]
+    with ccol1:
+        city_distribution = (
+            data.drop_duplicates(subset=["Pais anfitrión", "Año"])["Pais anfitrión"]
+            .value_counts()
+            .reset_index()
+        )
+        city_distribution.columns = ["Pais anfitrión", "Count"]
 
-    fig = px.choropleth(
-        city_distribution,
-        locations="Pais anfitrión",
-        locationmode="country names",
-        color="Count",
-        title="Países anfitriones de los Juegos Olímpicos",
-        labels={"Pais anfitrión": "Pais", "Count": "Número de olímpiadas"},
-        color_continuous_scale=px.colors.sequential.Viridis,
-    )
-    st.plotly_chart(fig, use_container_width=True)
+        fig = px.choropleth(
+            city_distribution,
+            locations="Pais anfitrión",
+            locationmode="country names",
+            color="Count",
+            title="Países anfitriones de los Juegos Olímpicos",
+            labels={"Pais anfitrión": "Pais", "Count": "Número de olímpiadas"},
+            color_continuous_scale=px.colors.sequential.Viridis,
+        )
+        st.plotly_chart(fig, use_container_width=True)
+
+    # Create a bar chart to show the average number of medals won per Olympics by each country
+    with ccol2:
+        # Calculate the total number of medals won by each country
+        total_medals = data.groupby("Región")["Medalla"].count().reset_index()
+        total_medals.columns = ["Región", "Total Medals"]
+
+        # Calculate the total number of Olympics each country has participated in
+        total_olympics = data["Región"].value_counts().reset_index()
+        total_olympics.columns = ["Región", "Total Olympics"]
+
+        # Merge the two DataFrames
+        avg_medals = pd.merge(total_medals, total_olympics, on="Región")
+
+        # Calculate the average number of medals won per Olympics
+        avg_medals["Promedio"] = (
+            avg_medals["Total Medals"] / avg_medals["Total Olympics"]
+        )
+
+        # Create the Plotly Express bar chart
+        fig = px.choropleth(
+            avg_medals.sort_values("Promedio", ascending=False),
+            locations="Región",
+            locationmode="country names",
+            color="Promedio",
+            title="Promedio de medallas ganadas por país por Olimpiada",
+            color_continuous_scale=px.colors.sequential.Viridis,
+        )
+
+        # Display the chart in Streamlit
+        st.plotly_chart(fig, use_container_width=True)
 
 
 def ww2_charts(data, og_data):
