@@ -172,7 +172,6 @@ def country_charts(data, og_data):
             showcountries=True,
             countrycolor="Black",
             showcoastlines=False,
-            projection_type="natural earth",
         )
         st.plotly_chart(fig)
 
@@ -204,7 +203,6 @@ def country_charts(data, og_data):
             showcountries=True,
             countrycolor="Black",
             showcoastlines=False,
-            projection_type="natural earth",
         )
         st.plotly_chart(fig)
 

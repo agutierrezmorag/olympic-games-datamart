@@ -32,7 +32,6 @@ def get_hdi_charts(data):
             showcountries=True,
             countrycolor="Black",
             showcoastlines=False,
-            projection_type="natural earth",
         )
         st.plotly_chart(fig, use_container_width=True)
 
@@ -70,7 +69,6 @@ def get_hdi_charts(data):
             showcountries=True,
             countrycolor="Black",
             showcoastlines=False,
-            projection_type="natural earth",
         )
         st.plotly_chart(fig, use_container_width=True)
 
