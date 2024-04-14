@@ -3,6 +3,7 @@ import plotly.express as px
 import streamlit as st
 
 from charts.hdi import get_hdi_charts
+from charts.hihd import get_hihd_charts
 from charts.income import get_income_charts
 from charts.olympics import get_olympics_charts
 from charts.schooling import get_schooling_charts
@@ -110,16 +111,18 @@ def load_and_display_data(title, filename):
         """)
 
         get_olympics_charts(data)
-    elif title == "🎓 Schooling (Spanish)":
+    elif title == "🎓 Schooling (Translated)":
         get_schooling_charts(data)
-    elif title == "💰 Income (Spanish)":
+    elif title == "💰 Income (Translated)":
         get_income_charts(data)
-    elif title == "🌍 Human Development Index (HDI) (Spanish)":
+    elif title == "🌍 Human Development Index (HDI) (Translated)":
         st.caption(
             "📢 **Nota:** PNUD significa Programa de las Naciones Unidas para el Desarrollo."
         )
 
         get_hdi_charts(data)
+    elif title == "📊 Historical Index of Human Development (HIHD) (Translated)":
+        get_hihd_charts(data)
 
 
 def main():
@@ -128,14 +131,15 @@ def main():
     with st.sidebar:
         # Define the datasets and their corresponding titles and qualitative variables
         chosen_datasets = {
-            "🏅 Olympics (Spanish)": "olympics_spanish.csv",
+            "🏅 Olympics (Translated)": "olympics_spanish.csv",
             "🏅 Olympics": "olympics.csv",
-            "🎓 Schooling (Spanish)": "expected-years-of-schooling-spanish.csv",
+            "🎓 Schooling (Translated)": "expected-years-of-schooling-spanish.csv",
             "🎓 Schooling": "expected-years-of-schooling.csv",
-            "💰 Income (Spanish)": "gross-national-income-per-capita-spanish.csv",
+            "💰 Income (Translated)": "gross-national-income-per-capita-spanish.csv",
             "💰 Income": "gross-national-income-per-capita.csv",
-            "🌍 Human Development Index (HDI) (Spanish)": "human-development-index-spanish.csv",
+            "🌍 Human Development Index (HDI) (Translated)": "human-development-index-spanish.csv",
             "🌍 Human Development Index (HDI)": "human-development-index.csv",
+            "📊 Historical Index of Human Development (HIHD) (Translated)": "hdi-vs-hihd-spanish.csv",
             "📊 Historical Index of Human Development (HIHD)": "hdi-vs-hihd.csv",
         }
 
