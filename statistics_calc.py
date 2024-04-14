@@ -73,3 +73,24 @@ def descriptors(data):
     desc = pd.concat([desc, skewness, kurtosis, iqr])
 
     return desc
+
+
+def translate_descriptors(df):
+    # Create a dictionary mapping English descriptors to Spanish
+    spanish_descriptors = {
+        "count": "Total de valores",
+        "mean": "Media",
+        "std": "Desviación estándar",
+        "min": "Valor mínimo",
+        "25%": "Q1",
+        "50%": "Q2",
+        "75%": "Q3",
+        "max": "Q4",
+        "skewness": "Asimetría",
+        "kurtosis": "Curtosis",
+        "IQR": "RIC",
+    }
+
+    # Rename the rows of the DataFrame
+    df.rename(index=spanish_descriptors, inplace=True)
+    return df
