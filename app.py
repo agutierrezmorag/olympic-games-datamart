@@ -86,7 +86,7 @@ def load_and_display_data(title, filename):
     fig.update_layout(title_text=f"{selected_plot} de {selected_var}", title_x=0.5)
     st.plotly_chart(fig, use_container_width=True)
 
-    if title == "🏅 Olympics (Spanish)":
+    if title == "🏅 Olympics (Translated)":
         st.caption(
             "📢 **Nota:** Puede haber más Comités Olímpicos Nacionales (NOCs) que países porque algunos territorios autónomos \
             tienen sus propios NOCs. Por ejemplo, Puerto Rico, Guam o Hong Kong."
