@@ -1,257 +1,59 @@
 ID,Nombre,Año de Nacimiento,Sexo,Edad,Altura,Peso,Equipo,NOC,Región,Región (ISO),Año,Temporada,Juegos,Ciudad,Pais anfitrión,Pais anfitrión (ISO),Deporte,Evento,Medalla,IMC
-307,Fahmi Ahmed Abdul Wahab Al-Tahri,1993.0,M,23.0,,,North Yemen,YAR,Yemen,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Atletismo,Athletics Men's 800 metres,,
-332,Zarinah Abdullah,1991.0,F,21.0,,,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Bádminton,Badminton Women's Singles,,
-332,Zarinah Abdullah,1991.0,F,25.0,,,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Bádminton,Badminton Women's Singles,,
-1420,Ehab Fuad Ahmed Nagi,1996.0,M,20.0,175.0,65.0,South Yemen,YMD,Yemen,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Atletismo,Athletics Men's 100 metres,,21.224489795918366
-1515,Saiyidah Aisyah Mohamed Rafa'ee,1988.0,F,28.0,173.0,68.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Remo,Rowing Women's Single Sculls,,22.720438370810918
-1771,Saeed Ali Al-Adhreai,1995.0,M,21.0,171.0,64.0,Yemen,YEM,Yemen,,2004,Verano,Verano 2004,Athina,Greece,GRC,Atletismo,Athletics Men's 400 metres,,21.887076365377382
 1773,Ahmad Al-Afasi,1983.0,M,33.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Tiro,Shooting Men's Double Trap,,
 1858,Fehaid Al-Deehani,1967.0,M,49.0,178.0,95.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Tiro,Shooting Men's Double Trap,Oro,29.983587930816814
-1896,Khalid Ahmed Al-Estashi,1998.0,M,18.0,155.0,65.0,Yemen,YEM,Yemen,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Atletismo,"Athletics Men's 10,000 metres",,27.055150884495315
 1897,Abdulrahman Al-Faihan,1986.0,M,30.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Tiro,Shooting Men's Trap,,
-1905,Abdulsalam Al-Gadabi,1986.0,M,30.0,,,Yemen,YEM,Yemen,,2008,Verano,Verano 2008,Beijing,China,CHN,Natación,Swimming Men's 50 metres Freestyle,,
-1907,Nabil Mohammed Al-Garbi,1998.0,M,18.0,175.0,65.0,Yemen,YEM,Yemen,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Atletismo,"Athletics Men's 1,500 metres",,21.224489795918366
-1912,Abdul Raab Al-Ghadi,1995.0,M,21.0,170.0,65.0,North Yemen,YAR,Yemen,,1984,Verano,Verano 1984,Los Angeles,United States,USA,Atletismo,Athletics Men's 800 metres,,22.49134948096886
-1913,Ali Saleh Al-Ghadi,1985.0,M,31.0,160.0,54.0,North Yemen,YAR,Yemen,,1984,Verano,Verano 1984,Los Angeles,United States,USA,Atletismo,"Athletics Men's 5,000 metres",,21.093749999999996
-1913,Ali Saleh Al-Ghadi,1985.0,M,31.0,160.0,54.0,North Yemen,YAR,Yemen,,1984,Verano,Verano 1984,Los Angeles,United States,USA,Atletismo,"Athletics Men's 10,000 metres",,21.093749999999996
-1918,Abdullah Al-Ghrbi,1993.0,M,23.0,167.0,72.0,North Yemen,YAR,Yemen,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Lucha,"Wrestling Men's Welterweight, Freestyle",,25.816630212628635
-1937,Anwar Al-Harazi,2001.0,M,15.0,170.0,69.0,North Yemen,YAR,Yemen,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Atletismo,"Athletics Men's 5,000 metres",,23.87543252595156
-1938,Nashwan Haidar Al-Harazi,1995.0,M,21.0,162.0,54.0,Yemen,YEM,Yemen,,2008,Verano,Verano 2008,Beijing,China,CHN,Gimnasia,Gymnastics Men's Individual All-Around,,20.576131687242793
-1938,Nashwan Haidar Al-Harazi,1995.0,M,21.0,162.0,54.0,Yemen,YEM,Yemen,,2008,Verano,Verano 2008,Beijing,China,CHN,Gimnasia,Gymnastics Men's Floor Exercise,,20.576131687242793
-1938,Nashwan Haidar Al-Harazi,1995.0,M,21.0,162.0,54.0,Yemen,YEM,Yemen,,2008,Verano,Verano 2008,Beijing,China,CHN,Gimnasia,Gymnastics Men's Horse Vault,,20.576131687242793
-1938,Nashwan Haidar Al-Harazi,1995.0,M,21.0,162.0,54.0,Yemen,YEM,Yemen,,2008,Verano,Verano 2008,Beijing,China,CHN,Gimnasia,Gymnastics Men's Pommelled Horse,,20.576131687242793
-1962,Salah Al-Humaidi,1999.0,M,17.0,,,Yemen,YEM,Yemen,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Judo,Judo Men's Extra-Lightweight,,
-1969,Abdullah Al-Izani,1989.0,M,27.0,,,Yemen,YEM,Yemen,,1996,Verano,Verano 1996,Atlanta,United States,USA,Lucha,"Wrestling Men's Light-Flyweight, Greco-Roman",,
-1973,Mohamed Al-Jalai,1997.0,M,19.0,,,Yemen,YEM,Yemen,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Judo,Judo Men's Lightweight,,
-2005,Basheer Mohamed Al-Khewani,1998.0,M,18.0,175.0,68.0,Yemen,YEM,Yemen,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Atletismo,Athletics Men's 400 metres,,22.20408163265306
-2010,Tameem Mohammed Ahmed Al-Kubati,1993.0,M,23.0,168.0,58.0,Yemen,YEM,Yemen,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Taekwondo,Taekwondo Men's Flyweight,,20.549886621315196
 2053,Khaled Al-Mudhaf,1978.0,M,38.0,164.0,105.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Tiro,Shooting Men's Trap,,39.03926234384296
-2077,Akram Abdullah Al-Noor,2000.0,M,16.0,160.0,54.0,Yemen,YEM,Yemen,,2004,Verano,Verano 2004,Athina,Greece,GRC,Taekwondo,Taekwondo Men's Flyweight,,21.093749999999996
 2112,Abdullah Al-Rashidi,1964.0,M,52.0,183.0,83.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Tiro,Shooting Men's Skeet,Bronce,24.78425751739377
-2118,Mohamed Al-Saadi,1988.0,M,28.0,170.0,60.0,Yemen,YEM,Yemen,,1996,Verano,Verano 1996,Atlanta,United States,USA,Atletismo,Athletics Men's Marathon,,20.761245674740486
-2153,Abdullah Al-Shamsi,1996.0,M,20.0,165.0,70.0,North Yemen,YAR,Yemen,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Lucha,"Wrestling Men's Lightweight, Greco-Roman",,25.71166207529844
 2161,Abdulaziz Al-Shatti,1991.0,M,25.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Esgrima,"Fencing Men's epee, Individual",,
-2166,Ahmed Yahya Al-Shiekh,1988.0,M,28.0,,,Yemen,YEM,Yemen,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Judo,Judo Men's Half-Middleweight,,
-2172,Mansour Mohamed Al-Soraihi,1995.0,M,21.0,,,Yemen,YEM,Yemen,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Judo,Judo Men's Half-Lightweight,,
-2192,Mohammed Ahmed Al-Yafaee,1993.0,M,23.0,185.0,65.0,Yemen,YEM,Yemen,,2008,Verano,Verano 2008,Beijing,China,CHN,Atletismo,Athletics Men's 800 metres,,18.991964937910883
 2277,Darija Alauf,1993.0,F,23.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Women's 100 metres Backstroke,,
 2277,Darija Alauf,1993.0,F,23.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Women's 200 metres Backstroke,,
-2667,Anwar Mohamed Ali,1991.0,M,25.0,170.0,58.0,Yemen,YEM,Yemen,,1996,Verano,Verano 1996,Atlanta,United States,USA,Atletismo,Athletics Men's 400 metres,,20.06920415224914
 3302,Aguida Fatima Amaral,1984.0,F,28.0,148.0,43.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Atletismo,Athletics Women's Marathon,,19.631117604090576
 3515,Paulo Amotun Lokoro,1992.0,M,24.0,170.0,61.0,Refugee Olympic Athletes,ROT,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Atletismo,"Athletics Men's 1,500 metres",,21.107266435986162
-4264,Ang Peng Siong,1991.0,M,21.0,180.0,75.0,Singapore,SGP,,,1984,Verano,Verano 1984,Los Angeles,United States,USA,Natación,Swimming Men's 100 metres Freestyle,,23.148148148148145
-4264,Ang Peng Siong,1991.0,M,21.0,180.0,75.0,Singapore,SGP,,,1984,Verano,Verano 1984,Los Angeles,United States,USA,Natación,Swimming Men's 4 x 100 metres Freestyle Relay,,23.148148148148145
-4264,Ang Peng Siong,1991.0,M,21.0,180.0,75.0,Singapore,SGP,,,1984,Verano,Verano 1984,Los Angeles,United States,USA,Natación,Swimming Men's 100 metres Butterfly,,23.148148148148145
-4264,Ang Peng Siong,1991.0,M,21.0,180.0,75.0,Singapore,SGP,,,1984,Verano,Verano 1984,Los Angeles,United States,USA,Natación,Swimming Men's 4 x 100 metres Medley Relay,,23.148148148148145
-4264,Ang Peng Siong,1991.0,M,25.0,180.0,75.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Natación,Swimming Men's 50 metres Freestyle,,23.148148148148145
-4264,Ang Peng Siong,1991.0,M,25.0,180.0,75.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Natación,Swimming Men's 100 metres Freestyle,,23.148148148148145
-4264,Ang Peng Siong,1991.0,M,25.0,180.0,75.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Natación,Swimming Men's 4 x 100 metres Freestyle Relay,,23.148148148148145
-4264,Ang Peng Siong,1991.0,M,25.0,180.0,75.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Natación,Swimming Men's 100 metres Butterfly,,23.148148148148145
-4264,Ang Peng Siong,1991.0,M,25.0,180.0,75.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Natación,Swimming Men's 4 x 100 metres Medley Relay,,23.148148148148145
 4379,Rami Anis,1991.0,M,25.0,178.0,78.0,Refugee Olympic Athletes,ROT,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Natación,Swimming Men's 100 metres Freestyle,,24.61810377477591
 4379,Rami Anis,1991.0,M,25.0,178.0,78.0,Refugee Olympic Athletes,ROT,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Natación,Swimming Men's 100 metres Butterfly,,24.61810377477591
-6385,Nooran Ahmed Ali Ba Matraf,2000.0,F,16.0,166.0,60.0,Yemen,YEM,Yemen,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Natación,Swimming Women's 100 metres Butterfly,,21.773842357381334
 7534,Vladimir Banjanac,1991.0,M,25.0,187.0,83.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Remo,Rowing Men's Coxless Pairs,,23.735308416025617
-8524,Saeed Basweidan,1997.0,M,19.0,160.0,61.0,Yemen,YEM,Yemen,,1996,Verano,Verano 1996,Atlanta,United States,USA,Atletismo,Athletics Men's 800 metres,,23.828124999999996
 11364,Yiech Pur Biel,1995.0,M,21.0,178.0,62.0,Refugee Olympic Athletes,ROT,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Atletismo,Athletics Men's 800 metres,,19.568236333796236
-11575,Lon bin Mohamed Noor,,M,,,55.0,Singapore,SGP,,,1952,Verano,Verano 1952,Helsinki,Finland,FIN,Levantamiento de pesas,Weightlifting Men's Bantamweight,,
 11592,Aranka Binder,1982.0,F,26.0,163.0,47.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tiro,"Shooting Women's Air Rifle, 10 metres",Bronce,17.68978885166924
 13173,Liemarvin Bonevacia,1989.0,M,23.0,185.0,74.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Atletismo,Athletics Men's 400 metres,,21.62162162162162
-14199,"Mei Yen ""Christel"" Bouvron",1997.0,F,15.0,165.0,62.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Natación,Swimming Women's 400 metres Freestyle,,22.77318640955005
-14199,"Mei Yen ""Christel"" Bouvron",1997.0,F,15.0,165.0,62.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Natación,Swimming Women's 200 metres Butterfly,,22.77318640955005
-14199,"Mei Yen ""Christel"" Bouvron",1997.0,F,19.0,165.0,62.0,Singapore,SGP,,,2004,Verano,Verano 2004,Athina,Greece,GRC,Natación,Swimming Women's 200 metres Butterfly,,22.77318640955005
 14684,Slobodan Brankovi,1992.0,M,24.0,190.0,82.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Atletismo,Athletics Men's 400 metres,,22.714681440443215
 15205,Mio Brkovi,1992.0,M,24.0,186.0,80.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Ciclismo,Cycling Men's 100 kilometres Team Time Trial,,23.12406058503873
 16287,Mabika Yolande Bukasa,1988.0,F,28.0,170.0,70.0,Refugee Olympic Athletes,ROT,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Judo,Judo Women's Middleweight,,24.221453287197235
-17291,Cai Xiao Li,1988.0,M,28.0,178.0,70.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Tenis de mesa,Table Tennis Men's Team,,22.093170054286073
-19565,Chai Hon Yam,1988.0,M,28.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Hockey,Hockey Men's Hockey,,
-19679,"Chan Khun Sing ""Joseph""",1973.0,M,39.0,174.0,68.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Vela,Sailing Men's Two Person Dinghy,,22.460034350640772
-19679,"Chan Khun Sing ""Joseph""",1973.0,M,43.0,174.0,68.0,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Vela,Sailing Men's Two Person Dinghy,,22.460034350640772
-19682,"Kum Seng ""Kelly"" Chan",1989.0,M,27.0,180.0,67.0,Singapore,SGP,,,1984,Verano,Verano 1984,Los Angeles,United States,USA,Vela,Sailing Men's Windsurfer,,20.679012345679013
-19694,"Li Yin ""Pat"" Chan",1998.0,F,18.0,173.0,64.0,Singapore,SGP,,,1972,Verano,Verano 1972,Munich,Germany,DEU,Natación,Swimming Women's 100 metres Backstroke,,21.383941996057334
-19694,"Li Yin ""Pat"" Chan",1998.0,F,18.0,173.0,64.0,Singapore,SGP,,,1972,Verano,Verano 1972,Munich,Germany,DEU,Natación,Swimming Women's 200 metres Backstroke,,21.383941996057334
-19697,"Kum Wah ""Roy"" Chan",2000.0,M,16.0,,,Singapore,SGP,,,1972,Verano,Verano 1972,Munich,Germany,DEU,Natación,Swimming Men's 100 metres Butterfly,,
-19697,"Kum Wah ""Roy"" Chan",2000.0,M,16.0,,,Singapore,SGP,,,1972,Verano,Verano 1972,Munich,Germany,DEU,Natación,Swimming Men's 200 metres Butterfly,,
-19697,"Kum Wah ""Roy"" Chan",2000.0,M,16.0,,,Singapore,SGP,,,1972,Verano,Verano 1972,Munich,Germany,DEU,Natación,Swimming Men's 200 metres Individual Medley,,
-20063,"Jung Jun ""Mark"" Chay",1994.0,M,18.0,176.0,78.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Natación,Swimming Men's 100 metres Freestyle,,25.180785123966942
-20063,"Jung Jun ""Mark"" Chay",1994.0,M,18.0,176.0,78.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Natación,Swimming Men's 200 metres Freestyle,,25.180785123966942
-20063,"Jung Jun ""Mark"" Chay",1994.0,M,22.0,176.0,78.0,Singapore,SGP,,,2004,Verano,Verano 2004,Athina,Greece,GRC,Natación,Swimming Men's 100 metres Freestyle,,25.180785123966942
-20063,"Jung Jun ""Mark"" Chay",1994.0,M,22.0,176.0,78.0,Singapore,SGP,,,2004,Verano,Verano 2004,Athina,Greece,GRC,Natación,Swimming Men's 200 metres Freestyle,,25.180785123966942
-20064,Chay Weng Yew,1992.0,M,24.0,,60.0,Singapore,SGP,,,1952,Verano,Verano 1952,Helsinki,Finland,FIN,Levantamiento de pesas,Weightlifting Men's Featherweight,,
-20104,Lionel Chee,1991.0,M,25.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Polo acuático,Water Polo Men's Water Polo,,
-20105,Chee Swee Lee,1995.0,F,21.0,165.0,53.0,Singapore,SGP,,,1976,Verano,Verano 1976,Montreal,Canada,CAN,Atletismo,Athletics Women's 800 metres,,19.467401285583104
-20186,Feng Chen,1994.0,M,22.0,170.0,65.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Tenis de mesa,Table Tennis Men's Singles,,22.49134948096886
-20264,Chen Sho Fa,,M,,175.0,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Baloncesto,Basketball Men's Basketball,,
-20361,"Xinru ""Colin"" Cheng",1990.0,M,22.0,175.0,80.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Vela,Sailing Men's One Person Dinghy,,26.122448979591837
-20361,"Xinru ""Colin"" Cheng",1990.0,M,26.0,175.0,80.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Vela,Sailing Men's One Person Dinghy,,26.122448979591837
 20693,James Nyang Chiengjiek,1992.0,M,24.0,179.0,59.0,Refugee Olympic Athletes,ROT,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Atletismo,Athletics Men's 400 metres,,18.413907181423802
-21132,Bei Fen Jovina Choo,1990.0,F,26.0,164.0,57.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Vela,Sailing Women's Two Person Dinghy,,21.192742415229034
-21369,Chua Koon Siong,1989.0,M,27.0,162.0,60.0,Singapore,SGP,,,1976,Verano,Verano 1976,Montreal,Canada,CAN,Levantamiento de pesas,Weightlifting Men's Featherweight,,22.86236854138088
-21371,Chua Phung Kim,1987.0,M,29.0,160.0,54.0,Singapore,SGP,,,1968,Verano,Verano 1968,Mexico City,Mexico,MEX,Levantamiento de pesas,Weightlifting Men's Featherweight,,21.093749999999996
-21486,Ch`ng Seng Mok,1975.0,M,41.0,,,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tiro,Shooting Mixed Trap,,
 21666,Suzana iri,1989.0,F,23.0,164.0,47.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Atletismo,"Athletics Women's 10,000 metres",,17.474717430101133
-22885,James Bryden Cooke,1991.0,M,25.0,182.0,78.0,June Climene,SGP,,,1960,Verano,Verano 1960,Roma,Italy,ITA,Vela,Sailing Mixed Three Person Keelboat,,23.54788069073783
-23520,Burdett Matthew Coutts,1979.0,M,37.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Hockey,Hockey Men's Hockey,,
 24163,Radia ubri,1986.0,M,30.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Ciclismo,"Cycling Men's Road Race, Individual",,
 24638,Calisto da Costa,1995.0,M,21.0,162.0,52.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Atletismo,Athletics Men's Marathon,,19.81405273586343
-24897,Fatima Abdullah Suleiman Al-Dahman,1997.0,F,19.0,168.0,49.0,Yemen,YEM,Yemen,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Atletismo,Athletics Women's 100 metres,,17.361111111111114
-25303,Yvonne Margaret Danson (-Tan),1979.0,F,37.0,151.0,38.0,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Atletismo,Athletics Women's Marathon,,16.66593570457436
-25328,Abdul Karim Daoud,1998.0,M,18.0,165.0,62.0,North Yemen,YAR,Yemen,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Atletismo,"Athletics Men's 10,000 metres",,22.77318640955005
 25884,Martinho de Araujo,1989.0,M,27.0,149.0,56.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Levantamiento de pesas,Weightlifting Men's Bantamweight,,25.224089004999776
-26613,Osbert John de Rozario,1984.0,M,32.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Hockey,Hockey Men's Hockey,,
 26790,Reginald de Windt,1988.0,M,28.0,178.0,81.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Judo,Judo Men's Half-Middleweight,,25.5649539199596
-27921,Vellupillai Devadas,1985.0,M,31.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Hockey,Hockey Men's Hockey,,
-29466,Edwin Jeyaceilan Doraisamy,1983.0,M,33.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Hockey,Hockey Men's Hockey,,
 29840,Milan orevi,1993.0,M,23.0,176.0,65.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Canoa,"Canoeing Men's Kayak Singles, Slalom",,20.983987603305785
-30818,Thomas Kevin Durcan,1977.0,M,39.0,184.0,86.0,June Climene,SGP,,,1960,Verano,Verano 1960,Roma,Italy,ITA,Vela,Sailing Mixed Three Person Keelboat,,25.401701323251416
 31292,Fritz Eccard,,M,,,,Unknown,UNK,,,1912,Verano,Verano 1912,Stockholm,Sweden,SWE,Competencias de arte,Art Competitions Mixed Architecture,,
 33094,Logona Esau,1995.0,M,21.0,163.0,69.0,Tuvalu,TUV,,,2008,Verano,Verano 2008,Beijing,China,CHN,Levantamiento de pesas,Weightlifting Men's Lightweight,,25.970115548195267
 34366,"Jasna Fazli-Reed (-Lupulesku-, -Rather)",1983.0,F,21.0,170.0,56.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tenis de mesa,Table Tennis Women's Singles,,19.377162629757787
 34366,"Jasna Fazli-Reed (-Lupulesku-, -Rather)",1983.0,F,21.0,170.0,56.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tenis de mesa,Table Tennis Women's Doubles,,19.377162629757787
-34619,Feng Tian Wei,1987.0,F,21.0,163.0,55.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Tenis de mesa,Table Tennis Women's Singles,,20.70081674131507
-34619,Feng Tian Wei,1987.0,F,21.0,163.0,55.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Tenis de mesa,Table Tennis Women's Team,Plata,20.70081674131507
-34619,Feng Tian Wei,1987.0,F,25.0,163.0,55.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Tenis de mesa,Table Tennis Women's Singles,Bronce,20.70081674131507
-34619,Feng Tian Wei,1987.0,F,25.0,163.0,55.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Tenis de mesa,Table Tennis Women's Team,Bronce,20.70081674131507
-34619,Feng Tian Wei,1987.0,F,29.0,163.0,55.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Tenis de mesa,Table Tennis Women's Singles,,20.70081674131507
-34619,Feng Tian Wei,1987.0,F,29.0,163.0,55.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Tenis de mesa,Table Tennis Women's Team,,20.70081674131507
-34815,"Frederick ""Fred"" Fernandez",1987.0,M,29.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Hockey,Hockey Men's Hockey,,
 35334,Kire Filipovski,1993.0,M,19.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Men's 100 metres Butterfly,,
 35334,Kire Filipovski,1993.0,M,19.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Men's 200 metres Butterfly,,
 38172,Zoran Galovi,1992.0,M,24.0,167.0,64.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Lucha,"Wrestling Men's Bantamweight, Greco-Roman",,22.948115744558788
-38259,Gan Eng Teck,1993.0,M,23.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Polo acuático,Water Polo Men's Water Polo,,
-38418,Gao Ning,1983.0,M,25.0,179.0,80.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Tenis de mesa,Table Tennis Men's Singles,,24.968009737523797
-38418,Gao Ning,1983.0,M,25.0,179.0,80.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Tenis de mesa,Table Tennis Men's Team,,24.968009737523797
-38418,Gao Ning,1983.0,M,29.0,179.0,80.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Tenis de mesa,Table Tennis Men's Singles,,24.968009737523797
-38418,Gao Ning,1983.0,M,29.0,179.0,80.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Tenis de mesa,Table Tennis Men's Team,,24.968009737523797
-38418,Gao Ning,1983.0,M,33.0,179.0,80.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Tenis de mesa,Table Tennis Men's Singles,,24.968009737523797
-40314,Ajit Singh Gill,1988.0,M,28.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Hockey,Hockey Men's Hockey,,
 40647,Nora Gjakova,1993.0,F,23.0,165.0,57.0,Kosovo,KOS,Autonomous,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Judo,Judo Women's Lightweight,,20.936639118457304
-41124,Kenneth Dunstan Golding,,M,,,,Rika II,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Vela,Sailing Mixed Three Person Keelboat,,
 42112,Milo Govedarica,1988.0,M,28.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Lucha,"Wrestling Men's Heavyweight, Greco-Roman",,
 43306,Slobodan Gruji,1986.0,M,18.0,180.0,76.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tenis de mesa,Table Tennis Men's Doubles,,23.456790123456788
-43422,Gu Juan,1994.0,F,22.0,160.0,56.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Bádminton,Badminton Women's Singles,,21.874999999999996
 44006,Qendrim Guri,1994.0,M,22.0,175.0,70.0,Kosovo,KOS,Autonomous,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Ciclismo,"Cycling Men's Road Race, Individual",,22.857142857142858
 44523,Saud Habib,1979.0,M,37.0,175.0,85.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Tiro,Shooting Men's Skeet,,27.755102040816325
 44851,Musa Hajdari,1988.0,M,28.0,187.0,74.0,Kosovo,KOS,Autonomous,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Atletismo,Athletics Men's 800 metres,,21.161600274528865
-45254,"H. A. Abdullah ""Dollah"" Hamid",1991.0,M,25.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Hockey,Hockey Men's Hockey,,
-45256,Nor Azhar Hamid Abdul,1993.0,M,23.0,182.0,60.0,Singapore,SGP,,,1972,Verano,Verano 1972,Munich,Germany,DEU,Atletismo,Athletics Men's High Jump,,18.11375437749064
-46788,"William Douglas ""Bill"" Hay",1994.0,M,22.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Hockey,Hockey Men's Hockey,,
-47579,Jerome Henderson,,M,,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Baloncesto,Basketball Men's Basketball,,
-48946,Ho Lien Siew,1992.0,M,24.0,168.0,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Baloncesto,Basketball Men's Basketball,,
-48948,Robert Ho,1982.0,M,34.0,,,Rika II,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Vela,Sailing Mixed Three Person Keelboat,,
-48953,Ho Yen Chye,1991.0,M,25.0,180.0,125.0,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Judo,Judo Men's Heavyweight,,38.58024691358025
-49348,"Edward Gilbert ""Ned"" Holiday",1957.0,M,56.0,171.0,83.0,Rika II,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Vela,Sailing Mixed Three Person Keelboat,,28.384802161348794
-49348,"Edward Gilbert ""Ned"" Holiday",1957.0,M,59.0,171.0,83.0,June Climene,SGP,,,1960,Verano,Verano 1960,Roma,Italy,ITA,Vela,Sailing Mixed Three Person Keelboat,,28.384802161348794
 52932,Aleksandra Ivoev,1990.0,F,18.0,165.0,57.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tiro,"Shooting Women's Small-Bore Rifle, Three Positions, 50 metres",,20.936639118457304
 52933,Pajo Ivoevi,1992.0,M,24.0,178.0,102.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Lucha,"Wrestling Men's Light-Heavyweight, Greco-Roman",,32.19290493624542
-53294,Ali Mohamed Sanad Jaffer,1983.0,M,33.0,,54.0,South Yemen,YMD,Yemen,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Boxeo,Boxing Men's Featherweight,,
-54691,Janet Elizabeth Jesudason (-Stevens),1997.0,F,19.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Atletismo,Athletics Women's 100 metres,,
-54715,S. Jeyathurai,1996.0,M,20.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Hockey,Hockey Men's Hockey,,
-54801,Jiang Yanmei,1989.0,F,23.0,171.0,55.0,Singapore,SGP,,,2004,Verano,Verano 2004,Athina,Greece,GRC,Bádminton,Badminton Women's Singles,,18.80920625149619
-54801,Jiang Yanmei,1989.0,F,27.0,171.0,55.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Bádminton,Badminton Women's Doubles,,18.80920625149619
-54908,Jing Jun Hong,1981.0,F,27.0,163.0,58.0,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Tenis de mesa,Table Tennis Women's Singles,,21.829952199932254
-54908,Jing Jun Hong,1981.0,F,31.0,163.0,58.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Tenis de mesa,Table Tennis Women's Singles,,21.829952199932254
-54908,Jing Jun Hong,1981.0,F,31.0,163.0,58.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Tenis de mesa,Table Tennis Women's Doubles,,21.829952199932254
-54908,Jing Jun Hong,1981.0,F,35.0,163.0,58.0,Singapore,SGP,,,2004,Verano,Verano 2004,Athina,Greece,GRC,Tenis de mesa,Table Tennis Women's Singles,,21.829952199932254
-54908,Jing Jun Hong,1981.0,F,35.0,163.0,58.0,Singapore-2,SGP,,,2004,Verano,Verano 2004,Athina,Greece,GRC,Tenis de mesa,Table Tennis Women's Doubles,,21.829952199932254
 55051,Miroslav Joi,1986.0,M,30.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Judo,Judo Men's Lightweight,,
-55409,Keith Littlewood Johnson,1957.0,M,59.0,,,Rika II,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Vela,Sailing Mixed Three Person Keelboat,,
 56058,Dejan Jovkovi,1992.0,M,24.0,184.0,79.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Atletismo,Athletics Men's 200 metres,,23.334120982986768
-56578,Syed Abdul Kadir,1992.0,M,24.0,157.0,48.0,Singapore,SGP,,,1972,Verano,Verano 1972,Munich,Germany,DEU,Boxeo,Boxing Men's Light-Flyweight,,19.473406629072173
 56864,Zoran Kalini,1982.0,M,34.0,196.0,86.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tenis de mesa,Table Tennis Men's Singles,,22.38650562265723
-57217,"Li Loong ""Calvin"" Kang",1998.0,M,18.0,175.0,62.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Atletismo,Athletics Men's 100 metres,,20.244897959183675
 57346,Mladen Kapor,1991.0,M,25.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Men's 50 metres Freestyle,,
 57346,Mladen Kapor,1991.0,M,25.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Men's 100 metres Freestyle,,
 57936,Goran Kasum,1986.0,M,26.0,181.0,94.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Lucha,"Wrestling Men's Middleweight, Greco-Roman",,28.692652849424622
 58601,Majlinda Kelmendi,1991.0,F,25.0,162.0,52.0,Kosovo,KOS,Autonomous,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Judo,Judo Women's Half-Lightweight,Oro,19.81405273586343
 58899,Shiva Keshavan,1984.0,M,32.0,183.0,85.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,2014,Invierno,Invierno 2014,Sochi,Russia,RUS,Luge,Luge Men's Singles,,25.381468541909282
-59131,Abdul Hamid Khan,1990.0,M,26.0,165.0,65.0,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Bádminton,Badminton Men's Singles,,23.875114784205696
-59131,Abdul Hamid Khan,1990.0,M,26.0,165.0,65.0,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Bádminton,Badminton Men's Doubles,,23.875114784205696
-59330,Griselda Khng,1991.0,F,25.0,155.0,60.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Vela,Sailing Women's Skiff,,24.97398543184183
-59398,Mohsen Ali Khousrof,1996.0,M,16.0,165.0,60.0,Yemen,YEM,Yemen,,2008,Verano,Verano 2008,Beijing,China,CHN,Judo,Judo Men's Extra-Lightweight,,22.03856749311295
-59398,Mohsen Ali Khousrof,1996.0,M,20.0,165.0,60.0,Yemen,YEM,Yemen,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Judo,Judo Men's Extra-Lightweight,,22.03856749311295
 60444,Yonas Kinde,1980.0,M,36.0,172.0,57.0,Refugee Olympic Athletes,ROT,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Atletismo,Athletics Men's Marathon,,19.2671714440238
-61062,Mary Beatrice Klass (-de Souza),1995.0,F,21.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Atletismo,Athletics Women's 100 metres,,
-61062,Mary Beatrice Klass (-de Souza),1995.0,F,21.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Atletismo,Athletics Women's 200 metres,,
-61642,Ko Tai Chuen,,M,,175.0,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Baloncesto,Basketball Men's Basketball,,
-61944,"Mun Kit ""Desmond"" Koh",1993.0,M,15.0,175.0,61.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Natación,Swimming Men's 400 metres Freestyle,,19.918367346938776
-61944,"Mun Kit ""Desmond"" Koh",1993.0,M,15.0,175.0,61.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Natación,Swimming Men's 4 x 100 metres Freestyle Relay,,19.918367346938776
-61944,"Mun Kit ""Desmond"" Koh",1993.0,M,15.0,175.0,61.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Natación,Swimming Men's 200 metres Butterfly,,19.918367346938776
-61944,"Mun Kit ""Desmond"" Koh",1993.0,M,15.0,175.0,61.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Natación,Swimming Men's 200 metres Individual Medley,,19.918367346938776
-61944,"Mun Kit ""Desmond"" Koh",1993.0,M,15.0,175.0,61.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Natación,Swimming Men's 400 metres Individual Medley,,19.918367346938776
-61944,"Mun Kit ""Desmond"" Koh",1993.0,M,19.0,175.0,61.0,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Men's 200 metres Breaststroke,,19.918367346938776
-61944,"Mun Kit ""Desmond"" Koh",1993.0,M,19.0,175.0,61.0,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Men's 200 metres Individual Medley,,19.918367346938776
-61944,"Mun Kit ""Desmond"" Koh",1993.0,M,19.0,175.0,61.0,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Men's 400 metres Individual Medley,,19.918367346938776
-61944,"Mun Kit ""Desmond"" Koh",1993.0,M,23.0,175.0,61.0,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Men's 4 x 200 metres Freestyle Relay,,19.918367346938776
-61944,"Mun Kit ""Desmond"" Koh",1993.0,M,23.0,175.0,61.0,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Men's 100 metres Breaststroke,,19.918367346938776
-61944,"Mun Kit ""Desmond"" Koh",1993.0,M,23.0,175.0,61.0,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Men's 200 metres Individual Medley,,19.918367346938776
-61944,"Mun Kit ""Desmond"" Koh",1993.0,M,23.0,175.0,61.0,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Men's 400 metres Individual Medley,,19.918367346938776
-61944,"Mun Kit ""Desmond"" Koh",1993.0,M,23.0,175.0,61.0,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Men's 4 x 100 metres Medley Relay,,19.918367346938776
-61945,"Leng Kang ""Donald"" Koh",1992.0,M,24.0,177.0,58.0,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Bádminton,Badminton Men's Singles,,18.513198633853616
-61945,"Leng Kang ""Donald"" Koh",1992.0,M,24.0,177.0,58.0,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Bádminton,Badminton Men's Doubles,,18.513198633853616
-61946,Koh Eng Kian,1997.0,M,19.0,169.0,93.0,Singapore,SGP,,,1976,Verano,Verano 1976,Montreal,Canada,CAN,Judo,Judo Men's Half-Heavyweight,,32.561885088057146
-61948,"Mun Yew ""Gerald"" Koh",1998.0,M,18.0,,,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Men's 4 x 200 metres Freestyle Relay,,
-61948,"Mun Yew ""Gerald"" Koh",1998.0,M,18.0,,,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Men's 100 metres Backstroke,,
-61948,"Mun Yew ""Gerald"" Koh",1998.0,M,18.0,,,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Men's 200 metres Backstroke,,
-61948,"Mun Yew ""Gerald"" Koh",1998.0,M,18.0,,,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Men's 200 metres Individual Medley,,
-61948,"Mun Yew ""Gerald"" Koh",1998.0,M,18.0,,,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Men's 4 x 100 metres Medley Relay,,
-61951,Koh Seng Leong,1992.0,M,16.0,176.0,71.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Vela,Sailing Men's Two Person Dinghy,,22.920971074380166
-61951,Koh Seng Leong,1992.0,M,24.0,176.0,71.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Vela,Sailing Men's One Person Dinghy,,22.920971074380166
-61952,Terence Koh,1996.0,M,20.0,180.0,68.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Vela,Sailing Men's Two Person Dinghy,,20.98765432098765
-62010,Mohamed Kohsrof,1994.0,M,22.0,175.0,73.0,North Yemen,YAR,Yemen,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Judo,Judo Men's Extra-Lightweight,,23.836734693877553
-62065,Kok Kum Woh,1967.0,M,45.0,180.0,100.0,Singapore,SGP,,,1960,Verano,Verano 1960,Roma,Italy,ITA,Tiro,"Shooting Men's Free Pistol, 50 metres",,30.864197530864196
 62938,Maja Kos,1992.0,F,24.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación sincronizada,Synchronized Swimming Women's Solo,,
 62938,Maja Kos,1992.0,F,24.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación sincronizada,Synchronized Swimming Women's Duet,,
 64422,Vijona Kryeziu,1998.0,F,18.0,167.0,51.0,Kosovo,KOS,Autonomous,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Atletismo,Athletics Women's 400 metres,,18.286779733945284
-64955,Canagasabai Kunalan,1991.0,M,25.0,163.0,54.0,Singapore,SGP,,,1968,Verano,Verano 1968,Mexico City,Mexico,MEX,Atletismo,Athletics Men's 100 metres,,20.32443825510934
-64955,Canagasabai Kunalan,1991.0,M,25.0,163.0,54.0,Singapore,SGP,,,1968,Verano,Verano 1968,Mexico City,Mexico,MEX,Atletismo,Athletics Men's 200 metres,,20.32443825510934
-65504,"Ying Wah ""Leslie"" Kwok",1990.0,M,26.0,184.0,78.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Natación,Swimming Men's 50 metres Freestyle,,23.03875236294896
 65813,A. Laffen,,M,,,,Unknown,UNK,,,1912,Verano,Verano 1912,Stockholm,Sweden,SWE,Competencias de arte,Art Competitions Mixed Architecture,,
 66655,Tuau Lapua Lapua,1995.0,M,21.0,140.0,62.0,Tuvalu,TUV,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Levantamiento de pesas,Weightlifting Men's Featherweight,,31.632653061224495
-67799,Lee Chak Men,,M,,183.0,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Baloncesto,Basketball Men's Basketball,,
-67875,"Wei Ling ""Geraldine"" Lee",1991.0,F,25.0,154.0,62.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Canoa,"Canoeing Women's Kayak Singles, 200 metres",,26.14268848035082
-67875,"Wei Ling ""Geraldine"" Lee",1991.0,F,25.0,154.0,62.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Canoa,"Canoeing Women's Kayak Singles, 500 metres",,26.14268848035082
-68193,Lee Wung Yew,1974.0,M,30.0,188.0,90.0,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Tiro,Shooting Men's Trap,,25.46401086464464
-68193,Lee Wung Yew,1974.0,M,38.0,188.0,90.0,Singapore,SGP,,,2004,Verano,Verano 2004,Athina,Greece,GRC,Tiro,Shooting Men's Trap,,25.46401086464464
-68193,Lee Wung Yew,1974.0,M,42.0,188.0,90.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Tiro,Shooting Men's Trap,,25.46401086464464
-68218,Lee Yujia,1991.0,F,25.0,175.0,60.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Bádminton,Badminton Mixed Doubles,,19.591836734693878
-68218,Lee Yujia,1991.0,F,25.0,175.0,60.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Bádminton,Badminton Women's Doubles,,19.591836734693878
-69392,Li Jia Wei,1986.0,F,19.0,170.0,60.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Tenis de mesa,Table Tennis Women's Singles,,20.761245674740486
-69392,Li Jia Wei,1986.0,F,19.0,170.0,60.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Tenis de mesa,Table Tennis Women's Doubles,,20.761245674740486
-69392,Li Jia Wei,1986.0,F,23.0,170.0,60.0,Singapore,SGP,,,2004,Verano,Verano 2004,Athina,Greece,GRC,Tenis de mesa,Table Tennis Women's Singles,,20.761245674740486
-69392,Li Jia Wei,1986.0,F,23.0,170.0,60.0,Singapore-2,SGP,,,2004,Verano,Verano 2004,Athina,Greece,GRC,Tenis de mesa,Table Tennis Women's Doubles,,20.761245674740486
-69392,Li Jia Wei,1986.0,F,26.0,170.0,60.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Tenis de mesa,Table Tennis Women's Singles,,20.761245674740486
-69392,Li Jia Wei,1986.0,F,26.0,170.0,60.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Tenis de mesa,Table Tennis Women's Team,Plata,20.761245674740486
-69392,Li Jia Wei,1986.0,F,30.0,170.0,60.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Tenis de mesa,Table Tennis Women's Team,Bronce,20.761245674740486
-69435,Li Li,1995.0,F,21.0,160.0,51.0,Singapore,SGP,,,2004,Verano,Verano 2004,Athina,Greece,GRC,Bádminton,Badminton Women's Singles,,19.921874999999996
-69626,Liang Xiaoyu,1996.0,F,20.0,163.0,55.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Bádminton,Badminton Women's Singles,,20.70081674131507
-69784,"Yao Xiang ""Daniel"" Liew",1997.0,M,19.0,170.0,68.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Natación,Swimming Men's 100 metres Breaststroke,,23.529411764705884
-69890,"Yi Yong ""Charles"" Lim",1993.0,M,23.0,,,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Vela,Sailing Men's Two Person Dinghy,,
-69893,"Ting Kiang ""David"" Lim",1998.0,M,18.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Polo acuático,Water Polo Men's Water Polo,,
-69894,"Fong Jock ""David"" Lim",1994.0,M,17.0,180.0,75.0,Singapore,SGP,,,1984,Verano,Verano 1984,Los Angeles,United States,USA,Natación,Swimming Men's 4 x 100 metres Freestyle Relay,,23.148148148148145
-69894,"Fong Jock ""David"" Lim",1994.0,M,17.0,180.0,75.0,Singapore,SGP,,,1984,Verano,Verano 1984,Los Angeles,United States,USA,Natación,Swimming Men's 100 metres Backstroke,,23.148148148148145
-69894,"Fong Jock ""David"" Lim",1994.0,M,17.0,180.0,75.0,Singapore,SGP,,,1984,Verano,Verano 1984,Los Angeles,United States,USA,Natación,Swimming Men's 4 x 100 metres Medley Relay,,23.148148148148145
-69894,"Fong Jock ""David"" Lim",1994.0,M,22.0,180.0,75.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Natación,Swimming Men's 200 metres Freestyle,,23.148148148148145
-69894,"Fong Jock ""David"" Lim",1994.0,M,22.0,180.0,75.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Natación,Swimming Men's 4 x 100 metres Freestyle Relay,,23.148148148148145
-69894,"Fong Jock ""David"" Lim",1994.0,M,22.0,180.0,75.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Natación,Swimming Men's 100 metres Backstroke,,23.148148148148145
-69894,"Fong Jock ""David"" Lim",1994.0,M,22.0,180.0,75.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Natación,Swimming Men's 200 metres Backstroke,,23.148148148148145
-69894,"Fong Jock ""David"" Lim",1994.0,M,22.0,180.0,75.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Natación,Swimming Men's 200 metres Individual Medley,,23.148148148148145
-69894,"Fong Jock ""David"" Lim",1994.0,M,22.0,180.0,75.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Natación,Swimming Men's 4 x 100 metres Medley Relay,,23.148148148148145
-69895,Denise Lim,1992.0,F,24.0,155.0,57.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Vela,Sailing Mixed Multihull,,23.725286160249738
-69897,Lim Heem Wei,1993.0,F,23.0,151.0,49.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Gimnasia,Gymnastics Women's Individual All-Around,,21.490285513793253
-69897,Lim Heem Wei,1993.0,F,23.0,151.0,49.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Gimnasia,Gymnastics Women's Floor Exercise,,21.490285513793253
-69897,Lim Heem Wei,1993.0,F,23.0,151.0,49.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Gimnasia,Gymnastics Women's Uneven Bars,,21.490285513793253
-69897,Lim Heem Wei,1993.0,F,23.0,151.0,49.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Gimnasia,Gymnastics Women's Balance Beam,,21.490285513793253
-69903,"Shu En ""Lynette"" Lim",1996.0,F,16.0,162.0,52.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Natación,Swimming Women's 200 metres Freestyle,,19.81405273586343
-69903,"Shu En ""Lynette"" Lim",1996.0,F,16.0,162.0,52.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Natación,Swimming Women's 400 metres Freestyle,,19.81405273586343
-69903,"Shu En ""Lynette"" Lim",1996.0,F,16.0,162.0,52.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Natación,Swimming Women's 800 metres Freestyle,,19.81405273586343
-69903,"Shu En ""Lynette"" Lim",1996.0,F,20.0,162.0,52.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Natación,Swimming Women's 400 metres Freestyle,,19.81405273586343
-69903,"Shu En ""Lynette"" Lim",1996.0,F,20.0,162.0,52.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Natación,Swimming Women's 800 metres Freestyle,,19.81405273586343
-69906,Lim Teck Pan,,M,,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Polo acuático,Water Polo Men's Water Polo,,
-70604,Justin Liu,1991.0,M,25.0,167.0,78.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Vela,Sailing Mixed Multihull,,27.968016063681024
-70877,Lo Man Yi,1996.0,F,20.0,164.0,57.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Vela,Sailing Women's One Person Dinghy,,21.192742415229034
-71066,Loh Kok Heng,1987.0,M,29.0,170.0,58.0,Singapore,SGP,,,1968,Verano,Verano 1968,Mexico City,Mexico,MEX,Tiro,"Shooting Mixed Rapid-Fire Pistol, 25 metres",,20.06920415224914
-71066,Loh Kok Heng,1987.0,M,29.0,170.0,58.0,Singapore,SGP,,,1968,Verano,Verano 1968,Mexico City,Mexico,MEX,Tiro,"Shooting Mixed Free Pistol, 50 metres",,20.06920415224914
 71067,Anjelina Nadai Lohalith,1993.0,F,23.0,163.0,50.0,Refugee Olympic Athletes,ROT,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Atletismo,"Athletics Women's 1,500 metres",,18.818924310286427
 71113,Rose Nathike Lokonyen,1995.0,F,21.0,157.0,50.0,Refugee Olympic Athletes,ROT,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Atletismo,Athletics Women's 800 metres,,20.28479857195018
 72433,Ilija Lupulesku,1980.0,M,24.0,177.0,79.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tenis de mesa,Table Tennis Men's Singles,,25.2162533116282
@@ -268,8 +70,6 @@ ID,Nombre,Año de Nacimiento,Sexo,Edad,Altura,Peso,Equipo,NOC,Región,Región (I
 75042,Sran Marilovi,1992.0,M,24.0,182.0,80.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Canoa,"Canoeing Men's Kayak Singles, 1,000 metres",,24.151672503320853
 75042,Sran Marilovi,1992.0,M,24.0,182.0,80.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Canoa,"Canoeing Men's Kayak Doubles, 1,000 metres",,24.151672503320853
 75196,Leposava Markovi,1997.0,F,19.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Judo,Judo Women's Extra-Lightweight,,
-76381,Zeyad Mater,1992.0,M,24.0,174.0,73.0,Yemen,YEM,Yemen,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Judo,Judo Men's Lightweight,,24.111507464658473
-78172,Sahim Saleh Mehdi,1996.0,M,20.0,,,South Yemen,YMD,Yemen,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Atletismo,Athletics Men's 200 metres,,
 79033,Nataa Mekovska,1992.0,F,20.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Women's 100 metres Butterfly,,
 79033,Nataa Mekovska,1992.0,F,20.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Women's 200 metres Butterfly,,
 79332,Vanja Mieta,1993.0,F,23.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación sincronizada,Synchronized Swimming Women's Solo,,
@@ -284,238 +84,41 @@ ID,Nombre,Año de Nacimiento,Sexo,Edad,Altura,Peso,Equipo,NOC,Región,Región (I
 80289,Nemanja Mirosavljev,1974.0,M,22.0,185.0,70.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tiro,"Shooting Men's Air Rifle, 10 metres",,20.45288531775018
 80289,Nemanja Mirosavljev,1974.0,M,22.0,185.0,70.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tiro,"Shooting Men's Small-Bore Rifle, Three Positions, 50 metres",,20.45288531775018
 80325,Popole Misenga,1992.0,M,24.0,180.0,90.0,Refugee Olympic Athletes,ROT,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Judo,Judo Men's Middleweight,,27.777777777777775
-80892,Anwar Omar Mohamed Ali,2001.0,M,15.0,184.0,55.0,Yemen,YEM,Yemen,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Atletismo,Athletics Men's 800 metres,,16.245274102079396
-82370,"Rudolf William ""Rudy"" Mosbergen",1989.0,M,27.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Hockey,Hockey Men's Hockey,,
-82448,Mohamed Moslih,1995.0,M,21.0,175.0,73.0,North Yemen,YAR,Yemen,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Judo,Judo Men's Lightweight,,23.836734693877553
-82875,Yahia Mufarrih,1993.0,M,23.0,,,Yemen,YEM,Yemen,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Judo,Judo Men's Middleweight,,
 83681,Sran Mukatirovi,1996.0,M,20.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tenis,Tennis Men's Singles,,
-84639,Awad Salah Nasser,2000.0,M,16.0,168.0,60.0,Yemen,YEM,Yemen,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Atletismo,"Athletics Men's 1,500 metres",,21.258503401360546
-85312,Neo Chwee Kok,1995.0,M,21.0,,,Singapore,SGP,,,1952,Verano,Verano 1952,Helsinki,Finland,FIN,Natación,Swimming Men's 100 metres Freestyle,,
-85312,Neo Chwee Kok,1995.0,M,21.0,,,Singapore,SGP,,,1952,Verano,Verano 1952,Helsinki,Finland,FIN,Natación,Swimming Men's 400 metres Freestyle,,
-85313,Neo Jie Shi,1985.0,F,31.0,168.0,50.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Atletismo,Athletics Women's Marathon,,17.71541950113379
-85633,Ling Kai Amanda Ng,1994.0,F,22.0,170.0,58.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Vela,Sailing Women's Two Person Dinghy,,20.06920415224914
-85645,"Peck Yui ""Shirley"" Ng",1977.0,F,39.0,164.0,75.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Tiro,"Shooting Women's Air Pistol, 10 metres",,27.885187388459254
-85655,Ng Yue Meng,1998.0,M,18.0,179.0,72.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Natación,Swimming Men's 100 metres Breaststroke,,22.47120876377142
-85655,Ng Yue Meng,1998.0,M,18.0,179.0,72.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Natación,Swimming Men's 200 metres Breaststroke,,22.47120876377142
-85655,Ng Yue Meng,1998.0,M,18.0,179.0,72.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Natación,Swimming Men's 4 x 100 metres Medley Relay,,22.47120876377142
 86663,Tavevele Noa,1996.0,M,20.0,176.0,74.0,Tuvalu,TUV,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Atletismo,Athletics Men's 100 metres,,23.889462809917354
-88234,Oh Chwee Hock,,M,,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Polo acuático,Water Polo Men's Water Polo,,
-88235,"Hock Chu ""Frank"" Oh",1987.0,M,29.0,168.0,65.0,Singapore,SGP,,,1976,Verano,Verano 1976,Montreal,Canada,CAN,Tiro,Shooting Mixed Trap,,23.030045351473927
-89148,"Hui Min ""Deborah"" Ong",1999.0,F,17.0,176.0,66.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Vela,Sailing Women's Two Person Dinghy,,21.306818181818183
-89152,Ong Kiat Guan,,M,,183.0,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Baloncesto,Basketball Men's Basketball,,
-89153,Leonard Ong,1993.0,M,23.0,170.0,68.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Vela,Sailing Men's Windsurfer,,23.529411764705884
-89155,"Chui Bin ""Mylene"" Ong",1995.0,F,21.0,169.0,55.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Natación,Swimming Women's 100 metres Freestyle,,19.257028815517668
-89232,"Yu Fen ""May"" Ooi",2000.0,F,16.0,,,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Women's 50 metres Freestyle,,
-89232,"Yu Fen ""May"" Ooi",2000.0,F,16.0,,,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Women's 200 metres Freestyle,,
-89232,"Yu Fen ""May"" Ooi",2000.0,F,16.0,,,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Women's 400 metres Freestyle,,
-89232,"Yu Fen ""May"" Ooi",2000.0,F,16.0,,,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Women's 100 metres Butterfly,,
-89232,"Yu Fen ""May"" Ooi",2000.0,F,16.0,,,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Women's 200 metres Butterfly,,
-89232,"Yu Fen ""May"" Ooi",2000.0,F,16.0,,,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Women's 200 metres Individual Medley,,
-89232,"Yu Fen ""May"" Ooi",2000.0,F,16.0,,,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Women's 400 metres Individual Medley,,
-89241,Oon Jin Gee,1995.0,M,17.0,180.0,73.0,Singapore,SGP,,,1984,Verano,Verano 1984,Los Angeles,United States,USA,Natación,Swimming Men's 100 metres Freestyle,,22.530864197530864
-89241,Oon Jin Gee,1995.0,M,17.0,180.0,73.0,Singapore,SGP,,,1984,Verano,Verano 1984,Los Angeles,United States,USA,Natación,Swimming Men's 4 x 100 metres Freestyle Relay,,22.530864197530864
-89241,Oon Jin Gee,1995.0,M,17.0,180.0,73.0,Singapore,SGP,,,1984,Verano,Verano 1984,Los Angeles,United States,USA,Natación,Swimming Men's 4 x 100 metres Medley Relay,,22.530864197530864
-89241,Oon Jin Gee,1995.0,M,21.0,180.0,73.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Natación,Swimming Men's 50 metres Freestyle,,22.530864197530864
-89241,Oon Jin Gee,1995.0,M,21.0,180.0,73.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Natación,Swimming Men's 100 metres Freestyle,,22.530864197530864
-89241,Oon Jin Gee,1995.0,M,21.0,180.0,73.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Natación,Swimming Men's 200 metres Freestyle,,22.530864197530864
-89241,Oon Jin Gee,1995.0,M,21.0,180.0,73.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Natación,Swimming Men's 4 x 100 metres Freestyle Relay,,22.530864197530864
-89241,Oon Jin Gee,1995.0,M,21.0,180.0,73.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Natación,Swimming Men's 4 x 100 metres Medley Relay,,22.530864197530864
-89242,Oon Jin Teik,1995.0,M,21.0,180.0,75.0,Singapore,SGP,,,1984,Verano,Verano 1984,Los Angeles,United States,USA,Natación,Swimming Men's 4 x 100 metres Freestyle Relay,,23.148148148148145
-89242,Oon Jin Teik,1995.0,M,21.0,180.0,75.0,Singapore,SGP,,,1984,Verano,Verano 1984,Los Angeles,United States,USA,Natación,Swimming Men's 100 metres Breaststroke,,23.148148148148145
-89242,Oon Jin Teik,1995.0,M,21.0,180.0,75.0,Singapore,SGP,,,1984,Verano,Verano 1984,Los Angeles,United States,USA,Natación,Swimming Men's 4 x 100 metres Medley Relay,,23.148148148148145
 91133,Dano Panti,1996.0,M,20.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Judo,Judo Men's Half-Heavyweight,,
 92345,Elizabeta Pavlovska,1997.0,F,19.0,170.0,62.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Atletismo,Athletics Women's 100 metres Hurdles,,21.453287197231838
-93042,Percy Milton Pennefather,1983.0,M,33.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Hockey,Hockey Men's Hockey,,
 93433,Dragan Peri,1976.0,M,28.0,186.0,107.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Atletismo,Athletics Men's Shot Put,,30.9284310324893
 93478,Gordana Perkuin,1986.0,F,30.0,168.0,59.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tenis de mesa,Table Tennis Women's Doubles,,20.904195011337873
 95271,Lazo Piva,1991.0,M,25.0,199.0,94.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Remo,Rowing Men's Coxless Pairs,,23.73677432388071
 95464,Stevan Pletikosi,1972.0,M,20.0,184.0,80.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tiro,"Shooting Men's Small-Bore Rifle, Prone, 50 metres",Bronce,23.629489603024574
-95673,Poh Seng Song,1995.0,M,21.0,172.0,67.0,Singapore,SGP,,,2004,Verano,Verano 2004,Athina,Greece,GRC,Atletismo,Athletics Men's 100 metres,,22.647376960519203
 95856,Eszter Poljak,1977.0,F,39.0,170.0,58.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tiro,"Shooting Women's Air Pistol, 10 metres",,20.06920415224914
 96152,Duan Popeskov,1993.0,M,23.0,182.0,78.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Ciclismo,Cycling Men's 100 kilometres Team Time Trial,,23.54788069073783
 96152,Duan Popeskov,1993.0,M,23.0,182.0,78.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Ciclismo,Cycling Men's Points Race,,23.54788069073783
 96212,Slobodan Popovi,1987.0,M,29.0,179.0,63.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Atletismo,Athletics Men's 800 metres,,19.66230766829999
 96222,Lazar Popovski,1986.0,M,18.0,175.0,67.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Canoa,"Canoeing Men's Kayak Singles, Slalom",,21.877551020408163
-96749,Dipna Lim Prasad,1995.0,F,21.0,174.0,54.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Atletismo,Athletics Women's 100 metres Hurdles,,17.8359096313912
 97735,Abbas Qali,1993.0,M,23.0,178.0,77.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Natación,Swimming Men's 100 metres Butterfly,,24.302487059714682
-97809,Quah Ting Wen,1993.0,F,15.0,175.0,60.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Natación,Swimming Women's 100 metres Freestyle,,19.591836734693878
-97809,Quah Ting Wen,1993.0,F,15.0,175.0,60.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Natación,Swimming Women's 400 metres Individual Medley,,19.591836734693878
-97809,Quah Ting Wen,1993.0,F,23.0,175.0,60.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Natación,Swimming Women's 100 metres Butterfly,,19.591836734693878
-97810,Quah Zheng Wen,1997.0,M,15.0,179.0,79.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Natación,Swimming Men's 200 metres Backstroke,,24.65590961580475
-97810,Quah Zheng Wen,1997.0,M,15.0,179.0,79.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Natación,Swimming Men's 400 metres Individual Medley,,24.65590961580475
-97810,Quah Zheng Wen,1997.0,M,19.0,179.0,79.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Natación,Swimming Men's 100 metres Backstroke,,24.65590961580475
-97810,Quah Zheng Wen,1997.0,M,19.0,179.0,79.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Natación,Swimming Men's 100 metres Butterfly,,24.65590961580475
-97810,Quah Zheng Wen,1997.0,M,19.0,179.0,79.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Natación,Swimming Men's 200 metres Butterfly,,24.65590961580475
 98103,Milan Radakovi,1993.0,M,23.0,187.0,131.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Lucha,"Wrestling Men's Super-Heavyweight, Greco-Roman",,37.46175183734164
 98186,Kristina Radonji,1999.0,F,17.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Gimnasia rítmica,Rhythmic Gymnastics Women's Individual,,
-98301,Mohammed Rageh,1998.0,M,18.0,169.0,64.0,Yemen,YEM,Yemen,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Atletismo,"Athletics Men's 1,500 metres",,22.40817898532965
 98556,Urata Rama,1987.0,F,29.0,173.0,64.0,Kosovo,KOS,Autonomous,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Tiro,"Shooting Women's Air Rifle, 10 metres",,21.383941996057334
 98743,Victor Ramos,1986.0,M,30.0,168.0,60.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Boxeo,Boxing Men's Lightweight,,21.258503401360546
 101191,Senad Rizvanovi,1992.0,M,24.0,180.0,57.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Lucha,"Wrestling Men's Flyweight, Greco-Roman",,17.59259259259259
 101212,Miko Rnjakovi,1988.0,M,28.0,181.0,82.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Ciclismo,"Cycling Men's Road Race, Individual",,25.029760996306585
 101212,Miko Rnjakovi,1988.0,M,28.0,181.0,82.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Ciclismo,Cycling Men's 100 kilometres Team Time Trial,,25.029760996306585
-103947,Mohamed Saad,1993.0,M,23.0,175.0,75.0,Yemen,YEM,Yemen,,2004,Verano,Verano 2004,Athina,Greece,GRC,Natación,Swimming Men's 50 metres Freestyle,,24.489795918367346
-103949,Waseelah Fadhl Saad,1998.0,F,18.0,160.0,48.0,Yemen,YEM,Yemen,,2008,Verano,Verano 2008,Beijing,China,CHN,Atletismo,Athletics Women's 100 metres,,18.749999999999996
 104054,Nandor Sabo Paloc,1984.0,M,32.0,172.0,68.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Lucha,"Wrestling Men's Lightweight, Greco-Roman",,22.985397512168742
-104693,Hana Ali Saleh,1984.0,F,32.0,168.0,54.0,Yemen,YEM,Yemen,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Atletismo,Athletics Women's 200 metres,,19.13265306122449
-104699,Awad Saleh Ahmed,1997.0,M,19.0,167.0,64.0,North Yemen,YAR,Yemen,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Atletismo,"Athletics Men's 1,500 metres",,22.948115744558788
-105713,Hendri Kurniawan Saputra,1989.0,M,27.0,172.0,68.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Bádminton,Badminton Mixed Doubles,,22.985397512168742
-105786,Shinta Mulia Sari,1992.0,F,24.0,164.0,58.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Bádminton,Badminton Women's Doubles,,21.564544913741823
 106241,Tamara Savi-otra,1987.0,F,21.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Esgrima,"Fencing Women's Foil, Individual",,
-106371,Farouk Ahmed Sayed,1999.0,M,17.0,,,South Yemen,YMD,Yemen,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Atletismo,"Athletics Men's 5,000 metres",,
-106373,Mohamed Mahfood Sayed,1988.0,M,28.0,175.0,71.0,South Yemen,YMD,Yemen,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Boxeo,Boxing Men's Flyweight,,23.183673469387756
-107436,Joseph Isaac Schooling,1995.0,M,17.0,184.0,74.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Natación,Swimming Men's 100 metres Butterfly,,21.85727788279773
-107436,Joseph Isaac Schooling,1995.0,M,17.0,184.0,74.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Natación,Swimming Men's 200 metres Butterfly,,21.85727788279773
-107436,Joseph Isaac Schooling,1995.0,M,21.0,184.0,74.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Natación,Swimming Men's 100 metres Freestyle,,21.85727788279773
-107436,Joseph Isaac Schooling,1995.0,M,21.0,184.0,74.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Natación,Swimming Men's 100 metres Butterfly,Oro,21.85727788279773
-107437,Richard Roland Schoon,1988.0,M,28.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Hockey,Hockey Men's Hockey,,
 108383,Jasna ekari (Brajkovi-),1970.0,F,26.0,175.0,70.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tiro,"Shooting Women's Air Pistol, 10 metres",Plata,22.857142857142858
 108383,Jasna ekari (Brajkovi-),1970.0,F,26.0,175.0,70.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tiro,"Shooting Women's Sporting Pistol, 25 metres",,22.857142857142858
 108625,Marija Senica,1995.0,F,21.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación sincronizada,Synchronized Swimming Women's Solo,,
-108760,"Xiang Wei ""Jasmine"" Ser",1991.0,F,21.0,155.0,47.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Tiro,"Shooting Women's Air Rifle, 10 metres",,19.562955254942764
-108760,"Xiang Wei ""Jasmine"" Ser",1991.0,F,21.0,155.0,47.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Tiro,"Shooting Women's Small-Bore Rifle, Three Positions, 50 metres",,19.562955254942764
-108760,"Xiang Wei ""Jasmine"" Ser",1991.0,F,25.0,155.0,47.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Tiro,"Shooting Women's Air Rifle, 10 metres",,19.562955254942764
-108760,"Xiang Wei ""Jasmine"" Ser",1991.0,F,25.0,155.0,47.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Tiro,"Shooting Women's Small-Bore Rifle, Three Positions, 50 metres",,19.562955254942764
-109298,Roy Sharma,1993.0,M,23.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Hockey,Hockey Men's Hockey,,
-110324,Siew Shaw Her,1977.0,M,31.0,173.0,62.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Vela,Sailing Men's Two Person Dinghy,,20.715693808680545
-110324,Siew Shaw Her,1977.0,M,35.0,173.0,62.0,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Vela,Sailing Men's Two Person Dinghy,,20.715693808680545
-110324,Siew Shaw Her,1977.0,M,39.0,173.0,62.0,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Vela,Sailing Men's Two Person Dinghy,,20.715693808680545
-112557,Sng Ju Wei,1996.0,M,16.0,177.0,73.0,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Men's 50 metres Freestyle,,23.301094832264035
-112557,Sng Ju Wei,1996.0,M,16.0,177.0,73.0,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Men's 100 metres Freestyle,,23.301094832264035
-112557,Sng Ju Wei,1996.0,M,16.0,177.0,73.0,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Men's 200 metres Freestyle,,23.301094832264035
-112557,Sng Ju Wei,1996.0,M,16.0,177.0,73.0,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Men's 400 metres Freestyle,,23.301094832264035
-112557,Sng Ju Wei,1996.0,M,16.0,177.0,73.0,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Men's 4 x 200 metres Freestyle Relay,,23.301094832264035
-112557,Sng Ju Wei,1996.0,M,16.0,177.0,73.0,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Men's 4 x 100 metres Medley Relay,,23.301094832264035
-112557,Sng Ju Wei,1996.0,M,20.0,177.0,73.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Natación,Swimming Men's 400 metres Freestyle,,23.301094832264035
-112586,"John ""Jack"" Snowden",1983.0,M,33.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Vela,Sailing Mixed One Person Dinghy,,
-113203,Kesevan Soon,1998.0,M,18.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Atletismo,Athletics Men's 100 metres,,
-113203,Kesevan Soon,1998.0,M,18.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Atletismo,Athletics Men's 200 metres,,
 113284,Zoran orov,1986.0,M,30.0,161.0,57.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Lucha,"Wrestling Men's Bantamweight, Freestyle",,21.98989236526368
 116388,Faye Sultan Hussain,1995.0,F,21.0,182.0,67.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Natación,Swimming Women's 50 metres Freestyle,,20.227025721531216
-116618,"Phang Cue ""P. C."" Suppiah",1993.0,M,23.0,168.0,54.0,Singapore,SGP,,,1972,Verano,Verano 1972,Munich,Germany,DEU,Atletismo,"Athletics Men's 5,000 metres",,19.13265306122449
-116618,"Phang Cue ""P. C."" Suppiah",1993.0,M,23.0,168.0,54.0,Singapore,SGP,,,1972,Verano,Verano 1972,Munich,Germany,DEU,Atletismo,"Athletics Men's 10,000 metres",,19.13265306122449
-116627,Khatijah Surattee,1978.0,F,38.0,155.0,52.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Tiro,"Shooting Women's Air Pistol, 10 metres",,21.64412070759625
-116668,Ronald Susilo,1987.0,M,25.0,177.0,67.0,Singapore,SGP,,,2004,Verano,Verano 2004,Athina,Greece,GRC,Bádminton,Badminton Men's Singles,,21.38593635289987
-116668,Ronald Susilo,1987.0,M,29.0,177.0,67.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Bádminton,Badminton Men's Singles,,21.38593635289987
-118255,"Chi Loong ""Ben"" Tan",1988.0,M,28.0,,,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Vela,Sailing Mixed One Person Dinghy,,
-118259,Tan Eng Bock,1996.0,M,20.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Polo acuático,Water Polo Men's Water Polo,,
-118260,Tan Eng Yoon,1988.0,M,28.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Atletismo,Athletics Men's 100 metres,,
-118260,Tan Eng Yoon,1988.0,M,28.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Atletismo,Athletics Men's Triple Jump,,
-118262,"V Meng ""Gary"" Tan",1998.0,M,18.0,,,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Men's 200 metres Backstroke,,
-118262,"V Meng ""Gary"" Tan",1998.0,M,18.0,,,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Men's 100 metres Butterfly,,
-118262,"V Meng ""Gary"" Tan",1998.0,M,18.0,,,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Men's 200 metres Butterfly,,
-118262,"V Meng ""Gary"" Tan",1998.0,M,18.0,,,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Men's 200 metres Individual Medley,,
-118263,"Lee Yu ""Gary"" Tan",1994.0,M,18.0,176.0,77.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Natación,Swimming Men's 100 metres Backstroke,,24.857954545454547
-118263,"Lee Yu ""Gary"" Tan",1994.0,M,18.0,176.0,77.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Natación,Swimming Men's 200 metres Backstroke,,24.857954545454547
-118263,"Lee Yu ""Gary"" Tan",1994.0,M,22.0,176.0,77.0,Singapore,SGP,,,2004,Verano,Verano 2004,Athina,Greece,GRC,Natación,Swimming Men's 200 metres Individual Medley,,24.857954545454547
-118278,"Tan Kim Huat ""Ronald""",1983.0,M,33.0,,,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Esgrima,"Fencing Men's Foil, Individual",,
-118278,"Tan Kim Huat ""Ronald""",1983.0,M,33.0,,,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Esgrima,"Fencing Men's epee, Individual",,
-118281,Li Ching Sara Tan,1991.0,F,25.0,171.0,71.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Vela,Sailing Women's Skiff,,24.280975342840534
-118282,Tan Ser Cher,1993.0,M,23.0,,59.0,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Levantamiento de pesas,Weightlifting Men's Featherweight,,
-118283,"Paey Fern ""Sharon"" Tan",1986.0,F,30.0,160.0,43.0,Singapore-1,SGP,,,2004,Verano,Verano 2004,Athina,Greece,GRC,Tenis de mesa,Table Tennis Women's Doubles,,16.796874999999996
-118285,"Kheng Siong ""Stanley"" Tan",1987.0,M,25.0,173.0,82.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Vela,Sailing Mixed One Person Dinghy,,27.39817568244846
-118285,"Kheng Siong ""Stanley"" Tan",1987.0,M,29.0,173.0,82.0,Singapore,SGP,,,2004,Verano,Verano 2004,Athina,Greece,GRC,Vela,Sailing Mixed One Person Dinghy,,27.39817568244846
-118289,"Howe Liang ""Tiger"" Tan",1985.0,M,23.0,160.0,69.5,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Levantamiento de pesas,Weightlifting Men's Lightweight,,27.148437499999996
-118289,"Howe Liang ""Tiger"" Tan",1985.0,M,27.0,160.0,69.5,Singapore,SGP,,,1960,Verano,Verano 1960,Roma,Italy,ITA,Levantamiento de pesas,Weightlifting Men's Lightweight,Plata,27.148437499999996
-118292,Tracey Tan,1996.0,F,20.0,,,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Vela,Sailing Women's One Person Dinghy,,
-118295,Tan Wearn Haw,1995.0,M,21.0,172.0,64.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Vela,Sailing Men's Two Person Dinghy,,21.63331530557058
-118431,Tang Pui Wah,1998.0,F,18.0,,,Singapore,SGP,,,1952,Verano,Verano 1952,Helsinki,Finland,FIN,Atletismo,Athletics Women's 100 metres,,
-118431,Tang Pui Wah,1998.0,F,18.0,,,Singapore,SGP,,,1952,Verano,Verano 1952,Helsinki,Finland,FIN,Atletismo,Athletics Women's 80 metres Hurdles,,
-118518,Tao Li,1994.0,F,18.0,160.0,58.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Natación,Swimming Women's 100 metres Butterfly,,22.656249999999996
-118518,Tao Li,1994.0,F,18.0,160.0,58.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Natación,Swimming Women's 200 metres Butterfly,,22.656249999999996
-118518,Tao Li,1994.0,F,22.0,160.0,58.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Natación,Swimming Women's 100 metres Backstroke,,22.656249999999996
-118518,Tao Li,1994.0,F,22.0,160.0,58.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Natación,Swimming Women's 100 metres Butterfly,,22.656249999999996
-118828,"Zhirong ""Bryan"" Tay",1996.0,M,20.0,184.0,75.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Natación,Swimming Men's 200 metres Freestyle,,22.152646502835537
-118829,Tay Chin Joo,1999.0,F,17.0,159.0,53.0,Singapore,SGP,,,1972,Verano,Verano 1972,Munich,Germany,DEU,Natación,Swimming Women's 100 metres Butterfly,,20.964360587002094
-119190,"Wei Min ""Nicolette"" Teo",1994.0,F,14.0,172.0,55.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Natación,Swimming Women's 200 metres Breaststroke,,18.591130340724717
-119190,"Wei Min ""Nicolette"" Teo",1994.0,F,18.0,172.0,55.0,Singapore,SGP,,,2004,Verano,Verano 2004,Athina,Greece,GRC,Natación,Swimming Women's 100 metres Breaststroke,,18.591130340724717
-119190,"Wei Min ""Nicolette"" Teo",1994.0,F,18.0,172.0,55.0,Singapore,SGP,,,2004,Verano,Verano 2004,Athina,Greece,GRC,Natación,Swimming Women's 200 metres Breaststroke,,18.591130340724717
-119190,"Wei Min ""Nicolette"" Teo",1994.0,F,22.0,172.0,55.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Natación,Swimming Women's 100 metres Breaststroke,,18.591130340724717
-119190,"Wei Min ""Nicolette"" Teo",1994.0,F,22.0,172.0,55.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Natación,Swimming Women's 200 metres Breaststroke,,18.591130340724717
-119191,Teo Shun Xie,1989.0,F,27.0,168.0,63.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Tiro,"Shooting Women's Air Pistol, 10 metres",,22.321428571428577
-119191,Teo Shun Xie,1989.0,F,27.0,168.0,63.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Tiro,"Shooting Women's Sporting Pistol, 25 metres",,22.321428571428577
-119714,Thio Gim Hock,1998.0,M,18.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Polo acuático,Water Polo Men's Water Polo,,
-120020,Thong Saw Pak,,M,,,67.0,Singapore,SGP,,,1952,Verano,Verano 1952,Helsinki,Finland,FIN,Levantamiento de pesas,Weightlifting Men's Lightweight,,
-120144,"Ping Tjin ""PJ"" Thum",2000.0,M,16.0,,,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Men's 4 x 200 metres Freestyle Relay,,
-120144,"Ping Tjin ""PJ"" Thum",2000.0,M,16.0,,,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Men's 100 metres Butterfly,,
-120144,"Ping Tjin ""PJ"" Thum",2000.0,M,16.0,,,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Men's 200 metres Butterfly,,
-120144,"Ping Tjin ""PJ"" Thum",2000.0,M,16.0,,,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Men's 4 x 100 metres Medley Relay,,
 120422,Etimoni Timuani,1992.0,M,24.0,184.0,72.0,Tuvalu,TUV,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Atletismo,Athletics Men's 100 metres,,21.266540642722116
 120439,Okilani Tinilau,1997.0,M,19.0,,,Tuvalu,TUV,,,2008,Verano,Verano 2008,Beijing,China,CHN,Atletismo,Athletics Men's 100 metres,,
-120728,Toh Li Ying,1993.0,F,23.0,157.0,52.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Vela,Sailing Women's Two Person Dinghy,,21.096190514828187
 121106,Dragutin Topi,1975.0,M,21.0,195.0,73.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Atletismo,Athletics Men's High Jump,,19.197896120973045
 121630,eljko Trajkovi,1991.0,M,25.0,171.0,76.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Lucha,"Wrestling Men's Welterweight, Greco-Roman",,25.990903183885642
-122624,Tung Chye Hong,1993.0,M,23.0,163.0,56.0,Singapore,SGP,,,1968,Verano,Verano 1968,Mexico City,Mexico,MEX,Levantamiento de pesas,Weightlifting Men's Bantamweight,,21.077195227520797
-123858,Lloyd Oscar Valberg,1990.0,M,26.0,,,Singapore,SGP,,,1948,Verano,Verano 1948,London,United Kingdom,GBR,Atletismo,Athletics Men's High Jump,,
 124142,Philipine van Aanholt,1992.0,F,20.0,171.0,65.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Vela,Sailing Women's One Person Dinghy,,22.229061933586404
 125698,arko Veki,1991.0,M,25.0,176.0,74.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Canoa,"Canoeing Men's Kayak Singles, 500 metres",,23.889462809917354
 125698,arko Veki,1991.0,M,25.0,176.0,74.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Canoa,"Canoeing Men's Kayak Doubles, 1,000 metres",,23.889462809917354
-125808,Sinnadurai Vellupillai,1986.0,M,30.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Hockey,Hockey Men's Hockey,,
-126499,Arumugam Vijiaratnam,1981.0,M,35.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Hockey,Hockey Men's Hockey,,
-128496,Wang Jue Gu,1984.0,F,28.0,155.0,63.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Tenis de mesa,Table Tennis Women's Singles,,26.22268470343392
-128496,Wang Jue Gu,1984.0,F,28.0,155.0,63.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Tenis de mesa,Table Tennis Women's Team,Plata,26.22268470343392
-128496,Wang Jue Gu,1984.0,F,32.0,155.0,63.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Tenis de mesa,Table Tennis Women's Singles,,26.22268470343392
-128496,Wang Jue Gu,1984.0,F,32.0,155.0,63.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Tenis de mesa,Table Tennis Women's Team,Bronce,26.22268470343392
-129221,Wee Tian Siak,1981.0,M,35.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Baloncesto,Basketball Men's Basketball,,
-131391,"Alexander Nicolaas ""Skip"" Wolters",1990.0,M,26.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Polo acuático,Water Polo Men's Water Polo,,
-131392,Wiebe Johan Wolters,1993.0,M,23.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Polo acuático,Water Polo Men's Water Polo,,
-131420,"Zi Liang ""Derek"" Wong",1989.0,M,23.0,176.0,69.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Bádminton,Badminton Men's Singles,,22.275309917355372
-131420,"Zi Liang ""Derek"" Wong",1989.0,M,27.0,176.0,69.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Bádminton,Badminton Men's Singles,,22.275309917355372
-131424,"Kar Mun ""Helena"" Wong",1992.0,F,24.0,158.0,53.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Levantamiento de pesas,Weightlifting Women's Featherweight,,21.230572023714146
-131426,"Wong Liang Hun ""James""",1977.0,M,39.0,,,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Esgrima,"Fencing Men's Foil, Individual",,
-131426,"Wong Liang Hun ""James""",1977.0,M,39.0,,,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Esgrima,"Fencing Men's epee, Individual",,
-131432,Wong Kay Poh,1989.0,M,27.0,,72.0,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Levantamiento de pesas,Weightlifting Men's Middleweight,,
-131434,Wong Kim Poh,1994.0,M,22.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Baloncesto,Basketball Men's Basketball,,
-131448,Wong Yew Tong,1991.0,M,25.0,194.0,81.0,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Atletismo,Athletics Men's High Jump,,21.521947071952386
-131718,Michael George Wright,1982.0,M,34.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Hockey,Hockey Men's Hockey,,
-132037,Xing Aiying,1997.0,F,19.0,163.0,55.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Bádminton,Badminton Women's Singles,,20.70081674131507
-132101,Xu Yuan Zhen,1993.0,M,23.0,169.0,60.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Vela,Sailing Men's Two Person Dinghy,,21.007667798746546
-132579,Yang Zi,1988.0,M,24.0,184.0,67.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Tenis de mesa,Table Tennis Men's Singles,,19.78969754253308
-132579,Yang Zi,1988.0,M,24.0,184.0,67.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Tenis de mesa,Table Tennis Men's Team,,19.78969754253308
-132579,Yang Zi,1988.0,M,28.0,184.0,67.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Tenis de mesa,Table Tennis Men's Singles,,19.78969754253308
-132579,Yang Zi,1988.0,M,28.0,184.0,67.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Tenis de mesa,Table Tennis Men's Team,,19.78969754253308
-132626,Yao Lei,1994.0,F,22.0,168.0,65.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Bádminton,Badminton Women's Doubles,,23.030045351473927
-132637,"Jin Wei ""Timothee"" Yap",1995.0,M,21.0,178.0,66.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Atletismo,Athletics Men's 100 metres,,20.830703194041156
-132757,Yee Tit Kwan,,M,,175.0,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Baloncesto,Basketball Men's Basketball,,
-132850,"Oon Tat ""Eric"" Yeo",1996.0,M,20.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Polo acuático,Water Polo Men's Water Polo,,
-132852,"Foo Ee ""Gary"" Yeo",1991.0,M,25.0,171.0,64.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Atletismo,Athletics Men's 100 metres,,21.887076365377382
-132853,Yeo Gek Huat,,M,,175.0,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Baloncesto,Basketball Men's Basketball,,
-132855,"Wei Ling ""Joscelin"" Yeo",1991.0,F,13.0,165.0,56.0,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Women's 50 metres Freestyle,,20.569329660238754
-132855,"Wei Ling ""Joscelin"" Yeo",1991.0,F,13.0,165.0,56.0,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Women's 100 metres Freestyle,,20.569329660238754
-132855,"Wei Ling ""Joscelin"" Yeo",1991.0,F,13.0,165.0,56.0,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Women's 200 metres Freestyle,,20.569329660238754
-132855,"Wei Ling ""Joscelin"" Yeo",1991.0,F,13.0,165.0,56.0,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Women's 400 metres Freestyle,,20.569329660238754
-132855,"Wei Ling ""Joscelin"" Yeo",1991.0,F,13.0,165.0,56.0,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Women's 100 metres Butterfly,,20.569329660238754
-132855,"Wei Ling ""Joscelin"" Yeo",1991.0,F,13.0,165.0,56.0,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Women's 200 metres Individual Medley,,20.569329660238754
-132855,"Wei Ling ""Joscelin"" Yeo",1991.0,F,17.0,165.0,56.0,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Women's 50 metres Freestyle,,20.569329660238754
-132855,"Wei Ling ""Joscelin"" Yeo",1991.0,F,17.0,165.0,56.0,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Women's 100 metres Freestyle,,20.569329660238754
-132855,"Wei Ling ""Joscelin"" Yeo",1991.0,F,17.0,165.0,56.0,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Women's 200 metres Freestyle,,20.569329660238754
-132855,"Wei Ling ""Joscelin"" Yeo",1991.0,F,17.0,165.0,56.0,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Women's 100 metres Breaststroke,,20.569329660238754
-132855,"Wei Ling ""Joscelin"" Yeo",1991.0,F,17.0,165.0,56.0,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Women's 100 metres Butterfly,,20.569329660238754
-132855,"Wei Ling ""Joscelin"" Yeo",1991.0,F,17.0,165.0,56.0,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Women's 200 metres Individual Medley,,20.569329660238754
-132855,"Wei Ling ""Joscelin"" Yeo",1991.0,F,21.0,165.0,56.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Natación,Swimming Women's 50 metres Freestyle,,20.569329660238754
-132855,"Wei Ling ""Joscelin"" Yeo",1991.0,F,21.0,165.0,56.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Natación,Swimming Women's 100 metres Freestyle,,20.569329660238754
-132855,"Wei Ling ""Joscelin"" Yeo",1991.0,F,21.0,165.0,56.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Natación,Swimming Women's 100 metres Breaststroke,,20.569329660238754
-132855,"Wei Ling ""Joscelin"" Yeo",1991.0,F,21.0,165.0,56.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Natación,Swimming Women's 100 metres Butterfly,,20.569329660238754
-132855,"Wei Ling ""Joscelin"" Yeo",1991.0,F,21.0,165.0,56.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Natación,Swimming Women's 200 metres Individual Medley,,20.569329660238754
-132855,"Wei Ling ""Joscelin"" Yeo",1991.0,F,25.0,165.0,56.0,Singapore,SGP,,,2004,Verano,Verano 2004,Athina,Greece,GRC,Natación,Swimming Women's 100 metres Butterfly,,20.569329660238754
-132855,"Wei Ling ""Joscelin"" Yeo",1991.0,F,25.0,165.0,56.0,Singapore,SGP,,,2004,Verano,Verano 2004,Athina,Greece,GRC,Natación,Swimming Women's 200 metres Individual Medley,,20.569329660238754
-132856,"Wi Jin ""Kenneth"" Yeo",1998.0,M,18.0,,,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Men's 50 metres Freestyle,,
-132856,"Wi Jin ""Kenneth"" Yeo",1998.0,M,18.0,,,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Men's 100 metres Freestyle,,
-132856,"Wi Jin ""Kenneth"" Yeo",1998.0,M,18.0,,,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Men's 200 metres Freestyle,,
-132856,"Wi Jin ""Kenneth"" Yeo",1998.0,M,18.0,,,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Men's 400 metres Freestyle,,
-132857,Yeo Kian Chye,1988.0,M,28.0,168.0,60.0,Singapore,SGP,,,1972,Verano,Verano 1972,Munich,Germany,DEU,Atletismo,Athletics Men's 100 metres,,21.258503401360546
-132857,Yeo Kian Chye,1988.0,M,28.0,168.0,60.0,Singapore,SGP,,,1972,Verano,Verano 1972,Munich,Germany,DEU,Atletismo,Athletics Men's 200 metres,,21.258503401360546
-132986,"Yin Yue ""Elizabeth"" Yin",1992.0,F,20.0,167.0,70.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Vela,Sailing Women's One Person Dinghy,,25.099501595611173
-132986,"Yin Yue ""Elizabeth"" Yin",1992.0,F,24.0,167.0,70.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Vela,Sailing Women's One Person Dinghy,,25.099501595611173
-133071,"Pei Lin ""Audrey"" Yong",1995.0,F,21.0,156.0,50.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Vela,Sailing Women's Windsurfer,,20.5456936226167
-133346,Yu Mengyu,1990.0,F,26.0,166.0,50.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Tenis de mesa,Table Tennis Women's Singles,,18.144868631151112
-133346,Yu Mengyu,1990.0,F,26.0,166.0,50.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Tenis de mesa,Table Tennis Women's Team,,18.144868631151112
 134359,Rita Zeqiri,1996.0,F,20.0,165.0,55.0,Kosovo,KOS,Autonomous,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Natación,Swimming Women's 100 metres Backstroke,,20.202020202020204
-134414,Zhan Jian,1986.0,M,30.0,170.0,75.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Tenis de mesa,Table Tennis Men's Team,,25.95155709342561
-134454,Zhang Guirong,1986.0,F,26.0,182.0,95.0,Singapore,SGP,,,2004,Verano,Verano 2004,Athina,Greece,GRC,Atletismo,Athletics Women's Shot Put,,28.680111097693512
-134454,Zhang Guirong,1986.0,F,30.0,182.0,95.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Atletismo,Athletics Women's Shot Put,,28.680111097693512
-134587,Zhang Xueling,1995.0,F,21.0,163.0,53.0,Singapore,SGP,,,2004,Verano,Verano 2004,Athina,Greece,GRC,Tenis de mesa,Table Tennis Women's Singles,,19.94805976890361
-134587,Zhang Xueling,1995.0,F,21.0,163.0,53.0,Singapore-1,SGP,,,2004,Verano,Verano 2004,Athina,Greece,GRC,Tenis de mesa,Table Tennis Women's Doubles,,19.94805976890361
 134699,Lum Zhaveli,1990.0,M,26.0,194.0,88.0,Kosovo,KOS,Autonomous,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Natación,Swimming Men's 50 metres Freestyle,,23.381868423849507
-134826,Zhou Yihan,1994.0,F,22.0,168.0,54.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Tenis de mesa,Table Tennis Women's Team,,19.13265306122449
 135246,Stevan Zori,1987.0,M,21.0,199.0,75.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Atletismo,Athletics Men's High Jump,,18.938915683947375
