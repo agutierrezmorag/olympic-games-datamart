@@ -51,22 +51,12 @@ ID,Nombre,Año de Nacimiento,Sexo,Edad,Altura,Peso,Equipo,NOC,Región,Región (I
 4379,Rami Anis,1991.0,M,25.0,178.0,78.0,Refugee Olympic Athletes,ROT,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Natación,Swimming Men's 100 metres Freestyle,,24.61810377477591
 4379,Rami Anis,1991.0,M,25.0,178.0,78.0,Refugee Olympic Athletes,ROT,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Natación,Swimming Men's 100 metres Butterfly,,24.61810377477591
 6385,Nooran Ahmed Ali Ba Matraf,2000.0,F,16.0,166.0,60.0,Yemen,YEM,Yemen,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Natación,Swimming Women's 100 metres Butterfly,,21.773842357381334
-7114,Nina Balaban,1996.0,F,20.0,158.0,58.0,Macedonia,MKD,Macedonia,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Tiro,"Shooting Women's Air Rifle, 10 metres",,23.233456176894723
 7534,Vladimir Banjanac,1991.0,M,25.0,187.0,83.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Remo,Rowing Men's Coxless Pairs,,23.735308416025617
 8524,Saeed Basweidan,1997.0,M,19.0,160.0,61.0,Yemen,YEM,Yemen,,1996,Verano,Verano 1996,Atlanta,United States,USA,Atletismo,Athletics Men's 800 metres,,23.828124999999996
 11364,Yiech Pur Biel,1995.0,M,21.0,178.0,62.0,Refugee Olympic Athletes,ROT,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Atletismo,Athletics Men's 800 metres,,19.568236333796236
 11575,Lon bin Mohamed Noor,,M,,,55.0,Singapore,SGP,,,1952,Verano,Verano 1952,Helsinki,Finland,FIN,Levantamiento de pesas,Weightlifting Men's Bantamweight,,
 11592,Aranka Binder,1982.0,F,26.0,163.0,47.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tiro,"Shooting Women's Air Rifle, 10 metres",Bronce,17.68978885166924
-12225,Marko Blaevski,1993.0,M,19.0,183.0,73.0,Macedonia,MKD,Macedonia,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Natación,Swimming Men's 400 metres Individual Medley,,21.798202394816204
-12225,Marko Blaevski,1993.0,M,23.0,183.0,73.0,Macedonia,MKD,Macedonia,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Natación,Swimming Men's 200 metres Individual Medley,,21.798202394816204
-12747,Anastasia Katerina Bogdanovski,1993.0,F,23.0,174.0,57.0,Macedonia,MKD,Macedonia,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Natación,Swimming Women's 200 metres Freestyle,,18.826793499801823
 13173,Liemarvin Bonevacia,1989.0,M,23.0,185.0,74.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Atletismo,Athletics Men's 400 metres,,21.62162162162162
-13737,Mirjana Boevska,1997.0,F,15.0,170.0,59.0,Macedonia,MKD,Macedonia,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Women's 400 metres Freestyle,,20.41522491349481
-13737,Mirjana Boevska,1997.0,F,15.0,170.0,59.0,Macedonia,MKD,Macedonia,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Women's 800 metres Freestyle,,20.41522491349481
-13737,Mirjana Boevska,1997.0,F,15.0,170.0,59.0,Macedonia,MKD,Macedonia,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Women's 400 metres Individual Medley,,20.41522491349481
-13737,Mirjana Boevska,1997.0,F,19.0,170.0,59.0,Macedonia,MKD,Macedonia,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Natación,Swimming Women's 800 metres Freestyle,,20.41522491349481
-13737,Mirjana Boevska,1997.0,F,19.0,170.0,59.0,Macedonia,MKD,Macedonia,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Natación,Swimming Women's 200 metres Butterfly,,20.41522491349481
-13737,Mirjana Boevska,1997.0,F,19.0,170.0,59.0,Macedonia,MKD,Macedonia,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Natación,Swimming Women's 400 metres Individual Medley,,20.41522491349481
 14199,"Mei Yen ""Christel"" Bouvron",1997.0,F,15.0,165.0,62.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Natación,Swimming Women's 400 metres Freestyle,,22.77318640955005
 14199,"Mei Yen ""Christel"" Bouvron",1997.0,F,15.0,165.0,62.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Natación,Swimming Women's 200 metres Butterfly,,22.77318640955005
 14199,"Mei Yen ""Christel"" Bouvron",1997.0,F,19.0,165.0,62.0,Singapore,SGP,,,2004,Verano,Verano 2004,Athina,Greece,GRC,Natación,Swimming Women's 200 metres Butterfly,,22.77318640955005
@@ -105,25 +95,16 @@ ID,Nombre,Año de Nacimiento,Sexo,Edad,Altura,Peso,Equipo,NOC,Región,Región (I
 24163,Radia ubri,1986.0,M,30.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Ciclismo,"Cycling Men's Road Race, Individual",,
 24638,Calisto da Costa,1995.0,M,21.0,162.0,52.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Atletismo,Athletics Men's Marathon,,19.81405273586343
 24897,Fatima Abdullah Suleiman Al-Dahman,1997.0,F,19.0,168.0,49.0,Yemen,YEM,Yemen,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Atletismo,Athletics Women's 100 metres,,17.361111111111114
-25119,Darko Damjanovski,1984.0,M,24.0,180.0,72.0,Macedonia,MKD,Macedonia,,2006,Invierno,Invierno 2006,Torino,Italy,ITA,Esquí de fondo,Cross Country Skiing Men's 15 kilometres,,22.22222222222222
-25119,Darko Damjanovski,1984.0,M,28.0,180.0,72.0,Macedonia,MKD,Macedonia,,2010,Invierno,Invierno 2010,Vancouver,Canada,CAN,Esquí de fondo,Cross Country Skiing Men's 15 kilometres,,22.22222222222222
-25119,Darko Damjanovski,1984.0,M,32.0,180.0,72.0,Macedonia,MKD,Macedonia,,2014,Invierno,Invierno 2014,Sochi,Russia,RUS,Esquí de fondo,Cross Country Skiing Men's Sprint,,22.22222222222222
-25119,Darko Damjanovski,1984.0,M,32.0,180.0,72.0,Macedonia,MKD,Macedonia,,2014,Invierno,Invierno 2014,Sochi,Russia,RUS,Esquí de fondo,Cross Country Skiing Men's 15 kilometres,,22.22222222222222
-25119,Darko Damjanovski,1984.0,M,32.0,180.0,72.0,Macedonia,MKD,Macedonia,,2014,Invierno,Invierno 2014,Sochi,Russia,RUS,Esquí de fondo,Cross Country Skiing Men's 50 kilometres,,22.22222222222222
 25303,Yvonne Margaret Danson (-Tan),1979.0,F,37.0,151.0,38.0,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Atletismo,Athletics Women's Marathon,,16.66593570457436
 25328,Abdul Karim Daoud,1998.0,M,18.0,165.0,62.0,North Yemen,YAR,Yemen,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Atletismo,"Athletics Men's 10,000 metres",,22.77318640955005
 25884,Martinho de Araujo,1989.0,M,27.0,149.0,56.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Levantamiento de pesas,Weightlifting Men's Bantamweight,,25.224089004999776
 26613,Osbert John de Rozario,1984.0,M,32.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Hockey,Hockey Men's Hockey,,
 26790,Reginald de Windt,1988.0,M,28.0,178.0,81.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Judo,Judo Men's Half-Middleweight,,25.5649539199596
 27921,Vellupillai Devadas,1985.0,M,31.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Hockey,Hockey Men's Hockey,,
-28652,Gjoko Dineski,1987.0,M,25.0,182.0,74.0,Macedonia,MKD,Macedonia,,1998,Invierno,Invierno 1998,Nagano,Japan,JPN,Esquí de fondo,Cross Country Skiing Men's 10 kilometres,,22.34029706557179
-28652,Gjoko Dineski,1987.0,M,29.0,182.0,74.0,Macedonia,MKD,Macedonia,,2002,Invierno,Invierno 2002,Salt Lake City,United States,USA,Esquí de fondo,Cross Country Skiing Men's Sprint,,22.34029706557179
-28652,Gjoko Dineski,1987.0,M,29.0,182.0,74.0,Macedonia,MKD,Macedonia,,2002,Invierno,Invierno 2002,Salt Lake City,United States,USA,Esquí de fondo,Cross Country Skiing Men's 30 kilometres,,22.34029706557179
 29466,Edwin Jeyaceilan Doraisamy,1983.0,M,33.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Hockey,Hockey Men's Hockey,,
 29840,Milan orevi,1993.0,M,23.0,176.0,65.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Canoa,"Canoeing Men's Kayak Singles, Slalom",,20.983987603305785
 30818,Thomas Kevin Durcan,1977.0,M,39.0,184.0,86.0,June Climene,SGP,,,1960,Verano,Verano 1960,Roma,Italy,ITA,Vela,Sailing Mixed Three Person Keelboat,,25.401701323251416
 31292,Fritz Eccard,,M,,,,Unknown,UNK,,,1912,Verano,Verano 1912,Stockholm,Sweden,SWE,Competencias de arte,Art Competitions Mixed Architecture,,
-31529,Kristijan Efremov,1995.0,M,21.0,184.0,72.0,Macedonia,MKD,Macedonia,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Atletismo,Athletics Men's 400 metres,,21.266540642722116
 33094,Logona Esau,1995.0,M,21.0,163.0,69.0,Tuvalu,TUV,,,2008,Verano,Verano 2008,Beijing,China,CHN,Levantamiento de pesas,Weightlifting Men's Lightweight,,25.970115548195267
 34366,"Jasna Fazli-Reed (-Lupulesku-, -Rather)",1983.0,F,21.0,170.0,56.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tenis de mesa,Table Tennis Women's Singles,,19.377162629757787
 34366,"Jasna Fazli-Reed (-Lupulesku-, -Rather)",1983.0,F,21.0,170.0,56.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tenis de mesa,Table Tennis Women's Doubles,,19.377162629757787
@@ -136,9 +117,6 @@ ID,Nombre,Año de Nacimiento,Sexo,Edad,Altura,Peso,Equipo,NOC,Región,Región (I
 34815,"Frederick ""Fred"" Fernandez",1987.0,M,29.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Hockey,Hockey Men's Hockey,,
 35334,Kire Filipovski,1993.0,M,19.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Men's 100 metres Butterfly,,
 35334,Kire Filipovski,1993.0,M,19.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Men's 200 metres Butterfly,,
-35334,Kire Filipovski,1993.0,M,23.0,,,Macedonia,MKD,Macedonia,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Men's 100 metres Butterfly,,
-35334,Kire Filipovski,1993.0,M,23.0,,,Macedonia,MKD,Macedonia,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Men's 200 metres Individual Medley,,
-37863,Nasir Gadihanov,1983.0,M,33.0,175.0,76.0,Macedonia,MKD,Macedonia,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Lucha,"Wrestling Men's Middleweight, Freestyle",,24.816326530612244
 38172,Zoran Galovi,1992.0,M,24.0,167.0,64.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Lucha,"Wrestling Men's Bantamweight, Greco-Roman",,22.948115744558788
 38259,Gan Eng Teck,1993.0,M,23.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Polo acuático,Water Polo Men's Water Polo,,
 38418,Gao Ning,1983.0,M,25.0,179.0,80.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Tenis de mesa,Table Tennis Men's Singles,,24.968009737523797
@@ -164,11 +142,6 @@ ID,Nombre,Año de Nacimiento,Sexo,Edad,Altura,Peso,Equipo,NOC,Región,Región (I
 48953,Ho Yen Chye,1991.0,M,25.0,180.0,125.0,Singapore,SGP,,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Judo,Judo Men's Heavyweight,,38.58024691358025
 49348,"Edward Gilbert ""Ned"" Holiday",1957.0,M,56.0,171.0,83.0,Rika II,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Vela,Sailing Mixed Three Person Keelboat,,28.384802161348794
 49348,"Edward Gilbert ""Ned"" Holiday",1957.0,M,59.0,171.0,83.0,June Climene,SGP,,,1960,Verano,Verano 1960,Roma,Italy,ITA,Vela,Sailing Mixed Three Person Keelboat,,28.384802161348794
-51537,Mogamed Ibragimov,1986.0,M,26.0,180.0,85.0,Macedonia,MKD,Macedonia,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Lucha,"Wrestling Men's Light-Heavyweight, Freestyle",Bronce,26.234567901234566
-51537,Mogamed Ibragimov,1986.0,M,30.0,180.0,85.0,Macedonia,MKD,Macedonia,,2004,Verano,Verano 2004,Athina,Greece,GRC,Lucha,"Wrestling Men's Light-Heavyweight, Freestyle",,26.234567901234566
-52567,Drita Islami,1996.0,F,20.0,166.0,56.0,Macedonia,MKD,Macedonia,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Atletismo,Athletics Women's 400 metres Hurdles,,20.322252866889244
-52900,Ivana Ivchevska,1999.0,F,17.0,164.0,59.0,Macedonia,MKD,Macedonia,,2006,Invierno,Invierno 2006,Torino,Italy,ITA,Esquí alpino,Alpine Skiing Women's Giant Slalom,,21.936347412254616
-52900,Ivana Ivchevska,1999.0,F,17.0,164.0,59.0,Macedonia,MKD,Macedonia,,2006,Invierno,Invierno 2006,Torino,Italy,ITA,Esquí alpino,Alpine Skiing Women's Slalom,,21.936347412254616
 52932,Aleksandra Ivoev,1990.0,F,18.0,165.0,57.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tiro,"Shooting Women's Small-Bore Rifle, Three Positions, 50 metres",,20.936639118457304
 52933,Pajo Ivoevi,1992.0,M,24.0,178.0,102.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Lucha,"Wrestling Men's Light-Heavyweight, Greco-Roman",,32.19290493624542
 53294,Ali Mohamed Sanad Jaffer,1983.0,M,33.0,,54.0,South Yemen,YMD,Yemen,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Boxeo,Boxing Men's Featherweight,,
@@ -198,7 +171,6 @@ ID,Nombre,Año de Nacimiento,Sexo,Edad,Altura,Peso,Equipo,NOC,Región,Región (I
 59398,Mohsen Ali Khousrof,1996.0,M,16.0,165.0,60.0,Yemen,YEM,Yemen,,2008,Verano,Verano 2008,Beijing,China,CHN,Judo,Judo Men's Extra-Lightweight,,22.03856749311295
 59398,Mohsen Ali Khousrof,1996.0,M,20.0,165.0,60.0,Yemen,YEM,Yemen,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Judo,Judo Men's Extra-Lightweight,,22.03856749311295
 60444,Yonas Kinde,1980.0,M,36.0,172.0,57.0,Refugee Olympic Athletes,ROT,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Atletismo,Athletics Men's Marathon,,19.2671714440238
-60753,Rosana Kiroska,1997.0,F,19.0,173.0,62.0,Macedonia,MKD,Macedonia,,2010,Invierno,Invierno 2010,Vancouver,Canada,CAN,Esquí de fondo,Cross Country Skiing Women's 10 kilometres,,20.715693808680545
 61062,Mary Beatrice Klass (-de Souza),1995.0,F,21.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Atletismo,Athletics Women's 100 metres,,
 61062,Mary Beatrice Klass (-de Souza),1995.0,F,21.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Atletismo,Athletics Women's 200 metres,,
 61642,Ko Tai Chuen,,M,,175.0,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Baloncesto,Basketball Men's Basketball,,
@@ -228,18 +200,14 @@ ID,Nombre,Año de Nacimiento,Sexo,Edad,Altura,Peso,Equipo,NOC,Región,Región (I
 61952,Terence Koh,1996.0,M,20.0,180.0,68.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Vela,Sailing Men's Two Person Dinghy,,20.98765432098765
 62010,Mohamed Kohsrof,1994.0,M,22.0,175.0,73.0,North Yemen,YAR,Yemen,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Judo,Judo Men's Extra-Lightweight,,23.836734693877553
 62065,Kok Kum Woh,1967.0,M,45.0,180.0,100.0,Singapore,SGP,,,1960,Verano,Verano 1960,Roma,Italy,ITA,Tiro,"Shooting Men's Free Pistol, 50 metres",,30.864197530864196
-62125,Marija Kolaroska,2000.0,F,16.0,164.0,50.0,Macedonia,MKD,Macedonia,,2014,Invierno,Invierno 2014,Sochi,Russia,RUS,Esquí de fondo,Cross Country Skiing Women's 10 kilometres,,18.590124925639504
 62938,Maja Kos,1992.0,F,24.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación sincronizada,Synchronized Swimming Women's Solo,,
 62938,Maja Kos,1992.0,F,24.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación sincronizada,Synchronized Swimming Women's Duet,,
 64422,Vijona Kryeziu,1998.0,F,18.0,167.0,51.0,Kosovo,KOS,Autonomous,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Atletismo,Athletics Women's 400 metres,,18.286779733945284
-64823,Daniela Kuleska,1997.0,F,19.0,168.0,50.0,Macedonia,MKD,Macedonia,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Atletismo,"Athletics Women's 1,500 metres",,17.71541950113379
 64955,Canagasabai Kunalan,1991.0,M,25.0,163.0,54.0,Singapore,SGP,,,1968,Verano,Verano 1968,Mexico City,Mexico,MEX,Atletismo,Athletics Men's 100 metres,,20.32443825510934
 64955,Canagasabai Kunalan,1991.0,M,25.0,163.0,54.0,Singapore,SGP,,,1968,Verano,Verano 1968,Mexico City,Mexico,MEX,Atletismo,Athletics Men's 200 metres,,20.32443825510934
 65504,"Ying Wah ""Leslie"" Kwok",1990.0,M,26.0,184.0,78.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Natación,Swimming Men's 50 metres Freestyle,,23.03875236294896
 65813,A. Laffen,,M,,,,Unknown,UNK,,,1912,Verano,Verano 1912,Stockholm,Sweden,SWE,Competencias de arte,Art Competitions Mixed Architecture,,
 66655,Tuau Lapua Lapua,1995.0,M,21.0,140.0,62.0,Tuvalu,TUV,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Levantamiento de pesas,Weightlifting Men's Featherweight,,31.632653061224495
-67423,Zoran Lazarovski,1993.0,M,19.0,183.0,73.0,Macedonia,MKD,Macedonia,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Natación,Swimming Men's 200 metres Butterfly,,21.798202394816204
-67423,Zoran Lazarovski,1993.0,M,23.0,183.0,73.0,Macedonia,MKD,Macedonia,,2004,Verano,Verano 2004,Athina,Greece,GRC,Natación,Swimming Men's 200 metres Butterfly,,21.798202394816204
 67799,Lee Chak Men,,M,,183.0,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Baloncesto,Basketball Men's Basketball,,
 67875,"Wei Ling ""Geraldine"" Lee",1991.0,F,25.0,154.0,62.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Canoa,"Canoeing Women's Kayak Singles, 200 metres",,26.14268848035082
 67875,"Wei Ling ""Geraldine"" Lee",1991.0,F,25.0,154.0,62.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Canoa,"Canoeing Women's Kayak Singles, 500 metres",,26.14268848035082
@@ -291,9 +259,6 @@ ID,Nombre,Año de Nacimiento,Sexo,Edad,Altura,Peso,Equipo,NOC,Región,Región (I
 73929,Goran Maksimovi,1979.0,M,28.0,168.0,63.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tiro,"Shooting Men's Air Rifle, 10 metres",,22.321428571428577
 73929,Goran Maksimovi,1979.0,M,28.0,168.0,63.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tiro,"Shooting Men's Small-Bore Rifle, Three Positions, 50 metres",,22.321428571428577
 73929,Goran Maksimovi,1979.0,M,28.0,168.0,63.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tiro,"Shooting Men's Small-Bore Rifle, Prone, 50 metres",,22.321428571428577
-74023,Aleksandar Malenko,1991.0,M,17.0,,,Macedonia,MKD,Macedonia,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Men's 200 metres Butterfly,,
-74023,Aleksandar Malenko,1991.0,M,17.0,,,Macedonia,MKD,Macedonia,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Men's 400 metres Individual Medley,,
-74023,Aleksandar Malenko,1991.0,M,25.0,,,Macedonia,MKD,Macedonia,,2004,Verano,Verano 2004,Athina,Greece,GRC,Natación,Swimming Men's 200 metres Freestyle,,
 74028,Tamara Maleev,1991.0,F,25.0,182.0,59.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Atletismo,Athletics Women's Long Jump,,17.81185847119913
 74540,Asenate Manoa,1996.0,F,16.0,,46.0,Tuvalu,TUV,,,2008,Verano,Verano 2008,Beijing,China,CHN,Atletismo,Athletics Women's 100 metres,,
 74540,Asenate Manoa,1996.0,F,20.0,,46.0,Tuvalu,TUV,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Atletismo,Athletics Women's 100 metres,,
@@ -302,24 +267,15 @@ ID,Nombre,Año de Nacimiento,Sexo,Edad,Altura,Peso,Equipo,NOC,Región,Región (I
 75001,Guor Marial (-Mading Miaker),1984.0,M,28.0,180.0,60.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Atletismo,Athletics Men's Marathon,,18.51851851851852
 75042,Sran Marilovi,1992.0,M,24.0,182.0,80.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Canoa,"Canoeing Men's Kayak Singles, 1,000 metres",,24.151672503320853
 75042,Sran Marilovi,1992.0,M,24.0,182.0,80.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Canoa,"Canoeing Men's Kayak Doubles, 1,000 metres",,24.151672503320853
-75106,Simona Marinova,1998.0,F,18.0,175.0,67.0,Macedonia,MKD,Macedonia,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Natación,Swimming Women's 800 metres Freestyle,,21.877551020408163
 75196,Leposava Markovi,1997.0,F,19.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Judo,Judo Women's Extra-Lightweight,,
-75209,Gjorgji Markovski,1996.0,M,20.0,180.0,80.0,Macedonia,MKD,Macedonia,,2006,Invierno,Invierno 2006,Torino,Italy,ITA,Esquí alpino,Alpine Skiing Men's Giant Slalom,,24.691358024691358
-75209,Gjorgji Markovski,1996.0,M,20.0,180.0,80.0,Macedonia,MKD,Macedonia,,2006,Invierno,Invierno 2006,Torino,Italy,ITA,Esquí alpino,Alpine Skiing Men's Slalom,,24.691358024691358
 76381,Zeyad Mater,1992.0,M,24.0,174.0,73.0,Yemen,YEM,Yemen,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Judo,Judo Men's Lightweight,,24.111507464658473
 78172,Sahim Saleh Mehdi,1996.0,M,20.0,,,South Yemen,YMD,Yemen,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Atletismo,Athletics Men's 200 metres,,
 79033,Nataa Mekovska,1992.0,F,20.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Women's 100 metres Butterfly,,
 79033,Nataa Mekovska,1992.0,F,20.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación,Swimming Women's 200 metres Butterfly,,
-79033,Nataa Mekovska,1992.0,F,24.0,,,Macedonia,MKD,Macedonia,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Women's 100 metres Butterfly,,
-79033,Nataa Mekovska,1992.0,F,24.0,,,Macedonia,MKD,Macedonia,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Women's 200 metres Butterfly,,
 79332,Vanja Mieta,1993.0,F,23.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación sincronizada,Synchronized Swimming Women's Solo,,
 79332,Vanja Mieta,1993.0,F,23.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación sincronizada,Synchronized Swimming Women's Duet,,
 79562,Lidija Mihajlovi,1977.0,F,23.0,165.0,75.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tiro,"Shooting Women's Air Rifle, 10 metres",,27.548209366391188
 79562,Lidija Mihajlovi,1977.0,F,23.0,165.0,75.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tiro,"Shooting Women's Small-Bore Rifle, Three Positions, 50 metres",,27.548209366391188
-79734,Aleksandar Miladinovski,1991.0,M,21.0,178.0,73.0,Macedonia,MKD,Macedonia,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Natación,Swimming Men's 100 metres Butterfly,,23.04002019946976
-79734,Aleksandar Miladinovski,1991.0,M,21.0,178.0,73.0,Macedonia,MKD,Macedonia,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Natación,Swimming Men's 200 metres Individual Medley,,23.04002019946976
-79734,Aleksandar Miladinovski,1991.0,M,25.0,178.0,73.0,Macedonia,MKD,Macedonia,,2004,Verano,Verano 2004,Athina,Greece,GRC,Natación,Swimming Men's 100 metres Butterfly,,23.04002019946976
-79734,Aleksandar Miladinovski,1991.0,M,25.0,178.0,73.0,Macedonia,MKD,Macedonia,,2004,Verano,Verano 2004,Athina,Greece,GRC,Natación,Swimming Men's 200 metres Individual Medley,,23.04002019946976
 79735,Majda Milak,2001.0,F,15.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Gimnasia rítmica,Rhythmic Gymnastics Women's Individual,,
 79789,Aleksandar Milenkovi,1978.0,M,24.0,193.0,83.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Ciclismo,"Cycling Men's Road Race, Individual",,22.28247738194314
 79789,Aleksandar Milenkovi,1978.0,M,24.0,193.0,83.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Ciclismo,Cycling Men's 100 kilometres Team Time Trial,,22.28247738194314
@@ -333,20 +289,15 @@ ID,Nombre,Año de Nacimiento,Sexo,Edad,Altura,Peso,Equipo,NOC,Región,Región (I
 82448,Mohamed Moslih,1995.0,M,21.0,175.0,73.0,North Yemen,YAR,Yemen,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Judo,Judo Men's Lightweight,,23.836734693877553
 82875,Yahia Mufarrih,1993.0,M,23.0,,,Yemen,YEM,Yemen,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Judo,Judo Men's Middleweight,,
 83681,Sran Mukatirovi,1996.0,M,20.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tenis,Tennis Men's Singles,,
-84593,Darko Naseski,2000.0,M,16.0,,,Macedonia,MKD,Macedonia,,1996,Verano,Verano 1996,Atlanta,United States,USA,Tiro,"Shooting Men's Air Rifle, 10 metres",,
 84639,Awad Salah Nasser,2000.0,M,16.0,168.0,60.0,Yemen,YEM,Yemen,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Atletismo,"Athletics Men's 1,500 metres",,21.258503401360546
 85312,Neo Chwee Kok,1995.0,M,21.0,,,Singapore,SGP,,,1952,Verano,Verano 1952,Helsinki,Finland,FIN,Natación,Swimming Men's 100 metres Freestyle,,
 85312,Neo Chwee Kok,1995.0,M,21.0,,,Singapore,SGP,,,1952,Verano,Verano 1952,Helsinki,Finland,FIN,Natación,Swimming Men's 400 metres Freestyle,,
 85313,Neo Jie Shi,1985.0,F,31.0,168.0,50.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Atletismo,Athletics Women's Marathon,,17.71541950113379
-85387,Sao Nestorov,1995.0,M,21.0,173.0,85.0,Macedonia,MKD,Macedonia,,2008,Verano,Verano 2008,Beijing,China,CHN,Tiro,"Shooting Men's Air Rifle, 10 metres",,28.40054796351365
 85633,Ling Kai Amanda Ng,1994.0,F,22.0,170.0,58.0,Singapore,SGP,,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Vela,Sailing Women's Two Person Dinghy,,20.06920415224914
 85645,"Peck Yui ""Shirley"" Ng",1977.0,F,39.0,164.0,75.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Tiro,"Shooting Women's Air Pistol, 10 metres",,27.885187388459254
 85655,Ng Yue Meng,1998.0,M,18.0,179.0,72.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Natación,Swimming Men's 100 metres Breaststroke,,22.47120876377142
 85655,Ng Yue Meng,1998.0,M,18.0,179.0,72.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Natación,Swimming Men's 200 metres Breaststroke,,22.47120876377142
 85655,Ng Yue Meng,1998.0,M,18.0,179.0,72.0,Singapore,SGP,,,1988,Verano,Verano 1988,Seoul,South Korea,KOR,Natación,Swimming Men's 4 x 100 metres Medley Relay,,22.47120876377142
-86281,Katerina Nikoloska,1991.0,F,25.0,163.0,63.0,Macedonia,MKD,Macedonia,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Judo,Judo Women's Half-Middleweight,,23.711844630960897
-86302,Jana Nikolovska,1998.0,F,18.0,,,Macedonia,MKD,Macedonia,,1998,Invierno,Invierno 1998,Nagano,Japan,JPN,Esquí alpino,Alpine Skiing Women's Giant Slalom,,
-86303,Atanas Nikolovski,1988.0,M,28.0,180.0,75.0,Macedonia,MKD,Macedonia,,2008,Verano,Verano 2008,Beijing,China,CHN,Canoa,"Canoeing Men's Kayak Singles, Slalom",,23.148148148148145
 86663,Tavevele Noa,1996.0,M,20.0,176.0,74.0,Tuvalu,TUV,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Atletismo,Athletics Men's 100 metres,,23.889462809917354
 88234,Oh Chwee Hock,,M,,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Polo acuático,Water Polo Men's Water Polo,,
 88235,"Hock Chu ""Frank"" Oh",1987.0,M,29.0,168.0,65.0,Singapore,SGP,,,1976,Verano,Verano 1976,Montreal,Canada,CAN,Tiro,Shooting Mixed Trap,,23.030045351473927
@@ -372,19 +323,11 @@ ID,Nombre,Año de Nacimiento,Sexo,Edad,Altura,Peso,Equipo,NOC,Región,Región (I
 89242,Oon Jin Teik,1995.0,M,21.0,180.0,75.0,Singapore,SGP,,,1984,Verano,Verano 1984,Los Angeles,United States,USA,Natación,Swimming Men's 4 x 100 metres Freestyle Relay,,23.148148148148145
 89242,Oon Jin Teik,1995.0,M,21.0,180.0,75.0,Singapore,SGP,,,1984,Verano,Verano 1984,Los Angeles,United States,USA,Natación,Swimming Men's 100 metres Breaststroke,,23.148148148148145
 89242,Oon Jin Teik,1995.0,M,21.0,180.0,75.0,Singapore,SGP,,,1984,Verano,Verano 1984,Los Angeles,United States,USA,Natación,Swimming Men's 4 x 100 metres Medley Relay,,23.148148148148145
-89781,Sihamir Osmanov,1987.0,M,29.0,172.0,74.0,Macedonia,MKD,Macedonia,,2004,Verano,Verano 2004,Athina,Greece,GRC,Lucha,"Wrestling Men's Middleweight, Freestyle",,25.013520822065985
-91001,Riste Pandev,1994.0,M,22.0,178.0,67.0,Macedonia,MKD,Macedonia,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Atletismo,Athletics Men's 100 metres,,21.146319909102385
-91103,Dejan Panovski,1995.0,M,21.0,176.0,73.0,Macedonia,MKD,Macedonia,,2002,Invierno,Invierno 2002,Salt Lake City,United States,USA,Esquí alpino,Alpine Skiing Men's Giant Slalom,,23.56663223140496
-91103,Dejan Panovski,1995.0,M,21.0,176.0,73.0,Macedonia,MKD,Macedonia,,2002,Invierno,Invierno 2002,Salt Lake City,United States,USA,Esquí alpino,Alpine Skiing Men's Slalom,,23.56663223140496
 91133,Dano Panti,1996.0,M,20.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Judo,Judo Men's Half-Heavyweight,,
 92345,Elizabeta Pavlovska,1997.0,F,19.0,170.0,62.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Atletismo,Athletics Women's 100 metres Hurdles,,21.453287197231838
 93042,Percy Milton Pennefather,1983.0,M,33.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Hockey,Hockey Men's Hockey,,
 93433,Dragan Peri,1976.0,M,28.0,186.0,107.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Atletismo,Athletics Men's Shot Put,,30.9284310324893
 93478,Gordana Perkuin,1986.0,F,30.0,168.0,59.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tenis de mesa,Table Tennis Women's Doubles,,20.904195011337873
-93727,Divna Pei,1992.0,F,20.0,175.0,60.0,Macedonia,MKD,Macedonia,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Tiro,"Shooting Women's Air Rifle, 10 metres",,19.591836734693878
-93727,Divna Pei,1992.0,F,20.0,175.0,60.0,Macedonia,MKD,Macedonia,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Tiro,"Shooting Women's Small-Bore Rifle, Three Positions, 50 metres",,19.591836734693878
-93727,Divna Pei,1992.0,F,24.0,175.0,60.0,Macedonia,MKD,Macedonia,,2004,Verano,Verano 2004,Athina,Greece,GRC,Tiro,"Shooting Women's Air Rifle, 10 metres",,19.591836734693878
-93727,Divna Pei,1992.0,F,24.0,175.0,60.0,Macedonia,MKD,Macedonia,,2004,Verano,Verano 2004,Athina,Greece,GRC,Tiro,"Shooting Women's Small-Bore Rifle, Three Positions, 50 metres",,19.591836734693878
 95271,Lazo Piva,1991.0,M,25.0,199.0,94.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Remo,Rowing Men's Coxless Pairs,,23.73677432388071
 95464,Stevan Pletikosi,1972.0,M,20.0,184.0,80.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tiro,"Shooting Men's Small-Bore Rifle, Prone, 50 metres",Bronce,23.629489603024574
 95673,Poh Seng Song,1995.0,M,21.0,172.0,67.0,Singapore,SGP,,,2004,Verano,Verano 2004,Athina,Greece,GRC,Atletismo,Athletics Men's 100 metres,,22.647376960519203
@@ -392,11 +335,7 @@ ID,Nombre,Año de Nacimiento,Sexo,Edad,Altura,Peso,Equipo,NOC,Región,Región (I
 96152,Duan Popeskov,1993.0,M,23.0,182.0,78.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Ciclismo,Cycling Men's 100 kilometres Team Time Trial,,23.54788069073783
 96152,Duan Popeskov,1993.0,M,23.0,182.0,78.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Ciclismo,Cycling Men's Points Race,,23.54788069073783
 96212,Slobodan Popovi,1987.0,M,29.0,179.0,63.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Atletismo,Athletics Men's 800 metres,,19.66230766829999
-96220,Elena Popovska,1998.0,F,18.0,174.0,63.0,Macedonia,MKD,Macedonia,,2008,Verano,Verano 2008,Beijing,China,CHN,Natación,Swimming Women's 100 metres Freestyle,,20.808561236623067
 96222,Lazar Popovski,1986.0,M,18.0,175.0,67.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Canoa,"Canoeing Men's Kayak Singles, Slalom",,21.877551020408163
-96222,Lazar Popovski,1986.0,M,22.0,175.0,67.0,Macedonia,MKD,Macedonia,,1996,Verano,Verano 1996,Atlanta,United States,USA,Canoa,"Canoeing Men's Kayak Singles, Slalom",,21.877551020408163
-96222,Lazar Popovski,1986.0,M,26.0,175.0,67.0,Macedonia,MKD,Macedonia,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Canoa,"Canoeing Men's Kayak Singles, Slalom",,21.877551020408163
-96222,Lazar Popovski,1986.0,M,30.0,175.0,67.0,Macedonia,MKD,Macedonia,,2004,Verano,Verano 2004,Athina,Greece,GRC,Canoa,"Canoeing Men's Kayak Singles, Slalom",,21.877551020408163
 96749,Dipna Lim Prasad,1995.0,F,21.0,174.0,54.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Atletismo,Athletics Women's 100 metres Hurdles,,17.8359096313912
 97735,Abbas Qali,1993.0,M,23.0,178.0,77.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Natación,Swimming Men's 100 metres Butterfly,,24.302487059714682
 97809,Quah Ting Wen,1993.0,F,15.0,175.0,60.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Natación,Swimming Women's 100 metres Freestyle,,19.591836734693878
@@ -411,18 +350,10 @@ ID,Nombre,Año de Nacimiento,Sexo,Edad,Altura,Peso,Equipo,NOC,Región,Región (I
 98186,Kristina Radonji,1999.0,F,17.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Gimnasia rítmica,Rhythmic Gymnastics Women's Individual,,
 98301,Mohammed Rageh,1998.0,M,18.0,169.0,64.0,Yemen,YEM,Yemen,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Atletismo,"Athletics Men's 1,500 metres",,22.40817898532965
 98556,Urata Rama,1987.0,F,29.0,173.0,64.0,Kosovo,KOS,Autonomous,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Tiro,"Shooting Women's Air Rifle, 10 metres",,21.383941996057334
-98600,Murad Ramazanov,1982.0,M,34.0,164.0,60.0,Macedonia,MKD,Macedonia,,2008,Verano,Verano 2008,Beijing,China,CHN,Lucha,"Wrestling Men's Lightweight, Freestyle",,22.308149910767405
 98743,Victor Ramos,1986.0,M,30.0,168.0,60.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Boxeo,Boxing Men's Lightweight,,21.258503401360546
-101030,Hristina Risteska,1996.0,F,20.0,168.0,60.0,Macedonia,MKD,Macedonia,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Atletismo,Athletics Women's 400 metres,,21.258503401360546
-101031,Antonio Ristevski,1992.0,M,20.0,180.0,84.0,Macedonia,MKD,Macedonia,,2010,Invierno,Invierno 2010,Vancouver,Canada,CAN,Esquí alpino,Alpine Skiing Men's Giant Slalom,,25.925925925925924
-101031,Antonio Ristevski,1992.0,M,20.0,180.0,84.0,Macedonia,MKD,Macedonia,,2010,Invierno,Invierno 2010,Vancouver,Canada,CAN,Esquí alpino,Alpine Skiing Men's Slalom,,25.925925925925924
-101031,Antonio Ristevski,1992.0,M,24.0,180.0,84.0,Macedonia,MKD,Macedonia,,2014,Invierno,Invierno 2014,Sochi,Russia,RUS,Esquí alpino,Alpine Skiing Men's Giant Slalom,,25.925925925925924
-101031,Antonio Ristevski,1992.0,M,24.0,180.0,84.0,Macedonia,MKD,Macedonia,,2014,Invierno,Invierno 2014,Sochi,Russia,RUS,Esquí alpino,Alpine Skiing Men's Slalom,,25.925925925925924
-101038,Mihajlo Ristovski,1991.0,M,25.0,174.0,70.0,Macedonia,MKD,Macedonia,,2008,Verano,Verano 2008,Beijing,China,CHN,Natación,Swimming Men's 200 metres Freestyle,,23.120623596247853
 101191,Senad Rizvanovi,1992.0,M,24.0,180.0,57.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Lucha,"Wrestling Men's Flyweight, Greco-Roman",,17.59259259259259
 101212,Miko Rnjakovi,1988.0,M,28.0,181.0,82.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Ciclismo,"Cycling Men's Road Race, Individual",,25.029760996306585
 101212,Miko Rnjakovi,1988.0,M,28.0,181.0,82.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Ciclismo,Cycling Men's 100 kilometres Team Time Trial,,25.029760996306585
-103110,Ivana Roman,1997.0,F,19.0,168.0,64.0,Macedonia,MKD,Macedonia,,2008,Verano,Verano 2008,Beijing,China,CHN,Atletismo,Athletics Women's 100 metres,,22.67573696145125
 103947,Mohamed Saad,1993.0,M,23.0,175.0,75.0,Yemen,YEM,Yemen,,2004,Verano,Verano 2004,Athina,Greece,GRC,Natación,Swimming Men's 50 metres Freestyle,,24.489795918367346
 103949,Waseelah Fadhl Saad,1998.0,F,18.0,160.0,48.0,Yemen,YEM,Yemen,,2008,Verano,Verano 2008,Beijing,China,CHN,Atletismo,Athletics Women's 100 metres,,18.749999999999996
 104054,Nandor Sabo Paloc,1984.0,M,32.0,172.0,68.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Lucha,"Wrestling Men's Lightweight, Greco-Roman",,22.985397512168742
@@ -440,7 +371,6 @@ ID,Nombre,Año de Nacimiento,Sexo,Edad,Altura,Peso,Equipo,NOC,Región,Región (I
 107437,Richard Roland Schoon,1988.0,M,28.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Hockey,Hockey Men's Hockey,,
 108383,Jasna ekari (Brajkovi-),1970.0,F,26.0,175.0,70.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tiro,"Shooting Women's Air Pistol, 10 metres",Plata,22.857142857142858
 108383,Jasna ekari (Brajkovi-),1970.0,F,26.0,175.0,70.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Tiro,"Shooting Women's Sporting Pistol, 25 metres",,22.857142857142858
-108489,Redep Selman,1994.0,M,22.0,183.0,77.0,Macedonia,MKD,Macedonia,,2008,Verano,Verano 2008,Beijing,China,CHN,Atletismo,Athletics Men's Triple Jump,,22.99262444384723
 108625,Marija Senica,1995.0,F,21.0,,,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Natación sincronizada,Synchronized Swimming Women's Solo,,
 108760,"Xiang Wei ""Jasmine"" Ser",1991.0,F,21.0,155.0,47.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Tiro,"Shooting Women's Air Rifle, 10 metres",,19.562955254942764
 108760,"Xiang Wei ""Jasmine"" Ser",1991.0,F,21.0,155.0,47.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Tiro,"Shooting Women's Small-Bore Rifle, Three Positions, 50 metres",,19.562955254942764
@@ -458,18 +388,9 @@ ID,Nombre,Año de Nacimiento,Sexo,Edad,Altura,Peso,Equipo,NOC,Región,Región (I
 112557,Sng Ju Wei,1996.0,M,16.0,177.0,73.0,Singapore,SGP,,,1996,Verano,Verano 1996,Atlanta,United States,USA,Natación,Swimming Men's 4 x 100 metres Medley Relay,,23.301094832264035
 112557,Sng Ju Wei,1996.0,M,20.0,177.0,73.0,Singapore,SGP,,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Natación,Swimming Men's 400 metres Freestyle,,23.301094832264035
 112586,"John ""Jack"" Snowden",1983.0,M,33.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Vela,Sailing Mixed One Person Dinghy,,
-112807,Vlatko Sokolov,1994.0,M,22.0,157.0,57.0,Macedonia,MKD,Macedonia,,1996,Verano,Verano 1996,Atlanta,United States,USA,Lucha,"Wrestling Men's Light-Flyweight, Freestyle",,23.124670372023203
 113203,Kesevan Soon,1998.0,M,18.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Atletismo,Athletics Men's 100 metres,,
 113203,Kesevan Soon,1998.0,M,18.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Atletismo,Athletics Men's 200 metres,,
 113284,Zoran orov,1986.0,M,30.0,161.0,57.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Lucha,"Wrestling Men's Bantamweight, Freestyle",,21.98989236526368
-115380,"Vano ""Vane"" Stojanov",1990.0,M,22.0,181.0,75.0,Macedonia,MKD,Macedonia,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Atletismo,Athletics Men's 800 metres,,22.89307408198773
-115380,"Vano ""Vane"" Stojanov",1990.0,M,26.0,181.0,75.0,Macedonia,MKD,Macedonia,,2004,Verano,Verano 2004,Athina,Greece,GRC,Atletismo,Athletics Men's 800 metres,,22.89307408198773
-115386,Vesna Stojanovska,1997.0,F,15.0,175.0,63.0,Macedonia,MKD,Macedonia,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Natación,Swimming Women's 200 metres Freestyle,,20.571428571428573
-115386,Vesna Stojanovska,1997.0,F,15.0,175.0,63.0,Macedonia,MKD,Macedonia,,2000,Verano,Verano 2000,Sydney,Australia,AUS,Natación,Swimming Women's 400 metres Freestyle,,20.571428571428573
-115386,Vesna Stojanovska,1997.0,F,19.0,175.0,63.0,Macedonia,MKD,Macedonia,,2004,Verano,Verano 2004,Athina,Greece,GRC,Natación,Swimming Women's 200 metres Freestyle,,20.571428571428573
-115386,Vesna Stojanovska,1997.0,F,19.0,175.0,63.0,Macedonia,MKD,Macedonia,,2004,Verano,Verano 2004,Athina,Greece,GRC,Natación,Swimming Women's 400 metres Freestyle,,20.571428571428573
-115386,Vesna Stojanovska,1997.0,F,19.0,175.0,63.0,Macedonia,MKD,Macedonia,,2004,Verano,Verano 2004,Athina,Greece,GRC,Natación,Swimming Women's 200 metres Butterfly,,20.571428571428573
-115387,Aleksandar Stojanovski,1997.0,M,19.0,,,Macedonia,MKD,Macedonia,,1998,Invierno,Invierno 1998,Nagano,Japan,JPN,Esquí alpino,Alpine Skiing Men's Giant Slalom,,
 116388,Faye Sultan Hussain,1995.0,F,21.0,182.0,67.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,2016,Verano,Verano 2016,Rio de Janeiro,Brazil,BRA,Natación,Swimming Women's 50 metres Freestyle,,20.227025721531216
 116618,"Phang Cue ""P. C."" Suppiah",1993.0,M,23.0,168.0,54.0,Singapore,SGP,,,1972,Verano,Verano 1972,Munich,Germany,DEU,Atletismo,"Athletics Men's 5,000 metres",,19.13265306122449
 116618,"Phang Cue ""P. C."" Suppiah",1993.0,M,23.0,168.0,54.0,Singapore,SGP,,,1972,Verano,Verano 1972,Munich,Germany,DEU,Atletismo,"Athletics Men's 10,000 metres",,19.13265306122449
@@ -524,18 +445,13 @@ ID,Nombre,Año de Nacimiento,Sexo,Edad,Altura,Peso,Equipo,NOC,Región,Región (I
 120728,Toh Li Ying,1993.0,F,23.0,157.0,52.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Vela,Sailing Women's Two Person Dinghy,,21.096190514828187
 121106,Dragutin Topi,1975.0,M,21.0,195.0,73.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Atletismo,Athletics Men's High Jump,,19.197896120973045
 121630,eljko Trajkovi,1991.0,M,25.0,171.0,76.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Lucha,"Wrestling Men's Welterweight, Greco-Roman",,25.990903183885642
-122095,Nenad Trpovski,1999.0,M,17.0,182.0,84.0,Macedonia,MKD,Macedonia,,1996,Verano,Verano 1996,Atlanta,United States,USA,Canoa,"Canoeing Men's Canadian Singles, Slalom",,25.359256128486894
-122096,aban Trstena,1985.0,M,31.0,165.0,58.0,Macedonia,MKD,Macedonia,,1996,Verano,Verano 1996,Atlanta,United States,USA,Lucha,"Wrestling Men's Bantamweight, Freestyle",,21.30394857667585
 122624,Tung Chye Hong,1993.0,M,23.0,163.0,56.0,Singapore,SGP,,,1968,Verano,Verano 1968,Mexico City,Mexico,MEX,Levantamiento de pesas,Weightlifting Men's Bantamweight,,21.077195227520797
-123165,Ana Ugrinovska,2000.0,F,16.0,,,Macedonia,MKD,Macedonia,,1996,Verano,Verano 1996,Atlanta,United States,USA,Canoa,"Canoeing Women's Kayak Singles, Slalom",,
 123858,Lloyd Oscar Valberg,1990.0,M,26.0,,,Singapore,SGP,,,1948,Verano,Verano 1948,London,United Kingdom,GBR,Atletismo,Athletics Men's High Jump,,
 124142,Philipine van Aanholt,1992.0,F,20.0,171.0,65.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Vela,Sailing Women's One Person Dinghy,,22.229061933586404
 125698,arko Veki,1991.0,M,25.0,176.0,74.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Canoa,"Canoeing Men's Kayak Singles, 500 metres",,23.889462809917354
 125698,arko Veki,1991.0,M,25.0,176.0,74.0,Individual Olympic Athletes,IOA,Individual Olympic Athletes,,1992,Verano,Verano 1992,Barcelona,Spain,ESP,Canoa,"Canoeing Men's Kayak Doubles, 1,000 metres",,23.889462809917354
 125808,Sinnadurai Vellupillai,1986.0,M,30.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Hockey,Hockey Men's Hockey,,
-126044,Valerij Verhuin,1980.0,M,36.0,171.0,78.0,Macedonia,MKD,Macedonia,,1996,Verano,Verano 1996,Atlanta,United States,USA,Lucha,"Wrestling Men's Welterweight, Freestyle",,26.674874320303687
 126499,Arumugam Vijiaratnam,1981.0,M,35.0,,,Singapore,SGP,,,1956,Verano,Verano 1956,Melbourne,Australia,AUS,Hockey,Hockey Men's Hockey,,
-127129,Aleksandra Vojnevska,1993.0,F,23.0,166.0,53.0,Macedonia,MKD,Macedonia,,2004,Verano,Verano 2004,Athina,Greece,GRC,Atletismo,Athletics Women's 100 metres,,19.233560749020178
 128496,Wang Jue Gu,1984.0,F,28.0,155.0,63.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Tenis de mesa,Table Tennis Women's Singles,,26.22268470343392
 128496,Wang Jue Gu,1984.0,F,28.0,155.0,63.0,Singapore,SGP,,,2008,Verano,Verano 2008,Beijing,China,CHN,Tenis de mesa,Table Tennis Women's Team,Plata,26.22268470343392
 128496,Wang Jue Gu,1984.0,F,32.0,155.0,63.0,Singapore,SGP,,,2012,Verano,Verano 2012,London,United Kingdom,GBR,Tenis de mesa,Table Tennis Women's Singles,,26.22268470343392
