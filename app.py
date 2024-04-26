@@ -149,9 +149,6 @@ def main():
         }
 
         st.markdown("# 📊 Datamart data")
-        st.markdown(
-            "Los siguientes datos no han sido modificados y se presentan tal como se encuentran en los archivos `csv`."
-        )
 
         st.warning(
             "⚠️ **IMPORTANTE:** Considerar que se usa un punto para valores decimales y una coma para separar miles."
