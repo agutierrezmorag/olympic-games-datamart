@@ -9,10 +9,10 @@ def get_hihd_charts(data):
     # Choropleth map of HIHD in early times
     with col1:
         # Find the earliest year in the data
-        earliest_year = data["Año"].max()
+        earliest_year = data["Year"].max()
 
         # Filter the data to only include the earliest year
-        data_earliest_year = data[data["Año"] == earliest_year]
+        data_earliest_year = data[data["Year"] == earliest_year]
 
         st.dataframe(data_earliest_year)
 
@@ -20,10 +20,10 @@ def get_hihd_charts(data):
         fig = px.choropleth(
             data_earliest_year,
             title=f"Índice Histórico de Desarrollo Humano en {earliest_year}",
-            locations="Entidad",
+            locations="Entity",
             locationmode="country names",
-            color="Población",
-            hover_name="Entidad",
+            color="Population (historical estimates)",
+            hover_name="Entity",
             color_continuous_scale="Viridis",
         )
         fig.update_geos(
