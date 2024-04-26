@@ -2,7 +2,6 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-from charts.hdi import get_hdi_charts
 from charts.hihd import get_hihd_charts
 from charts.income import get_income_charts
 from charts.olympics import get_olympics_charts
@@ -115,12 +114,6 @@ def load_and_display_data(title, filename):
         get_schooling_charts(data)
     elif title == "💰 Income (Cleaned)":
         get_income_charts(data)
-    elif title == "🌍 Human Development Index (HDI) (Cleaned)":
-        st.caption(
-            "📢 **Nota:** PNUD significa Programa de las Naciones Unidas para el Desarrollo."
-        )
-
-        get_hdi_charts(data)
     elif title == "📊 Historical Index of Human Development (HIHD) (Cleaned)":
         get_hihd_charts(data)
 
@@ -139,8 +132,6 @@ def main():
             "💰 Income": "gross-national-income-per-capita.csv",
             "🌍 Human Development Index (HDI) (Cleaned)": "human-development-index-cleaned.csv",
             "🌍 Human Development Index (HDI)": "human-development-index.csv",
-            "📊 Historical Index of Human Development (HIHD) (Cleaned)": "hdi-vs-hihd-cleaned.csv",
-            "📊 Historical Index of Human Development (HIHD)": "hdi-vs-hihd.csv",
             "👦🏻 Population (Cleaned)": "population_total_long-cleaned.csv",
             "👦🏻 Population": "population_total_long.csv",
         }
