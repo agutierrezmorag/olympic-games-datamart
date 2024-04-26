@@ -121,7 +121,7 @@ def load_and_display_data(title, filename):
         )
 
         get_hdi_charts(data)
-    elif title == "📊 Historical Index of Human Development (HIHD) (Translated)":
+    elif title == "📊 Historical Index of Human Development (HIHD) (Cleaned)":
         get_hihd_charts(data)
 
 
