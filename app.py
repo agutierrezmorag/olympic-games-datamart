@@ -1,3 +1,5 @@
+import warnings
+
 import pandas as pd
 import plotly.express as px
 import streamlit as st
@@ -7,6 +9,8 @@ from charts.income import get_income_charts
 from charts.olympics import get_olympics_charts
 from charts.schooling import get_schooling_charts
 from statistics_calc import descriptors, qualitative_stats
+
+warnings.filterwarnings("ignore")
 
 
 def load_and_display_data(title, filename):
@@ -53,7 +57,7 @@ def load_and_display_data(title, filename):
     selected_plot = st.selectbox("Selecciona un tipo de gráfico", plot_types)
 
     # Add a selectbox for the user to select a quantitative variable
-    quantitative_vars = [col for col in data.columns]
+    quantitative_vars = data.columns
     selected_var = st.selectbox(
         "Selecciona una variable para generar un gráfico", quantitative_vars
     )
