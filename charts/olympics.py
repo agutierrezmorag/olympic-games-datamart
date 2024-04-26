@@ -636,19 +636,25 @@ def extra_charts(data, og_data):
 
         # Add annotations for each marker
         for i in range(len(medal_distribution)):
+            age = medal_distribution.loc[i, "Age"]
+            if age != "Unknown":
+                age = str(int(float(age)))
             fig.add_annotation(
                 x=medal_distribution.loc[i, "Age"],
                 y=medal_distribution.loc[i, "Medal"],
-                text=str(int(medal_distribution.loc[i, "Age"])),
+                text=age,
                 showarrow=False,
                 font=dict(size=11),
                 yshift=10,
             )
         for i in range(len(athlete_distribution)):
+            age = athlete_distribution.loc[i, "Age"]
+            if age != "Unknown":
+                age = str(int(float(age)))
             fig.add_annotation(
                 x=athlete_distribution.loc[i, "Age"],
                 y=athlete_distribution.loc[i, "ID"],
-                text=str(int(athlete_distribution.loc[i, "Age"])),
+                text=age,
                 showarrow=False,
                 font=dict(size=11),
                 yshift=10,
