@@ -76,8 +76,8 @@ def gender_charts(data, og_data):
             season_gender_distribution,
             x="Season",
             y=["F", "M"],
-            title="Distribución de género por Season",
-            labels={"value": "Total", "variable": "Sex", "Season": "Season"},
+            title="Distribución de género por termporada",
+            labels={"value": "Total", "variable": "Género", "Season": "Temporada"},
             barmode="stack",
             color_discrete_map={"F": female_color, "M": male_color},
             text_auto=True,
@@ -104,7 +104,7 @@ def gender_charts(data, og_data):
             x="Sport",
             y=["Bronze", "Silver", "Gold"],
             color="Sex",
-            title="Distribución de tipos de Medals dentro de cada Sport por género",
+            title="Distribución de medallas dentro de cada deporte por género",
             labels={
                 "value": "Número de Medals",
                 "variable": "Tipo de Medal",
@@ -135,10 +135,10 @@ def gender_charts(data, og_data):
 
     # Display sports played only by each gender
     st.write(
-        "Sports jugados solo por atletas :red[femeninas]: ", str(female_only_sports)
+        "Deportes jugados solo por atletas :red[femeninas]: ", str(female_only_sports)
     )
     st.write(
-        "Sports jugados solo por atletas :blue[masculinos]: ", str(male_only_sports)
+        "Deportes jugados solo por atletas :blue[masculinos]: ", str(male_only_sports)
     )
 
 
@@ -164,7 +164,7 @@ def country_charts(data, og_data):
             locations="Region",
             locationmode="country names",
             color="Count",
-            title="Distribución de Medals por país",
+            title="Distribución de medallas por país",
             labels={"Region": "País", "Count": "Número de Medallas"},
             color_continuous_scale=px.colors.sequential.Viridis,
         )
@@ -180,7 +180,7 @@ def country_charts(data, og_data):
             medal_distribution.head(25),
             x="Region",
             y="Count",
-            title="Top 25 países con más Medals",
+            title="Top 25 países con más medallas",
             labels={"Region": "País", "Count": "Número de Medallas"},
             text_auto=True,
         )
@@ -262,7 +262,7 @@ def country_charts(data, og_data):
             locations="Region",
             locationmode="country names",
             color="Promedio",
-            title="Promedio de Medals ganadas por país por Olimpiada",
+            title="Promedio de medallas ganadas de cada país por Olimpiada",
             color_continuous_scale=px.colors.sequential.Viridis,
         )
 
@@ -337,7 +337,7 @@ def ww2_charts(data, og_data):
                     x=country_data["Year"],
                     y=country_data["Medals"],
                     mode="lines",
-                    name=f"{country} Medals",
+                    name=f"{country} Medallas",
                     line=dict(dash="solid", color=colors.get(country, "blue")),
                 )
             )
@@ -365,7 +365,7 @@ def ww2_charts(data, og_data):
                     x=country_data["Year"],
                     y=country_data["Medals"],
                     mode="lines",
-                    name=f"{country} Medals",
+                    name=f"{country} Medallas",
                     line=dict(dash="solid", color=colors.get(country, "blue")),
                 )
             )
@@ -393,7 +393,7 @@ def ww2_charts(data, og_data):
                     x=country_data["Year"],
                     y=country_data["Medals"],
                     mode="lines",
-                    name=f"{country} Medals",
+                    name=f"{country} Medallas",
                     line=dict(dash="solid", color=colors.get(country, "blue")),
                 )
             )
@@ -503,7 +503,7 @@ def cold_war_charts(data, og_data):
                     x=country_data["Year"],
                     y=country_data["Medals"],
                     mode="lines",
-                    name=f"{country} Medals",
+                    name=f"{country} Medallas",
                     line=dict(dash="solid", color=colors.get(country, "blue")),
                 )
             )
@@ -548,7 +548,7 @@ def cold_war_charts(data, og_data):
                     x=country_data["Year"],
                     y=country_data["Medals"],
                     mode="lines",
-                    name=f"{country} Medals",
+                    name=f"{country} Medallas",
                     line=dict(dash="solid", color=colors.get(country, "blue")),
                 )
             )
@@ -592,8 +592,8 @@ def extra_charts(data, og_data):
             season_distribution,
             names="Season",
             values="Count",
-            title="Distribución de atletas por Season olímpica",
-            labels={"Season": "Season", "Count": "Número de atletas"},
+            title="Distribución de atletas por temporada olímpica",
+            labels={"Season": "Temporada", "Count": "Número de atletas"},
             color=season_distribution["Season"],
             color_discrete_map={"Summer": "khaki", "Winter": "lightblue"},
         )
@@ -663,7 +663,7 @@ def extra_charts(data, og_data):
         # Set the title and labels
         fig.update_layout(
             title="Distribución de Medals y atletas por edad",
-            xaxis_title="Age",
+            xaxis_title="Edad",
             yaxis_title="Número",
             legend_title="Distribución",
         )
@@ -689,11 +689,11 @@ def extra_charts(data, og_data):
             medal_distribution,
             x="Sport",
             y=["Bronze", "Silver", "Gold"],
-            title="Distribución de tipos de Medals dentro de cada deporte",
+            title="Distribución de tipos de medallas dentro de cada deporte",
             labels={
-                "value": "Número de Medals",
-                "variable": "Tipo de Medal",
-                "Sport": "Sport",
+                "value": "Número de medallas",
+                "variable": "Tipo de medalla",
+                "Sport": "Deporte",
             },
             barmode="stack",
             text_auto=True,
@@ -725,7 +725,7 @@ def extra_charts(data, og_data):
             x="Year_x",
             y="Sport",
             title="Deportes más antiguos que todavía se juegan hoy en día",
-            labels={"Sport": "Sport", "Year_x": "Primer año de competencia"},
+            labels={"Sport": "Deporte", "Year_x": "Primer año de competencia"},
         )
 
         st.plotly_chart(fig)
@@ -743,7 +743,7 @@ def extra_charts(data, og_data):
             y="Count",
             color="Sport",
             title="Participación en cada deporte a lo largo del tiempo",
-            labels={"Count": "Número de atletas", "Year": "Year", "Sport": "Sport"},
+            labels={"Count": "Número de atletas", "Year": "Año", "Sport": "Deporte"},
         )
         st.plotly_chart(fig)
 
@@ -762,7 +762,7 @@ def extra_charts(data, og_data):
             x="Event",
             y="Atletas",
             text_auto=True,
-            title=f"Participación en los 25 Events principales en {recent_year}",
+            title=f"Participación en los 25 eventos principales en {recent_year}",
         )
         st.plotly_chart(fig)
 
@@ -840,7 +840,7 @@ def extra_charts(data, og_data):
             color="Tipo",
             color_discrete_map={"Summer": "khaki", "Winter": "lightblue"},
             orientation="h",
-            title="Sports que ya no se juegan en los Juegos Olímpicos",
+            title="Deportes que ya no se juegan en los Juegos Olímpicos",
             text="Year",
             text_auto=True,
         )
