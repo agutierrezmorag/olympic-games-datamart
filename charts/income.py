@@ -9,19 +9,19 @@ def get_income_charts(data):
     # Choropleth map of income in early times
     with col1:
         # Find the earliest year in the data
-        earliest_year = data["Año"].min()
+        earliest_year = data["Year"].min()
 
         # Filter the data to only include the earliest year
-        data_earliest_year = data[data["Año"] == earliest_year]
+        data_earliest_year = data[data["Year"] == earliest_year]
 
         # Add a choropleth map showing the gross national income per capita
         fig = px.choropleth(
             data_earliest_year,
-            title=f"Ingreso Nacional Bruto per cápita en {earliest_year}",
-            locations="Entidad",
+            title=f"GNI per capita, PPP (constant 2017 international $) en {earliest_year}",
+            locations="Entity",
             locationmode="country names",
-            color="Ingreso Nacional Bruto per cápita",
-            hover_name="Entidad",
+            color="GNI per capita, PPP (constant 2017 international $)",
+            hover_name="Entity",
             color_continuous_scale="Viridis",
             range_color=(10_000, 100_000),
         )
@@ -34,36 +34,38 @@ def get_income_charts(data):
 
         # Add a bar chart showing the top countries with the highest income
         fig = px.bar(
-            data_earliest_year.nlargest(10, "Ingreso Nacional Bruto per cápita"),
-            x="Ingreso Nacional Bruto per cápita",
-            y="Entidad",
-            title=f"Top 10 países con mayor ingreso nacional bruto per cápita en {earliest_year}",
+            data_earliest_year.nlargest(
+                10, "GNI per capita, PPP (constant 2017 international $)"
+            ),
+            x="GNI per capita, PPP (constant 2017 international $)",
+            y="Entity",
+            title=f"Top 10 países con mayor GNI per capita, PPP (constant 2017 international $) en {earliest_year}",
             orientation="h",
-            text=data_earliest_year.nlargest(10, "Ingreso Nacional Bruto per cápita")[
-                "Ingreso Nacional Bruto per cápita"
-            ].round(2),
+            text=data_earliest_year.nlargest(
+                10, "GNI per capita, PPP (constant 2017 international $)"
+            )["GNI per capita, PPP (constant 2017 international $)"].round(2),
         )
         st.plotly_chart(fig, use_container_width=True)
 
     # Choropleth map of income in modern times
     with col2:
         st.caption(
-            "Si bien el ultimo año del dataset es 2020, se muestra el año 2017, ya que este es el último año con datos de todos los países."
+            "Si bien el ultimo Year del dataset es 2020, se muestra el Year 2017, ya que este es el último Year con datos de todos los países."
         )
         # Find the latest year in the data
         latest_year = 2017
 
         # Filter the data to only include the latest year
-        data_latest_year = data[data["Año"] == latest_year]
+        data_latest_year = data[data["Year"] == latest_year]
 
         # Add a choropleth map showing the gross national income per capita
         fig = px.choropleth(
             data_latest_year,
-            title=f"Ingreso Nacional Bruto per cápita en {latest_year}",
-            locations="Entidad",
+            title=f"GNI per capita, PPP (constant 2017 international $) en {latest_year}",
+            locations="Entity",
             locationmode="country names",
-            color="Ingreso Nacional Bruto per cápita",
-            hover_name="Entidad",
+            color="GNI per capita, PPP (constant 2017 international $)",
+            hover_name="Entity",
             color_continuous_scale="Viridis",
             range_color=(10_000, 100_000),
         )
@@ -76,13 +78,15 @@ def get_income_charts(data):
 
         # Add a bar chart showing the top countries with the highest income
         fig = px.bar(
-            data_latest_year.nlargest(10, "Ingreso Nacional Bruto per cápita"),
-            x="Ingreso Nacional Bruto per cápita",
-            y="Entidad",
-            title=f"Top 10 países con mayor ingreso nacional bruto per cápita en {latest_year}",
+            data_latest_year.nlargest(
+                10, "GNI per capita, PPP (constant 2017 international $)"
+            ),
+            x="GNI per capita, PPP (constant 2017 international $)",
+            y="Entity",
+            title=f"Top 10 países con mayor GNI per capita, PPP (constant 2017 international $) en {latest_year}",
             orientation="h",
-            text=data_latest_year.nlargest(10, "Ingreso Nacional Bruto per cápita")[
-                "Ingreso Nacional Bruto per cápita"
-            ].round(2),
+            text=data_latest_year.nlargest(
+                10, "GNI per capita, PPP (constant 2017 international $)"
+            )["GNI per capita, PPP (constant 2017 international $)"].round(2),
         )
         st.plotly_chart(fig, use_container_width=True)
