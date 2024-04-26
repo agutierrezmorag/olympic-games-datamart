@@ -131,15 +131,15 @@ def main():
     with st.sidebar:
         # Define the datasets and their corresponding titles and qualitative variables
         chosen_datasets = {
-            "🏅 Olympics (Cleaned)": "olympics-spanish.csv",
+            "🏅 Olympics (Cleaned)": "olympics-cleaned.csv",
             "🏅 Olympics": "olympics.csv",
-            "🎓 Schooling (Cleaned)": "expected-years-of-schooling-spanish.csv",
+            "🎓 Schooling (Cleaned)": "expected-years-of-schooling-cleaned.csv",
             "🎓 Schooling": "expected-years-of-schooling.csv",
-            "💰 Income (Cleaned)": "gross-national-income-per-capita-spanish.csv",
+            "💰 Income (Cleaned)": "gross-national-income-per-capita-cleaned.csv",
             "💰 Income": "gross-national-income-per-capita.csv",
-            "🌍 Human Development Index (HDI) (Cleaned)": "human-development-index-spanish.csv",
+            "🌍 Human Development Index (HDI) (Cleaned)": "human-development-index-cleaned.csv",
             "🌍 Human Development Index (HDI)": "human-development-index.csv",
-            "📊 Historical Index of Human Development (HIHD) (Cleaned)": "hdi-vs-hihd-spanish.csv",
+            "📊 Historical Index of Human Development (HIHD) (Cleaned)": "hdi-vs-hihd-cleaned.csv",
             "📊 Historical Index of Human Development (HIHD)": "hdi-vs-hihd.csv",
         }
 
