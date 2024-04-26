@@ -54,7 +54,7 @@ def load_and_display_data(title, filename):
     selected_plot = st.selectbox("Selecciona un tipo de gráfico", plot_types)
 
     # Add a selectbox for the user to select a quantitative variable
-    quantitative_vars = [col for col in data.columns if col not in qualitative_vars]
+    quantitative_vars = [col for col in data.columns]
     selected_var = st.selectbox(
         "Selecciona una variable para generar un gráfico", quantitative_vars
     )
