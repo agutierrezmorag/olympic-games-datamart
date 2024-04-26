@@ -34,14 +34,14 @@ def get_olympics_charts(data):
 
     st.markdown("## :green[Información adicional]")
     st.markdown("""
-        - La Aeronáutica solo recibió medallas de oro en los Juegos Olímpicos de 1936 en Berlín, Alemania. \
-        Hubieron preparativos para expandir esta disciplina como deporte pero el inicio de la Segunda Guerra Mundial \
+        - La Aeronáutica solo recibió Medals de Gold en los Juegos Olímpicos de 1936 en Berlín, Alemania. \
+        Hubieron preparativos para expandir esta disciplina como Sport pero el inicio de la Segunda Guerra Mundial \
         detuvo el proceso.
         
         - Lacrosse solo fue jugado en 1904 en St. Louis, 1908 en Londres, 1928 en Ámsterdam y 1932 en Los Ángeles. \
-        En 1904, solo hubieron 3 equipos participantes. En 1908 y 1928 solo participaron equipos de Canadá y en 1932 \
-        solo participaron equipos de Estados Unidos y Canadá. Posteriormente, dejó de ser un deporte olímpico debido a \
-        la falta de equipos internacionales. Se espera que regrese a los Juegos Olímpicos en 2028.
+        En 1904, solo hubieron 3 Teams participantes. En 1908 y 1928 solo participaron Teams de Canadá y en 1932 \
+        solo participaron Teams de Estados Unidos y Canadá. Posteriormente, dejó de ser un Sport olímpico debido a \
+        la falta de Teams internacionales. Se espera que regrese a los Juegos Olímpicos en 2028.
         """)
 
 
@@ -52,12 +52,12 @@ def gender_charts(data, og_data):
     gcol1, gcol2 = st.columns(2)
 
     with gcol1:
-        gender_distribution = data["Sexo"].value_counts()
+        gender_distribution = data["Sex"].value_counts()
         fig = px.pie(
             names=gender_distribution.index,
             values=gender_distribution.values,
             title="Distribución de género",
-            labels={"names": "Sexo", "values": "Total"},
+            labels={"names": "Sex", "values": "Total"},
             color=gender_distribution.index,
             color_discrete_map={"F": female_color, "M": male_color},
         )
@@ -67,17 +67,17 @@ def gender_charts(data, og_data):
     with gcol2:
         # Group by season and gender
         season_gender_distribution = (
-            data.groupby(["Temporada", "Sexo"])["Sexo"].count().unstack().reset_index()
+            data.groupby(["Season", "Sex"])["Sex"].count().unstack().reset_index()
         )
-        season_gender_distribution.columns = ["Temporada", "F", "M"]
+        season_gender_distribution.columns = ["Season", "F", "M"]
 
         # Create a stacked bar chart to show gender distribution by season
         fig = px.bar(
             season_gender_distribution,
-            x="Temporada",
+            x="Season",
             y=["F", "M"],
-            title="Distribución de género por temporada",
-            labels={"value": "Total", "variable": "Sexo", "Temporada": "Temporada"},
+            title="Distribución de género por Season",
+            labels={"value": "Total", "variable": "Sex", "Season": "Season"},
             barmode="stack",
             color_discrete_map={"F": female_color, "M": male_color},
             text_auto=True,
@@ -87,29 +87,29 @@ def gender_charts(data, og_data):
 
     with gcol1:
         medal_distribution = (
-            data[data["Medalla"].isin(["Bronce", "Plata", "Oro"])]
-            .groupby(["Deporte", "Sexo", "Medalla"])["Medalla"]
+            data[data["Medal"].isin(["Bronze", "Silver", "Gold"])]
+            .groupby(["Sport", "Sex", "Medal"])["Medal"]
             .count()
             .unstack()
             .reset_index()
         )
-        medal_distribution.columns = ["Deporte", "Sexo", "Bronce", "Plata", "Oro"]
+        medal_distribution.columns = ["Sport", "Sex", "Bronze", "Silver", "Gold"]
         medal_distribution["Total"] = medal_distribution[
-            ["Bronce", "Plata", "Oro"]
+            ["Bronze", "Silver", "Gold"]
         ].sum(axis=1)
         medal_distribution = medal_distribution.sort_values("Total", ascending=False)
 
         fig = px.bar(
             medal_distribution,
-            x="Deporte",
-            y=["Bronce", "Plata", "Oro"],
-            color="Sexo",
-            title="Distribución de tipos de medallas dentro de cada deporte por género",
+            x="Sport",
+            y=["Bronze", "Silver", "Gold"],
+            color="Sex",
+            title="Distribución de tipos de Medals dentro de cada Sport por género",
             labels={
-                "value": "Número de medallas",
-                "variable": "Tipo de medalla",
-                "Deporte": "Deporte",
-                "Sexo": "Género",
+                "value": "Número de Medals",
+                "variable": "Tipo de Medal",
+                "Sport": "Sport",
+                "Sex": "Género",
             },
             barmode="group",
             color_discrete_map={"F": female_color, "M": male_color},
@@ -119,53 +119,53 @@ def gender_charts(data, og_data):
 
     # Group by sport and gender
     gender_distribution = (
-        data.groupby(["Deporte", "Sexo"])["Sexo"].count().unstack().reset_index()
+        data.groupby(["Sport", "Sex"])["Sex"].count().unstack().reset_index()
     )
-    gender_distribution.columns = ["Deporte", "F", "M"]
+    gender_distribution.columns = ["Sport", "F", "M"]
 
     # Find sports played only by females
     female_only_sports = gender_distribution[gender_distribution["M"].isna()][
-        "Deporte"
+        "Sport"
     ].tolist()
 
     # Find sports played only by males
     male_only_sports = gender_distribution[gender_distribution["F"].isna()][
-        "Deporte"
+        "Sport"
     ].tolist()
 
     # Display sports played only by each gender
     st.write(
-        "Deportes jugados solo por atletas :red[femeninas]: ", str(female_only_sports)
+        "Sports jugados solo por atletas :red[femeninas]: ", str(female_only_sports)
     )
     st.write(
-        "Deportes jugados solo por atletas :blue[masculinos]: ", str(male_only_sports)
+        "Sports jugados solo por atletas :blue[masculinos]: ", str(male_only_sports)
     )
 
 
 def country_charts(data, og_data):
     ccol1, ccol2 = st.columns(2)
 
-    # Create a choropleth map to show the distribution of medals by country
+    # Create a chGoldpleth map to show the distribution of medals by country
     with ccol1:
         # Filter out rows where Medal is NaN
-        medal_data = og_data.dropna(subset=["Medalla"])
+        medal_data = og_data.dropna(subset=["Medal"])
 
         # Drop duplicates for team events
         medal_data = medal_data.drop_duplicates(
-            subset=["Equipo", "Evento", "Año", "Temporada", "Deporte"]
+            subset=["Team", "Event", "Year", "Season", "Sport"]
         )
 
         # Count the number of medals for each NOC
-        medal_distribution = medal_data["Región"].value_counts().reset_index()
-        medal_distribution.columns = ["Región", "Count"]
+        medal_distribution = medal_data["Region"].value_counts().reset_index()
+        medal_distribution.columns = ["Region", "Count"]
 
-        fig = px.choropleth(
+        fig = px.chGoldpleth(
             medal_distribution,
-            locations="Región",
+            locations="Region",
             locationmode="country names",
             color="Count",
-            title="Distribución de medallas por país",
-            labels={"Región": "País", "Count": "Número de medallas"},
+            title="Distribución de Medals por país",
+            labels={"Region": "País", "Count": "Número de Medallas"},
             color_continuous_scale=px.colors.sequential.Viridis,
         )
         fig.update_geos(
@@ -178,25 +178,25 @@ def country_charts(data, og_data):
         # Create a bar chart to show the distribution of medals by country
         fig = px.bar(
             medal_distribution.head(25),
-            x="Región",
+            x="Region",
             y="Count",
-            title="Top 25 países con más medallas",
-            labels={"Región": "País", "Count": "Número de medallas"},
+            title="Top 25 países con más Medals",
+            labels={"Region": "País", "Count": "Número de Medallas"},
             text_auto=True,
         )
         st.plotly_chart(fig)
 
-    # Create a choropleth map to show the distribution of athletes by country
+    # Create a chGoldpleth map to show the distribution of athletes by country
     with ccol2:
-        country_distribution = data["Región"].value_counts().reset_index()
-        country_distribution.columns = ["Región", "Count"]
-        fig = px.choropleth(
+        country_distribution = data["Region"].value_counts().reset_index()
+        country_distribution.columns = ["Region", "Count"]
+        fig = px.chGoldpleth(
             country_distribution,
-            locations="Región",
+            locations="Region",
             locationmode="country names",
             color="Count",
             title="Distribución de atletas por país",
-            labels={"Región": "Pais", "Count": "Número de atletas"},
+            labels={"Region": "Pais", "Count": "Número de atletas"},
             color_continuous_scale=px.colors.sequential.Viridis,
         )
         fig.update_geos(
@@ -209,10 +209,10 @@ def country_charts(data, og_data):
         # Create a bar chart for the top 25 countries with the most athletes
         fig = px.bar(
             country_distribution.head(25),
-            x="Región",
+            x="Region",
             y="Count",
             title="Top 25 países con más atletas",
-            labels={"Región": "País", "Count": "Número de atletas"},
+            labels={"Region": "País", "Count": "Número de atletas"},
             text_auto=True,
         )
 
@@ -221,19 +221,19 @@ def country_charts(data, og_data):
     # Count the number of unique years each country has hosted the Olympics
     with ccol1:
         city_distribution = (
-            data.drop_duplicates(subset=["Pais anfitrión", "Año"])["Pais anfitrión"]
+            data.drop_duplicates(subset=["Host country", "Year"])["Host country"]
             .value_counts()
             .reset_index()
         )
-        city_distribution.columns = ["Pais anfitrión", "Count"]
+        city_distribution.columns = ["Host country", "Count"]
 
-        fig = px.choropleth(
+        fig = px.chGoldpleth(
             city_distribution,
-            locations="Pais anfitrión",
+            locations="Host country",
             locationmode="country names",
             color="Count",
             title="Países anfitriones de los Juegos Olímpicos",
-            labels={"Pais anfitrión": "Pais", "Count": "Número de olímpiadas"},
+            labels={"Host country": "Pais", "Count": "Número de olímpiadas"},
             color_continuous_scale=px.colors.sequential.Viridis,
         )
         st.plotly_chart(fig, use_container_width=True)
@@ -241,15 +241,15 @@ def country_charts(data, og_data):
     # Create a bar chart to show the average number of medals won per Olympics by each country
     with ccol2:
         # Calculate the total number of medals won by each country
-        total_medals = data.groupby("Región")["Medalla"].count().reset_index()
-        total_medals.columns = ["Región", "Total Medals"]
+        total_medals = data.groupby("Region")["Medal"].count().reset_index()
+        total_medals.columns = ["Region", "Total Medals"]
 
         # Calculate the total number of Olympics each country has participated in
-        total_olympics = data["Región"].value_counts().reset_index()
-        total_olympics.columns = ["Región", "Total Olympics"]
+        total_olympics = data["Region"].value_counts().reset_index()
+        total_olympics.columns = ["Region", "Total Olympics"]
 
         # Merge the two DataFrames
-        avg_medals = pd.merge(total_medals, total_olympics, on="Región")
+        avg_medals = pd.merge(total_medals, total_olympics, on="Region")
 
         # Calculate the average number of medals won per Olympics
         avg_medals["Promedio"] = (
@@ -257,12 +257,12 @@ def country_charts(data, og_data):
         )
 
         # Create the Plotly Express bar chart
-        fig = px.choropleth(
+        fig = px.chGoldpleth(
             avg_medals.sort_values("Promedio", ascending=False),
-            locations="Región",
+            locations="Region",
             locationmode="country names",
             color="Promedio",
-            title="Promedio de medallas ganadas por país por Olimpiada",
+            title="Promedio de Medals ganadas por país por Olimpiada",
             color_continuous_scale=px.colors.sequential.Viridis,
         )
 
@@ -283,14 +283,14 @@ def ww2_charts(data, og_data):
 
     # Group the data by country and Olympic year
     grouped_data = (
-        data.groupby(["NOC", "Año"])
-        .agg({"Medalla": "count", "ID": pd.Series.nunique})
+        data.groupby(["NOC", "Year"])
+        .agg({"Medal": "count", "ID": pd.Series.nunique})
         .reset_index()
     )
-    grouped_data.columns = ["NOC", "Año", "Medallas", "Atletas"]
+    grouped_data.columns = ["NOC", "Year", "Medals", "Atletas"]
 
     # Filter the data to consider only up to 1994
-    grouped_data = grouped_data[grouped_data["Año"] <= 1993]
+    grouped_data = grouped_data[grouped_data["Year"] <= 1993]
 
     # Create separate dataframes for Axis, Allies, and Neutral countries
     axis_data = grouped_data[grouped_data["NOC"].isin(axis_countries)]
@@ -334,16 +334,16 @@ def ww2_charts(data, og_data):
             country_data = axis_data[axis_data["NOC"] == country]
             fig.add_trace(
                 go.Scatter(
-                    x=country_data["Año"],
-                    y=country_data["Medallas"],
+                    x=country_data["Year"],
+                    y=country_data["Medals"],
                     mode="lines",
-                    name=f"{country} Medallas",
+                    name=f"{country} Medals",
                     line=dict(dash="solid", color=colors.get(country, "blue")),
                 )
             )
             fig.add_trace(
                 go.Scatter(
-                    x=country_data["Año"],
+                    x=country_data["Year"],
                     y=country_data["Atletas"],
                     mode="lines",
                     name=f"{country} Atletas",
@@ -362,16 +362,16 @@ def ww2_charts(data, og_data):
             country_data = allies_data[allies_data["NOC"] == country]
             fig.add_trace(
                 go.Scatter(
-                    x=country_data["Año"],
-                    y=country_data["Medallas"],
+                    x=country_data["Year"],
+                    y=country_data["Medals"],
                     mode="lines",
-                    name=f"{country} Medallas",
+                    name=f"{country} Medals",
                     line=dict(dash="solid", color=colors.get(country, "blue")),
                 )
             )
             fig.add_trace(
                 go.Scatter(
-                    x=country_data["Año"],
+                    x=country_data["Year"],
                     y=country_data["Atletas"],
                     mode="lines",
                     name=f"{country} Atletas",
@@ -390,16 +390,16 @@ def ww2_charts(data, og_data):
             country_data = neutral_data[neutral_data["NOC"] == country]
             fig.add_trace(
                 go.Scatter(
-                    x=country_data["Año"],
-                    y=country_data["Medallas"],
+                    x=country_data["Year"],
+                    y=country_data["Medals"],
                     mode="lines",
-                    name=f"{country} Medallas",
+                    name=f"{country} Medals",
                     line=dict(dash="solid", color=colors.get(country, "blue")),
                 )
             )
             fig.add_trace(
                 go.Scatter(
-                    x=country_data["Año"],
+                    x=country_data["Year"],
                     y=country_data["Atletas"],
                     mode="lines",
                     name=f"{country} Atletas",
@@ -423,14 +423,14 @@ def cold_war_charts(data, og_data):
 
     # Group the data by country and Olympic year
     grouped_data = (
-        data.groupby(["NOC", "Año"])
-        .agg({"Medalla": "count", "ID": pd.Series.nunique})
+        data.groupby(["NOC", "Year"])
+        .agg({"Medal": "count", "ID": pd.Series.nunique})
         .reset_index()
     )
-    grouped_data.columns = ["NOC", "Año", "Medallas", "Atletas"]
+    grouped_data.columns = ["NOC", "Year", "Medals", "Atletas"]
 
     # Filter the data to consider only up to 1991
-    grouped_data = grouped_data[grouped_data["Año"] <= 1993]
+    grouped_data = grouped_data[grouped_data["Year"] <= 1993]
 
     # Create separate dataframes for Western Bloc and Eastern Bloc countries
     western_bloc_data = grouped_data[grouped_data["NOC"].isin(western_bloc_countries)]
@@ -500,16 +500,16 @@ def cold_war_charts(data, og_data):
             country_data = western_bloc_data[western_bloc_data["NOC"] == country]
             fig.add_trace(
                 go.Scatter(
-                    x=country_data["Año"],
-                    y=country_data["Medallas"],
+                    x=country_data["Year"],
+                    y=country_data["Medals"],
                     mode="lines",
-                    name=f"{country} Medallas",
+                    name=f"{country} Medals",
                     line=dict(dash="solid", color=colors.get(country, "blue")),
                 )
             )
             fig.add_trace(
                 go.Scatter(
-                    x=country_data["Año"],
+                    x=country_data["Year"],
                     y=country_data["Atletas"],
                     mode="lines",
                     name=f"{country} Atletas",
@@ -535,7 +535,7 @@ def cold_war_charts(data, og_data):
 
     La ausencia de EEUU y sus aliados, incluyendo potencias deportivas como Alemania Occidental, Canadá y Japón, \
     fue un duro golpe para estos Juegos. \
-    La Unión Soviética y sus países del bloque comunista dominaron las competencias, ganando la mayor parte de las medallas de oro. \
+    La Unión Soviética y sus países del bloque comunista dominaron las competencias, ganando la mayor parte de las Medals de Gold. \
     Sin embargo, los Juegos de Moscú se vieron opacados por la controversia y la baja participación.
         """)
 
@@ -545,16 +545,16 @@ def cold_war_charts(data, og_data):
             country_data = eastern_bloc_data[eastern_bloc_data["NOC"] == country]
             fig.add_trace(
                 go.Scatter(
-                    x=country_data["Año"],
-                    y=country_data["Medallas"],
+                    x=country_data["Year"],
+                    y=country_data["Medals"],
                     mode="lines",
-                    name=f"{country} Medallas",
+                    name=f"{country} Medals",
                     line=dict(dash="solid", color=colors.get(country, "blue")),
                 )
             )
             fig.add_trace(
                 go.Scatter(
-                    x=country_data["Año"],
+                    x=country_data["Year"],
                     y=country_data["Atletas"],
                     mode="lines",
                     name=f"{country} Atletas",
@@ -585,17 +585,17 @@ def extra_charts(data, og_data):
 
     # Create a pie chart to show the distribution of athletes across different Olympic seasons
     with col1:
-        season_distribution = data["Temporada"].value_counts().reset_index()
-        season_distribution.columns = ["Temporada", "Count"]
+        season_distribution = data["Season"].value_counts().reset_index()
+        season_distribution.columns = ["Season", "Count"]
 
         fig = px.pie(
             season_distribution,
-            names="Temporada",
+            names="Season",
             values="Count",
-            title="Distribución de atletas por temporada olímpica",
-            labels={"Season": "Temporada", "Count": "Número de atletas"},
-            color=season_distribution["Temporada"],
-            color_discrete_map={"Verano": "khaki", "Invierno": "lightblue"},
+            title="Distribución de atletas por Season olímpica",
+            labels={"Season": "Season", "Count": "Número de atletas"},
+            color=season_distribution["Season"],
+            color_discrete_map={"Summer": "khaki", "Winter": "lightblue"},
         )
 
         fig.update_traces(textinfo="value+percent")
@@ -605,14 +605,11 @@ def extra_charts(data, og_data):
     with col2:
         # Calculate the distribution of medals by age
         medal_distribution = (
-            data[data["Medalla"].notna()]
-            .groupby("Edad")["Medalla"]
-            .count()
-            .reset_index()
+            data[data["Medal"].notna()].groupby("Age")["Medal"].count().reset_index()
         )
 
         # Calculate the distribution of athletes by age
-        athlete_distribution = data.groupby("Edad")["ID"].nunique().reset_index()
+        athlete_distribution = data.groupby("Age")["ID"].nunique().reset_index()
 
         # Create a figure
         fig = go.Figure()
@@ -620,17 +617,17 @@ def extra_charts(data, og_data):
         # Add a scatter trace for the distribution of medals by age
         fig.add_trace(
             go.Scatter(
-                x=medal_distribution["Edad"],
-                y=medal_distribution["Medalla"],
+                x=medal_distribution["Age"],
+                y=medal_distribution["Medal"],
                 mode="markers",
-                name="Medallas",
+                name="Medals",
             )
         )
 
         # Add a scatter trace for the distribution of athletes by age
         fig.add_trace(
             go.Scatter(
-                x=athlete_distribution["Edad"],
+                x=athlete_distribution["Age"],
                 y=athlete_distribution["ID"],
                 mode="markers",
                 name="Atletas",
@@ -640,18 +637,18 @@ def extra_charts(data, og_data):
         # Add annotations for each marker
         for i in range(len(medal_distribution)):
             fig.add_annotation(
-                x=medal_distribution.loc[i, "Edad"],
-                y=medal_distribution.loc[i, "Medalla"],
-                text=str(int(medal_distribution.loc[i, "Edad"])),
+                x=medal_distribution.loc[i, "Age"],
+                y=medal_distribution.loc[i, "Medal"],
+                text=str(int(medal_distribution.loc[i, "Age"])),
                 showarrow=False,
                 font=dict(size=11),
                 yshift=10,
             )
         for i in range(len(athlete_distribution)):
             fig.add_annotation(
-                x=athlete_distribution.loc[i, "Edad"],
+                x=athlete_distribution.loc[i, "Age"],
                 y=athlete_distribution.loc[i, "ID"],
-                text=str(int(athlete_distribution.loc[i, "Edad"])),
+                text=str(int(athlete_distribution.loc[i, "Age"])),
                 showarrow=False,
                 font=dict(size=11),
                 yshift=10,
@@ -659,8 +656,8 @@ def extra_charts(data, og_data):
 
         # Set the title and labels
         fig.update_layout(
-            title="Distribución de medallas y atletas por edad",
-            xaxis_title="Edad",
+            title="Distribución de Medals y atletas por edad",
+            xaxis_title="Age",
             yaxis_title="Número",
             legend_title="Distribución",
         )
@@ -670,27 +667,27 @@ def extra_charts(data, og_data):
     # Create a bar chart to show the distribution of medal types within each sport
     with col1:
         medal_distribution = (
-            og_data[og_data["Medalla"].isin(["Bronce", "Plata", "Oro"])]
-            .groupby(["Deporte", "Medalla"])["Medalla"]
+            og_data[og_data["Medal"].isin(["Bronze", "Silver", "Gold"])]
+            .groupby(["Sport", "Medal"])["Medal"]
             .count()
             .unstack()
             .reset_index()
         )
-        medal_distribution.columns = ["Deporte", "Bronce", "Plata", "Oro"]
+        medal_distribution.columns = ["Sport", "Bronze", "Silver", "Gold"]
         medal_distribution["Total"] = medal_distribution[
-            ["Bronce", "Plata", "Oro"]
+            ["Bronze", "Silver", "Gold"]
         ].sum(axis=1)
         medal_distribution = medal_distribution.sort_values("Total", ascending=False)
 
         fig = px.bar(
             medal_distribution,
-            x="Deporte",
-            y=["Bronce", "Plata", "Oro"],
-            title="Distribución de tipos de medallas dentro de cada deporte",
+            x="Sport",
+            y=["Bronze", "Silver", "Gold"],
+            title="Distribución de tipos de Medals dentro de cada deporte",
             labels={
-                "value": "Número de medallas",
-                "variable": "Tipo de medalla",
-                "Deporte": "Deporte",
+                "value": "Número de Medals",
+                "variable": "Tipo de Medal",
+                "Sport": "Sport",
             },
             barmode="stack",
             text_auto=True,
@@ -705,24 +702,24 @@ def extra_charts(data, og_data):
 
     # Display the oldest sports that are still played today in a line chart
     with col2:
-        oldest_sports = og_data.groupby("Deporte")["Año"].min().reset_index()
-        latest_sports = og_data.groupby("Deporte")["Año"].max().reset_index()
+        oldest_sports = og_data.groupby("Sport")["Year"].min().reset_index()
+        latest_sports = og_data.groupby("Sport")["Year"].max().reset_index()
 
         # Merge the two dataframes
-        sports = pd.merge(oldest_sports, latest_sports, on="Deporte")
+        sports = pd.merge(oldest_sports, latest_sports, on="Sport")
 
         # Filter sports that are still played today
-        sports = sports[sports["Año_y"] == og_data["Año"].max()]
+        sports = sports[sports["Year_y"] == og_data["Year"].max()]
 
         # Sort by the oldest year
-        sports = sports.sort_values("Año_x", ascending=True)
+        sports = sports.sort_values("Year_x", ascending=True)
 
         fig = px.line(
             sports,
-            x="Año_x",
-            y="Deporte",
+            x="Year_x",
+            y="Sport",
             title="Deportes más antiguos que todavía se juegan hoy en día",
-            labels={"Deporte": "Deporte", "Año_x": "Primer año de competencia"},
+            labels={"Sport": "Sport", "Year_x": "Primer año de competencia"},
         )
 
         st.plotly_chart(fig)
@@ -730,36 +727,36 @@ def extra_charts(data, og_data):
     # Create a line plot to show the number of participants in each sport over time
     with col1:
         sport_participation = (
-            og_data.groupby(["Año", "Deporte"])["Deporte"]
+            og_data.groupby(["Year", "Sport"])["Sport"]
             .count()
             .reset_index(name="Count")
         )
         fig = px.line(
             sport_participation,
-            x="Año",
+            x="Year",
             y="Count",
-            color="Deporte",
+            color="Sport",
             title="Participación en cada deporte a lo largo del tiempo",
-            labels={"Count": "Número de atletas", "Año": "Año", "Deporte": "Deporte"},
+            labels={"Count": "Número de atletas", "Year": "Year", "Sport": "Sport"},
         )
         st.plotly_chart(fig)
 
     # Create a bar chart to show the number of participants in the top 25 events in the most recent year
     with col2:
-        recent_year = data["Año"].max()
+        recent_year = data["Year"].max()
         event_participation = (
-            data[data["Año"] == recent_year]["Evento"]
+            data[data["Year"] == recent_year]["Event"]
             .value_counts()
             .nlargest(25)  # Select only the top 25 events
             .reset_index(name="Atletas")
         )
-        event_participation.columns = ["Evento", "Atletas"]
+        event_participation.columns = ["Event", "Atletas"]
         fig = px.bar(
             event_participation,
-            x="Evento",
+            x="Event",
             y="Atletas",
             text_auto=True,
-            title=f"Participación en los 25 eventos principales en {recent_year}",
+            title=f"Participación en los 25 Events principales en {recent_year}",
         )
         st.plotly_chart(fig)
 
@@ -767,20 +764,20 @@ def extra_charts(data, og_data):
     with col1:
         # Group by athlete name and NOC, and count the number of participations for each
         athlete_participation = (
-            og_data.groupby(["Nombre", "NOC"])
+            og_data.groupby(["Name", "NOC"])
             .size()
             .nlargest(10)
             .reset_index(name="Participaciones")
         )
 
         # Create a new column that combines the athlete name and NOC
-        athlete_participation["Nombre (NOC)"] = (
-            athlete_participation["Nombre"] + " (" + athlete_participation["NOC"] + ")"
+        athlete_participation["Name (NOC)"] = (
+            athlete_participation["Name"] + " (" + athlete_participation["NOC"] + ")"
         )
 
         fig = px.bar(
             athlete_participation,
-            x="Nombre (NOC)",
+            x="Name (NOC)",
             y="Participaciones",
             title="Atletas con más participaciones en los Juegos Olímpicos",
             text_auto=True,
@@ -790,55 +787,55 @@ def extra_charts(data, og_data):
     # Find sports that are no longer played in the Olympics
     with col2:
         # Find the most recent year for each sport and whether it's a Summer or Winter Olympics
-        latest_year = data.groupby(["Deporte", "Temporada"])["Año"].max().reset_index()
+        latest_year = data.groupby(["Sport", "Season"])["Year"].max().reset_index()
 
         # Find the most recent year for Summer and Winter Olympics
-        latest_summer_year = data[data["Temporada"] == "Verano"]["Año"].max()
-        latest_winter_year = data[data["Temporada"] == "Invierno"]["Año"].max()
+        latest_summer_year = data[data["Season"] == "Summer"]["Year"].max()
+        latest_winter_year = data[data["Season"] == "Winter"]["Year"].max()
 
-        # Filter sports that are no longer played in Verano Olympics
+        # Filter sports that are no longer played in Summer Olympics
         discontinued_summer_sports = latest_year[
-            (latest_year["Año"] < latest_summer_year)
-            & (latest_year["Temporada"] == "Verano")
+            (latest_year["Year"] < latest_summer_year)
+            & (latest_year["Season"] == "Summer")
         ]
 
-        # Filter sports that are no longer played in Invierno Olympics
+        # Filter sports that are no longer played in Winter Olympics
         discontinued_winter_sports = latest_year[
-            (latest_year["Año"] < latest_winter_year)
-            & (latest_year["Temporada"] == "Invierno")
+            (latest_year["Year"] < latest_winter_year)
+            & (latest_year["Season"] == "Winter")
         ]
 
         # Calculate years since each sport was last played
-        discontinued_summer_sports.loc[:, "Años desde la última vez que se jugó"] = (
-            latest_summer_year - discontinued_summer_sports["Año"]
+        discontinued_summer_sports.loc[:, "Years desde la última vez que se jugó"] = (
+            latest_summer_year - discontinued_summer_sports["Year"]
         )
-        discontinued_winter_sports.loc[:, "Años desde la última vez que se jugó"] = (
-            latest_winter_year - discontinued_winter_sports["Año"]
+        discontinued_winter_sports.loc[:, "Years desde la última vez que se jugó"] = (
+            latest_winter_year - discontinued_winter_sports["Year"]
         )
 
         # Concatenate the two dataframes and create a new column for the type of sport
         discontinued_sports = pd.concat(
             [
-                discontinued_summer_sports.assign(Tipo="Verano"),
-                discontinued_winter_sports.assign(Tipo="Invierno"),
+                discontinued_summer_sports.assign(Tipo="Summer"),
+                discontinued_winter_sports.assign(Tipo="Winter"),
             ]
         )
 
-        # Sort the dataframe by the "Años desde la última vez que se jugó" column
+        # Sort the dataframe by the "Years desde la última vez que se jugó" column
         discontinued_sports = discontinued_sports.sort_values(
-            "Años desde la última vez que se jugó"
+            "Years desde la última vez que se jugó"
         )
 
         # Create a bar plot
         fig = px.bar(
             discontinued_sports,
-            x="Años desde la última vez que se jugó",
-            y="Deporte",
+            x="Years desde la última vez que se jugó",
+            y="Sport",
             color="Tipo",
-            color_discrete_map={"Verano": "khaki", "Invierno": "lightblue"},
+            color_discrete_map={"Summer": "khaki", "Winter": "lightblue"},
             orientation="h",
-            title="Deportes que ya no se juegan en los Juegos Olímpicos",
-            text="Año",
+            title="Sports que ya no se juegan en los Juegos Olímpicos",
+            text="Year",
             text_auto=True,
         )
 
