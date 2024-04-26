@@ -10,19 +10,19 @@ def get_schooling_charts(data):
 
     with col1:
         # Find the earliest year in the data
-        earliest_year = data["Año"].min()
+        earliest_year = data["Year"].min()
 
         # Filter the data to only include the earliest year
-        data_earliest_year = data[data["Año"] == earliest_year]
+        data_earliest_year = data[data["Year"] == earliest_year]
 
         # Add a choropleth map showing the expected years of schooling
         fig = px.choropleth(
             data_earliest_year,
-            title="Años de escolaridad esperados (1990)",
-            locations="Entidad",
+            title="Expected Years of Schooling (years) (1990)",
+            locations="Entity",
             locationmode="country names",
-            color="Años de escolaridad esperados",
-            hover_name="Entidad",
+            color="Expected Years of Schooling (years)",
+            hover_name="Entity",
             color_continuous_scale="Viridis",
             range_color=(5, 20),
         )
@@ -35,30 +35,30 @@ def get_schooling_charts(data):
 
         # Add a bar chart showing the top countries with the highest expected years of schooling in 1990
         fig = px.bar(
-            data_earliest_year.nlargest(10, "Años de escolaridad esperados"),
-            x="Años de escolaridad esperados",
-            y="Entidad",
-            title="Top 10 países con mayor años de escolaridad esperados (1990)",
+            data_earliest_year.nlargest(10, "Expected Years of Schooling (years)"),
+            x="Expected Years of Schooling (years)",
+            y="Entity",
+            title="Top 10 países con mayor Expected Years of Schooling (years) (1990)",
             orientation="h",
-            text="Años de escolaridad esperados",
+            text="Expected Years of Schooling (years)",
         )
         st.plotly_chart(fig, use_container_width=True)
 
     with col2:
         # Find the latest year in the data
-        latest_year = data["Año"].max()
+        latest_year = data["Year"].max()
 
         # Filter the data to only include the latest year
-        data_latest_year = data[data["Año"] == latest_year]
+        data_latest_year = data[data["Year"] == latest_year]
 
         # Add a choropleth map showing the expected years of schooling
         fig = px.choropleth(
             data_latest_year,
-            title="Años de escolaridad esperados (2017)",
-            locations="Entidad",
+            title="Expected Years of Schooling (years) (2017)",
+            locations="Entity",
             locationmode="country names",
-            color="Años de escolaridad esperados",
-            hover_name="Entidad",
+            color="Expected Years of Schooling (years)",
+            hover_name="Entity",
             color_continuous_scale="Viridis",
             range_color=(5, 20),
         )
@@ -71,40 +71,40 @@ def get_schooling_charts(data):
 
         # Add a bar chart showing the top countries with the highest expected years of schooling in 2017
         fig = px.bar(
-            data_latest_year.nlargest(10, "Años de escolaridad esperados"),
-            x="Años de escolaridad esperados",
-            y="Entidad",
-            title="Top 10 países con mayor años de escolaridad esperados (2017)",
+            data_latest_year.nlargest(10, "Expected Years of Schooling (years)"),
+            x="Expected Years of Schooling (years)",
+            y="Entity",
+            title="Top 10 países con mayor Expected Years of Schooling (years) (2017)",
             orientation="h",
-            text="Años de escolaridad esperados",
+            text="Expected Years of Schooling (years)",
         )
         st.plotly_chart(fig, use_container_width=True)
 
     # Identify the top 10 countries in 1990 and 2017
     top_countries_1990 = data_earliest_year.nlargest(
-        10, "Años de escolaridad esperados"
-    )["Entidad"]
-    top_countries_2017 = data_latest_year.nlargest(10, "Años de escolaridad esperados")[
-        "Entidad"
-    ]
+        10, "Expected Years of Schooling (years)"
+    )["Entity"]
+    top_countries_2017 = data_latest_year.nlargest(
+        10, "Expected Years of Schooling (years)"
+    )["Entity"]
 
     # Combine the two sets of countries
     top_countries = pd.concat([top_countries_1990, top_countries_2017]).unique()
 
     # Filter the original data to only include these countries
-    data_top_countries = data[data["Entidad"].isin(top_countries)]
+    data_top_countries = data[data["Entity"].isin(top_countries)]
 
     # Create a line chart
     fig = px.line(
         data_top_countries,
-        x="Año",
-        y="Años de escolaridad esperados",
-        color="Entidad",
-        title="Diferencia en años de escolaridad esperados entre 1990 y 2017",
+        x="Year",
+        y="Expected Years of Schooling (years)",
+        color="Entity",
+        title="Diferencia en Expected Years of Schooling (years) entre 1990 y 2017",
         labels={
-            "Año": "Año",
-            "Años de escolaridad esperados": "Años de escolaridad esperados",
-            "Entidad": "Entidad",
+            "Year": "Year",
+            "Expected Years of Schooling (years)": "Expected Years of Schooling (years)",
+            "Entity": "Entity",
         },
     )
     st.plotly_chart(fig, use_container_width=True)
