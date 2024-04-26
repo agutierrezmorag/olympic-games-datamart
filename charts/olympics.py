@@ -145,7 +145,7 @@ def gender_charts(data, og_data):
 def country_charts(data, og_data):
     ccol1, ccol2 = st.columns(2)
 
-    # Create a chGoldpleth map to show the distribution of medals by country
+    # Create a choropleth map to show the distribution of medals by country
     with ccol1:
         # Filter out rows where Medal is NaN
         medal_data = og_data.dropna(subset=["Medal"])
@@ -159,7 +159,7 @@ def country_charts(data, og_data):
         medal_distribution = medal_data["Region"].value_counts().reset_index()
         medal_distribution.columns = ["Region", "Count"]
 
-        fig = px.chGoldpleth(
+        fig = px.choropleth(
             medal_distribution,
             locations="Region",
             locationmode="country names",
@@ -186,11 +186,11 @@ def country_charts(data, og_data):
         )
         st.plotly_chart(fig)
 
-    # Create a chGoldpleth map to show the distribution of athletes by country
+    # Create a choropleth map to show the distribution of athletes by country
     with ccol2:
         country_distribution = data["Region"].value_counts().reset_index()
         country_distribution.columns = ["Region", "Count"]
-        fig = px.chGoldpleth(
+        fig = px.choropleth(
             country_distribution,
             locations="Region",
             locationmode="country names",
@@ -227,7 +227,7 @@ def country_charts(data, og_data):
         )
         city_distribution.columns = ["Host country", "Count"]
 
-        fig = px.chGoldpleth(
+        fig = px.choropleth(
             city_distribution,
             locations="Host country",
             locationmode="country names",
@@ -257,7 +257,7 @@ def country_charts(data, og_data):
         )
 
         # Create the Plotly Express bar chart
-        fig = px.chGoldpleth(
+        fig = px.choropleth(
             avg_medals.sort_values("Promedio", ascending=False),
             locations="Region",
             locationmode="country names",
