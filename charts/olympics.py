@@ -178,10 +178,10 @@ def country_charts(data, og_data):
         # Create a bar chart to show the distribution of medals by country
         fig = px.bar(
             medal_distribution.head(25),
-            x="Region",
+            x="Region (ISO)",
             y="Count",
             title="Top 25 países con más medallas",
-            labels={"Region": "País", "Count": "Número de Medallas"},
+            labels={"Region (ISO)": "País", "Count": "Número de Medallas"},
             text_auto=True,
         )
         st.plotly_chart(fig)
