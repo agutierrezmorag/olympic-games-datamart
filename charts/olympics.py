@@ -221,11 +221,13 @@ def country_charts(data, og_data):
     # Count the number of unique years each country has hosted the Olympics
     with ccol1:
         city_distribution = (
-            data.drop_duplicates(subset=["Host Country", "Year"])["Host Country"]
+            data.drop_duplicates(subset=["Host Country (ISO)", "Year"])[
+                "Host Country (ISO)"
+            ]
             .value_counts()
             .reset_index()
         )
-        city_distribution.columns = ["Host Country", "Count"]
+        city_distribution.columns = ["Host Country (ISO)", "Count"]
 
         fig = px.choropleth(
             city_distribution,
