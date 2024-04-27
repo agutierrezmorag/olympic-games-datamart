@@ -188,15 +188,15 @@ def country_charts(data, og_data):
 
     # Create a choropleth map to show the distribution of athletes by country
     with ccol2:
-        country_distribution = data["Region"].value_counts().reset_index()
-        country_distribution.columns = ["Region", "Count"]
+        country_distribution = data["Region (ISO)"].value_counts().reset_index()
+        country_distribution.columns = ["Region (ISO)", "Count"]
         fig = px.choropleth(
             country_distribution,
             locations="Region (ISO)",
             locationmode="ISO-3",
             color="Count",
             title="Distribución de atletas por país",
-            labels={"Region": "Pais", "Count": "Número de atletas"},
+            labels={"Region (ISO)": "Pais", "Count": "Número de atletas"},
             color_continuous_scale=px.colors.sequential.Viridis,
         )
         fig.update_geos(
@@ -209,10 +209,10 @@ def country_charts(data, og_data):
         # Create a bar chart for the top 25 countries with the most athletes
         fig = px.bar(
             country_distribution.head(25),
-            x="Region",
+            x="Region (ISO)",
             y="Count",
             title="Top 25 países con más atletas",
-            labels={"Region": "País", "Count": "Número de atletas"},
+            labels={"Region (ISO)": "País", "Count": "Número de atletas"},
             text_auto=True,
         )
 
@@ -241,15 +241,15 @@ def country_charts(data, og_data):
     # Create a bar chart to show the average number of medals won per Olympics by each country
     with ccol2:
         # Calculate the total number of medals won by each country
-        total_medals = data.groupby("Region")["Medal"].count().reset_index()
-        total_medals.columns = ["Region", "Total Medals"]
+        total_medals = data.groupby("Region (ISO)")["Medal"].count().reset_index()
+        total_medals.columns = ["Region (ISO)", "Total Medals"]
 
         # Calculate the total number of Olympics each country has participated in
-        total_olympics = data["Region"].value_counts().reset_index()
-        total_olympics.columns = ["Region", "Total Olympics"]
+        total_olympics = data["Region (ISO)"].value_counts().reset_index()
+        total_olympics.columns = ["Region (ISO)", "Total Olympics"]
 
         # Merge the two DataFrames
-        avg_medals = pd.merge(total_medals, total_olympics, on="Region")
+        avg_medals = pd.merge(total_medals, total_olympics, on="Region (ISO)")
 
         # Calculate the average number of medals won per Olympics
         avg_medals["Promedio"] = (
