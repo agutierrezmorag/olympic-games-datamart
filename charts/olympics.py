@@ -233,7 +233,7 @@ def country_charts(data, og_data):
             locationmode="ISO-3",
             color="Count",
             title="Países anfitriones de los Juegos Olímpicos",
-            labels={"Host Country": "Pais", "Count": "Número de olímpiadas"},
+            labels={"Host Country (ISO)": "Pais", "Count": "Número de olímpiadas"},
             color_continuous_scale=px.colors.sequential.Viridis,
         )
         st.plotly_chart(fig, use_container_width=True)
