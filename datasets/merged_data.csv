@@ -1,264 +1,234 @@
-ISO,name,noc,region,notes
-ABW,Aruba,ARU,Aruba,
-AFG,Afghanistan,AFG,Afghanistan,
-AGO,Angola,ANG,Angola,
-AIA,Anguilla,,,
-ALA,Åland Islands,,,
-ALB,Albania,ALB,Albania,
-AND,Andorra,AND,Andorra,
-ARE,United Arab Emirates,UAE,United Arab Emirates,
-ARG,Argentina,ARG,Argentina,
-ARM,Armenia,ARM,Armenia,
-ASM,American Samoa,ASA,American Samoa,
-ATA,Antarctica,,,
-ATF,French Southern Territories,,,
-ATG,Antigua and Barbuda,,,
-AUS,Australia,ANZ,Australia,Australasia
-AUS,Australia,AUS,Australia,
-AUT,Austria,AUT,Austria,
-AZE,Azerbaijan,AZE,Azerbaijan,
-BDI,Burundi,BDI,Burundi,
-BEL,Belgium,BEL,Belgium,
-BEN,Benin,BEN,Benin,
-BES,"Bonaire, Sint Eustatius and Saba",,,
-BFA,Burkina Faso,BUR,Burkina Faso,
-BGD,Bangladesh,BAN,Bangladesh,
-BGR,Bulgaria,BUL,Bulgaria,
-BHR,Bahrain,BRN,Bahrain,
-BHS,Bahamas,BAH,Bahamas,
-BIH,Bosnia and Herzegovina,BIH,Bosnia and Herzegovina,
-BLM,Saint Barthélemy,,,
-BLR,Belarus,BLR,Belarus,
-BLZ,Belize,BIZ,Belize,
-BMU,Bermuda,BER,Bermuda,
-BOL,"Bolivia, Plurinational State of",,,
-BRA,Brazil,BRA,Brazil,
-BRB,Barbados,BAR,Barbados,
-BRN,Brunei Darussalam,,,
-BTN,Bhutan,BHU,Bhutan,
-BVT,Bouvet Island,,,
-BWA,Botswana,BOT,Botswana,
-CAF,Central African Republic,CAF,Central African Republic,
-CAN,Canada,CAN,Canada,
-CAN,Canada,NFL,Canada,Newfoundland
-CCK,Cocos (Keeling) Islands,,,
-CHE,Switzerland,SUI,Switzerland,
-CHL,Chile,CHI,Chile,
-CHN,China,CHN,China,
-CHN,China,HKG,China,Hong Kong
-CIV,Côte d'Ivoire,,,
-CMR,Cameroon,CMR,Cameroon,
-COD,"Congo, Democratic Republic of the",,,
-COG,Congo,,,
-COK,Cook Islands,COK,Cook Islands,
-COL,Colombia,COL,Colombia,
-COM,Comoros,COM,Comoros,
-CPV,Cabo Verde,,,
-CRI,Costa Rica,CRC,Costa Rica,
-CUB,Cuba,CUB,Cuba,
-CUW,Curaçao,,,
-CXR,Christmas Island,,,
-CYM,Cayman Islands,CAY,Cayman Islands,
-CYP,Cyprus,CYP,Cyprus,
-CZE,Czechia,,,
-DEU,Germany,FRG,Germany,
-DEU,Germany,GDR,Germany,
-DEU,Germany,GER,Germany,
-DEU,Germany,SAA,Germany,
-DJI,Djibouti,DJI,Djibouti,
-DMA,Dominica,DMA,Dominica,
-DNK,Denmark,DEN,Denmark,
-DOM,Dominican Republic,DOM,Dominican Republic,
-DZA,Algeria,ALG,Algeria,
-ECU,Ecuador,ECU,Ecuador,
-EGY,Egypt,EGY,Egypt,
-ERI,Eritrea,ERI,Eritrea,
-ESH,Western Sahara,,,
-ESP,Spain,ESP,Spain,
-EST,Estonia,EST,Estonia,
-ETH,Ethiopia,ETH,Ethiopia,
-FIN,Finland,FIN,Finland,
-FJI,Fiji,FIJ,Fiji,
-FLK,Falkland Islands (Malvinas),,,
-FRA,France,FRA,France,
-FRO,Faroe Islands,,,
-FSM,"Micronesia, Federated States of",,,
-GAB,Gabon,GAB,Gabon,
-GBR,United Kingdom of Great Britain and Northern Ireland,,,
-GEO,Georgia,GEO,Georgia,
-GGY,Guernsey,,,
-GHA,Ghana,GHA,Ghana,
-GIB,Gibraltar,,,
-GIN,Guinea,GUI,Guinea,
-GLP,Guadeloupe,,,
-GMB,Gambia,GAM,Gambia,
-GNB,Guinea-Bissau,GBS,Guinea-Bissau,
-GNQ,Equatorial Guinea,GEQ,Equatorial Guinea,
-GRC,Greece,CRT,Greece,Crete
-GRC,Greece,GRE,Greece,
-GRD,Grenada,GRN,Grenada,
-GRL,Greenland,,,
-GTM,Guatemala,GUA,Guatemala,
-GUF,French Guiana,,,
-GUM,Guam,GUM,Guam,
-GUY,Guyana,GUY,Guyana,
-HKG,Hong Kong,,,
-HMD,Heard Island and McDonald Islands,,,
-HND,Honduras,HON,Honduras,
-HRV,Croatia,CRO,Croatia,
-HTI,Haiti,HAI,Haiti,
-HUN,Hungary,HUN,Hungary,
-IDN,Indonesia,INA,Indonesia,
-IMN,Isle of Man,,,
-IND,India,IND,India,
-IOT,British Indian Ocean Territory,,,
-IRL,Ireland,IRL,Ireland,
-IRN,"Iran, Islamic Republic of",,,
-IRQ,Iraq,IRQ,Iraq,
-ISL,Iceland,ISL,Iceland,
-ISR,Israel,ISR,Israel,
-ITA,Italy,ITA,Italy,
-JAM,Jamaica,JAM,Jamaica,
-JEY,Jersey,,,
-JOR,Jordan,JOR,Jordan,
-JPN,Japan,JPN,Japan,
-KAZ,Kazakhstan,KAZ,Kazakhstan,
-KEN,Kenya,KEN,Kenya,
-KGZ,Kyrgyzstan,KGZ,Kyrgyzstan,
-KHM,Cambodia,CAM,Cambodia,
-KIR,Kiribati,KIR,Kiribati,
-KNA,Saint Kitts and Nevis,,,
-KOR,"Korea, Republic of",,,
-KWT,Kuwait,KUW,Kuwait,
-LAO,Lao People's Democratic Republic,,,
-LBN,Lebanon,LIB,Lebanon,
-LBR,Liberia,LBR,Liberia,
-LBY,Libya,LBA,Libya,
-LCA,Saint Lucia,LCA,Saint Lucia,
-LIE,Liechtenstein,LIE,Liechtenstein,
-LKA,Sri Lanka,SRI,Sri Lanka,
-LSO,Lesotho,LES,Lesotho,
-LTU,Lithuania,LTU,Lithuania,
-LUX,Luxembourg,LUX,Luxembourg,
-LVA,Latvia,LAT,Latvia,
-MAC,Macao,,,
-MAF,Saint Martin (French part),,,
-MAR,Morocco,MAR,Morocco,
-MCO,Monaco,MON,Monaco,
-MDA,"Moldova, Republic of",,,
-MDG,Madagascar,MAD,Madagascar,
-MDV,Maldives,MDV,Maldives,
-MEX,Mexico,MEX,Mexico,
-MHL,Marshall Islands,MHL,Marshall Islands,
-MKD,North Macedonia,,,
-MLI,Mali,MLI,Mali,
-MLT,Malta,MLT,Malta,
-MMR,Myanmar,MYA,Myanmar,
-MNE,Montenegro,MNE,Montenegro,
-MNG,Mongolia,MGL,Mongolia,
-MNP,Northern Mariana Islands,,,
-MOZ,Mozambique,MOZ,Mozambique,
-MRT,Mauritania,MTN,Mauritania,
-MSR,Montserrat,,,
-MTQ,Martinique,,,
-MUS,Mauritius,MRI,Mauritius,
-MWI,Malawi,MAW,Malawi,
-MYS,Malaysia,MAL,Malaysia,
-MYS,Malaysia,MAS,Malaysia,
-MYS,Malaysia,NBO,Malaysia,North Borneo
-MYT,Mayotte,,,
-NAM,Namibia,NAM,Namibia,
-NCL,New Caledonia,,,
-NER,Niger,NIG,Niger,
-NFK,Norfolk Island,,,
-NGA,Nigeria,NGR,Nigeria,
-NIC,Nicaragua,NCA,Nicaragua,
-NIU,Niue,,,
-NLD,"Netherlands, Kingdom of the",,,
-NOR,Norway,NOR,Norway,
-NPL,Nepal,NEP,Nepal,
-NRU,Nauru,NRU,Nauru,
-NZL,New Zealand,NZL,New Zealand,
-OMN,Oman,OMA,Oman,
-PAK,Pakistan,PAK,Pakistan,
-PAN,Panama,PAN,Panama,
-PCN,Pitcairn,,,
-PER,Peru,PER,Peru,
-PHL,Philippines,PHI,Philippines,
-PLW,Palau,PLW,Palau,
-PNG,Papua New Guinea,PNG,Papua New Guinea,
-POL,Poland,POL,Poland,
-PRI,Puerto Rico,PUR,Puerto Rico,
-PRK,"Korea, Democratic People's Republic of",,,
-PRT,Portugal,POR,Portugal,
-PRY,Paraguay,PAR,Paraguay,
-PSE,"Palestine, State of",,,
-PYF,French Polynesia,,,
-QAT,Qatar,QAT,Qatar,
-REU,Réunion,,,
-ROU,Romania,ROU,Romania,
-RUS,Russian Federation,,,
-RWA,Rwanda,RWA,Rwanda,
-SAU,Saudi Arabia,KSA,Saudi Arabia,
-SDN,Sudan,SUD,Sudan,
-SEN,Senegal,SEN,Senegal,
-SGP,Singapore,SIN,Singapore,
-SGS,South Georgia and the South Sandwich Islands,,,
-SHN,"Saint Helena, Ascension and Tristan da Cunha",,,
-SJM,Svalbard and Jan Mayen,,,
-SLB,Solomon Islands,SOL,Solomon Islands,
-SLE,Sierra Leone,SLE,Sierra Leone,
-SLV,El Salvador,ESA,El Salvador,
-SMR,San Marino,SMR,San Marino,
-SOM,Somalia,SOM,Somalia,
-SPM,Saint Pierre and Miquelon,,,
-SRB,Serbia,SCG,Serbia,Serbia and Montenegro
-SRB,Serbia,SRB,Serbia,
-SRB,Serbia,YUG,Serbia,Yugoslavia
-SSD,South Sudan,SSD,South Sudan,
-STP,Sao Tome and Principe,STP,Sao Tome and Principe,
-SUR,Suriname,SUR,Suriname,
-SVK,Slovakia,SVK,Slovakia,
-SVN,Slovenia,SLO,Slovenia,
-SWE,Sweden,SWE,Sweden,
-SWZ,Eswatini,,,
-SXM,Sint Maarten (Dutch part),,,
-SYC,Seychelles,SEY,Seychelles,
-SYR,Syrian Arab Republic,,,
-TCA,Turks and Caicos Islands,,,
-TCD,Chad,CHA,Chad,
-TGO,Togo,TOG,Togo,
-THA,Thailand,THA,Thailand,
-TJK,Tajikistan,TJK,Tajikistan,
-TKL,Tokelau,,,
-TKM,Turkmenistan,TKM,Turkmenistan,
-TLS,Timor-Leste,TLS,Timor-Leste,
-TON,Tonga,TGA,Tonga,
-TTO,Trinidad and Tobago,,,
-TUN,Tunisia,TUN,Tunisia,
-TUR,Türkiye,,,
-TUV,Tuvalu,,,
-TWN,"Taiwan, Province of China",,,
-TZA,"Tanzania, United Republic of",,,
-UGA,Uganda,UGA,Uganda,
-UKR,Ukraine,UKR,Ukraine,
-UMI,United States Minor Outlying Islands,,,
-URY,Uruguay,URU,Uruguay,
-USA,United States of America,,,
-UZB,Uzbekistan,UZB,Uzbekistan,
-VAT,Holy See,,,
-VCT,Saint Vincent and the Grenadines,,,
-VEN,"Venezuela, Bolivarian Republic of",,,
-VGB,Virgin Islands (British),,,
-VIR,Virgin Islands (U.S.),,,
-VNM,Viet Nam,,,
-VUT,Vanuatu,VAN,Vanuatu,
-WLF,Wallis and Futuna,,,
-WSM,Samoa,SAM,Samoa,
-YEM,Yemen,YAR,Yemen,North Yemen
-YEM,Yemen,YEM,Yemen,
-YEM,Yemen,YMD,Yemen,South Yemen
-ZAF,South Africa,RSA,South Africa,
-ZMB,Zambia,ZAM,Zambia,
-ZWE,Zimbabwe,RHO,Zimbabwe,
-ZWE,Zimbabwe,ZIM,Zimbabwe,
+NOC,region,continent,name
+AFG,Afghanistan,Asia,Afghanistan
+AHO,Curaçao,,
+ALB,Albania,Europe,Albania
+ALG,Algeria,Africa,Algeria
+AND,Andorra,Europe,Andorra
+ANG,Angola,Africa,Angola
+ANT,Antigua and Barbuda,Americas,Antigua and Barbuda
+ANZ,Australia,,
+ARG,Argentina,Americas,Argentina
+ARM,Armenia,Europe,Armenia
+ARU,Aruba,Americas,Aruba
+ASA,American Samoa,Oceania,American Samoa
+AUS,Australia,Oceania,Australia
+AUT,Austria,Europe,Austria
+AZE,Azerbaijan,Europe,Azerbaijan
+BAH,Bahamas,Americas,Bahamas
+BAN,Bangladesh,Asia,Bangladesh
+BAR,Barbados,Americas,Barbados
+BDI,Burundi,Africa,Burundi
+BEL,Belgium,Europe,Belgium
+BEN,Benin,Africa,Benin
+BER,Bermuda,Americas,Bermuda
+BHU,Bhutan,Asia,Bhutan
+BIH,Bosnia and Herzegovina,Europe,Bosnia and Herzegovina
+BIZ,Belize,Americas,Belize
+BLR,Belarus,Europe,Belarus
+BOH,Czechia,,
+BOL,"Bolivia, Plurinational State of",Americas,Bolivia
+BOT,Botswana,Africa,Botswana
+BRA,Brazil,Americas,Brazil
+BRN,Bahrain,Asia,Bahrain
+BRU,Brunei Darussalam,Asia,Brunei Darussalam
+BUL,Bulgaria,Europe,Bulgaria
+BUR,Burkina Faso,Africa,Burkina Faso
+CAF,Central African Republic,Africa,Central African Republic
+CAM,Cambodia,Asia,Cambodia
+CAN,Canada,Americas,Canada
+CAY,Cayman Islands,Americas,Cayman Islands
+CGO,Congo,Africa,Congo
+CHA,Chad,Africa,Chad
+CHI,Chile,Americas,Chile
+CHN,China,Asia,People's Republic of China
+CIV,Côte d'Ivoire,Africa,Côte d'Ivoire
+CMR,Cameroon,Africa,Cameroon
+COD,"Congo, Democratic Republic of the",Africa,Democratic Republic of the Congo
+COK,Cook Islands,Oceania,Cook Islands
+COL,Colombia,Americas,Colombia
+COM,Comoros,Africa,Comoros
+CPV,Cabo Verde,Africa,Cape Verde
+CRC,Costa Rica,Americas,Costa Rica
+CRO,Croatia,Europe,Croatia
+CRT,Greece,,
+CUB,Cuba,Americas,Cuba
+CYP,Cyprus,Europe,Cyprus
+CZE,Czechia,Europe,Czech Republic
+DEN,Denmark,Europe,Denmark
+DJI,Djibouti,Africa,Djibouti
+DMA,Dominica,Americas,Dominica
+DOM,Dominican Republic,Americas,Dominican Republic
+ECU,Ecuador,Americas,Ecuador
+EGY,Egypt,Africa,Egypt
+EOR,,,IOC Refugee Olympic Team
+ERI,Eritrea,Africa,Eritrea
+ESA,El Salvador,Americas,El Salvador
+ESP,Spain,Europe,Spain
+EST,Estonia,Europe,Estonia
+ETH,Ethiopia,Africa,Ethiopia
+EUN,Russian Federation,,
+FIJ,Fiji,Oceania,Fiji
+FIN,Finland,Europe,Finland
+FRA,France,Europe,France
+FRG,Germany,,
+FSM,"Micronesia, Federated States of",Oceania,Federated States of Micronesia
+GAB,Gabon,Africa,Gabon
+GAM,Gambia,Africa,Gambia
+GBR,United Kingdom of Great Britain and Northern Ireland,Europe,Great Britain
+GBS,Guinea-Bissau,Africa,Guinea-Bissau
+GDR,Germany,,
+GEO,Georgia,Europe,Georgia
+GEQ,Equatorial Guinea,Africa,Equatorial Guinea
+GER,Germany,Europe,Germany
+GHA,Ghana,Africa,Ghana
+GRE,Greece,Europe,Greece
+GRN,Grenada,Americas,Grenada
+GUA,Guatemala,Americas,Guatemala
+GUI,Guinea,Africa,Guinea
+GUM,Guam,Oceania,Guam
+GUY,Guyana,Americas,Guyana
+HAI,Haiti,Americas,Haiti
+HKG,Hong Kong,Asia,"Hong Kong, China"
+HON,Honduras,Americas,Honduras
+HUN,Hungary,Europe,Hungary
+INA,Indonesia,Asia,Indonesia
+IND,India,Asia,India
+IOA,Individual Olympic Athletes,,Independent Olympic Athletes
+IOP,,,Independent Olympic Participants
+IRI,"Iran, Islamic Republic of",Asia,Islamic Republic of Iran
+IRL,Ireland,Europe,Ireland
+IRQ,Iraq,Asia,Iraq
+ISL,Iceland,Europe,Iceland
+ISR,Israel,Europe,Israel
+ISV,Virgin Islands (U.S.),Americas,"Virgin Islands, US"
+ITA,Italy,Europe,Italy
+IVB,Virgin Islands (British),Americas,"Virgin Islands, British"
+JAM,Jamaica,Americas,Jamaica
+JOR,Jordan,Asia,Jordan
+JPN,Japan,Asia,Japan
+KAZ,Kazakhstan,Asia,Kazakhstan
+KEN,Kenya,Africa,Kenya
+KGZ,Kyrgyzstan,Asia,Kyrgyzstan
+KIR,Kiribati,Oceania,Kiribati
+KOR,"Korea, Republic of",Asia,Republic of Korea
+KOS,Kosovo,Europe,Kosovo
+KSA,Saudi Arabia,Asia,Saudi Arabia
+KUW,Kuwait,Asia,Kuwait
+LAO,Lao People's Democratic Republic,Asia,Lao People's Democratic Republic
+LAT,Latvia,Europe,Latvia
+LBA,Libya,Africa,Libya
+LBN,,Asia,Lebanon
+LBR,Liberia,Africa,Liberia
+LCA,Saint Lucia,Americas,Saint Lucia
+LES,Lesotho,Africa,Lesotho
+LIB,Lebanon,,
+LIE,Liechtenstein,Europe,Liechtenstein
+LTU,Lithuania,Europe,Lithuania
+LUX,Luxembourg,Europe,Luxembourg
+MAD,Madagascar,Africa,Madagascar
+MAL,Malaysia,,
+MAR,Morocco,Africa,Morocco
+MAS,Malaysia,Asia,Malaysia
+MAW,Malawi,Africa,Malawi
+MDA,"Moldova, Republic of",Europe,Republic of Moldova
+MDV,Maldives,Asia,Maldives
+MEX,Mexico,Americas,Mexico
+MGL,Mongolia,Asia,Mongolia
+MHL,Marshall Islands,Oceania,Marshall Islands
+MKD,North Macedonia,Europe,Republic of North Macedonia
+MLI,Mali,Africa,Mali
+MLT,Malta,Europe,Malta
+MNE,Montenegro,Europe,Montenegro
+MON,Monaco,Europe,Monaco
+MOZ,Mozambique,Africa,Mozambique
+MRI,Mauritius,Africa,Mauritius
+MTN,Mauritania,Africa,Mauritania
+MYA,Myanmar,Asia,Myanmar
+NAM,Namibia,Africa,Namibia
+NBO,Malaysia,,
+NCA,Nicaragua,Americas,Nicaragua
+NED,"Netherlands, Kingdom of the",Europe,Netherlands
+NEP,Nepal,Asia,Nepal
+NFL,Canada,,
+NGR,Nigeria,Africa,Nigeria
+NIG,Niger,Africa,Niger
+NOR,Norway,Europe,Norway
+NRU,Nauru,Oceania,Nauru
+NZL,New Zealand,Oceania,New Zealand
+OMA,Oman,Asia,Oman
+PAK,Pakistan,Asia,Pakistan
+PAN,Panama,Americas,Panama
+PAR,Paraguay,Americas,Paraguay
+PER,Peru,Americas,Peru
+PHI,Philippines,Asia,Philippines
+PLE,"Palestine, State of",Asia,Palestine
+PLW,Palau,Oceania,Palau
+PNG,Papua New Guinea,Oceania,Papua New Guinea
+POL,Poland,Europe,Poland
+POR,Portugal,Europe,Portugal
+PRK,"Korea, Democratic People's Republic of",Asia,Democratic People's Republic of Korea
+PUR,Puerto Rico,Americas,Puerto Rico
+QAT,Qatar,Asia,Qatar
+RHO,Zimbabwe,,
+ROT,,,
+ROU,Romania,Europe,Romania
+RSA,South Africa,Africa,South Africa
+RUS,Russian Federation,Europe,Russian Federation
+RWA,Rwanda,Africa,Rwanda
+SAA,Germany,,
+SAM,Samoa,Oceania,Samoa
+SCG,Serbia,,
+SEN,Senegal,Africa,Senegal
+SEY,Seychelles,Africa,Seychelles
+SGP,Singapore,Asia,Singapore
+SKN,Saint Kitts and Nevis,Americas,Saint Kitts and Nevis
+SLE,Sierra Leone,Africa,Sierra Leone
+SLO,Slovenia,Europe,Slovenia
+SMR,San Marino,Europe,San Marino
+SOL,Solomon Islands,Oceania,Solomon Islands
+SOM,Somalia,Africa,Somalia
+SRB,Serbia,Europe,Serbia
+SRI,Sri Lanka,Asia,Sri Lanka
+SSD,South Sudan,Africa,South Sudan
+STP,Sao Tome and Principe,Africa,Sao Tome and Principe
+SUD,Sudan,Africa,Sudan
+SUI,Switzerland,Europe,Switzerland
+SUR,Suriname,Americas,Suriname
+SVK,Slovakia,Europe,Slovakia
+SWE,Sweden,Europe,Sweden
+SWZ,Eswatini,Africa,Eswatini
+SYR,Syrian Arab Republic,Asia,Syrian Arab Republic
+TAN,"Tanzania, United Republic of",Africa,United Republic of Tanzania
+TCH,Czechia,,
+TGA,Tonga,Oceania,Tonga
+THA,Thailand,Asia,Thailand
+TJK,Tajikistan,Asia,Tajikistan
+TKM,Turkmenistan,Asia,Turkmenistan
+TLS,Timor-Leste,Asia,Democratic Republic of Timor-Leste
+TOG,Togo,Africa,Togo
+TPE,"Taiwan, Province of China",Asia,Chinese Taipei
+TTO,Trinidad and Tobago,Americas,Trinidad and Tobago
+TUN,Tunisia,Africa,Tunisia
+TUR,Türkiye,Europe,Turkey
+TUV,Tuvalu,Oceania,Tuvalu
+UAE,United Arab Emirates,Asia,United Arab Emirates
+UAR,Syrian Arab Republic,,
+UGA,Uganda,Africa,Uganda
+UKR,Ukraine,Europe,Ukraine
+UNK,,,
+URS,Russian Federation,,
+URU,Uruguay,Americas,Uruguay
+USA,United States of America,Americas,United States of America
+UZB,Uzbekistan,Asia,Uzbekistan
+VAN,Vanuatu,Oceania,Vanuatu
+VEN,"Venezuela, Bolivarian Republic of",Americas,Venezuela
+VIE,Viet Nam,Asia,Vietnam
+VIN,Saint Vincent and the Grenadines,Americas,St Vincent and the Grenadines
+VNM,Viet Nam,,
+WIF,Trinidad and Tobago,,
+YAR,Yemen,,
+YEM,Yemen,Asia,Yemen
+YMD,Yemen,,
+YUG,Serbia,,
+ZAM,Zambia,Africa,Zambia
+ZIM,Zimbabwe,Africa,Zimbabwe
