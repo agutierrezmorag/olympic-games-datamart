@@ -221,19 +221,19 @@ def country_charts(data, og_data):
     # Count the number of unique years each country has hosted the Olympics
     with ccol1:
         city_distribution = (
-            data.drop_duplicates(subset=["Host country", "Year"])["Host country"]
+            data.drop_duplicates(subset=["Host Country", "Year"])["Host Country"]
             .value_counts()
             .reset_index()
         )
-        city_distribution.columns = ["Host country", "Count"]
+        city_distribution.columns = ["Host Country", "Count"]
 
         fig = px.choropleth(
             city_distribution,
-            locations="Host country",
+            locations="Host Country",
             locationmode="country names",
             color="Count",
             title="Países anfitriones de los Juegos Olímpicos",
-            labels={"Host country": "Pais", "Count": "Número de olímpiadas"},
+            labels={"Host Country": "Pais", "Count": "Número de olímpiadas"},
             color_continuous_scale=px.colors.sequential.Viridis,
         )
         st.plotly_chart(fig, use_container_width=True)
