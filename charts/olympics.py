@@ -161,8 +161,8 @@ def country_charts(data, og_data):
 
         fig = px.choropleth(
             medal_distribution,
-            locations="Region",
-            locationmode="country names",
+            locations="Region (ISO)",
+            locationmode="ISO-3",
             color="Count",
             title="Distribución de medallas por país",
             labels={"Region": "País", "Count": "Número de Medallas"},
@@ -192,8 +192,8 @@ def country_charts(data, og_data):
         country_distribution.columns = ["Region", "Count"]
         fig = px.choropleth(
             country_distribution,
-            locations="Region",
-            locationmode="country names",
+            locations="Region (ISO)",
+            locationmode="ISO-3",
             color="Count",
             title="Distribución de atletas por país",
             labels={"Region": "Pais", "Count": "Número de atletas"},
@@ -229,8 +229,8 @@ def country_charts(data, og_data):
 
         fig = px.choropleth(
             city_distribution,
-            locations="Host Country",
-            locationmode="country names",
+            locations="Host Country (ISO)",
+            locationmode="ISO-3",
             color="Count",
             title="Países anfitriones de los Juegos Olímpicos",
             labels={"Host Country": "Pais", "Count": "Número de olímpiadas"},
@@ -259,8 +259,8 @@ def country_charts(data, og_data):
         # Create the Plotly Express bar chart
         fig = px.choropleth(
             avg_medals.sort_values("Promedio", ascending=False),
-            locations="Region",
-            locationmode="country names",
+            locations="Region (ISO)",
+            locationmode="ISO-3",
             color="Promedio",
             title="Promedio de medallas ganadas de cada país por Olimpiada",
             color_continuous_scale=px.colors.sequential.Viridis,
