@@ -156,8 +156,8 @@ def country_charts(data, og_data):
         )
 
         # Count the number of medals for each NOC
-        medal_distribution = medal_data["Region"].value_counts().reset_index()
-        medal_distribution.columns = ["Region", "Count"]
+        medal_distribution = medal_data["Region (ISO)"].value_counts().reset_index()
+        medal_distribution.columns = ["Region (ISO)", "Count"]
 
         fig = px.choropleth(
             medal_distribution,
