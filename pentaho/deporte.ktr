@@ -489,11 +489,6 @@
   </connection>
   <order>
     <hop>
-      <from>Select values</from>
-      <to>Sort rows</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Sort rows</from>
       <to>Unique rows</to>
       <enabled>Y</enabled>
@@ -510,7 +505,7 @@
     </hop>
     <hop>
       <from>CSV file input</from>
-      <to>Select values</to>
+      <to>Sort rows</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -544,7 +539,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>720</xloc>
+      <xloc>656</xloc>
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
@@ -636,7 +631,7 @@
       </field>
       <field>
         <column_name>nombredeporte</column_name>
-        <stream_name>Deporte</stream_name>
+        <stream_name>Sport</stream_name>
       </field>
     </fields>
     <attributes/>
@@ -648,39 +643,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>832</xloc>
-      <yloc>224</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>Sport</name>
-        <rename>Deporte</rename>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>384</xloc>
+      <xloc>768</xloc>
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
@@ -705,7 +668,7 @@
     <unique_rows>N</unique_rows>
     <fields>
       <field>
-        <name>Deporte</name>
+        <name>Sport</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
@@ -722,7 +685,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>496</xloc>
+      <xloc>400</xloc>
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
@@ -744,7 +707,7 @@
     <error_description/>
     <fields>
       <field>
-        <name>Deporte</name>
+        <name>Sport</name>
         <case_insensitive>Y</case_insensitive>
       </field>
     </fields>
@@ -757,7 +720,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>608</xloc>
+      <xloc>528</xloc>
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
