@@ -560,7 +560,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>C:\Users\alvarog\VSCode Projects\olympic-games-datamart\datasets\olympics-spanish.csv</filename>
+    <filename>C:\Users\alvarog\VSCode Projects\olympic-games-datamart\datasets\olympics-cleaned.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
