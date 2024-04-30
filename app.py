@@ -138,7 +138,8 @@ def main():
             "🌍 Human Development Index (HDI)": "human-development-index.csv",
             "👦🏻 Population (Cleaned)": "population_total_long-cleaned.csv",
             "👦🏻 Population": "population_total_long.csv",
-            "Merged Data": "merged_data.csv",
+            "📍 ISO-NOC Merged": "iso_noc-merged.csv",
+            "🗺️ Country Data Merged": "country-data-merged.csv",
         }
 
         other_datasets = {
