@@ -443,7 +443,7 @@
     <database>postgres</database>
     <port>5432</port>
     <username>postgres</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb79ce71da9fa6d4</password>
+    <password>Encrypted 2be98afc86aa7f2e4a316a271c6c3fd89</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -625,6 +625,256 @@
     <GUI>
       <xloc>656</xloc>
       <yloc>592</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>CSV file input 2</name>
+    <type>CsvInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <filename>D:\Inteligencia de negocios\Dataset\actualizados\olympics-cleaned.csv</filename>
+    <filename_field/>
+    <rownum_field/>
+    <include_filename>N</include_filename>
+    <separator>,</separator>
+    <enclosure>"</enclosure>
+    <header>Y</header>
+    <buffer_size>50000</buffer_size>
+    <lazy_conversion>N</lazy_conversion>
+    <add_filename_result>N</add_filename_result>
+    <parallel>N</parallel>
+    <newline_possible>N</newline_possible>
+    <format>mixed</format>
+    <encoding/>
+    <fields>
+      <field>
+        <name>ID</name>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>Ch$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>15</length>
+        <precision>0</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Name</name>
+        <type>String</type>
+        <format/>
+        <currency>Ch$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>34</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Sex</name>
+        <type>String</type>
+        <format/>
+        <currency>Ch$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Age</name>
+        <type>Number</type>
+        <format>#.#</format>
+        <currency>Ch$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Height</name>
+        <type>Number</type>
+        <format>#.#</format>
+        <currency>Ch$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Weight</name>
+        <type>Number</type>
+        <format>#.#</format>
+        <currency>Ch$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Team</name>
+        <type>String</type>
+        <format/>
+        <currency>Ch$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>14</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>NOC</name>
+        <type>String</type>
+        <format/>
+        <currency>Ch$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>3</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Region</name>
+        <type>String</type>
+        <format/>
+        <currency>Ch$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>27</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Region (ISO)</name>
+        <type>String</type>
+        <format/>
+        <currency>Ch$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>3</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Games</name>
+        <type>String</type>
+        <format/>
+        <currency>Ch$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>11</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Year</name>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>Ch$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>15</length>
+        <precision>0</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Season</name>
+        <type>String</type>
+        <format/>
+        <currency>Ch$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>6</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>City</name>
+        <type>String</type>
+        <format/>
+        <currency>Ch$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>14</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Host Country</name>
+        <type>String</type>
+        <format/>
+        <currency>Ch$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>52</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Host Country (ISO)</name>
+        <type>String</type>
+        <format/>
+        <currency>Ch$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>3</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Sport</name>
+        <type>String</type>
+        <format/>
+        <currency>Ch$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>20</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Event</name>
+        <type>String</type>
+        <format/>
+        <currency>Ch$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>51</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Medal</name>
+        <type>String</type>
+        <format/>
+        <currency>Ch$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>6</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>112</xloc>
+      <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -899,7 +1149,7 @@ FROM
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1040</xloc>
+      <xloc>1024</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1175,7 +1425,6 @@ FROM
       </field>
       <field>
         <name>NOC</name>
-        <rename/>
       </field>
       <field>
         <name>Games</name>
@@ -1195,7 +1444,6 @@ FROM
       </field>
       <field>
         <name>imc</name>
-        <rename/>
       </field>
       <field>
         <name>Age</name>
@@ -1243,47 +1491,36 @@ FROM
     <fields>
       <field>
         <name>estatura</name>
-        <rename/>
       </field>
       <field>
         <name>peso</name>
-        <rename/>
       </field>
       <field>
         <name>equipo</name>
-        <rename/>
       </field>
       <field>
         <name>tipoPodio</name>
-        <rename/>
       </field>
       <field>
         <name>imc</name>
-        <rename/>
       </field>
       <field>
         <name>edad</name>
-        <rename/>
       </field>
       <field>
         <name>id_modalidad</name>
-        <rename/>
       </field>
       <field>
         <name>idatleta</name>
-        <rename/>
       </field>
       <field>
         <name>ideventodeportivo</name>
-        <rename/>
       </field>
       <field>
         <name>identidad</name>
-        <rename/>
       </field>
       <field>
         <name>idanio</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1315,51 +1552,39 @@ FROM
     <fields>
       <field>
         <name>estatura</name>
-        <rename/>
       </field>
       <field>
         <name>peso</name>
-        <rename/>
       </field>
       <field>
         <name>equipo</name>
-        <rename/>
       </field>
       <field>
         <name>tipoPodio</name>
-        <rename/>
       </field>
       <field>
         <name>imc</name>
-        <rename/>
       </field>
       <field>
         <name>edad</name>
-        <rename/>
       </field>
       <field>
         <name>id_modalidad</name>
-        <rename/>
       </field>
       <field>
         <name>idatleta</name>
-        <rename/>
       </field>
       <field>
         <name>ideventodeportivo</name>
-        <rename/>
       </field>
       <field>
         <name>identidad</name>
-        <rename/>
       </field>
       <field>
         <name>idanio</name>
-        <rename/>
       </field>
       <field>
         <name>idhechorendimiento</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1373,7 +1598,57 @@ FROM
     </remotesteps>
     <GUI>
       <xloc>560</xloc>
-      <yloc>576</yloc>
+      <yloc>592</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Sort rows</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>Sport</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Event</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>224</xloc>
+      <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1553,7 +1828,7 @@ FROM
     <name>Stream lookup 5</name>
     <type>StreamLookup</type>
     <description/>
-    <distribute>Y</distribute>
+    <distribute>N</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -1742,256 +2017,6 @@ FROM
     </GUI>
   </step>
   <step>
-    <name>CSV file input 2</name>
-    <type>CsvInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <filename>C:\Users\alvarog\VSCode Projects\olympic-games-datamart\datasets\olympics-cleaned.csv</filename>
-    <filename_field/>
-    <rownum_field/>
-    <include_filename>N</include_filename>
-    <separator>,</separator>
-    <enclosure>"</enclosure>
-    <header>Y</header>
-    <buffer_size>50000</buffer_size>
-    <lazy_conversion>N</lazy_conversion>
-    <add_filename_result>N</add_filename_result>
-    <parallel>N</parallel>
-    <newline_possible>N</newline_possible>
-    <format>mixed</format>
-    <encoding/>
-    <fields>
-      <field>
-        <name>ID</name>
-        <type>Integer</type>
-        <format>#</format>
-        <currency>Ch$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>15</length>
-        <precision>0</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Name</name>
-        <type>String</type>
-        <format/>
-        <currency>Ch$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>34</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Sex</name>
-        <type>String</type>
-        <format/>
-        <currency>Ch$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Age</name>
-        <type>Number</type>
-        <format>#.#</format>
-        <currency>Ch$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>15</length>
-        <precision>0</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Height</name>
-        <type>Number</type>
-        <format>#.#</format>
-        <currency>Ch$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>15</length>
-        <precision>0</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Weight</name>
-        <type>Number</type>
-        <format>#.#</format>
-        <currency>Ch$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>15</length>
-        <precision>0</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Team</name>
-        <type>String</type>
-        <format/>
-        <currency>Ch$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>14</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>NOC</name>
-        <type>String</type>
-        <format/>
-        <currency>Ch$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>3</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Region</name>
-        <type>String</type>
-        <format/>
-        <currency>Ch$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>27</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Region (ISO)</name>
-        <type>String</type>
-        <format/>
-        <currency>Ch$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>3</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Games</name>
-        <type>String</type>
-        <format/>
-        <currency>Ch$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>11</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Year</name>
-        <type>Integer</type>
-        <format>#</format>
-        <currency>Ch$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>15</length>
-        <precision>0</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Season</name>
-        <type>String</type>
-        <format/>
-        <currency>Ch$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>6</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>City</name>
-        <type>String</type>
-        <format/>
-        <currency>Ch$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>14</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Host Country</name>
-        <type>String</type>
-        <format/>
-        <currency>Ch$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>52</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Host Country (ISO)</name>
-        <type>String</type>
-        <format/>
-        <currency>Ch$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>3</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Sport</name>
-        <type>String</type>
-        <format/>
-        <currency>Ch$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>20</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Event</name>
-        <type>String</type>
-        <format/>
-        <currency>Ch$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>51</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Medal</name>
-        <type>String</type>
-        <format/>
-        <currency>Ch$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>6</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>112</xloc>
-      <yloc>64</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>delete sport from event</name>
     <type>ScriptValueMod</type>
     <description/>
@@ -2105,56 +2130,6 @@ if (regex.test(event)) {
     </remotesteps>
     <GUI>
       <xloc>480</xloc>
-      <yloc>64</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Sort rows</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <directory>%%java.io.tmpdir%%</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
-    <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>Sport</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>Event</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>224</xloc>
       <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>

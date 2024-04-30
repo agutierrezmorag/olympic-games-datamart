@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>Dim Entidad</name>
+    <name>Hecho Metricas entidades</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -427,10 +427,10 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2024/04/25 19:05:25.582</created_date>
+    <created_date>2024/04/28 19:04:14.851</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2024/04/25 19:05:25.582</modified_date>
-    <key_for_session_key>H4sIAAAAAAAA/wMAAAAAAAAAAAA=</key_for_session_key>
+    <modified_date>2024/04/28 19:04:14.851</modified_date>
+    <key_for_session_key/>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
@@ -474,11 +474,11 @@
       </attribute>
       <attribute>
         <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
-        <attribute>N</attribute>
+        <attribute>Y</attribute>
       </attribute>
       <attribute>
         <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
-        <attribute>N</attribute>
+        <attribute>Y</attribute>
       </attribute>
       <attribute>
         <code>USE_POOLING</code>
@@ -488,18 +488,48 @@
   </connection>
   <order>
     <hop>
-      <from>CSV Paises</from>
-      <to>Select values 2</to>
+      <from>CSV file input</from>
+      <to>Select values</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Database lookup</from>
-      <to>ID Entidad</to>
+      <from>Select values</from>
+      <to>If field value is null</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>ID Entidad</from>
+      <from>Dummy (do nothing)</from>
+      <to>Stream lookup</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Stream lookup</from>
+      <to>Stream lookup 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Dimension Entidad</from>
+      <to>Stream lookup</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Dimension Tiempo</from>
+      <to>Stream lookup 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values 2</from>
+      <to>Add sequence</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Add sequence</from>
       <to>Select values 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Stream lookup 2</from>
+      <to>Select values 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -509,17 +539,22 @@
     </hop>
     <hop>
       <from>If field value is null</from>
-      <to>Database lookup</to>
+      <to>Remover años > 2016</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values 2</from>
-      <to>If field value is null</to>
+      <from>Remover años > 2016</from>
+      <to>Dummy (do nothing)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Remover años > 2016</from>
+      <to>Dummy (do nothing) 2</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>CSV Paises</name>
+    <name>CSV file input</name>
     <type>CsvInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -529,7 +564,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>D:\Inteligencia de negocios\Dataset\actualizados\noc y alpha3.csv</filename>
+    <filename>D:\Inteligencia de negocios\Dataset\actualizados\paises_merged.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -545,7 +580,40 @@
     <encoding/>
     <fields>
       <field>
-        <name>NOC</name>
+        <name>Country Name</name>
+        <type>String</type>
+        <format/>
+        <currency>Ch$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>24</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Year</name>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>Ch$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>15</length>
+        <precision>0</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Count</name>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>Ch$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>15</length>
+        <precision>0</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Code</name>
         <type>String</type>
         <format/>
         <currency>Ch$</currency>
@@ -556,47 +624,47 @@
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>region</name>
+        <name>Continent</name>
         <type>String</type>
         <format/>
         <currency>Ch$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>52</length>
+        <length>13</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>continent</name>
-        <type>String</type>
-        <format/>
+        <name>Human Development Index (UNDP)</name>
+        <type>Number</type>
+        <format>#.#</format>
         <currency>Ch$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>10</length>
-        <precision>-1</precision>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>ISO</name>
-        <type>String</type>
-        <format/>
+        <name>Expected Years of Schooling (years)</name>
+        <type>Number</type>
+        <format>#.#</format>
         <currency>Ch$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>3</length>
-        <precision>-1</precision>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>name</name>
-        <type>String</type>
-        <format/>
+        <name>GNI per capita, PPP (constant 2017 international $)</name>
+        <type>Number</type>
+        <format>#.#</format>
         <currency>Ch$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>37</length>
-        <precision>-1</precision>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
       </field>
     </fields>
@@ -609,90 +677,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>128</xloc>
-      <yloc>128</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Database lookup</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>local</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>public</schema>
-      <table>continente</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>continente</name>
-        <field>continente</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>idcontinente</name>
-        <rename>idcontinente</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>576</xloc>
-      <yloc>128</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>ID Entidad</name>
-    <type>Sequence</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <valuename>idEntidad</valuename>
-    <use_database>N</use_database>
-    <connection/>
-    <schema/>
-    <seqname>SEQ_</seqname>
-    <use_counter>Y</use_counter>
-    <counter_name/>
-    <start_at>1</start_at>
-    <increment_by>1</increment_by>
-    <max_value>999999999</max_value>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>688</xloc>
+      <xloc>192</xloc>
       <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
@@ -717,32 +702,26 @@
       </valuetypes>
     <fields>
       <field>
-        <name>nocEntidad</name>
-        <value>na</value>
+        <name>escolaridad</name>
+        <value>0</value>
         <mask/>
         <set_empty_string>N</set_empty_string>
       </field>
       <field>
-        <name>continente</name>
-        <value>na</value>
+        <name>gni</name>
+        <value>0</value>
         <mask/>
         <set_empty_string>N</set_empty_string>
       </field>
       <field>
-        <name>alpha3Entidad</name>
-        <value>na</value>
+        <name>idh</name>
+        <value>0</value>
         <mask/>
         <set_empty_string>N</set_empty_string>
       </field>
       <field>
-        <name>Entidad</name>
-        <value>na</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>region</name>
-        <value>na</value>
+        <name>poblacion</name>
+        <value>0</value>
         <mask/>
         <set_empty_string>N</set_empty_string>
       </field>
@@ -762,10 +741,10 @@
     </GUI>
   </step>
   <step>
-    <name>Select values 2</name>
+    <name>Select values</name>
     <type>SelectValues</type>
     <description/>
-    <distribute>N</distribute>
+    <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -774,22 +753,55 @@
     </partitioning>
     <fields>
       <field>
-        <name>NOC</name>
-        <rename>nocEntidad</rename>
+        <name>Country Name</name>
+        <rename>entidad</rename>
       </field>
       <field>
-        <name>continent</name>
+        <name>Year</name>
+        <rename>anio</rename>
+      </field>
+      <field>
+        <name>Count</name>
+        <rename>poblacion</rename>
+      </field>
+      <field>
+        <name>Code</name>
+        <rename>alpha3</rename>
+      </field>
+      <field>
+        <name>Continent</name>
         <rename>continente</rename>
       </field>
       <field>
-        <name>ISO</name>
-        <rename>alpha3Entidad</rename>
+        <name>Human Development Index (UNDP)</name>
+        <rename>idh</rename>
       </field>
       <field>
-        <name>name</name>
-        <rename>Entidad</rename>
+        <name>Expected Years of Schooling (years)</name>
+        <rename>escolaridad</rename>
       </field>
-      <select_unspecified>Y</select_unspecified>
+      <field>
+        <name>GNI per capita, PPP (constant 2017 international $)</name>
+        <rename>gni</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>anio</name>
+        <rename>anio</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -800,8 +812,372 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>224</xloc>
+      <xloc>304</xloc>
       <yloc>128</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Dummy (do nothing)</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>672</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Stream lookup</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <from>Dimension Entidad</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>Y</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>alpha3</name>
+        <field>alpha3entidad</field>
+      </key>
+      <value>
+        <name>identidad</name>
+        <rename>identidad</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+      <value>
+        <name>idcontinente</name>
+        <rename>idcontinente</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>672</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Stream lookup 2</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <from>Dimension Tiempo</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>Y</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>anio</name>
+        <field>idanio</field>
+      </key>
+      <value>
+        <name>idanio</name>
+        <rename>idanio</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>672</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Dimension Entidad</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>local</connection>
+    <sql>SELECT alpha3entidad, identidad, idcontinente FROM entidad</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>nocentidad</name>
+        <length>3</length>
+        <precision>-1</precision>
+        <origin>Dimension Entidad</origin>
+        <comments>nocentidad</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_CL</date_format_locale>
+        <date_format_timezone>America/Santiago</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>identidad</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>Dimension Entidad</origin>
+        <comments>identidad</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_CL</date_format_locale>
+        <date_format_timezone>America/Santiago</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>idcontinente</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>Dimension Entidad</origin>
+        <comments>idcontinente</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_CL</date_format_locale>
+        <date_format_timezone>America/Santiago</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+    </row-meta>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>784</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Dimension Tiempo</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>local</connection>
+    <sql>SELECT idanio FROM anio</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>idanio</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>Dimension Tiempo</origin>
+        <comments>idanio</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_CL</date_format_locale>
+        <date_format_timezone>America/Santiago</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+    </row-meta>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>784</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select values 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>identidad</name>
+        <rename/>
+      </field>
+      <field>
+        <name>idanio</name>
+        <rename/>
+      </field>
+      <field>
+        <name>idh</name>
+        <rename/>
+      </field>
+      <field>
+        <name>escolaridad</name>
+        <rename/>
+      </field>
+      <field>
+        <name>gni</name>
+        <rename/>
+      </field>
+      <field>
+        <name>poblacion</name>
+        <rename/>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>608</xloc>
+      <yloc>464</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Add sequence</name>
+    <type>Sequence</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <valuename>idhechoentidad</valuename>
+    <use_database>N</use_database>
+    <connection>local</connection>
+    <schema/>
+    <seqname>SEQ_</seqname>
+    <use_counter>Y</use_counter>
+    <counter_name/>
+    <start_at>1</start_at>
+    <increment_by>1</increment_by>
+    <max_value>999999999</max_value>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>512</xloc>
+      <yloc>464</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -818,19 +1194,32 @@
     </partitioning>
     <fields>
       <field>
-        <name>nocEntidad</name>
+        <name>idhechoentidad</name>
+        <rename/>
       </field>
       <field>
-        <name>alpha3Entidad</name>
+        <name>idanio</name>
+        <rename/>
       </field>
       <field>
-        <name>Entidad</name>
+        <name>identidad</name>
+        <rename/>
       </field>
       <field>
-        <name>idcontinente</name>
+        <name>idh</name>
+        <rename/>
       </field>
       <field>
-        <name>idEntidad</name>
+        <name>escolaridad</name>
+        <rename/>
+      </field>
+      <field>
+        <name>gni</name>
+        <rename/>
+      </field>
+      <field>
+        <name>poblacion</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -843,8 +1232,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>800</xloc>
-      <yloc>128</yloc>
+      <xloc>416</xloc>
+      <yloc>464</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -861,7 +1250,7 @@
     </partitioning>
     <connection>local</connection>
     <schema>public</schema>
-    <table>Entidad</table>
+    <table>metricas_entidades</table>
     <commit>1000</commit>
     <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>
@@ -878,24 +1267,32 @@
     <return_field/>
     <fields>
       <field>
-        <column_name>nocentidad</column_name>
-        <stream_name>nocEntidad</stream_name>
+        <column_name>idhechoentidad</column_name>
+        <stream_name>idhechoentidad</stream_name>
       </field>
       <field>
-        <column_name>alpha3entidad</column_name>
-        <stream_name>alpha3Entidad</stream_name>
-      </field>
-      <field>
-        <column_name>entidad</column_name>
-        <stream_name>Entidad</stream_name>
-      </field>
-      <field>
-        <column_name>idcontinente</column_name>
-        <stream_name>idcontinente</stream_name>
+        <column_name>idanio</column_name>
+        <stream_name>idanio</stream_name>
       </field>
       <field>
         <column_name>identidad</column_name>
-        <stream_name>idEntidad</stream_name>
+        <stream_name>identidad</stream_name>
+      </field>
+      <field>
+        <column_name>idh</column_name>
+        <stream_name>idh</stream_name>
+      </field>
+      <field>
+        <column_name>escolaridad</column_name>
+        <stream_name>escolaridad</stream_name>
+      </field>
+      <field>
+        <column_name>gni</column_name>
+        <stream_name>gni</stream_name>
+      </field>
+      <field>
+        <column_name>poblacion</column_name>
+        <stream_name>poblacion</stream_name>
       </field>
     </fields>
     <attributes/>
@@ -907,8 +1304,77 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>896</xloc>
+      <xloc>320</xloc>
+      <yloc>464</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Remover años > 2016</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>Dummy (do nothing)</send_true_to>
+    <send_false_to>Dummy (do nothing) 2</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>anio</leftvalue>
+        <function>&lt;</function>
+        <rightvalue/>
+        <value>
+          <name>constant</name>
+          <type>Integer</type>
+          <text>2017</text>
+          <length>-1</length>
+          <precision>0</precision>
+          <isnull>N</isnull>
+          <mask>####0;-####0</mask>
+        </value>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>560</xloc>
       <yloc>128</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Dummy (do nothing) 2</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>560</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
