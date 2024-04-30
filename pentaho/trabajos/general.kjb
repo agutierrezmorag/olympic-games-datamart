@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <job>
-  <name>ETL General</name>
+  <name>general</name>
   <description/>
   <extended_description/>
   <job_version/>
+  <job_status>0</job_status>
   <directory>/</directory>
   <created_user>-</created_user>
   <created_date>2024/04/29 20:03:07.679</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2024/04/29 20:03:07.679</modified_date>
+  <modified_date>2024/04/29 21:04:37.784</modified_date>
   <parameters>
     </parameters>
   <connection>
@@ -19,46 +20,14 @@
     <database>postgres</database>
     <port>5432</port>
     <username>postgres</username>
-    <password>Encrypted 2be98afc86aa7f2e4a316a271c6c3fd89</password>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce71da9fa6d4</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
     <attributes>
       <attribute>
-        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>IS_CLUSTERED</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
         <code>PORT_NUMBER</code>
         <attribute>5432</attribute>
-      </attribute>
-      <attribute>
-        <code>PRESERVE_RESERVED_WORD_CASE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>QUOTE_ALL_FIELDS</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>USE_POOLING</code>
-        <attribute>N</attribute>
       </attribute>
     </attributes>
   </connection>
@@ -378,7 +347,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <job_object_id/>
-      <filename>D:/Inteligencia de negocios/Transformaciones/teams/Dimensiones.kjb</filename>
+      <filename>${JOB_DIMENSIONES}</filename>
       <jobname/>
       <directory/>
       <arg_from_previous>N</arg_from_previous>
@@ -415,7 +384,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <job_object_id/>
-      <filename>D:/Inteligencia de negocios/Transformaciones/teams/Tablas Hecho.kjb</filename>
+      <filename>${JOB_HECHOS}</filename>
       <jobname/>
       <directory/>
       <arg_from_previous>N</arg_from_previous>
@@ -561,7 +530,7 @@ delete from atleta;
       <description/>
       <type>FILE_EXISTS</type>
       <attributes/>
-      <filename>file:///D:/Inteligencia%20de%20negocios/Dataset/actualizados/noc%20y%20alpha3.csv</filename>
+      <filename>${CSV_ISO_NOC_MERGED}</filename>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -574,7 +543,7 @@ delete from atleta;
       <description/>
       <type>FILE_EXISTS</type>
       <attributes/>
-      <filename>file:///D:/Inteligencia%20de%20negocios/Dataset/actualizados/olympics-cleaned.csv</filename>
+      <filename>${CSV_OLYMPICS}</filename>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -587,7 +556,7 @@ delete from atleta;
       <description/>
       <type>FILE_EXISTS</type>
       <attributes/>
-      <filename>file:///D:/Inteligencia%20de%20negocios/Dataset/actualizados/paises_merged.csv</filename>
+      <filename>${CSV_COUNTRY_DATA_MERGED}</filename>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -595,17 +564,105 @@ delete from atleta;
       <yloc>224</yloc>
       <attributes_kjc/>
     </entry>
+    <entry>
+      <name>Set variables</name>
+      <description/>
+      <type>SET_VARIABLES</type>
+      <attributes/>
+      <replacevars>Y</replacevars>
+      <filename/>
+      <file_variable_type>JVM</file_variable_type>
+      <fields>
+        <field>
+          <variable_name>CSV_OLYMPICS</variable_name>
+          <variable_value>C:\Users\alvarog\VSCode Projects\olympic-games-datamart\datasets\olympics-cleaned.csv</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>CSV_ISO_NOC_MERGED</variable_name>
+          <variable_value>C:\Users\alvarog\VSCode Projects\olympic-games-datamart\datasets\iso_noc-merged.csv</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>CSV_COUNTRY_DATA_MERGED</variable_name>
+          <variable_value>C:\Users\alvarog\VSCode Projects\olympic-games-datamart\datasets\country-data-merged.csv</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>TR_ANIO</variable_name>
+          <variable_value>C:\Users\alvarog\VSCode Projects\olympic-games-datamart\pentaho\transformaciones\anio.ktr</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>TR_ATLETA</variable_name>
+          <variable_value>C:\Users\alvarog\VSCode Projects\olympic-games-datamart\pentaho\transformaciones\atleta.ktr</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>TR_CATEGORIA</variable_name>
+          <variable_value>C:\Users\alvarog\VSCode Projects\olympic-games-datamart\pentaho\transformaciones\categoria.ktr</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>TR_CONTINENTE</variable_name>
+          <variable_value>C:\Users\alvarog\VSCode Projects\olympic-games-datamart\pentaho\transformaciones\continente.ktr</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>TR_DEPORTE</variable_name>
+          <variable_value>C:\Users\alvarog\VSCode Projects\olympic-games-datamart\pentaho\transformaciones\deporte.ktr</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>TR_ENTIDAD</variable_name>
+          <variable_value>C:\Users\alvarog\VSCode Projects\olympic-games-datamart\pentaho\transformaciones\entidad.ktr</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>TR_EVENTO_DEPORTIVO</variable_name>
+          <variable_value>C:\Users\alvarog\VSCode Projects\olympic-games-datamart\pentaho\transformaciones\eventoDeportivo.ktr</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>TR_HECHO_METRICAS</variable_name>
+          <variable_value>C:\Users\alvarog\VSCode Projects\olympic-games-datamart\pentaho\transformaciones\hechoMetricasEntidades.ktr</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>TR_HECHO_RENDIMIENTO</variable_name>
+          <variable_value>C:\Users\alvarog\VSCode Projects\olympic-games-datamart\pentaho\transformaciones\hechoRendimientoAtletico.ktr</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>TR_MODALIDAD</variable_name>
+          <variable_value>C:\Users\alvarog\VSCode Projects\olympic-games-datamart\pentaho\transformaciones\modalidad.ktr</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>JOB_DIMENSIONES</variable_name>
+          <variable_value>C:\Users\alvarog\VSCode Projects\olympic-games-datamart\pentaho\trabajos\dimensiones.kjb</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>JOB_GENERAL</variable_name>
+          <variable_value>C:\Users\alvarog\VSCode Projects\olympic-games-datamart\pentaho\trabajos\general.kjb</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>JOB_HECHOS</variable_name>
+          <variable_value>C:\Users\alvarog\VSCode Projects\olympic-games-datamart\pentaho\trabajos\hecho.kjb</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+      </fields>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>96</xloc>
+      <yloc>304</yloc>
+      <attributes_kjc/>
+    </entry>
   </entries>
   <hops>
-    <hop>
-      <from>Start</from>
-      <to>Verificar Base de datos</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
     <hop>
       <from>Verificar Base de datos</from>
       <to>Limpiar base de datos</to>
@@ -757,6 +814,24 @@ delete from atleta;
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Start</from>
+      <to>Set variables</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Set variables</from>
+      <to>Verificar Base de datos</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
   </hops>

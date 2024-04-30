@@ -321,13 +321,13 @@
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Hecho Atletas</name>
+      <name>Hecho Rendimiento</name>
       <description/>
       <type>TRANS</type>
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>D:\Inteligencia de negocios\Transformaciones\teams\Hecho Atletas.ktr</filename>
+      <filename>${TR_HECHO_RENDIMIENTO}</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -360,13 +360,13 @@
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Hecho Entidades</name>
+      <name>Hecho Metricas</name>
       <description/>
       <type>TRANS</type>
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>D:\Inteligencia de negocios\Transformaciones\teams\Hecho Metricas entidades.ktr</filename>
+      <filename>${TR_HECHO_METRICAS}</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -402,7 +402,7 @@
   <hops>
     <hop>
       <from>Start</from>
-      <to>Hecho Atletas</to>
+      <to>Hecho Rendimiento</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -411,7 +411,7 @@
     </hop>
     <hop>
       <from>Start</from>
-      <to>Hecho Entidades</to>
+      <to>Hecho Metricas</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -419,7 +419,7 @@
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>Hecho Atletas</from>
+      <from>Hecho Rendimiento</from>
       <to>Success</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -428,7 +428,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Hecho Entidades</from>
+      <from>Hecho Metricas</from>
       <to>Success</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>

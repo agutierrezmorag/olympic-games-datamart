@@ -486,6 +486,25 @@
       </attribute>
     </attributes>
   </connection>
+  <connection>
+    <name>localhost</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>postgres</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce71da9fa6d4</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+    </attributes>
+  </connection>
   <order>
     <hop>
       <from>CSV Paises</from>
@@ -529,7 +548,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>D:\Inteligencia de negocios\Dataset\actualizados\noc y alpha3.csv</filename>
+    <filename>${CSV_ISO_NOC_MERGED}</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -859,7 +878,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>local</connection>
+    <connection>localhost</connection>
     <schema>public</schema>
     <table>Entidad</table>
     <commit>1000</commit>

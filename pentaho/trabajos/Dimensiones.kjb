@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <job>
-  <name>Dimensiones</name>
+  <name>dimensiones</name>
   <description/>
   <extended_description/>
   <job_version/>
@@ -315,7 +315,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>D:\Inteligencia de negocios\Transformaciones\teams\anio.ktr</filename>
+      <filename>${TR_ANIO}</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -354,7 +354,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>D:\Inteligencia de negocios\Transformaciones\teams\Atleta.ktr</filename>
+      <filename>${TR_ATLETA}</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -393,7 +393,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>D:\Inteligencia de negocios\Transformaciones\teams\deporte.ktr</filename>
+      <filename>${TR_DEPORTE}</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -432,7 +432,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>D:\Inteligencia de negocios\Transformaciones\teams\continente.ktr</filename>
+      <filename>${TR_CONTINENTE}</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -471,7 +471,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>D:\Inteligencia de negocios\Transformaciones\teams\EventoDeportivo.ktr</filename>
+      <filename>${TR_EVENTO_DEPORTIVO}</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -510,7 +510,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>D:\Inteligencia de negocios\Transformaciones\teams\modalidad.ktr</filename>
+      <filename>${TR_MODALIDAD}</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -549,7 +549,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>D:\Inteligencia de negocios\Transformaciones\teams\Dim Entidad.ktr</filename>
+      <filename>${TR_ENTIDAD}</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
