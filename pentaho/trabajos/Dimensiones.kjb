@@ -641,15 +641,6 @@
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>Dimension Deporte</from>
-      <to>Dimension Modalidad</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>Dimension Continente</from>
       <to>Dimension Entidad</to>
       <from_nr>0</from_nr>
@@ -697,6 +688,15 @@
     <hop>
       <from>Dimension Evento deportivo</from>
       <to>Success</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Dimension Deporte</from>
+      <to>Dimension Modalidad</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
