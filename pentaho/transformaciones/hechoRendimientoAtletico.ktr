@@ -874,7 +874,7 @@
     </remotesteps>
     <GUI>
       <xloc>112</xloc>
-      <yloc>64</yloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1425,6 +1425,7 @@ FROM
       </field>
       <field>
         <name>NOC</name>
+        <rename/>
       </field>
       <field>
         <name>Games</name>
@@ -1444,6 +1445,7 @@ FROM
       </field>
       <field>
         <name>imc</name>
+        <rename/>
       </field>
       <field>
         <name>Age</name>
@@ -1460,6 +1462,10 @@ FROM
       <field>
         <name>Height</name>
         <rename>estatura</rename>
+      </field>
+      <field>
+        <name>ID</name>
+        <rename>idatleta</rename>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1648,7 +1654,7 @@ FROM
     </remotesteps>
     <GUI>
       <xloc>224</xloc>
-      <yloc>64</yloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1716,8 +1722,8 @@ FROM
     <integer_pair>N</integer_pair>
     <lookup>
       <key>
-        <name>nombre</name>
-        <field>nombreatleta</field>
+        <name>idatleta</name>
+        <field>idatleta</field>
       </key>
       <value>
         <name>idatleta</name>
@@ -1953,8 +1959,8 @@ FROM
       </output>
     </remotesteps>
     <GUI>
-      <xloc>416</xloc>
-      <yloc>576</yloc>
+      <xloc>400</xloc>
+      <yloc>592</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2062,7 +2068,7 @@ Event = Event.replace(regex, '').trim();</jsScript_script>
     </remotesteps>
     <GUI>
       <xloc>352</xloc>
-      <yloc>64</yloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2130,7 +2136,7 @@ if (regex.test(event)) {
     </remotesteps>
     <GUI>
       <xloc>480</xloc>
-      <yloc>64</yloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
