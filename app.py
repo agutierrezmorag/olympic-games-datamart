@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-from charts.hihd import get_hihd_charts
+from charts.hdi import get_hdi_charts
 from charts.income import get_income_charts
 from charts.olympics import get_olympics_charts
 from charts.schooling import get_schooling_charts
@@ -119,7 +119,7 @@ def load_and_display_data(title, filename):
     elif title == "💰 Income (Cleaned)":
         get_income_charts(data)
     elif title == "🌍 Human Development Index (HDI) (Cleaned)":
-        get_hihd_charts(data)
+        get_hdi_charts(data)
 
 
 def main():
