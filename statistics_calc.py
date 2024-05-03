@@ -128,8 +128,18 @@ def generate_range_df(df):
             # Add the column name to the list of column names
             column_names.append(column)
 
-            # Calculate the range of the column and add it to the list of ranges
-            column_range = df[column].max() - df[column].min()
+            # Calculate the min and max of the column
+            min_val = df[column].min()
+            max_val = df[column].max()
+
+            # If the min and max values are integers, convert them to an integer type
+            if min_val.is_integer():
+                min_val = int(min_val)
+            if max_val.is_integer():
+                max_val = int(max_val)
+
+            # Store the min and max values as a tuple
+            column_range = (min_val, max_val)
             ranges.append(column_range)
 
     # Create a new DataFrame with the lists of column names and ranges
