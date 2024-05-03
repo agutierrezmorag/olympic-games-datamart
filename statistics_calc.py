@@ -114,3 +114,25 @@ def generate_domain_df(df):
     domain_df = pd.DataFrame({"Columna": column_names, "Dominio": domains})
 
     return domain_df
+
+
+def generate_range_df(df):
+    # Create empty lists to store the column names and ranges
+    column_names = []
+    ranges = []
+
+    # Iterate over each column in the DataFrame
+    for column in df.columns:
+        # Check if the column data type is numeric
+        if pd.api.types.is_numeric_dtype(df[column]):
+            # Add the column name to the list of column names
+            column_names.append(column)
+
+            # Calculate the range of the column and add it to the list of ranges
+            column_range = df[column].max() - df[column].min()
+            ranges.append(column_range)
+
+    # Create a new DataFrame with the lists of column names and ranges
+    range_df = pd.DataFrame({"Columna": column_names, "Rango": ranges})
+
+    return range_df
