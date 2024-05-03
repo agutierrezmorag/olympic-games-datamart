@@ -94,3 +94,23 @@ def translate_descriptors(df):
     # Rename the rows of the DataFrame
     df.rename(index=spanish_descriptors, inplace=True)
     return df
+
+
+def generate_domain_df(df):
+    # Crear listas vacías para almacenar los nombres de las columnas y los dominios
+    column_names = []
+    domains = []
+
+    # Iterar sobre cada columna en el DataFrame
+    for column in df.columns:
+        # Agregar el nombre de la columna a la lista de nombres de columnas
+        column_names.append(column)
+
+        # Calcular el dominio de la columna y agregarlo a la lista de dominios
+        domain = len(df[column].unique())
+        domains.append(domain)
+
+    # Crear un nuevo DataFrame con las listas de nombres de columnas y dominios
+    domain_df = pd.DataFrame({"Columna": column_names, "Dominio": domains})
+
+    return domain_df
