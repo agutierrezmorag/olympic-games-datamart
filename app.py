@@ -7,6 +7,7 @@ import streamlit as st
 from charts.hdi import get_hdi_charts
 from charts.income import get_income_charts
 from charts.olympics import get_olympics_charts
+from charts.population import get_population_charts
 from charts.schooling import get_schooling_charts
 from statistics_calc import descriptors, qualitative_stats
 
@@ -120,6 +121,8 @@ def load_and_display_data(title, filename):
         get_income_charts(data)
     elif title == "🌍 Human Development Index (HDI) (Cleaned)":
         get_hdi_charts(data)
+    elif title == "👦🏻 Population (Cleaned)":
+        get_population_charts(data)
 
 
 def main():
