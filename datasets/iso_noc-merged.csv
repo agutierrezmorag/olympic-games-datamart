@@ -41,9 +41,11 @@ CMR,Africa,CMR,Cameroon
 CAN,Americas,CAN,Canada
 NFL,Americas,CAN,Canada
 CPV,Africa,CPV,Cape Verde
+,,CSS,Caribbean small states
 CAY,Americas,CYM,Cayman Islands
 CAF,Africa,CAF,Central African Republic
 CHA,Africa,TCD,Chad
+,,CHI,Channel Islands
 CHI,Americas,CHL,Chile
 TPE,Asia,TWN,Chinese Taipei
 ,Oceania,CXR,Christmas Island
@@ -112,10 +114,10 @@ HAI,Americas,HTI,Haiti
 HON,Americas,HND,Honduras
 HKG,Asia,HKG,"Hong Kong, China"
 HUN,Europe,HUN,Hungary
-EOR,No continent,,IOC Refugee Olympic Team
+EOR,No continent,N/A,IOC Refugee Olympic Team
 ISL,Europe,ISL,Iceland
-IOA,No continent,,Independent Olympic Athletes
-IOP,No continent,,Independent Olympic Participants
+IOA,No continent,N/A,Independent Olympic Athletes
+IOP,No continent,N/A,Independent Olympic Participants
 IND,Asia,IND,India
 INA,Asia,IDN,Indonesia
 IRQ,Asia,IRQ,Iraq
@@ -166,6 +168,8 @@ MNE,Europe,MNE,Montenegro
 MAR,Africa,MAR,Morocco
 MOZ,Africa,MOZ,Mozambique
 MYA,Asia,MMR,Myanmar
+ROT,,N/A,N/A
+UNK,,N/A,N/A
 NAM,Africa,NAM,Namibia
 NRU,Oceania,NRU,Nauru
 NEP,Asia,NPL,Nepal
@@ -180,6 +184,7 @@ NGR,Africa,NGA,Nigeria
 ,Oceania,MNP,Northern Mariana Islands
 NOR,Europe,NOR,Norway
 OMA,Asia,OMN,Oman
+,,PSS,Pacific island small states
 PAK,Asia,PAK,Pakistan
 PLW,Oceania,PLW,Palau
 PLE,Asia,PSE,Palestine
@@ -272,7 +277,4 @@ YMD,Asia,YEM,Yemen
 ZAM,Africa,ZMB,Zambia
 RHO,Africa,ZWE,Zimbabwe
 ZIM,Africa,ZWE,Zimbabwe
-ROT,,,
-UNK,,,
 ,Europe,ALA,Åland Islands
-,No continent,ROT,Refugee Olympic Athletes

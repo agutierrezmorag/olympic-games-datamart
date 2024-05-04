@@ -972,6 +972,12 @@
         <mask/>
         <set_empty_string>N</set_empty_string>
       </field>
+      <field>
+        <name>continente</name>
+        <value>No continent</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -1122,21 +1128,31 @@
     <fields>
       <field>
         <name>identidad</name>
+        <rename/>
       </field>
       <field>
         <name>idanio</name>
+        <rename/>
       </field>
       <field>
         <name>idh</name>
+        <rename/>
       </field>
       <field>
         <name>escolaridad</name>
+        <rename/>
       </field>
       <field>
         <name>gni</name>
+        <rename/>
       </field>
       <field>
         <name>poblacion</name>
+        <rename/>
+      </field>
+      <field>
+        <name>entidad</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>

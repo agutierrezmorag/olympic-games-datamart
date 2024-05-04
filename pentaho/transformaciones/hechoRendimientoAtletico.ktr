@@ -523,11 +523,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Stream lookup 3</from>
-      <to>Stream lookup 4</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Select values</from>
       <to>Add sequence</to>
       <enabled>Y</enabled>
@@ -570,6 +565,21 @@
     <hop>
       <from>Stream lookup 4</from>
       <to>Select values</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Stream lookup 4</from>
+      <to>Select values</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Stream lookup 4</from>
+      <to>Select values</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Stream lookup 3</from>
+      <to>Stream lookup 4</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -1266,7 +1276,6 @@ FROM
       </field>
       <field>
         <name>NOC</name>
-        <rename/>
       </field>
       <field>
         <name>Games</name>
@@ -1286,7 +1295,6 @@ FROM
       </field>
       <field>
         <name>imc</name>
-        <rename/>
       </field>
       <field>
         <name>Age</name>
@@ -1306,7 +1314,6 @@ FROM
       </field>
       <field>
         <name>ID</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1338,31 +1345,24 @@ FROM
     <fields>
       <field>
         <name>estatura</name>
-        <rename/>
       </field>
       <field>
         <name>peso</name>
-        <rename/>
       </field>
       <field>
         <name>equipo</name>
-        <rename/>
       </field>
       <field>
         <name>tipoPodio</name>
-        <rename/>
       </field>
       <field>
         <name>imc</name>
-        <rename/>
       </field>
       <field>
         <name>edad</name>
-        <rename/>
       </field>
       <field>
         <name>id_modalidad</name>
-        <rename/>
       </field>
       <field>
         <name>ID</name>
@@ -1370,11 +1370,9 @@ FROM
       </field>
       <field>
         <name>ideventodeportivo</name>
-        <rename/>
       </field>
       <field>
         <name>identidad</name>
-        <rename/>
       </field>
       <field>
         <name>anio</name>

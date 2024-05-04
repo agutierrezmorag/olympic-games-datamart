@@ -503,11 +503,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values 3</from>
-      <to>Table output</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>If field value is null</from>
       <to>Database lookup</to>
       <enabled>Y</enabled>
@@ -515,6 +510,11 @@
     <hop>
       <from>Select values 2</from>
       <to>If field value is null</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values 3</from>
+      <to>Table output</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -552,17 +552,6 @@
         <decimal>,</decimal>
         <group>.</group>
         <length>3</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>region</name>
-        <type>String</type>
-        <format/>
-        <currency>Ch$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>52</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -609,8 +598,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>128</xloc>
-      <yloc>128</yloc>
+      <xloc>64</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -657,8 +646,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>576</xloc>
-      <yloc>128</yloc>
+      <xloc>512</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -692,8 +681,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>688</xloc>
-      <yloc>128</yloc>
+      <xloc>624</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -724,7 +713,7 @@
       </field>
       <field>
         <name>continente</name>
-        <value>na</value>
+        <value>No continent</value>
         <mask/>
         <set_empty_string>N</set_empty_string>
       </field>
@@ -740,12 +729,6 @@
         <mask/>
         <set_empty_string>N</set_empty_string>
       </field>
-      <field>
-        <name>region</name>
-        <value>na</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-      </field>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -756,8 +739,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>416</xloc>
-      <yloc>128</yloc>
+      <xloc>352</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -800,8 +783,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>224</xloc>
-      <yloc>128</yloc>
+      <xloc>192</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -843,8 +826,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>800</xloc>
-      <yloc>128</yloc>
+      <xloc>736</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -861,7 +844,7 @@
     </partitioning>
     <connection>localhost</connection>
     <schema/>
-    <table>Entidad</table>
+    <table>entidad</table>
     <commit>1000</commit>
     <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>
@@ -886,16 +869,16 @@
         <stream_name>alpha3Entidad</stream_name>
       </field>
       <field>
-        <column_name>entidad</column_name>
-        <stream_name>Entidad</stream_name>
-      </field>
-      <field>
         <column_name>idcontinente</column_name>
         <stream_name>idcontinente</stream_name>
       </field>
       <field>
         <column_name>identidad</column_name>
         <stream_name>idEntidad</stream_name>
+      </field>
+      <field>
+        <column_name>entidad</column_name>
+        <stream_name>Entidad</stream_name>
       </field>
     </fields>
     <attributes/>
@@ -907,8 +890,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>896</xloc>
-      <yloc>128</yloc>
+      <xloc>864</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
