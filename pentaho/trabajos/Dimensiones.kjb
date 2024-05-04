@@ -309,7 +309,7 @@
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Dimension anio</name>
+      <name>Dimension Anio</name>
       <description/>
       <type>TRANS</type>
       <attributes/>
@@ -597,7 +597,7 @@
   <hops>
     <hop>
       <from>Start</from>
-      <to>Dimension anio</to>
+      <to>Dimension Anio</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -659,7 +659,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Dimension anio</from>
+      <from>Dimension Anio</from>
       <to>Success</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>

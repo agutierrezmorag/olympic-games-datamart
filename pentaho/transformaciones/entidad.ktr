@@ -488,38 +488,38 @@
   </connection>
   <order>
     <hop>
-      <from>CSV Paises</from>
-      <to>Select values 2</to>
+      <from>Carga dataset</from>
+      <to>Renombrar valores</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Database lookup</from>
-      <to>ID Entidad</to>
+      <from>Consultar IDContinente</from>
+      <to>Generar IDEntidad</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>ID Entidad</from>
-      <to>Select values 3</to>
+      <from>Generar IDEntidad</from>
+      <to>Seleccion de valores finales</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>If field value is null</from>
-      <to>Database lookup</to>
+      <from>Manejo de nulos</from>
+      <to>Consultar IDContinente</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values 2</from>
-      <to>If field value is null</to>
+      <from>Renombrar valores</from>
+      <to>Manejo de nulos</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values 3</from>
-      <to>Table output</to>
+      <from>Seleccion de valores finales</from>
+      <to>Registro en BBDD</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>CSV Paises</name>
+    <name>Carga dataset</name>
     <type>CsvInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -598,13 +598,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>64</xloc>
-      <yloc>224</yloc>
+      <xloc>192</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Database lookup</name>
+    <name>Consultar IDContinente</name>
     <type>DBLookup</type>
     <description/>
     <distribute>N</distribute>
@@ -646,13 +646,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>512</xloc>
-      <yloc>224</yloc>
+      <xloc>480</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>ID Entidad</name>
+    <name>Generar IDEntidad</name>
     <type>Sequence</type>
     <description/>
     <distribute>N</distribute>
@@ -664,7 +664,7 @@
     </partitioning>
     <valuename>idEntidad</valuename>
     <use_database>N</use_database>
-    <connection/>
+    <connection>localhost</connection>
     <schema/>
     <seqname>SEQ_</seqname>
     <use_counter>Y</use_counter>
@@ -682,12 +682,12 @@
     </remotesteps>
     <GUI>
       <xloc>624</xloc>
-      <yloc>224</yloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>If field value is null</name>
+    <name>Manejo de nulos</name>
     <type>IfNull</type>
     <description/>
     <distribute>N</distribute>
@@ -739,13 +739,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>352</xloc>
-      <yloc>224</yloc>
+      <xloc>336</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Select values 2</name>
+    <name>Renombrar valores</name>
     <type>SelectValues</type>
     <description/>
     <distribute>N</distribute>
@@ -784,12 +784,12 @@
     </remotesteps>
     <GUI>
       <xloc>192</xloc>
-      <yloc>224</yloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Select values 3</name>
+    <name>Seleccion de valores finales</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
@@ -802,18 +802,23 @@
     <fields>
       <field>
         <name>nocEntidad</name>
+        <rename/>
       </field>
       <field>
         <name>alpha3Entidad</name>
+        <rename/>
       </field>
       <field>
         <name>Entidad</name>
+        <rename/>
       </field>
       <field>
         <name>idcontinente</name>
+        <rename/>
       </field>
       <field>
         <name>idEntidad</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -826,13 +831,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>736</xloc>
-      <yloc>224</yloc>
+      <xloc>768</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Table output</name>
+    <name>Registro en BBDD</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -890,8 +895,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>864</xloc>
-      <yloc>224</yloc>
+      <xloc>768</xloc>
+      <yloc>352</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

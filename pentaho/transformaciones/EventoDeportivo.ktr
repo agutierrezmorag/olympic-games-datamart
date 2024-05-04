@@ -450,45 +450,77 @@
     <index_tablespace/>
     <attributes>
       <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
         <code>PORT_NUMBER</code>
         <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
       </attribute>
     </attributes>
   </connection>
   <order>
     <hop>
-      <from>Dataset Input</from>
-      <to>TransformarColumnas</to>
+      <from>Carga dataset</from>
+      <to>Renombrar valores</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>TransformarColumnas</from>
-      <to>OrdenarDuplicados</to>
+      <from>Renombrar valores</from>
+      <to>Ordenar valores</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>OrdenarDuplicados</from>
-      <to>EliminarDuplicados</to>
+      <from>Ordenar valores</from>
+      <to>Seleccion de valores unicos</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>EliminarDuplicados</from>
-      <to>AgregarID</to>
+      <from>Seleccion de valores unicos</from>
+      <to>Generar IDEventoDeportivo</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>AgregarID</from>
-      <to>OrdenarColumnas</to>
+      <from>Generar IDEventoDeportivo</from>
+      <to>Seleccion de valores finales</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>OrdenarColumnas</from>
-      <to>Table output</to>
+      <from>Seleccion de valores finales</from>
+      <to>Registro en BBDD</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>AgregarID</name>
+    <name>Generar IDEventoDeportivo</name>
     <type>Sequence</type>
     <description/>
     <distribute>Y</distribute>
@@ -500,7 +532,7 @@
     </partitioning>
     <valuename>idEventoDeportivo</valuename>
     <use_database>N</use_database>
-    <connection/>
+    <connection>localhost</connection>
     <schema/>
     <seqname>SEQ_</seqname>
     <use_counter>Y</use_counter>
@@ -523,7 +555,7 @@
     </GUI>
   </step>
   <step>
-    <name>Dataset Input</name>
+    <name>Carga dataset</name>
     <type>CsvInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -773,7 +805,7 @@
     </GUI>
   </step>
   <step>
-    <name>EliminarDuplicados</name>
+    <name>Seleccion de valores unicos</name>
     <type>Unique</type>
     <description/>
     <distribute>Y</distribute>
@@ -808,7 +840,7 @@
     </GUI>
   </step>
   <step>
-    <name>OrdenarColumnas</name>
+    <name>Seleccion de valores finales</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
@@ -821,21 +853,27 @@
     <fields>
       <field>
         <name>idEventoDeportivo</name>
+        <rename/>
       </field>
       <field>
         <name>nombreEvento</name>
+        <rename/>
       </field>
       <field>
         <name>temporadaEvento</name>
+        <rename/>
       </field>
       <field>
         <name>ciudadEvento</name>
+        <rename/>
       </field>
       <field>
         <name>paisEvento</name>
+        <rename/>
       </field>
       <field>
         <name>codigoPaisEvento</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -854,7 +892,7 @@
     </GUI>
   </step>
   <step>
-    <name>OrdenarDuplicados</name>
+    <name>Ordenar valores</name>
     <type>SortRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -896,7 +934,7 @@
     </GUI>
   </step>
   <step>
-    <name>Table output</name>
+    <name>Registro en BBDD</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -940,7 +978,7 @@
     </GUI>
   </step>
   <step>
-    <name>TransformarColumnas</name>
+    <name>Renombrar valores</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
@@ -953,33 +991,43 @@
     <fields>
       <field>
         <name>ID</name>
+        <rename/>
       </field>
       <field>
         <name>Name</name>
+        <rename/>
       </field>
       <field>
         <name>Sex</name>
+        <rename/>
       </field>
       <field>
         <name>Age</name>
+        <rename/>
       </field>
       <field>
         <name>Height</name>
+        <rename/>
       </field>
       <field>
         <name>Weight</name>
+        <rename/>
       </field>
       <field>
         <name>Team</name>
+        <rename/>
       </field>
       <field>
         <name>NOC</name>
+        <rename/>
       </field>
       <field>
         <name>Region</name>
+        <rename/>
       </field>
       <field>
         <name>Region (ISO)</name>
+        <rename/>
       </field>
       <field>
         <name>Games</name>
@@ -987,6 +1035,7 @@
       </field>
       <field>
         <name>Year</name>
+        <rename/>
       </field>
       <field>
         <name>Season</name>
@@ -1006,12 +1055,15 @@
       </field>
       <field>
         <name>Sport</name>
+        <rename/>
       </field>
       <field>
         <name>Event</name>
+        <rename/>
       </field>
       <field>
         <name>Medal</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
       <remove>

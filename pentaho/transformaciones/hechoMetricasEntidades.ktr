@@ -488,17 +488,17 @@
   </connection>
   <order>
     <hop>
-      <from>CSV file input</from>
-      <to>Select values</to>
+      <from>Carga dataset</from>
+      <to>Renombrar valores</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values</from>
-      <to>If field value is null</to>
+      <from>Renombrar valores</from>
+      <to>Manejar nulos</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Dummy (do nothing)</from>
+      <from>--</from>
       <to>Stream lookup</to>
       <enabled>Y</enabled>
     </hop>
@@ -518,43 +518,43 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values 2</from>
-      <to>Add sequence</to>
+      <from>Seleccion de valores</from>
+      <to>Generar IDHecho</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Add sequence</from>
-      <to>Select values 3</to>
+      <from>Generar IDHecho</from>
+      <to>Seleccion de valores finales</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Stream lookup 2</from>
-      <to>Select values 2</to>
+      <to>Seleccion de valores</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values 3</from>
-      <to>Table output</to>
+      <from>Seleccion de valores finales</from>
+      <to>Registro en BBDD</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>If field value is null</from>
-      <to>Remover años > 2016</to>
+      <from>Manejar nulos</from>
+      <to>Filtrar por años</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Remover años > 2016</from>
-      <to>Dummy (do nothing)</to>
+      <from>Filtrar por años</from>
+      <to>--</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Remover años > 2016</from>
-      <to>Dummy (do nothing) 2</to>
+      <from>Filtrar por años</from>
+      <to>-</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>Add sequence</name>
+    <name>Generar IDHecho</name>
     <type>Sequence</type>
     <description/>
     <distribute>Y</distribute>
@@ -566,7 +566,7 @@
     </partitioning>
     <valuename>idhechoentidad</valuename>
     <use_database>N</use_database>
-    <connection/>
+    <connection>localhost</connection>
     <schema/>
     <seqname>SEQ_</seqname>
     <use_counter>Y</use_counter>
@@ -583,13 +583,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>512</xloc>
-      <yloc>464</yloc>
+      <xloc>368</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>CSV file input</name>
+    <name>Carga dataset</name>
     <type>CsvInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -816,8 +816,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>784</xloc>
-      <yloc>256</yloc>
+      <xloc>704</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -874,13 +874,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>784</xloc>
-      <yloc>352</yloc>
+      <xloc>704</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Dummy (do nothing)</name>
+    <name>--</name>
     <type>Dummy</type>
     <description/>
     <distribute>N</distribute>
@@ -899,38 +899,38 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>672</xloc>
+      <xloc>576</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>-</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>448</xloc>
       <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Dummy (do nothing) 2</name>
-    <type>Dummy</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>560</xloc>
-      <yloc>256</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>If field value is null</name>
+    <name>Manejar nulos</name>
     <type>IfNull</type>
     <description/>
     <distribute>N</distribute>
@@ -988,13 +988,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>416</xloc>
-      <yloc>128</yloc>
+      <xloc>320</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Remover años > 2016</name>
+    <name>Filtrar por años</name>
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -1004,23 +1004,44 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <send_true_to>Dummy (do nothing)</send_true_to>
-    <send_false_to>Dummy (do nothing) 2</send_false_to>
+    <send_true_to>--</send_true_to>
+    <send_false_to>-</send_false_to>
     <compare>
       <condition>
         <negated>N</negated>
-        <leftvalue>anio</leftvalue>
-        <function>&lt;</function>
-        <rightvalue/>
-        <value>
-          <name>constant</name>
-          <type>Integer</type>
-          <text>2017</text>
-          <length>-1</length>
-          <precision>0</precision>
-          <isnull>N</isnull>
-          <mask>####0;-####0</mask>
-        </value>
+        <conditions>
+          <condition>
+            <negated>N</negated>
+            <leftvalue>anio</leftvalue>
+            <function>&lt;=</function>
+            <rightvalue/>
+            <value>
+              <name>constant</name>
+              <type>Integer</type>
+              <text>2016</text>
+              <length>-1</length>
+              <precision>0</precision>
+              <isnull>N</isnull>
+              <mask>####0;-####0</mask>
+            </value>
+          </condition>
+          <condition>
+            <negated>N</negated>
+            <operator>AND</operator>
+            <leftvalue>anio</leftvalue>
+            <function>&gt;=</function>
+            <rightvalue/>
+            <value>
+              <name>constant</name>
+              <type>Integer</type>
+              <text>1990</text>
+              <length>-1</length>
+              <precision>0</precision>
+              <isnull>N</isnull>
+              <mask>####0;-####0</mask>
+            </value>
+          </condition>
+        </conditions>
       </condition>
     </compare>
     <attributes/>
@@ -1032,13 +1053,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>560</xloc>
-      <yloc>128</yloc>
+      <xloc>448</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Select values</name>
+    <name>Renombrar valores</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
@@ -1109,13 +1130,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>304</xloc>
-      <yloc>128</yloc>
+      <xloc>192</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Select values 2</name>
+    <name>Seleccion de valores</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
@@ -1165,13 +1186,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>608</xloc>
-      <yloc>464</yloc>
+      <xloc>464</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Select values 3</name>
+    <name>Seleccion de valores finales</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
@@ -1184,24 +1205,31 @@
     <fields>
       <field>
         <name>idhechoentidad</name>
+        <rename/>
       </field>
       <field>
         <name>idanio</name>
+        <rename/>
       </field>
       <field>
         <name>identidad</name>
+        <rename/>
       </field>
       <field>
         <name>idh</name>
+        <rename/>
       </field>
       <field>
         <name>escolaridad</name>
+        <rename/>
       </field>
       <field>
         <name>gni</name>
+        <rename/>
       </field>
       <field>
         <name>poblacion</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1214,8 +1242,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>416</xloc>
-      <yloc>464</yloc>
+      <xloc>224</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1262,8 +1290,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>672</xloc>
-      <yloc>256</yloc>
+      <xloc>576</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1304,13 +1332,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>672</xloc>
-      <yloc>352</yloc>
+      <xloc>576</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Table output</name>
+    <name>Registro en BBDD</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -1376,8 +1404,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>320</xloc>
-      <yloc>464</yloc>
+      <xloc>224</xloc>
+      <yloc>528</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

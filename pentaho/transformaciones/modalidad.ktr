@@ -488,43 +488,43 @@
   </connection>
   <order>
     <hop>
-      <from>delete sport from event</from>
-      <to>split gender and event</to>
+      <from>Eliminar deporte de evento</from>
+      <to>Separar genero de evento</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Database lookup</from>
-      <to>Add sequence</to>
+      <from>Consultar IDDeporte</from>
+      <to>Generar IDModalidad</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Unique rows</from>
-      <to>Database lookup</to>
+      <from>Seleccion de valores unicos</from>
+      <to>Consultar IDDeporte</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>CSV file input 2</from>
-      <to>Sort rows</to>
+      <from>Carga dataset</from>
+      <to>Ordenar valores</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Sort rows</from>
-      <to>delete sport from event</to>
+      <from>Ordenar valores</from>
+      <to>Eliminar deporte de evento</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>split gender and event</from>
-      <to>Unique rows</to>
+      <from>Separar genero de evento</from>
+      <to>Seleccion de valores unicos</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Add sequence</from>
-      <to>Table output</to>
+      <from>Generar IDModalidad</from>
+      <to>Registro en BBDD</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>Add sequence</name>
+    <name>Generar IDModalidad</name>
     <type>Sequence</type>
     <description/>
     <distribute>Y</distribute>
@@ -536,7 +536,7 @@
     </partitioning>
     <valuename>idmodalidad</valuename>
     <use_database>N</use_database>
-    <connection/>
+    <connection>localhost</connection>
     <schema/>
     <seqname>SEQ_</seqname>
     <use_counter>Y</use_counter>
@@ -553,13 +553,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>848</xloc>
-      <yloc>288</yloc>
+      <xloc>688</xloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>CSV file input 2</name>
+    <name>Carga dataset</name>
     <type>CsvInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -616,13 +616,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>112</xloc>
-      <yloc>288</yloc>
+      <xloc>208</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Database lookup</name>
+    <name>Consultar IDDeporte</name>
     <type>DBLookup</type>
     <description/>
     <distribute>Y</distribute>
@@ -664,13 +664,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>720</xloc>
-      <yloc>288</yloc>
+      <xloc>688</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Sort rows</name>
+    <name>Ordenar valores</name>
     <type>SortRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -714,13 +714,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>224</xloc>
-      <yloc>288</yloc>
+      <xloc>208</xloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Table output</name>
+    <name>Registro en BBDD</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -774,13 +774,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1008</xloc>
-      <yloc>288</yloc>
+      <xloc>832</xloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Unique rows</name>
+    <name>Seleccion de valores unicos</name>
     <type>Unique</type>
     <description/>
     <distribute>Y</distribute>
@@ -817,13 +817,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>608</xloc>
-      <yloc>288</yloc>
+      <xloc>528</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>delete sport from event</name>
+    <name>Eliminar deporte de evento</name>
     <type>ScriptValueMod</type>
     <description/>
     <distribute>Y</distribute>
@@ -868,12 +868,12 @@ Event = Event.replace(regex, '').trim();</jsScript_script>
     </remotesteps>
     <GUI>
       <xloc>352</xloc>
-      <yloc>288</yloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>split gender and event</name>
+    <name>Separar genero de evento</name>
     <type>ScriptValueMod</type>
     <description/>
     <distribute>Y</distribute>
@@ -935,8 +935,8 @@ if (regex.test(event)) {
       </output>
     </remotesteps>
     <GUI>
-      <xloc>480</xloc>
-      <yloc>288</yloc>
+      <xloc>352</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

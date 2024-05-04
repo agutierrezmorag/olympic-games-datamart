@@ -449,25 +449,57 @@
     <index_tablespace/>
     <attributes>
       <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
         <code>PORT_NUMBER</code>
         <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
       </attribute>
     </attributes>
   </connection>
   <order>
     <hop>
-      <from>Add sequence</from>
-      <to>Table output</to>
+      <from>Generar IDAnio</from>
+      <to>Registrar en BBDD</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Generate rows</from>
-      <to>Add sequence</to>
+      <from>Generar filas</from>
+      <to>Generar IDAnio</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>Add sequence</name>
+    <name>Generar IDAnio</name>
     <type>Sequence</type>
     <description/>
     <distribute>Y</distribute>
@@ -479,7 +511,7 @@
     </partitioning>
     <valuename>idanio</valuename>
     <use_database>N</use_database>
-    <connection>local</connection>
+    <connection>localhost</connection>
     <schema/>
     <seqname>SEQ_</seqname>
     <use_counter>Y</use_counter>
@@ -502,7 +534,7 @@
     </GUI>
   </step>
   <step>
-    <name>Generate rows</name>
+    <name>Generar filas</name>
     <type>RowGenerator</type>
     <description/>
     <distribute>Y</distribute>
@@ -534,7 +566,7 @@
     </GUI>
   </step>
   <step>
-    <name>Table output</name>
+    <name>Registrar en BBDD</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>

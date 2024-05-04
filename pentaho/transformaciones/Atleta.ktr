@@ -488,28 +488,28 @@
   </connection>
   <order>
     <hop>
-      <from>Modified JavaScript value</from>
-      <to>Calculator</to>
+      <from>Asignar año a valores nulos de edad</from>
+      <to>Calculo año de nacimiento</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>CSV file input</from>
-      <to>Unique rows (HashSet)</to>
+      <from>Carga dataset</from>
+      <to>Seleccion de valores unicos</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Unique rows (HashSet)</from>
-      <to>Modified JavaScript value</to>
+      <from>Seleccion de valores unicos</from>
+      <to>Asignar año a valores nulos de edad</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Calculator</from>
-      <to>Table output</to>
+      <from>Calculo año de nacimiento</from>
+      <to>Registro en BBDD</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>CSV file input</name>
+    <name>Carga dataset</name>
     <type>CsvInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -599,13 +599,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>112</xloc>
-      <yloc>192</yloc>
+      <xloc>240</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Calculator</name>
+    <name>Calculo año de nacimiento</name>
     <type>Calculator</type>
     <description/>
     <distribute>Y</distribute>
@@ -640,13 +640,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>496</xloc>
-      <yloc>192</yloc>
+      <xloc>592</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Modified JavaScript value</name>
+    <name>Asignar año a valores nulos de edad</name>
     <type>ScriptValueMod</type>
     <description/>
     <distribute>Y</distribute>
@@ -686,13 +686,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>192</yloc>
+      <xloc>416</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Table output</name>
+    <name>Registro en BBDD</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -746,13 +746,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>608</xloc>
-      <yloc>192</yloc>
+      <xloc>592</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Unique rows (HashSet)</name>
+    <name>Seleccion de valores unicos</name>
     <type>UniqueRowsByHashSet</type>
     <description/>
     <distribute>Y</distribute>
@@ -780,7 +780,7 @@
     </remotesteps>
     <GUI>
       <xloc>240</xloc>
-      <yloc>192</yloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
