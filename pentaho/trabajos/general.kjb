@@ -346,8 +346,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>752</xloc>
-      <yloc>224</yloc>
+      <xloc>912</xloc>
+      <yloc>192</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -383,8 +383,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>400</xloc>
-      <yloc>224</yloc>
+      <xloc>560</xloc>
+      <yloc>192</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -420,8 +420,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>512</xloc>
-      <yloc>224</yloc>
+      <xloc>672</xloc>
+      <yloc>192</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -439,8 +439,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>160</xloc>
-      <yloc>224</yloc>
+      <xloc>320</xloc>
+      <yloc>192</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -474,8 +474,8 @@ delete from atleta;
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>288</xloc>
-      <yloc>224</yloc>
+      <xloc>448</xloc>
+      <yloc>192</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -489,8 +489,8 @@ delete from atleta;
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>192</xloc>
-      <yloc>432</yloc>
+      <xloc>352</xloc>
+      <yloc>448</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -503,12 +503,12 @@ delete from atleta;
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>336</xloc>
-      <yloc>320</yloc>
+      <xloc>544</xloc>
+      <yloc>336</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Abortar 2</name>
+      <name>Abortar</name>
       <description/>
       <type>ABORT</type>
       <attributes/>
@@ -516,8 +516,8 @@ delete from atleta;
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>192</xloc>
-      <yloc>320</yloc>
+      <xloc>352</xloc>
+      <yloc>336</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -531,8 +531,8 @@ delete from atleta;
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>640</xloc>
-      <yloc>224</yloc>
+      <xloc>800</xloc>
+      <yloc>192</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -628,8 +628,8 @@ delete from atleta;
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>48</xloc>
-      <yloc>224</yloc>
+      <xloc>176</xloc>
+      <yloc>192</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -650,8 +650,8 @@ delete from atleta;
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>48</xloc>
-      <yloc>128</yloc>
+      <xloc>176</xloc>
+      <yloc>96</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -664,8 +664,8 @@ delete from atleta;
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>48</xloc>
-      <yloc>320</yloc>
+      <xloc>176</xloc>
+      <yloc>336</yloc>
       <attributes_kjc/>
     </entry>
   </entries>
@@ -744,7 +744,7 @@ delete from atleta;
     </hop>
     <hop>
       <from>Alerta 2</from>
-      <to>Abortar 2</to>
+      <to>Abortar</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -752,7 +752,7 @@ delete from atleta;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Abortar 2</from>
+      <from>Abortar</from>
       <to>Realizar registro</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -798,7 +798,7 @@ delete from atleta;
     </hop>
     <hop>
       <from>Alerta</from>
-      <to>Abortar 2</to>
+      <to>Abortar</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>

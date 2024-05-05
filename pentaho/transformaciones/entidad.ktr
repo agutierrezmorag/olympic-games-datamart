@@ -646,8 +646,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>480</xloc>
-      <yloc>256</yloc>
+      <xloc>336</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -681,8 +681,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>624</xloc>
-      <yloc>256</yloc>
+      <xloc>480</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -740,98 +740,6 @@
     </remotesteps>
     <GUI>
       <xloc>336</xloc>
-      <yloc>256</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Renombrar valores</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>NOC</name>
-        <rename>nocEntidad</rename>
-      </field>
-      <field>
-        <name>continent</name>
-        <rename>continente</rename>
-      </field>
-      <field>
-        <name>ISO</name>
-        <rename>alpha3Entidad</rename>
-      </field>
-      <field>
-        <name>name</name>
-        <rename>Entidad</rename>
-      </field>
-      <select_unspecified>Y</select_unspecified>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>192</xloc>
-      <yloc>256</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Seleccion de valores finales</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>nocEntidad</name>
-        <rename/>
-      </field>
-      <field>
-        <name>alpha3Entidad</name>
-        <rename/>
-      </field>
-      <field>
-        <name>Entidad</name>
-        <rename/>
-      </field>
-      <field>
-        <name>idcontinente</name>
-        <rename/>
-      </field>
-      <field>
-        <name>idEntidad</name>
-        <rename/>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>768</xloc>
       <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
@@ -895,8 +803,95 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>768</xloc>
-      <yloc>352</yloc>
+      <xloc>624</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Renombrar valores</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>NOC</name>
+        <rename>nocEntidad</rename>
+      </field>
+      <field>
+        <name>continent</name>
+        <rename>continente</rename>
+      </field>
+      <field>
+        <name>ISO</name>
+        <rename>alpha3Entidad</rename>
+      </field>
+      <field>
+        <name>name</name>
+        <rename>Entidad</rename>
+      </field>
+      <select_unspecified>Y</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>192</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Seleccion de valores finales</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>nocEntidad</name>
+      </field>
+      <field>
+        <name>alpha3Entidad</name>
+      </field>
+      <field>
+        <name>Entidad</name>
+      </field>
+      <field>
+        <name>idcontinente</name>
+      </field>
+      <field>
+        <name>idEntidad</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>480</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

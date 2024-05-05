@@ -504,7 +504,7 @@
     </hop>
     <hop>
       <from>Calculo año de nacimiento</from>
-      <to>Registro en BBDD</to>
+      <to>Registrar en BBDD</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -692,7 +692,7 @@
     </GUI>
   </step>
   <step>
-    <name>Registro en BBDD</name>
+    <name>Registrar en BBDD</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>

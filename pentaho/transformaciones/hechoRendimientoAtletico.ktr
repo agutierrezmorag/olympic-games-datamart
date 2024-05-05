@@ -499,11 +499,11 @@
     </hop>
     <hop>
       <from>Tratamiento de nulos</from>
-      <to>-</to>
+      <to>Dummy</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>-</from>
+      <from>Dummy</from>
       <to>Stream lookup</to>
       <enabled>Y</enabled>
     </hop>
@@ -514,12 +514,12 @@
     </hop>
     <hop>
       <from>Dimension Evento Deportivo</from>
-      <to>Stream lookup 3</to>
+      <to>Stream lookup 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Dimension Entidad</from>
-      <to>Stream lookup 4</to>
+      <to>Stream lookup 3</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -559,51 +559,41 @@
     </hop>
     <hop>
       <from>Stream lookup</from>
-      <to>Stream lookup 3</to>
+      <to>Stream lookup 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Stream lookup 4</from>
-      <to>Seleccion de valores</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Stream lookup 4</from>
-      <to>Seleccion de valores</to>
-      <enabled>N</enabled>
-    </hop>
-    <hop>
-      <from>Stream lookup 4</from>
+      <from>Stream lookup 3</from>
       <to>Seleccion de valores</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Stream lookup 3</from>
-      <to>Stream lookup 4</to>
+      <to>Seleccion de valores</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Stream lookup 3</from>
+      <to>Seleccion de valores</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Stream lookup 2</from>
+      <to>Stream lookup 3</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>Generar IDHecho</name>
-    <type>Sequence</type>
+    <name>Dummy</name>
+    <type>Dummy</type>
     <description/>
-    <distribute>Y</distribute>
+    <distribute>N</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <valuename>idhechorendimiento</valuename>
-    <use_database>N</use_database>
-    <connection>magallanes</connection>
-    <schema/>
-    <seqname>SEQ_</seqname>
-    <use_counter>Y</use_counter>
-    <counter_name/>
-    <start_at>1</start_at>
-    <increment_by>1</increment_by>
-    <max_value>999999999</max_value>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -613,8 +603,69 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>672</xloc>
-      <yloc>544</yloc>
+      <xloc>720</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Calculo IMC</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>//Script here
+
+var imc;
+var estaturaMetros;
+
+
+
+if (Weight != null || Height != null){
+
+	estaturaMetros = Height/100;
+	imc = Weight/(estaturaMetros * estaturaMetros);
+}else{
+	imc = 0;
+}
+
+
+
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>imc</name>
+        <rename>imc</rename>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>528</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -869,67 +920,6 @@
     </GUI>
   </step>
   <step>
-    <name>Calculo IMC</name>
-    <type>ScriptValueMod</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <compatible>N</compatible>
-    <optimizationLevel>9</optimizationLevel>
-    <jsScripts>
-      <jsScript>
-        <jsScript_type>0</jsScript_type>
-        <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>//Script here
-
-var imc;
-var estaturaMetros;
-
-
-
-if (Weight != null || Height != null){
-
-	estaturaMetros = Height/100;
-	imc = Weight/(estaturaMetros * estaturaMetros);
-}else{
-	imc = 0;
-}
-
-
-
-</jsScript_script>
-      </jsScript>
-    </jsScripts>
-    <fields>
-      <field>
-        <name>imc</name>
-        <rename>imc</rename>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>640</xloc>
-      <yloc>224</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>Dimension Deporte</name>
     <type>TableInput</type>
     <description/>
@@ -1058,8 +1048,8 @@ FROM
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1040</xloc>
-      <yloc>368</yloc>
+      <xloc>752</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1139,8 +1129,8 @@ FROM
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1040</xloc>
-      <yloc>544</yloc>
+      <xloc>752</xloc>
+      <yloc>576</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1220,39 +1210,14 @@ FROM
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1040</xloc>
-      <yloc>464</yloc>
+      <xloc>752</xloc>
+      <yloc>496</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>-</name>
-    <type>Dummy</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1008</xloc>
-      <yloc>224</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Renombrar las columnas</name>
-    <type>SelectValues</type>
+    <name>Eliminar deporte de evento</name>
+    <type>ScriptValueMod</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1261,61 +1226,30 @@ FROM
       <method>none</method>
       <schema_name/>
     </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>var sportName = Sport;
+ 
+// Create a regular expression to match all occurrences of the substring
+var regex = new RegExp(sportName, 'g');
+ 
+// Replace all occurrences of the substring with the replacement string
+Event = Event.replace(regex, '').trim();</jsScript_script>
+      </jsScript>
+    </jsScripts>
     <fields>
-      <field>
-        <name>Name</name>
-        <rename>nombre</rename>
-      </field>
-      <field>
-        <name>Weight</name>
-        <rename>peso</rename>
-      </field>
-      <field>
-        <name>Team</name>
-        <rename>equipo</rename>
-      </field>
-      <field>
-        <name>NOC</name>
-      </field>
-      <field>
-        <name>Games</name>
-        <rename>evento</rename>
-      </field>
-      <field>
-        <name>Year</name>
-        <rename>anio</rename>
-      </field>
-      <field>
-        <name>Medal</name>
-        <rename>tipoPodio</rename>
-      </field>
-      <field>
-        <name>Category</name>
-        <rename>categoria</rename>
-      </field>
-      <field>
-        <name>imc</name>
-      </field>
-      <field>
-        <name>Age</name>
-        <rename>edad</rename>
-      </field>
       <field>
         <name>Event</name>
-        <rename>modalidad</rename>
+        <rename>Event</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
       </field>
-      <field>
-        <name>Sport</name>
-        <rename>deporte</rename>
-      </field>
-      <field>
-        <name>Height</name>
-        <rename>estatura</rename>
-      </field>
-      <field>
-        <name>ID</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -1326,14 +1260,14 @@ FROM
       </output>
     </remotesteps>
     <GUI>
-      <xloc>752</xloc>
+      <xloc>368</xloc>
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Seleccion de valores</name>
-    <type>SelectValues</type>
+    <name>Generar IDHecho</name>
+    <type>Sequence</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1342,53 +1276,16 @@ FROM
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <fields>
-      <field>
-        <name>estatura</name>
-        <rename/>
-      </field>
-      <field>
-        <name>peso</name>
-        <rename/>
-      </field>
-      <field>
-        <name>equipo</name>
-        <rename/>
-      </field>
-      <field>
-        <name>tipoPodio</name>
-        <rename/>
-      </field>
-      <field>
-        <name>imc</name>
-        <rename/>
-      </field>
-      <field>
-        <name>edad</name>
-        <rename/>
-      </field>
-      <field>
-        <name>id_modalidad</name>
-        <rename/>
-      </field>
-      <field>
-        <name>ID</name>
-        <rename>idatleta</rename>
-      </field>
-      <field>
-        <name>ideventodeportivo</name>
-        <rename/>
-      </field>
-      <field>
-        <name>identidad</name>
-        <rename/>
-      </field>
-      <field>
-        <name>anio</name>
-        <rename>idanio</rename>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
+    <valuename>idhechorendimiento</valuename>
+    <use_database>N</use_database>
+    <connection>magallanes</connection>
+    <schema/>
+    <seqname>SEQ_</seqname>
+    <use_counter>Y</use_counter>
+    <counter_name/>
+    <start_at>1</start_at>
+    <increment_by>1</increment_by>
+    <max_value>999999999</max_value>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -1398,84 +1295,8 @@ FROM
       </output>
     </remotesteps>
     <GUI>
-      <xloc>768</xloc>
-      <yloc>544</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Seleccion de valores finales</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>estatura</name>
-        <rename/>
-      </field>
-      <field>
-        <name>peso</name>
-        <rename/>
-      </field>
-      <field>
-        <name>equipo</name>
-        <rename/>
-      </field>
-      <field>
-        <name>tipoPodio</name>
-        <rename/>
-      </field>
-      <field>
-        <name>imc</name>
-        <rename/>
-      </field>
-      <field>
-        <name>edad</name>
-        <rename/>
-      </field>
-      <field>
-        <name>id_modalidad</name>
-        <rename/>
-      </field>
-      <field>
-        <name>idatleta</name>
-        <rename/>
-      </field>
-      <field>
-        <name>ideventodeportivo</name>
-        <rename/>
-      </field>
-      <field>
-        <name>identidad</name>
-        <rename/>
-      </field>
-      <field>
-        <name>idanio</name>
-        <rename/>
-      </field>
-      <field>
-        <name>idhechorendimiento</name>
-        <rename/>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>672</xloc>
-      <yloc>432</yloc>
+      <xloc>352</xloc>
+      <yloc>576</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1526,136 +1347,6 @@ FROM
     <GUI>
       <xloc>240</xloc>
       <yloc>224</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Stream lookup</name>
-    <type>StreamLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <from>Dimension Deporte</from>
-    <input_sorted>N</input_sorted>
-    <preserve_memory>Y</preserve_memory>
-    <sorted_list>N</sorted_list>
-    <integer_pair>N</integer_pair>
-    <lookup>
-      <key>
-        <name>deporte</name>
-        <field>nombre_deporte</field>
-      </key>
-      <key>
-        <name>modalidad</name>
-        <field>nombre_modalidad</field>
-      </key>
-      <value>
-        <name>id_modalidad</name>
-        <rename>id_modalidad</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>880</xloc>
-      <yloc>368</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Stream lookup 3</name>
-    <type>StreamLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <from>Dimension Evento Deportivo</from>
-    <input_sorted>N</input_sorted>
-    <preserve_memory>Y</preserve_memory>
-    <sorted_list>N</sorted_list>
-    <integer_pair>N</integer_pair>
-    <lookup>
-      <key>
-        <name>evento</name>
-        <field>nombreevento</field>
-      </key>
-      <value>
-        <name>ideventodeportivo</name>
-        <rename>ideventodeportivo</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>880</xloc>
-      <yloc>464</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Stream lookup 4</name>
-    <type>StreamLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <from>Dimension Entidad</from>
-    <input_sorted>N</input_sorted>
-    <preserve_memory>Y</preserve_memory>
-    <sorted_list>N</sorted_list>
-    <integer_pair>N</integer_pair>
-    <lookup>
-      <key>
-        <name>NOC</name>
-        <field>nocentidad</field>
-      </key>
-      <value>
-        <name>identidad</name>
-        <rename>identidad</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>880</xloc>
-      <yloc>544</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1746,14 +1437,14 @@ FROM
       </output>
     </remotesteps>
     <GUI>
-      <xloc>528</xloc>
-      <yloc>432</yloc>
+      <xloc>208</xloc>
+      <yloc>464</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Tratamiento de nulos</name>
-    <type>IfNull</type>
+    <name>Renombrar las columnas</name>
+    <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1762,38 +1453,124 @@ FROM
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <replaceAllByValue/>
-    <replaceAllMask/>
-    <selectFields>Y</selectFields>
-    <selectValuesType>N</selectValuesType>
-    <setEmptyStringAll>N</setEmptyStringAll>
-    <valuetypes>
-      </valuetypes>
+    <fields>
+      <field>
+        <name>Name</name>
+        <rename>nombre</rename>
+      </field>
+      <field>
+        <name>Weight</name>
+        <rename>peso</rename>
+      </field>
+      <field>
+        <name>Team</name>
+        <rename>equipo</rename>
+      </field>
+      <field>
+        <name>NOC</name>
+      </field>
+      <field>
+        <name>Games</name>
+        <rename>evento</rename>
+      </field>
+      <field>
+        <name>Year</name>
+        <rename>anio</rename>
+      </field>
+      <field>
+        <name>Medal</name>
+        <rename>tipoPodio</rename>
+      </field>
+      <field>
+        <name>Category</name>
+        <rename>categoria</rename>
+      </field>
+      <field>
+        <name>imc</name>
+      </field>
+      <field>
+        <name>Age</name>
+        <rename>edad</rename>
+      </field>
+      <field>
+        <name>Event</name>
+        <rename>modalidad</rename>
+      </field>
+      <field>
+        <name>Sport</name>
+        <rename>deporte</rename>
+      </field>
+      <field>
+        <name>Height</name>
+        <rename>estatura</rename>
+      </field>
+      <field>
+        <name>ID</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>528</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Seleccion de valores</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
     <fields>
       <field>
         <name>estatura</name>
-        <value>0</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>peso</name>
-        <value>0</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>equipo</name>
       </field>
       <field>
         <name>tipoPodio</name>
-        <value>Sin Medalla</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>imc</name>
       </field>
       <field>
         <name>edad</name>
-        <value>0</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
       </field>
+      <field>
+        <name>id_modalidad</name>
+      </field>
+      <field>
+        <name>ID</name>
+        <rename>idatleta</rename>
+      </field>
+      <field>
+        <name>ideventodeportivo</name>
+      </field>
+      <field>
+        <name>identidad</name>
+      </field>
+      <field>
+        <name>anio</name>
+        <rename>idanio</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -1804,46 +1581,60 @@ FROM
       </output>
     </remotesteps>
     <GUI>
-      <xloc>896</xloc>
-      <yloc>224</yloc>
+      <xloc>480</xloc>
+      <yloc>576</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Eliminar deporte de evento</name>
-    <type>ScriptValueMod</type>
+    <name>Seleccion de valores finales</name>
+    <type>SelectValues</type>
     <description/>
-    <distribute>Y</distribute>
+    <distribute>N</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <compatible>N</compatible>
-    <optimizationLevel>9</optimizationLevel>
-    <jsScripts>
-      <jsScript>
-        <jsScript_type>0</jsScript_type>
-        <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>var sportName = Sport;
- 
-// Create a regular expression to match all occurrences of the substring
-var regex = new RegExp(sportName, 'g');
- 
-// Replace all occurrences of the substring with the replacement string
-Event = Event.replace(regex, '').trim();</jsScript_script>
-      </jsScript>
-    </jsScripts>
     <fields>
       <field>
-        <name>Event</name>
-        <rename>Event</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>Y</replace>
+        <name>estatura</name>
       </field>
+      <field>
+        <name>peso</name>
+      </field>
+      <field>
+        <name>equipo</name>
+      </field>
+      <field>
+        <name>tipoPodio</name>
+      </field>
+      <field>
+        <name>imc</name>
+      </field>
+      <field>
+        <name>edad</name>
+      </field>
+      <field>
+        <name>id_modalidad</name>
+      </field>
+      <field>
+        <name>idatleta</name>
+      </field>
+      <field>
+        <name>ideventodeportivo</name>
+      </field>
+      <field>
+        <name>identidad</name>
+      </field>
+      <field>
+        <name>idanio</name>
+      </field>
+      <field>
+        <name>idhechorendimiento</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -1854,8 +1645,8 @@ Event = Event.replace(regex, '').trim();</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>368</xloc>
-      <yloc>224</yloc>
+      <xloc>352</xloc>
+      <yloc>464</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1922,8 +1713,196 @@ if (regex.test(event)) {
       </output>
     </remotesteps>
     <GUI>
-      <xloc>512</xloc>
-      <yloc>224</yloc>
+      <xloc>368</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Stream lookup</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <from>Dimension Deporte</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>deporte</name>
+        <field>nombre_deporte</field>
+      </key>
+      <key>
+        <name>modalidad</name>
+        <field>nombre_modalidad</field>
+      </key>
+      <value>
+        <name>id_modalidad</name>
+        <rename>id_modalidad</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>592</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Stream lookup 2</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <from>Dimension Evento Deportivo</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>evento</name>
+        <field>nombreevento</field>
+      </key>
+      <value>
+        <name>ideventodeportivo</name>
+        <rename>ideventodeportivo</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>592</xloc>
+      <yloc>496</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Stream lookup 3</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <from>Dimension Entidad</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>NOC</name>
+        <field>nocentidad</field>
+      </key>
+      <value>
+        <name>identidad</name>
+        <rename>identidad</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>592</xloc>
+      <yloc>576</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Tratamiento de nulos</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <replaceAllByValue/>
+    <replaceAllMask/>
+    <selectFields>Y</selectFields>
+    <selectValuesType>N</selectValuesType>
+    <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      </valuetypes>
+    <fields>
+      <field>
+        <name>estatura</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>peso</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>tipoPodio</name>
+        <value>Sin Medalla</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>edad</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

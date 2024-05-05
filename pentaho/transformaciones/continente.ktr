@@ -510,7 +510,7 @@
     </hop>
     <hop>
       <from>Validar datos</from>
-      <to>-</to>
+      <to>Dummy</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -520,8 +520,8 @@
     </hop>
   </order>
   <step>
-    <name>Generar IDContinente</name>
-    <type>Sequence</type>
+    <name>Dummy</name>
+    <type>Dummy</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -530,16 +530,6 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <valuename>idcontinente</valuename>
-    <use_database>N</use_database>
-    <connection>magallanes</connection>
-    <schema/>
-    <seqname>SEQ_</seqname>
-    <use_counter>Y</use_counter>
-    <counter_name/>
-    <start_at>1</start_at>
-    <increment_by>1</increment_by>
-    <max_value>999999999</max_value>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -549,8 +539,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>624</xloc>
-      <yloc>256</yloc>
+      <xloc>496</xloc>
+      <yloc>368</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -602,69 +592,13 @@
     </remotesteps>
     <GUI>
       <xloc>224</xloc>
-      <yloc>160</yloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Validar datos</name>
-    <type>Validator</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <validate_all>N</validate_all>
-    <concat_errors>N</concat_errors>
-    <concat_separator>|</concat_separator>
-    <validator_field>
-      <name>continent</name>
-      <validation_name>Continente nulo</validation_name>
-      <max_length/>
-      <min_length/>
-      <null_allowed>N</null_allowed>
-      <only_null_allowed>N</only_null_allowed>
-      <only_numeric_allowed>N</only_numeric_allowed>
-      <data_type>None</data_type>
-      <data_type_verified>N</data_type_verified>
-      <conversion_mask/>
-      <decimal_symbol/>
-      <grouping_symbol/>
-      <max_value/>
-      <min_value/>
-      <start_string/>
-      <end_string/>
-      <start_string_not_allowed/>
-      <end_string_not_allowed/>
-      <regular_expression/>
-      <regular_expression_not_allowed/>
-      <error_code/>
-      <error_description/>
-      <is_sourcing_values>N</is_sourcing_values>
-      <sourcing_step/>
-      <sourcing_field/>
-      <allowed_value/>
-    </validator_field>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>496</xloc>
-      <yloc>256</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>-</name>
-    <type>Dummy</type>
+    <name>Generar IDContinente</name>
+    <type>Sequence</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -673,6 +607,16 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
+    <valuename>idcontinente</valuename>
+    <use_database>N</use_database>
+    <connection>magallanes</connection>
+    <schema/>
+    <seqname>SEQ_</seqname>
+    <use_counter>Y</use_counter>
+    <counter_name/>
+    <start_at>1</start_at>
+    <increment_by>1</increment_by>
+    <max_value>999999999</max_value>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -682,8 +626,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>496</xloc>
-      <yloc>368</yloc>
+      <xloc>624</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -816,10 +760,66 @@
       <draw>Y</draw>
     </GUI>
   </step>
+  <step>
+    <name>Validar datos</name>
+    <type>Validator</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <validate_all>N</validate_all>
+    <concat_errors>N</concat_errors>
+    <concat_separator>|</concat_separator>
+    <validator_field>
+      <name>continent</name>
+      <validation_name>Continente nulo</validation_name>
+      <max_length/>
+      <min_length/>
+      <null_allowed>N</null_allowed>
+      <only_null_allowed>N</only_null_allowed>
+      <only_numeric_allowed>N</only_numeric_allowed>
+      <data_type>None</data_type>
+      <data_type_verified>N</data_type_verified>
+      <conversion_mask/>
+      <decimal_symbol/>
+      <grouping_symbol/>
+      <max_value/>
+      <min_value/>
+      <start_string/>
+      <end_string/>
+      <start_string_not_allowed/>
+      <end_string_not_allowed/>
+      <regular_expression/>
+      <regular_expression_not_allowed/>
+      <error_code/>
+      <error_description/>
+      <is_sourcing_values>N</is_sourcing_values>
+      <sourcing_step/>
+      <sourcing_field/>
+      <allowed_value/>
+    </validator_field>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>496</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step_error_handling>
     <error>
       <source_step>Validar datos</source_step>
-      <target_step>-</target_step>
+      <target_step>Dummy</target_step>
       <is_enabled>Y</is_enabled>
       <nr_valuename/>
       <descriptions_valuename/>

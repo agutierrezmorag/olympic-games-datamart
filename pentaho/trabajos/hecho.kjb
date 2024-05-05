@@ -304,20 +304,20 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>288</xloc>
-      <yloc>304</yloc>
+      <xloc>144</xloc>
+      <yloc>256</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Success</name>
+      <name>Exito</name>
       <description/>
       <type>SUCCESS</type>
       <attributes/>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>688</xloc>
-      <yloc>304</yloc>
+      <xloc>544</xloc>
+      <yloc>256</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -355,8 +355,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>480</xloc>
-      <yloc>240</yloc>
+      <xloc>336</xloc>
+      <yloc>192</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -394,8 +394,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>480</xloc>
-      <yloc>352</yloc>
+      <xloc>336</xloc>
+      <yloc>304</yloc>
       <attributes_kjc/>
     </entry>
   </entries>
@@ -420,7 +420,7 @@
     </hop>
     <hop>
       <from>Hecho Rendimiento</from>
-      <to>Success</to>
+      <to>Exito</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -429,7 +429,7 @@
     </hop>
     <hop>
       <from>Hecho Metricas</from>
-      <to>Success</to>
+      <to>Exito</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>

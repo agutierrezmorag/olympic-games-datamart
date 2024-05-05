@@ -520,41 +520,6 @@
     </hop>
   </order>
   <step>
-    <name>Generar IDEventoDeportivo</name>
-    <type>Sequence</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <valuename>idEventoDeportivo</valuename>
-    <use_database>N</use_database>
-    <connection>magallanes</connection>
-    <schema/>
-    <seqname>SEQ_</seqname>
-    <use_counter>Y</use_counter>
-    <counter_name/>
-    <start_at>1</start_at>
-    <increment_by>1</increment_by>
-    <max_value>999999999</max_value>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>832</xloc>
-      <yloc>256</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>Carga dataset</name>
     <type>CsvInput</type>
     <description/>
@@ -799,14 +764,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>224</xloc>
-      <yloc>256</yloc>
+      <xloc>144</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Seleccion de valores unicos</name>
-    <type>Unique</type>
+    <name>Generar IDEventoDeportivo</name>
+    <type>Sequence</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -815,16 +780,16 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <count_rows>N</count_rows>
-    <count_field/>
-    <reject_duplicate_row>N</reject_duplicate_row>
-    <error_description/>
-    <fields>
-      <field>
-        <name>nombreEvento</name>
-        <case_insensitive>N</case_insensitive>
-      </field>
-    </fields>
+    <valuename>idEventoDeportivo</valuename>
+    <use_database>N</use_database>
+    <connection>magallanes</connection>
+    <schema/>
+    <seqname>SEQ_</seqname>
+    <use_counter>Y</use_counter>
+    <counter_name/>
+    <start_at>1</start_at>
+    <increment_by>1</increment_by>
+    <max_value>999999999</max_value>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -834,60 +799,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>688</xloc>
-      <yloc>256</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Seleccion de valores finales</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>idEventoDeportivo</name>
-        <rename/>
-      </field>
-      <field>
-        <name>nombreEvento</name>
-        <rename/>
-      </field>
-      <field>
-        <name>temporadaEvento</name>
-        <rename/>
-      </field>
-      <field>
-        <name>ciudadEvento</name>
-        <rename/>
-      </field>
-      <field>
-        <name>paisEvento</name>
-        <rename/>
-      </field>
-      <field>
-        <name>codigoPaisEvento</name>
-        <rename/>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>960</xloc>
-      <yloc>256</yloc>
+      <xloc>432</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -928,8 +841,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>544</xloc>
-      <yloc>256</yloc>
+      <xloc>272</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -972,8 +885,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1088</xloc>
-      <yloc>256</yloc>
+      <xloc>592</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -991,43 +904,33 @@
     <fields>
       <field>
         <name>ID</name>
-        <rename/>
       </field>
       <field>
         <name>Name</name>
-        <rename/>
       </field>
       <field>
         <name>Sex</name>
-        <rename/>
       </field>
       <field>
         <name>Age</name>
-        <rename/>
       </field>
       <field>
         <name>Height</name>
-        <rename/>
       </field>
       <field>
         <name>Weight</name>
-        <rename/>
       </field>
       <field>
         <name>Team</name>
-        <rename/>
       </field>
       <field>
         <name>NOC</name>
-        <rename/>
       </field>
       <field>
         <name>Region</name>
-        <rename/>
       </field>
       <field>
         <name>Region (ISO)</name>
-        <rename/>
       </field>
       <field>
         <name>Games</name>
@@ -1035,7 +938,6 @@
       </field>
       <field>
         <name>Year</name>
-        <rename/>
       </field>
       <field>
         <name>Season</name>
@@ -1055,15 +957,12 @@
       </field>
       <field>
         <name>Sport</name>
-        <rename/>
       </field>
       <field>
         <name>Event</name>
-        <rename/>
       </field>
       <field>
         <name>Medal</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
       <remove>
@@ -1118,8 +1017,89 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>256</yloc>
+      <xloc>144</xloc>
+      <yloc>272</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Seleccion de valores finales</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>idEventoDeportivo</name>
+      </field>
+      <field>
+        <name>nombreEvento</name>
+      </field>
+      <field>
+        <name>temporadaEvento</name>
+      </field>
+      <field>
+        <name>ciudadEvento</name>
+      </field>
+      <field>
+        <name>paisEvento</name>
+      </field>
+      <field>
+        <name>codigoPaisEvento</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>432</xloc>
+      <yloc>272</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Seleccion de valores unicos</name>
+    <type>Unique</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <count_rows>N</count_rows>
+    <count_field/>
+    <reject_duplicate_row>N</reject_duplicate_row>
+    <error_description/>
+    <fields>
+      <field>
+        <name>nombreEvento</name>
+        <case_insensitive>N</case_insensitive>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>272</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
