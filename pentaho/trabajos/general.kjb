@@ -771,15 +771,6 @@ delete from atleta;
     </hop>
     <hop>
       <from>Def variables</from>
-      <to>Verificar Base de datos</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Def variables</from>
       <to>Alerta</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -799,6 +790,15 @@ delete from atleta;
     <hop>
       <from>Alerta</from>
       <to>Abortar</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Def variables</from>
+      <to>Verificar Base de datos</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
