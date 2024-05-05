@@ -436,14 +436,14 @@
   <notepads>
   </notepads>
   <connection>
-    <name>localhost</name>
-    <server>localhost</server>
+    <name>magallanes</name>
+    <server>magallanes.inf.unap.cl</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
-    <database>postgres</database>
+    <database>agutierrez</database>
     <port>5432</port>
-    <username>postgres</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb79ce71da9fa6d4</password>
+    <username>agutierrez</username>
+    <password>Encrypted 2be98afc86aa7f2e49c49a16adfc2a7eb</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -702,7 +702,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>localhost</connection>
+    <connection>magallanes</connection>
     <schema/>
     <table>atleta</table>
     <commit>1000</commit>
