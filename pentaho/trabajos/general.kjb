@@ -494,7 +494,7 @@ delete from atleta;
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Alerta</name>
+      <name>Alerta 2</name>
       <description/>
       <type>MSGBOX_INFO</type>
       <attributes/>
@@ -693,6 +693,20 @@ delete from atleta;
       <yloc>128</yloc>
       <attributes_kjc/>
     </entry>
+    <entry>
+      <name>Alerta</name>
+      <description/>
+      <type>MSGBOX_INFO</type>
+      <attributes/>
+      <bodymessage>Hubo un error al intentar cargar uno de los archivos. Comprueba que las rutas de archivo de cada uno sean los correctos.</bodymessage>
+      <titremessage>Error</titremessage>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>48</xloc>
+      <yloc>320</yloc>
+      <attributes_kjc/>
+    </entry>
   </entries>
   <hops>
     <hop>
@@ -706,7 +720,7 @@ delete from atleta;
     </hop>
     <hop>
       <from>Verificar Base de datos</from>
-      <to>Alerta</to>
+      <to>Alerta 2</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -742,7 +756,7 @@ delete from atleta;
     </hop>
     <hop>
       <from>Carga Dimensiones</from>
-      <to>Alerta</to>
+      <to>Alerta 2</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -751,7 +765,7 @@ delete from atleta;
     </hop>
     <hop>
       <from>Carga Tablas Hecho</from>
-      <to>Alerta</to>
+      <to>Alerta 2</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -760,7 +774,7 @@ delete from atleta;
     </hop>
     <hop>
       <from>Limpiar base de datos</from>
-      <to>Alerta</to>
+      <to>Alerta 2</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -768,7 +782,7 @@ delete from atleta;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Alerta</from>
+      <from>Alerta 2</from>
       <to>Abortar</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -805,7 +819,7 @@ delete from atleta;
     </hop>
     <hop>
       <from>Verificar Archivo 1</from>
-      <to>Alerta</to>
+      <to>Alerta 2</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -814,7 +828,7 @@ delete from atleta;
     </hop>
     <hop>
       <from>Verificar Archivo 2</from>
-      <to>Alerta</to>
+      <to>Alerta 2</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -841,7 +855,7 @@ delete from atleta;
     </hop>
     <hop>
       <from>Verificar Archivo 3</from>
-      <to>Alerta</to>
+      <to>Alerta 2</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -864,6 +878,15 @@ delete from atleta;
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Def variables</from>
+      <to>Alerta</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
       <unconditional>N</unconditional>
     </hop>
   </hops>
