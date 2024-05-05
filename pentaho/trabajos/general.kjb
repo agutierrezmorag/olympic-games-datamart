@@ -339,14 +339,14 @@
   <shared_objects_file/>
   <entries>
     <entry>
-      <name>Success</name>
+      <name>Exito</name>
       <description/>
       <type>SUCCESS</type>
       <attributes/>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1104</xloc>
+      <xloc>752</xloc>
       <yloc>224</yloc>
       <attributes_kjc/>
     </entry>
@@ -383,7 +383,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>752</xloc>
+      <xloc>400</xloc>
       <yloc>224</yloc>
       <attributes_kjc/>
     </entry>
@@ -420,7 +420,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>864</xloc>
+      <xloc>512</xloc>
       <yloc>224</yloc>
       <attributes_kjc/>
     </entry>
@@ -479,7 +479,7 @@ delete from atleta;
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Write to log</name>
+      <name>Realizar registro</name>
       <description/>
       <type>WRITE_TO_LOG</type>
       <attributes/>
@@ -489,8 +489,8 @@ delete from atleta;
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>864</xloc>
-      <yloc>400</yloc>
+      <xloc>192</xloc>
+      <yloc>432</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -503,12 +503,12 @@ delete from atleta;
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>576</xloc>
-      <yloc>400</yloc>
+      <xloc>336</xloc>
+      <yloc>320</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Abortar</name>
+      <name>Abortar 2</name>
       <description/>
       <type>ABORT</type>
       <attributes/>
@@ -516,57 +516,18 @@ delete from atleta;
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>736</xloc>
-      <yloc>400</yloc>
+      <xloc>192</xloc>
+      <yloc>320</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Write to log 2</name>
+      <name>Realizar registro 2</name>
       <description/>
       <type>WRITE_TO_LOG</type>
       <attributes/>
       <logmessage/>
       <loglevel>Basic</loglevel>
       <logsubject/>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>992</xloc>
-      <yloc>224</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>Verificar Archivo 1</name>
-      <description/>
-      <type>FILE_EXISTS</type>
-      <attributes/>
-      <filename>${CSV_ISO_NOC_MERGED}</filename>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>416</xloc>
-      <yloc>224</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>Verificar Archivo 2</name>
-      <description/>
-      <type>FILE_EXISTS</type>
-      <attributes/>
-      <filename>${CSV_OLYMPICS}</filename>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>528</xloc>
-      <yloc>224</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>Verificar Archivo 3</name>
-      <description/>
-      <type>FILE_EXISTS</type>
-      <attributes/>
-      <filename>${CSV_COUNTRY_DATA_MERGED}</filename>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -738,7 +699,7 @@ delete from atleta;
     </hop>
     <hop>
       <from>Carga Tablas Hecho</from>
-      <to>Write to log 2</to>
+      <to>Realizar registro 2</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -746,8 +707,8 @@ delete from atleta;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Write to log 2</from>
-      <to>Success</to>
+      <from>Realizar registro 2</from>
+      <to>Exito</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -783,7 +744,7 @@ delete from atleta;
     </hop>
     <hop>
       <from>Alerta 2</from>
-      <to>Abortar</to>
+      <to>Abortar 2</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -791,75 +752,12 @@ delete from atleta;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Abortar</from>
-      <to>Write to log</to>
+      <from>Abortar 2</from>
+      <to>Realizar registro</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Limpiar base de datos</from>
-      <to>Verificar Archivo 1</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Verificar Archivo 1</from>
-      <to>Verificar Archivo 2</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Verificar Archivo 1</from>
-      <to>Alerta 2</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Verificar Archivo 2</from>
-      <to>Alerta 2</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Verificar Archivo 2</from>
-      <to>Verificar Archivo 3</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Verificar Archivo 3</from>
-      <to>Carga Dimensiones</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Verificar Archivo 3</from>
-      <to>Alerta 2</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
@@ -887,6 +785,24 @@ delete from atleta;
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Limpiar base de datos</from>
+      <to>Carga Dimensiones</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Alerta</from>
+      <to>Abortar 2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
   </hops>
