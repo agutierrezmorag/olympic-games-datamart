@@ -689,12 +689,37 @@
     <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
+    <lazy_conversion_active>Y</lazy_conversion_active>
     <cached_row_meta_active>N</cached_row_meta_active>
     <row-meta>
       <value-meta>
         <type>String</type>
-        <storagetype>normal</storagetype>
+        <storagetype>binary-string</storagetype>
+        <storage-meta>
+          <value-meta>
+            <type>String</type>
+            <storagetype>normal</storagetype>
+            <name>alpha3entidad</name>
+            <length>3</length>
+            <precision>-1</precision>
+            <origin>Dimension Entidad</origin>
+            <comments>alpha3entidad</comments>
+            <conversion_Mask/>
+            <decimal_symbol>,</decimal_symbol>
+            <grouping_symbol>.</grouping_symbol>
+            <currency_symbol/>
+            <trim_type>none</trim_type>
+            <case_insensitive>N</case_insensitive>
+            <collator_disabled>Y</collator_disabled>
+            <collator_strength>0</collator_strength>
+            <sort_descending>N</sort_descending>
+            <output_padding>N</output_padding>
+            <date_format_lenient>N</date_format_lenient>
+            <date_format_locale>es_CL</date_format_locale>
+            <date_format_timezone>America/Santiago</date_format_timezone>
+            <lenient_string_to_number>N</lenient_string_to_number>
+          </value-meta>
+        </storage-meta>
         <name>alpha3entidad</name>
         <length>3</length>
         <precision>-1</precision>
@@ -904,7 +929,7 @@
     </partitioning>
     <valuename>idhechoentidad</valuename>
     <use_database>N</use_database>
-    <connection>magallanes</connection>
+    <connection/>
     <schema/>
     <seqname>SEQ_</seqname>
     <use_counter>Y</use_counter>
@@ -1153,31 +1178,24 @@
     <fields>
       <field>
         <name>identidad</name>
-        <rename/>
       </field>
       <field>
         <name>anio</name>
-        <rename/>
       </field>
       <field>
         <name>idh</name>
-        <rename/>
       </field>
       <field>
         <name>escolaridad</name>
-        <rename/>
       </field>
       <field>
         <name>gni</name>
-        <rename/>
       </field>
       <field>
         <name>poblacion</name>
-        <rename/>
       </field>
       <field>
         <name>entidad</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1209,33 +1227,77 @@
     <fields>
       <field>
         <name>idhechoentidad</name>
-        <rename/>
       </field>
       <field>
         <name>anio</name>
-        <rename/>
       </field>
       <field>
         <name>identidad</name>
-        <rename/>
       </field>
       <field>
         <name>idh</name>
-        <rename/>
       </field>
       <field>
         <name>escolaridad</name>
-        <rename/>
       </field>
       <field>
         <name>gni</name>
-        <rename/>
       </field>
       <field>
         <name>poblacion</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>idh</name>
+        <rename>idh</rename>
+        <type>Number</type>
+        <length>8</length>
+        <precision>2</precision>
+        <conversion_mask>0.00</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>gni</name>
+        <rename>gni</rename>
+        <type>Number</type>
+        <length>8</length>
+        <precision>2</precision>
+        <conversion_mask>0.00</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>escolaridad</name>
+        <rename>escolaridad</rename>
+        <type>Number</type>
+        <length>8</length>
+        <precision>2</precision>
+        <conversion_mask>0.00</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
     </fields>
     <attributes/>
     <cluster_schema/>

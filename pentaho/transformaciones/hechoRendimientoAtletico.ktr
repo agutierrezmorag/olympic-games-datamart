@@ -607,7 +607,7 @@ var estaturaMetros;
 
 
 
-if (Weight != null || Height != null){
+if ((Weight != null &amp;&amp; Weight != 0) &amp;&amp; (Height != null &amp;&amp; Height != 0)){
 
 	estaturaMetros = Height/100;
 	imc = Weight/(estaturaMetros * estaturaMetros);
@@ -1278,7 +1278,7 @@ Event = Event.replace(regex, '').trim();</jsScript_script>
     </partitioning>
     <valuename>idhechorendimiento</valuename>
     <use_database>N</use_database>
-    <connection>magallanes</connection>
+    <connection/>
     <schema/>
     <seqname>SEQ_</seqname>
     <use_counter>Y</use_counter>
@@ -1635,6 +1635,23 @@ Event = Event.replace(regex, '').trim();</jsScript_script>
         <name>idhechorendimiento</name>
       </field>
       <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>imc</name>
+        <rename>imc</rename>
+        <type>Number</type>
+        <length>8</length>
+        <precision>2</precision>
+        <conversion_mask>#.#</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
     </fields>
     <attributes/>
     <cluster_schema/>
