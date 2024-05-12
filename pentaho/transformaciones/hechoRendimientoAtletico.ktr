@@ -435,71 +435,10 @@
   </info>
   <notepads>
   </notepads>
-  <connection>
-    <name>magallanes</name>
-    <server>magallanes.inf.unap.cl</server>
-    <type>POSTGRESQL</type>
-    <access>Native</access>
-    <database>agutierrez</database>
-    <port>5432</port>
-    <username>agutierrez</username>
-    <password>Encrypted 2be98afc86aa7f2e49c49a16adfc2a7eb</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute>
-        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>IS_CLUSTERED</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>PORT_NUMBER</code>
-        <attribute>5432</attribute>
-      </attribute>
-      <attribute>
-        <code>PRESERVE_RESERVED_WORD_CASE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>QUOTE_ALL_FIELDS</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>USE_POOLING</code>
-        <attribute>N</attribute>
-      </attribute>
-    </attributes>
-  </connection>
   <order>
-    <hop>
-      <from>Calculo IMC</from>
-      <to>Renombrar las columnas</to>
-      <enabled>Y</enabled>
-    </hop>
     <hop>
       <from>Renombrar las columnas</from>
       <to>Tratamiento de nulos</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Tratamiento de nulos</from>
-      <to>Dummy</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -582,6 +521,21 @@
       <to>Stream lookup 3</to>
       <enabled>Y</enabled>
     </hop>
+    <hop>
+      <from>Calculo IMC</from>
+      <to>Renombrar las columnas</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Tratamiento de nulos</from>
+      <to>Calculo Rangos Etarios</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Calculo Rangos Etarios</from>
+      <to>Dummy</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
   <step>
     <name>Calculo IMC</name>
@@ -641,6 +595,70 @@ if ((Weight != null &amp;&amp; Weight != 0) &amp;&amp; (Height != null &amp;&amp
     <GUI>
       <xloc>528</xloc>
       <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Calculo Rangos Etarios</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>//Script here
+
+var rangoEtario;
+
+if(edad == 0){
+	rangoEtario = "Sin Dato";
+}else if (edad > 0 &amp;&amp; edad &lt;= 21){
+	rangoEtario = "Joven";
+}else if (edad > 21 &amp;&amp; edad &lt; 35){
+	rangoEtario = "Adulto";
+}else{
+	rangoEtario = "Veterano"
+}
+
+
+
+
+
+
+
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>rangoEtario</name>
+        <rename>rangoEtario</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>800</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -905,7 +923,7 @@ if ((Weight != null &amp;&amp; Weight != 0) &amp;&amp; (Height != null &amp;&amp
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>magallanes</connection>
+    <connection>localhost</connection>
     <sql>SELECT
     m.idmodalidad AS id_modalidad,
 	m.nombremodalidad AS nombre_modalidad,
@@ -1039,7 +1057,7 @@ FROM
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>magallanes</connection>
+    <connection>localhost</connection>
     <sql>SELECT identidad, nocentidad FROM entidad</sql>
     <limit>0</limit>
     <lookup/>
@@ -1120,7 +1138,7 @@ FROM
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>magallanes</connection>
+    <connection>localhost</connection>
     <sql>SELECT ideventodeportivo, nombreevento FROM evento_deportivo</sql>
     <limit>0</limit>
     <lookup/>
@@ -1361,7 +1379,7 @@ Event = Event.replace(regex, '').trim();</jsScript_script>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>magallanes</connection>
+    <connection>localhost</connection>
     <schema/>
     <table>rendimiento_atletico</table>
     <commit>1000</commit>
@@ -1426,6 +1444,10 @@ Event = Event.replace(regex, '').trim();</jsScript_script>
       <field>
         <column_name>idhechorendimiento</column_name>
         <stream_name>idhechorendimiento</stream_name>
+      </field>
+      <field>
+        <column_name>rangoEtario</column_name>
+        <stream_name>rangoEtario</stream_name>
       </field>
     </fields>
     <attributes/>
@@ -1570,6 +1592,9 @@ Event = Event.replace(regex, '').trim();</jsScript_script>
         <name>anio</name>
         <rename>idanio</rename>
       </field>
+      <field>
+        <name>rangoEtario</name>
+      </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
@@ -1633,6 +1658,9 @@ Event = Event.replace(regex, '').trim();</jsScript_script>
       </field>
       <field>
         <name>idhechorendimiento</name>
+      </field>
+      <field>
+        <name>rangoEtario</name>
       </field>
       <select_unspecified>N</select_unspecified>
       <meta>
